@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      FwX · CloudFlare CSS
+    </title>
+    <link rel="icon" sizes="350x350" href="https://sfwx.github.io/copyright/index.png">
+    <meta name="author" content="FlowniX">
+    <meta name="developer" content="FlowniX">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="https://api.fwxr.repl.co">
+    <meta name="theme-color" content="#1e90ff">
+    <meta property="og:title" content="FlowniXr | CloudFlare CSS">
+    <meta property="og:description" content="✨ Um programa Api criada e integrada para projetos gerais.">
+    <meta property="og:image" content="https://icon.fwxr.repl.co/fr/img.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+      @font-face {
+        font-family: "Minecraft";
+        src: url("./Minecraft.otf") format("opentype");
+      }
+      @font-face {
+        font-family: "Minecraft";
+        font-weight: bold;
+        src: url("./MinecraftBold.otf") format("opentype");
+      }
+      body, input {
+        font-family: Minecraft;
+        background-color: #00001c;
+        color: darkgray;
+        border: none;
+        outline: none;
+        resize: none;
+        overflow: hidden;
+      }
+      ::placeholder {
+        font-family: Minecraft;
+        color: darkgray;
+        opacity: 0.3;
+      }
+      i, a {
+        font-family: Minecraft;
+        text-decoration: none;
+        color: darkgray;
+      }
+    </style>
+  </head>
+  <body>
+    <pre><span style="font-size: 30px"><i onclick="copyElement()" class="fab fa-font-awesome"></i> <a href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" target="_blank">CloudFlare</a>
+<input id="input" autofocus="true" placeholder="Your icon" style="font-size: 35px; width: 90%; height: 35px" onchange="submit();" autocomplete="off">
+├ <a href="javascript:void()" onclick="copyIcon('fa')">fa:  <i id="fa"></i></a>
+├ <a href="javascript:void()" onclick="copyIcon('fab')">fab: <i id="fab"></i></a>
+├ <a href="javascript:void()" onclick="copyIcon('fad')">fad: <i id="fad"></i></a>
+├ <a href="javascript:void()" onclick="copyIcon('fal')">fal: <i id="fal"></i></a>
+├ <a href="javascript:void()" onclick="copyIcon('far')">far: <i id="far"></i></a>
+└ <a href="javascript:void()" onclick="copyIcon('fas')">fas: <i id="fas"></i></a></span></pre>
+    <script>
+      function copyElement() {
+        navigator.clipboard.writeText('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">');
+      }
+      setInterval(function() {
+        var value = document.getElementById("input").value.toLowerCase();
+        if (value!="") {
+          document.getElementById("fa").classList = "fa fa-" + value;
+          document.getElementById("fab").classList = "fab fa-" + value;
+          document.getElementById("fad").classList = "fad fa-" + value;
+          document.getElementById("far").classList = "fal fa-" + value;
+          document.getElementById("far").classList = "far fa-" + value;
+          document.getElementById("fas").classList = "fas fa-" + value;
+        }
+        else {
+          document.getElementById("fa").classList = null;
+          document.getElementById("fab").classList = null;
+          document.getElementById("fad").classList = null;
+          document.getElementById("far").classList = null;
+          document.getElementById("far").classList = null;
+          document.getElementById("fas").classList = null;
+        }
+      }, 10);
+      function copyIcon(name) {
+        if (document.getElementById("input").value) {
+          navigator.clipboard.writeText('<i class="' + document.getElementById(name).classList + '"></i>');
+        }
+      }
+    </script>
+  </body>
+</html>
