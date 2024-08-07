@@ -1,28 +1,91 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html>
   <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./pack_icon.png">
     <title>
-      FwX • FloralCapes
+      FwX · FloralCape
     </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="350x350" href="./pack_icon.png">
+    <meta name="author" content="FlowniX · Murilo de Moura S.">
+    <meta name="developer" content="FlowniX · Murilo de Moura S.">
+    <meta name="copyright" content="https://sfwx.github.io/copyright">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="https://sfwx.github.io/floral">
+    <meta name="theme-color" content="#70922d">
+    <meta property="og:title" content="FwX · FloralCape">
+    <meta property="og:description" content="✨ FloralCape · Gerador de skins em formato FloralCape.">
+    <meta property="og:image" content="./pack_icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="preload" as="image" href="./64/dummy.png">
+    <link rel="preload" as="image" href="./128/dummy.png">
+    <link rel="preload" as="image" href="./64/signature.png">
+    <link rel="preload" as="image" href="./128/signature.png">
+    <link rel="preload" as="image" href="./64/cape.png">
+    <link rel="preload" as="image" href="./128/cape.png">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+      @font-face {
+        font-family: "Minecraft";
+        src: url("./Minecraft.otf") format("opentype");
+      }
+      @font-face {
+        font-family: "Minecraft";
+        font-weight: bold;
+        src: url("./MinecraftBold.otf") format("opentype");
+      }
+      body {
+        background-color: #5c7a20;
+        font-family: "Minecraft";
+        padding: 0;
+        margin: 0;
+      }
+      div.fwxNavBar {
+        background-color: #496415;
+        align-items: center;
+        overflow: hidden;
+        font-size: 24px;
+        color: #f2f2f2;
+        display: flex;
+        padding: 10px;
+      }
+      div.fwxNavBar img {
+        margin-right: 10px;
+        height: 40px;
+      }
+      img#fwxSkinPreview {
+        image-rendering: pixelated;
+      }
+      .fwxInput {
+        background-color: #496415;
+        font-family: "Minecraft";
+        font-size: 24px;
+        color: #f2f2f2;
+        height: 45px;
+        width: 325px;
+        border: none;
+      }
+    </style>
   </head>
   <body>
-    <img src="./pack_icon.png" width="256px" style="image-rendering: pixelated;">
-    <canvas id="skin" width="64px" height="64px" hidden></canvas>
-    <form id="uploadForm">
-      <div>
-        <label for="skinUpload">Upload Skin:</label>
-        <input type="file" id="skinUpload" name="skinUpload" accept=".png">
-      </div>
-      <div>
-        <label for="capeUpload">Upload Cape:</label>
-        <input type="file" id="capeUpload" name="capeUpload" accept=".png">
-      </div>
-      <button type="button" onclick="handleUpload()">Upload</button>
-    </form>
-
+    <div class="fwxNavBar">
+      <img src="./pack_icon.png">
+      FloralCape
+    </div>
+    <br><br>
+    <center>
+      <input id="fwxFiles" type="file" name="fwxFiles" accept=".png" multiple hidden onchange="handleUpload();">
+      <button class="fwxInput" onclick="document.getElementById('fwxFiles').click();">
+        Select Skin & Cape
+      </button>
+      <br><br>
+      <canvas id="fwxSkin" width="64px" height="64px" hidden></canvas>
+      <img id="fwxSkinPreview" src="./64/dummy.png" width="325px" alt="dummy.png">
+      <br><br>
+      <button id="fwxTexturePack" class="fwxInput">
+        Texture Pack
+      </button>
+    </center>
     <script>
       async function loadImage(src) {
         return new Promise((resolve, reject) => {
@@ -32,45 +95,44 @@
           img.src = src;
         });
       }
-
       async function createSkin(size, skinFile, capeFile) {
         if (size === 64) {
-          const skinImg = document.getElementById("skin").getContext("2d");
-          skinImg.clearRect(0, 0, document.getElementById("skin").width, document.getElementById("skin").height);
+          const skinCanvas = document.getElementById("fwxSkin");
+          const skinImg = skinCanvas.getContext("2d");
+          skinImg.clearRect(0, 0, skinCanvas.width, skinCanvas.height);
           const skin = await loadImage(URL.createObjectURL(skinFile));
           const cape = await loadImage(URL.createObjectURL(capeFile));
           const sign = await loadImage("./64/signature.png");
           skinImg.drawImage(skin, 0, 0);
-          skinImg.drawImage(sign, 0, 0, 64, 64, 0, 0, 64, 64);
           skinImg.drawImage(cape, 1, 1, 5, 16, 56, 16, 5, 16);
           skinImg.drawImage(cape, 6, 1, 5, 16, 56, 32, 5, 16);
-          document.querySelector("img").src = skinImg.canvas.toDataURL();
-          document.querySelector("img").alt = skinFile.name;
+          skinImg.drawImage(sign, 0, 0, 64, 64, 0, 0, 64, 64);
+          const skinPreview = document.getElementById("fwxSkinPreview");
+          skinPreview.src = skinCanvas.toDataURL();
+          skinPreview.alt = skinFile.name;
         }
       }
-
       function skinDownload() {
-        const skin = document.getElementById("skin");
-        const name = document.querySelector("img").alt;
+        const skinCanvas = document.getElementById("fwxSkin");
+        const skinName = document.getElementById("fwxSkinPreview").alt;
         const link = document.createElement("a");
-        link.download = name;
-        link.href = skin.toDataURL();
+        link.download = skinName;
+        link.href = skinCanvas.toDataURL();
         link.click();
         link.remove();
       }
-
       function handleUpload() {
-        const skinFile = document.getElementById("skinUpload").files[0];
-        const capeFile = document.getElementById("capeUpload").files[0];
-        document.querySelector("img").alt = skinFile.name;
+        const skinFile = document.getElementById("fwxFiles").files[0];
+        const capeFile = document.getElementById("fwxFiles").files[1];
         if (skinFile && capeFile) {
+          document.getElementById("fwxSkinPreview").alt = skinFile.name;
+          document.getElementById("fwxSkinPreview").onclick = skinDownload;
           createSkin(64, skinFile, capeFile);
-        } else {
-          alert("Por favor, selecione ambos os arquivos de skin e cape.");
+        }
+        else {
+          alert("Please choose Skin and Cape files when selecting textures.");
         }
       }
-
-      document.querySelector("img").addEventListener("click", skinDownload);
     </script>
   </body>
 </html>
