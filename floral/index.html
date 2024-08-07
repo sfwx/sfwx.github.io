@@ -34,6 +34,11 @@
         font-weight: bold;
         src: url("./MinecraftBold.otf") format("opentype");
       }
+      a.fwxCopyright {
+        text-decoration: none;
+        font-size: 12.5px;
+        color: #cccccc;
+      }
       body {
         background-color: #5c7a20;
         font-family: "Minecraft";
@@ -53,10 +58,21 @@
         margin-right: 10px;
         height: 40px;
       }
-      img#fwxSkinPreview {
-        image-rendering: pixelated;
+      div.fwxNavBar a {
+        text-decoration: none;
+        position: fixed;
+        color: #cccccc;
+        right: 15px;
       }
-      .fwxInput {
+      div#fwxSkinPreview {
+        background-image: url("https://sfwx.github.io/floral/64/dummy.png");
+        image-rendering: pixelated;
+        background-color: #618023;
+        background-size: 325px;
+        height: 325px;
+        width: 325px;
+      }
+      button.fwxInput {
         background-color: #496415;
         font-family: "Minecraft";
         font-size: 24px;
@@ -69,25 +85,30 @@
   </head>
   <body>
     <div class="fwxNavBar">
-      <img src="./pack_icon.png">
+      <img src="https://sfwx.github.io/floral/pack_icon.png">
       FloralCape
+      <a href="./floral/help">
+        help >
+      </a>
     </div>
     <br><br>
     <center>
-      <input id="fwxFiles" type="file" name="fwxFiles" accept=".png" multiple hidden onchange="handleUpload();">
+      <input id="fwxFiles" type="file" name="fwxFiles" accept=".png" multiple hidden onchange="fwxHandleUpload();">
       <button class="fwxInput" onclick="document.getElementById('fwxFiles').click();">
         Select Skin & Cape
       </button>
       <br><br>
       <canvas id="fwxSkin" width="64px" height="64px" hidden></canvas>
-      <img id="fwxSkinPreview" src="./64/dummy.png" width="325px" alt="dummy.png">
-      <br><br>
-      <button id="fwxTexturePack" class="fwxInput">
+      <div id="fwxSkinPreview" style="background-image: url('https://sfwx.github.io/floral/64/dummy.png');"></div>
+      <br>
+      <button class="fwxInput" onclick="window.open('./FloralCape.mcpack', '_blank');">
         Texture Pack
       </button>
+      <br>
+      <a href="https://sfwx.github.io/copyright" class="fwxCopyright">© Copyright · Murilo de Moura Santos</a>
     </center>
     <script>
-      async function loadImage(src) {
+      async function fwxLoadImage(src) {
         return new Promise((resolve, reject) => {
           const img = new Image();
           img.onload = () => resolve(img);
@@ -95,43 +116,42 @@
           img.src = src;
         });
       }
-      async function createSkin(size, skinFile, capeFile) {
+      async function fwxCreateSkin(size, skinFile, capeFile) {
         if (size === 64) {
+          const skinPreview = document.getElementById("fwxSkinPreview");
           const skinCanvas = document.getElementById("fwxSkin");
           const skinImg = skinCanvas.getContext("2d");
           skinImg.clearRect(0, 0, skinCanvas.width, skinCanvas.height);
-          const skin = await loadImage(URL.createObjectURL(skinFile));
-          const cape = await loadImage(URL.createObjectURL(capeFile));
-          const sign = await loadImage("./64/signature.png");
+          const skin = await fwxLoadImage(URL.createObjectURL(skinFile));
+          const cape = await fwxLoadImage(URL.createObjectURL(capeFile));
+          const sign = await fwxLoadImage("./64/signature.png");
           skinImg.drawImage(skin, 0, 0);
           skinImg.drawImage(cape, 1, 1, 5, 16, 56, 16, 5, 16);
           skinImg.drawImage(cape, 6, 1, 5, 16, 56, 32, 5, 16);
           skinImg.drawImage(sign, 0, 0, 64, 64, 0, 0, 64, 64);
-          const skinPreview = document.getElementById("fwxSkinPreview");
-          skinPreview.src = skinCanvas.toDataURL();
-          skinPreview.alt = skinFile.name;
+          skinPreview.style.backgroundImage = 'url(\'' + skinCanvas.toDataURL() + '\')';
         }
       }
-      function skinDownload() {
+      function fwxHandleUpload() {
+        const skinFile = document.getElementById("fwxFiles").files[0];
+        const capeFile = document.getElementById("fwxFiles").files[1];
+        if (skinFile && capeFile) {
+          const skinPreview = document.getElementById("fwxSkinPreview");
+          fwxCreateSkin(64, skinFile, capeFile);
+          skinPreview.onclick = fwxSkinDownload;
+        }
+        else {
+          alert("Please choose Skin and Cape files when selecting textures.");
+        }
+      }
+      function fwxSkinDownload() {
         const skinCanvas = document.getElementById("fwxSkin");
-        const skinName = document.getElementById("fwxSkinPreview").alt;
+        const skinName = document.getElementById("fwxFiles").files[0].name;
         const link = document.createElement("a");
         link.download = skinName;
         link.href = skinCanvas.toDataURL();
         link.click();
         link.remove();
-      }
-      function handleUpload() {
-        const skinFile = document.getElementById("fwxFiles").files[0];
-        const capeFile = document.getElementById("fwxFiles").files[1];
-        if (skinFile && capeFile) {
-          document.getElementById("fwxSkinPreview").alt = skinFile.name;
-          document.getElementById("fwxSkinPreview").onclick = skinDownload;
-          createSkin(64, skinFile, capeFile);
-        }
-        else {
-          alert("Please choose Skin and Cape files when selecting textures.");
-        }
       }
     </script>
   </body>
