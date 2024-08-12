@@ -203,7 +203,6 @@
         link.click();
         link.remove();
       }
-
       function fwxUpdateJson() {
         const input = document.getElementById("fwxJsonInput");
         const file = input.files[0];
@@ -211,10 +210,36 @@
           const reader = new FileReader();
           reader.onload = function(event) {
             try {
-              let json = JSON.parse(event.target.result);   
-              // Adicione aqui as novas propriedades ao JSON
-              json.novaPropriedade1 = "valor1";
-              json.novaPropriedade2 = "valor2";
+              let json = JSON.parse(event.target.result);
+
+              json.['minecraft:client_entity'].description.materials.costume = "entity";
+              json.['minecraft:client_entity'].description.textures.flownix = "textures/models/flownix";
+              json.['minecraft:client_entity'].description.textures.friends = "textures/models/friends";
+              json.['minecraft:client_entity'].description.textures.patcher = "textures/models/patcher";
+              json.['minecraft:client_entity'].description.textures.greenBacker = "textures/models/greenBacker";
+              json.['minecraft:client_entity'].description.textures.blueBacker = "textures/models/blueBacker";
+              json.['minecraft:client_entity'].description.textures.pinkBacker = "textures/models/pinkBacker";
+              json.['minecraft:client_entity'].description.textures.blackBacker = "textures/models/blackBacker";
+              json.['minecraft:client_entity'].description.textures.whiteBacker = "textures/models/whiteBacker";
+              json.['minecraft:client_entity'].description.textures.cape = "textures/models/floralCape64";
+              json.['minecraft:client_entity'].description.geometry.flownix = "geometry.costume.flownix";
+              json.['minecraft:client_entity'].description.geometry.cube = "geometry.costume.cube";
+              json.['minecraft:client_entity'].description.geometry.backer = "geometry.costume.backer";
+              json.['minecraft:client_entity'].description.geometry.cape = "geometry.flownix.cape";
+              json.['minecraft:client_entity'].description.scripts.scripts[] = "costume";
+              json.['minecraft:client_entity'].description.scripts.scripts[] = "eyes";
+              json.['minecraft:client_entity'].description.animations.costume = "animation.costume.fly";
+              json.['minecraft:client_entity'].description.animations.eyes = "animation.player.eyes";
+              json.['minecraft:client_entity'].description.render_controllers[] = { "controller.render.costume.flownix": false };
+              json.['minecraft:client_entity'].description.render_controllers[] = { "controller.render.costume.friends": false };
+              json.['minecraft:client_entity'].description.render_controllers[] = { "controller.render.costume.patcher": false };
+              json.['minecraft:client_entity'].description.render_controllers[] = { "controller.render.costume.greenBacker": false };
+              json.['minecraft:client_entity'].description.render_controllers[] = { "controller.render.costume.blueBacker": false };
+              json.['minecraft:client_entity'].description.render_controllers[] = { "controller.render.costume.pinkBacker": false };
+              json.['minecraft:client_entity'].description.render_controllers[] = { "controller.render.costume.blackBacker": false };;
+              json.['minecraft:client_entity'].description.render_controllers[] = { "controller.render.costume.whiteBacker": false };
+              json.['minecraft:client_entity'].description.render_controllers[] = { "controller.render.player.floralCape": "(!variable.is_first_person || query.is_in_ui || variable.is_paperdoll) && !query.is_spectator && !variable.map_face_icon" };
+
               const blob = new Blob([JSON.stringify(json, null, 2)], { type: "application/json" });
               const link = document.createElement("a");
               link.href = URL.createObjectURL(blob);
