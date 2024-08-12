@@ -194,7 +194,7 @@
           }
         }
       }
-      /*function fwxSkinDownload() {
+      function fwxSkinDownload() {
         const skinCanvas = document.getElementById("fwxSkin");
         const skinName = document.getElementById("fwxImagesInput").files[0].name;
         const link = document.createElement("a");
@@ -202,39 +202,36 @@
         link.href = skinCanvas.toDataURL();
         link.click();
         link.remove();
-      }*/
-
-function fwxUpdateJson() {
-  const input = document.getElementById('fwxJsonInput');
-  const file = input.files[0];
-  
-  if (file && file.type === "application/json") {
-    const reader = new FileReader();
-    
-    reader.onload = function(event) {
-      try {
-        let json = JSON.parse(event.target.result);
-        
-        // Adicione aqui as novas propriedades ao JSON
-        json.novaPropriedade1 = "valor1";
-        json.novaPropriedade2 = "valor2";
-        
-        const blob = new Blob([JSON.stringify(json, null, 2)], { type: "application/json" });
-        const link = document.createElement("a");
-        link.href = URL.createObjectURL(blob);
-        link.download = file.name;
-        link.click();
-        link.remove();
-      } catch (e) {
-        alert("Erro ao processar o JSON. Verifique o arquivo e tente novamente.");
       }
-    };
-    
-    reader.readAsText(file);
-  } else {
-    alert("Por favor, selecione um arquivo JSON válido.");
-  }
-}
+
+      function fwxUpdateJson() {
+        const input = document.getElementById('fwxJsonInput');
+        const file = input.files[0];
+        if (file && file.type === "application/json") {
+          const reader = new FileReader();
+          reader.onload = function(event) {
+            try {
+              let json = JSON.parse(event.target.result);   
+              // Adicione aqui as novas propriedades ao JSON
+              json.novaPropriedade1 = "valor1";
+              json.novaPropriedade2 = "valor2";
+              const blob = new Blob([JSON.stringify(json, null, 2)], { type: "application/json" });
+              const link = document.createElement("a");
+              link.href = URL.createObjectURL(blob);
+              link.download = file.name;
+              link.click();
+              link.remove();
+            }
+            catch (e) {
+              alert("Erro ao processar o JSON. Verifique o arquivo e tente novamente.");
+            }
+          };
+          reader.readAsText(file);
+        }
+        else {
+          alert("Por favor, selecione um arquivo JSON válido.");
+        }
+      }
     </script>
   </body>
 </html>
