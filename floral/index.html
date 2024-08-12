@@ -253,6 +253,7 @@
                 desc.render_controllers.push({ "controller.render.costume.blackBacker": false });
                 desc.render_controllers.push({ "controller.render.costume.whiteBacker": false });
                 desc.render_controllers.push({ "controller.render.player.floralCape": "(!variable.is_first_person || query.is_in_ui || variable.is_paperdoll) && !query.is_spectator && !variable.map_face_icon" });
+                desc.render_controllers.push({ "controller.render.player.eyes": "(!variable.is_first_person || query.is_in_ui || variable.is_paperdoll) && !query.is_spectator && !variable.map_face_icon" });
               }
               else {
                 throw new Error("Estrutura do JSON inválida.");
