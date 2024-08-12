@@ -66,11 +66,15 @@
         margin-right: 10px;
         height: 40px;
       }
-      div.fwxNavBar a {
+      div.fwxNavBar span {
         text-decoration: none;
         position: fixed;
         color: #cccccc;
         right: 15px;
+      }
+      div.fwxNavBar a {
+        text-decoration: none;
+        color: #cccccc;
       }
       div#fwxSkinPreview {
         background-image: url("https://sfwx.github.io/floral/64/dummy.png");
@@ -95,12 +99,15 @@
     <div class="fwxNavBar">
       <img src="https://sfwx.github.io/floral/pack_icon.png">
       FloralCape
-      <a id="fwxChangeLang" href="javascript:fwxChangeLang();">
-        <i class="fa fa-globe"></i> pt
-      </a>
-      <a href="./help">
-        ajuda >
-      </a>
+      <span>
+        <a id="fwxChangeLang" href="javascript:fwxChangeLang();">
+          pt
+        </a>
+        /
+        <a href="./help">
+          ajuda >
+        </a>
+      </span>
     </div>
     <br><br>
     <center>
@@ -129,7 +136,7 @@
       function fwxChangeLang() {
         if (document.documentElement.lang === "pt-BR") {
           document.documentElement.lang = "en-US";
-          document.getElementById("fwxChangeLang").innerHTML = "<i class="fa fa-globe"></i> en";
+          document.getElementById("fwxChangeLang").innerHTML = "en";
           document.getElementById("fwxImages").innerHTML = "Select Skin & Cape";
           document.getElementById("fwxCopyright").innerHTML = "© Copyright · Murilo de Moura Santos";
           document.getElementById("fwxResource").innerHTML = "Texture Pack";
@@ -137,7 +144,7 @@
         }
         else {
           document.documentElement.lang = "pt-BR";
-          document.getElementById("fwxChangeLang").innerHTML = "<i class="fa fa-globe"></i> pt";
+          document.getElementById("fwxChangeLang").innerHTML = "pt";
           document.getElementById("fwxCopyright").innerHTML = "© Direitos Autorais · Murilo de Moura Santos";
           document.getElementById("fwxImages").innerHTML = "Selecionar Skin & Capa";
           document.getElementById("fwxResource").innerHTML = "Pacote de Textura";
