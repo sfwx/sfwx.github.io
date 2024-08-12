@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8">
     <title>
@@ -95,7 +95,7 @@
     <div class="fwxNavBar">
       <img src="https://sfwx.github.io/floral/pack_icon.png">
       FloralCape
-      <a href="./help" disabled>
+      <a href="./help">
         help >
       </a>
     </div>
@@ -156,7 +156,12 @@
           skinPreview.onclick = fwxSkinDownload;
         }
         else {
-          alert("Choose Skin and Cape files in png format when selecting your textures.");
+          if (document.documentElement.lang === "pt-BR") {
+            alert("Escolha os arquivos de Skin e Capa no formato png ao selecionar suas texturas.");
+          }
+          else {
+            alert("Choose Skin and Cape files in png format when selecting your textures.");
+          }
         }
       }
       function fwxSkinDownload() {
@@ -168,7 +173,14 @@
         link.click();
         link.remove();
       }
-      function fwxUpdateJson() {}
+      function fwxUpdateJson() {
+        if (document.documentElement.lang === "pt-BR") {
+          alert("Função de aplicação json em desenvolvimento. 🔧");
+        }
+        else {
+          alert("Função de aplicação json em desenvolvimento. 🔧");
+        }
+      }
     </script>
   </body>
 </html>
