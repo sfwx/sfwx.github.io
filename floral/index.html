@@ -104,7 +104,7 @@
           pt
         </a>
         /
-        <a href="./help">
+        <a id="fwxHelp" href="./help">
           ajuda >
         </a>
       </span>
@@ -137,6 +137,7 @@
         if (document.documentElement.lang === "pt-BR") {
           document.documentElement.lang = "en-US";
           document.getElementById("fwxChangeLang").innerHTML = "en";
+          document.getElementById("fwxHelp").innerHTML = "help >";
           document.getElementById("fwxImages").innerHTML = "Select Skin & Cape";
           document.getElementById("fwxCopyright").innerHTML = "© Copyright · Murilo de Moura Santos";
           document.getElementById("fwxResource").innerHTML = "Texture Pack";
@@ -145,6 +146,7 @@
         else {
           document.documentElement.lang = "pt-BR";
           document.getElementById("fwxChangeLang").innerHTML = "pt";
+          document.getElementById("fwxHelp").innerHTML = "ajuda >";
           document.getElementById("fwxCopyright").innerHTML = "© Direitos Autorais · Murilo de Moura Santos";
           document.getElementById("fwxImages").innerHTML = "Selecionar Skin & Capa";
           document.getElementById("fwxResource").innerHTML = "Pacote de Textura";
