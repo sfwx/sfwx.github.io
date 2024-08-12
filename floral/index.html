@@ -211,35 +211,53 @@
           reader.onload = function(event) {
             try {
               let json = JSON.parse(event.target.result);
-
-              json.['minecraft:client_entity'].description.materials.costume = "entity";
-              json.['minecraft:client_entity'].description.textures.flownix = "textures/models/flownix";
-              json.['minecraft:client_entity'].description.textures.friends = "textures/models/friends";
-              json.['minecraft:client_entity'].description.textures.patcher = "textures/models/patcher";
-              json.['minecraft:client_entity'].description.textures.greenBacker = "textures/models/greenBacker";
-              json.['minecraft:client_entity'].description.textures.blueBacker = "textures/models/blueBacker";
-              json.['minecraft:client_entity'].description.textures.pinkBacker = "textures/models/pinkBacker";
-              json.['minecraft:client_entity'].description.textures.blackBacker = "textures/models/blackBacker";
-              json.['minecraft:client_entity'].description.textures.whiteBacker = "textures/models/whiteBacker";
-              json.['minecraft:client_entity'].description.textures.cape = "textures/models/floralCape64";
-              json.['minecraft:client_entity'].description.geometry.flownix = "geometry.costume.flownix";
-              json.['minecraft:client_entity'].description.geometry.cube = "geometry.costume.cube";
-              json.['minecraft:client_entity'].description.geometry.backer = "geometry.costume.backer";
-              json.['minecraft:client_entity'].description.geometry.cape = "geometry.flownix.cape";
-              json.['minecraft:client_entity'].description.scripts.scripts[] = "costume";
-              json.['minecraft:client_entity'].description.scripts.scripts[] = "eyes";
-              json.['minecraft:client_entity'].description.animations.costume = "animation.costume.fly";
-              json.['minecraft:client_entity'].description.animations.eyes = "animation.player.eyes";
-              json.['minecraft:client_entity'].description.render_controllers[] = { "controller.render.costume.flownix": false };
-              json.['minecraft:client_entity'].description.render_controllers[] = { "controller.render.costume.friends": false };
-              json.['minecraft:client_entity'].description.render_controllers[] = { "controller.render.costume.patcher": false };
-              json.['minecraft:client_entity'].description.render_controllers[] = { "controller.render.costume.greenBacker": false };
-              json.['minecraft:client_entity'].description.render_controllers[] = { "controller.render.costume.blueBacker": false };
-              json.['minecraft:client_entity'].description.render_controllers[] = { "controller.render.costume.pinkBacker": false };
-              json.['minecraft:client_entity'].description.render_controllers[] = { "controller.render.costume.blackBacker": false };;
-              json.['minecraft:client_entity'].description.render_controllers[] = { "controller.render.costume.whiteBacker": false };
-              json.['minecraft:client_entity'].description.render_controllers[] = { "controller.render.player.floralCape": "(!variable.is_first_person || query.is_in_ui || variable.is_paperdoll) && !query.is_spectator && !variable.map_face_icon" };
-
+              // Verifique se as propriedades existem antes de modificá-las
+              if (json["minecraft:client_entity"] && json["minecraft:client_entity"].description) {
+                let desc = json["minecraft:client_entity"].description;
+                desc.materials = desc.materials || {};
+                desc.materials.costume = "entity";
+                desc.textures = desc.textures || {};
+                desc.textures.flownix = "textures/models/flownix";
+                desc.textures.friends = "textures/models/friends";
+                desc.textures.patcher = "textures/models/patcher";
+                desc.textures.greenBacker = "textures/models/greenBacker";
+                desc.textures.blueBacker = "textures/models/blueBacker";
+                desc.textures.pinkBacker = "textures/models/pinkBacker";
+                desc.textures.blackBacker = "textures/models/blackBacker";
+                desc.textures.whiteBacker = "textures/models/whiteBacker";
+                desc.textures.cape = "textures/models/floralCape64";
+                desc.geometry = desc.geometry || {};
+                desc.geometry.flownix = "geometry.costume.flownix";
+                desc.geometry.cube = "geometry.costume.cube";
+                desc.geometry.backer = "geometry.costume.backer";
+                desc.geometry.cape = "geometry.flownix.cape";
+                desc.scripts = desc.scripts || { animate: [] };
+                if (!Array.isArray(desc.scripts.animate)) {
+                  desc.scripts.animate = [];
+                }
+                desc.scripts.animate.push("costume");
+                desc.scripts.animate.push("eyes");
+                desc.animations = desc.animations || {};
+                desc.animations.costume = "animation.costume.fly";
+                desc.animations.eyes = "animation.player.eyes";
+                desc.render_controllers = desc.render_controllers || [];
+                if (!Array.isArray(desc.render_controllers)) {
+                  desc.render_controllers = [];
+                }
+                desc.render_controllers.push({ "controller.render.costume.flownix": false });
+                desc.render_controllers.push({ "controller.render.costume.friends": false });
+                desc.render_controllers.push({ "controller.render.costume.patcher": false });
+                desc.render_controllers.push({ "controller.render.costume.greenBacker": false });
+                desc.render_controllers.push({ "controller.render.costume.blueBacker": false });
+                desc.render_controllers.push({ "controller.render.costume.pinkBacker": false });
+                desc.render_controllers.push({ "controller.render.costume.blackBacker": false });
+                desc.render_controllers.push({ "controller.render.costume.whiteBacker": false });
+                desc.render_controllers.push({ "controller.render.player.floralCape": "(!variable.is_first_person || query.is_in_ui || variable.is_paperdoll) && !query.is_spectator && !variable.map_face_icon" });
+              }
+              else {
+                throw new Error("Estrutura do JSON inválida.");
+              }
+              // Criação e download do novo JSON
               const blob = new Blob([JSON.stringify(json, null, 2)], { type: "application/json" });
               const link = document.createElement("a");
               link.href = URL.createObjectURL(blob);
@@ -248,7 +266,7 @@
               link.remove();
             }
             catch (e) {
-              alert("Erro ao processar o JSON. Verifique o arquivo e tente novamente.");
+              alert("Erro ao processar o JSON: " + e.message);
             }
           };
           reader.readAsText(file);
