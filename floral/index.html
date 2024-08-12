@@ -95,34 +95,55 @@
     <div class="fwxNavBar">
       <img src="https://sfwx.github.io/floral/pack_icon.png">
       FloralCape
+      <a id="fwxChangeLang" href="javascript:fwxChangeLang();">
+        <i class="fa fa-globe"></i> pt
+      </a>
       <a href="./help">
-        help >
+        ajuda >
       </a>
     </div>
     <br><br>
     <center>
-      <input id="fwxImages" type="file" name="fwxImages" multiple hidden onchange="fwxHandleUpload();">
-      <button class="fwxInput" onclick="document.getElementById('fwxImages').click();">
-        Select Skin & Cape
+      <input id="fwxImagesInput" type="file" name="fwxImagesInput" multiple hidden onchange="fwxHandleUpload();">
+      <button id="fwxImages" class="fwxInput" onclick="document.getElementById('fwxImages').click();">
+        Selecionar Skin & Capa
       </button>
       <br><br>
       <canvas id="fwxSkin" width="64px" height="64px" hidden></canvas>
       <div id="fwxSkinPreview" style="background-image: url('https://sfwx.github.io/floral/64/dummy.png');"></div>
       <br>
       <a href="https://github.com/sfwx/sfwx.github.io/raw/main/FloralCapes.mcpack" download>
-        <button class="fwxInput">
-          Texture Pack
+        <button id="fwxResource" class="fwxInput">
+          Pacote de Textura
         </button>
       </a>
       <br>
-      <input id="fwxJson" type="file" name="fwxJson" multiple="off" hidden onchange="fwxUpdateJson();">
-      <button class="fwxInput" onclick="document.getElementById('fwxJson').click();" style="display: block; margin-top: 7.5px; opacity: 0.75;" disabled>
-        Update Json
+      <input id="fwxJsonInput" type="file" name="fwxJson" multiple="off" hidden onchange="fwxUpdateJson();">
+      <button id="fwxJson" class="fwxInput" onclick="document.getElementById('fwxJson').click();" style="display: block; margin-top: 7.5px; opacity: 0.75;" disabled>
+        Atualizar Json
       </button>
       <br>
-      <a href="https://sfwx.github.io/copyright" class="fwxCopyright">© Copyright · Murilo de Moura Santos</a>
+      <a id="fwxCopyright" href="https://sfwx.github.io/copyright" class="fwxCopyright">© Direitos Autorais · Murilo de Moura Santos</a>
     </center>
     <script>
+      function fwxChangeLang() {
+        if (document.documentElement.lang === "pt-BR") {
+          document.documentElement.lang = "en-US";
+          document.getElementById("fwxChangeLang").innerHTML = "<i class="fa fa-globe"></i> en";
+          document.getElementById("fwxImages").innerHTML = "Select Skin & Cape";
+          document.getElementById("fwxCopyright").innerHTML = "© Copyright · Murilo de Moura Santos";
+          document.getElementById("fwxResource").innerHTML = "Texture Pack";
+          document.getElementById("fwxJson").innerHTML = "Update Json";
+        }
+        else {
+          document.documentElement.lang = "pt-BR";
+          document.getElementById("fwxChangeLang").innerHTML = "<i class="fa fa-globe"></i> pt";
+          document.getElementById("fwxCopyright").innerHTML = "© Direitos Autorais · Murilo de Moura Santos";
+          document.getElementById("fwxImages").innerHTML = "Selecionar Skin & Capa";
+          document.getElementById("fwxResource").innerHTML = "Pacote de Textura";
+          document.getElementById("fwxJson").innerHTML = "Atualizar Json";
+        }
+      }
       async function fwxLoadImage(src) {
         return new Promise((resolve, reject) => {
           const img = new Image();
@@ -148,8 +169,8 @@
         }
       }
       function fwxHandleUpload() {
-        const skinFile = document.getElementById("fwxImages").files[0];
-        const capeFile = document.getElementById("fwxImages").files[1];
+        const skinFile = document.getElementById("fwxImagesInput").files[0];
+        const capeFile = document.getElementById("fwxImagesInput").files[1];
         if (skinFile && capeFile && skinFile.type === "image/png" && capeFile.type === "image/png") {
           const skinPreview = document.getElementById("fwxSkinPreview");
           fwxCreateSkin(64, skinFile, capeFile);
@@ -157,7 +178,7 @@
         }
         else {
           if (document.documentElement.lang === "pt-BR") {
-            alert("Escolha os arquivos de Skin e Capa no formato png ao selecionar suas texturas.");
+            alert("Escolha os arquivos de Skin e uma Capa no formato png ao selecionar suas texturas.");
           }
           else {
             alert("Choose Skin and Cape files in png format when selecting your textures.");
@@ -166,7 +187,7 @@
       }
       function fwxSkinDownload() {
         const skinCanvas = document.getElementById("fwxSkin");
-        const skinName = document.getElementById("fwxImages").files[0].name;
+        const skinName = document.getElementById("fwxImagesInput").files[0].name;
         const link = document.createElement("a");
         link.download = skinName;
         link.href = skinCanvas.toDataURL();
