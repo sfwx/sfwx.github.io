@@ -150,7 +150,7 @@
       function fwxHandleUpload() {
         const skinFile = document.getElementById("fwxImages").files[0];
         const capeFile = document.getElementById("fwxImages").files[1];
-        if (skinFile.type === "image/png" && capeFile.type === "image/png") {
+        if (skinFile && capeFile && skinFile.type === "image/png" && capeFile.type === "image/png") {
           const skinPreview = document.getElementById("fwxSkinPreview");
           fwxCreateSkin(64, skinFile, capeFile);
           skinPreview.onclick = fwxSkinDownload;
