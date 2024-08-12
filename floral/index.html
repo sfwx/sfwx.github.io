@@ -99,8 +99,8 @@
     </div>
     <br><br>
     <center>
-      <input id="fwxFiles" type="file" name="fwxFiles" multiple hidden onchange="fwxHandleUpload();">
-      <button class="fwxInput" onclick="document.getElementById('fwxFiles').click();">
+      <input id="fwxImages" type="file" name="fwxImages" multiple hidden onchange="fwxHandleUpload();">
+      <button class="fwxInput" onclick="document.getElementById('fwxImages').click();">
         Select Skin & Cape
       </button>
       <br><br>
@@ -113,11 +113,10 @@
         </button>
       </a>
       <br><br>
-      <a href="https://github.com/sfwx/sfwx.github.io/raw/main/FloralCapes.mcpack" download>
-        <button class="fwxInput">
-          Update Json
-        </button>
-      </a>
+      <input id="fwxJson" type="file" name="fwxJson" multiple="off" hidden onchange="fwxUpdateJson();">
+      <button class="fwxInput" onclick="document.getElementById('fwxFiles').click();" disabled>
+        Update Json
+      </button>
       <br>
       <a href="https://sfwx.github.io/copyright" class="fwxCopyright">© Copyright · Murilo de Moura Santos</a>
     </center>
@@ -147,8 +146,8 @@
         }
       }
       function fwxHandleUpload() {
-        const skinFile = document.getElementById("fwxFiles").files[0];
-        const capeFile = document.getElementById("fwxFiles").files[1];
+        const skinFile = document.getElementById("fwxImages").files[0];
+        const capeFile = document.getElementById("fwxImages").files[1];
         if (skinFile.type === "image/png" && capeFile.type === "image/png") {
           const skinPreview = document.getElementById("fwxSkinPreview");
           fwxCreateSkin(64, skinFile, capeFile);
@@ -160,13 +159,14 @@
       }
       function fwxSkinDownload() {
         const skinCanvas = document.getElementById("fwxSkin");
-        const skinName = document.getElementById("fwxFiles").files[0].name;
+        const skinName = document.getElementById("fwxImages").files[0].name;
         const link = document.createElement("a");
         link.download = skinName;
         link.href = skinCanvas.toDataURL();
         link.click();
         link.remove();
       }
+      function fwxUpdateJson() {}
     </script>
   </body>
 </html>
