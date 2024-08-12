@@ -125,7 +125,7 @@
         </button>
       </a>
       <br>
-      <input id="fwxJsonInput" type="file" name="fwxJson" multiple="off" hidden onchange="fwxUpdateJson();">
+      <input id="fwxJsonInput" type="file" name="fwxJson" hidden onchange="fwxUpdateJson();">
       <button id="fwxJson" class="fwxInput" onclick="document.getElementById('fwxJson').click();" style="display: block; margin-top: 7.5px;">
         Atualizar Json
       </button>
@@ -205,7 +205,7 @@
       }
 
       function fwxUpdateJson() {
-        const input = document.getElementById('fwxJsonInput');
+        const input = document.getElementById("fwxJsonInput");
         const file = input.files[0];
         if (file && file.type === "application/json") {
           const reader = new FileReader();
