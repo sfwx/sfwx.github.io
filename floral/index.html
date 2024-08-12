@@ -112,7 +112,7 @@
     <br><br>
     <center>
       <input id="fwxImagesInput" type="file" name="fwxImagesInput" multiple hidden onchange="fwxHandleUpload();">
-      <button id="fwxImages" class="fwxInput" onclick="document.getElementById('fwxImages').click();">
+      <button id="fwxImages" class="fwxInput" onclick="document.getElementById('fwxImagesInput').click();">
         Selecionar Skin & Capa
       </button>
       <br><br>
@@ -125,8 +125,8 @@
         </button>
       </a>
       <br>
-      <input id="fwxJsonInput" type="file" name="fwxJson" hidden onchange="fwxUpdateJson();">
-      <button id="fwxJson" class="fwxInput" onclick="document.getElementById('fwxJson').click();" style="display: block; margin-top: 7.5px;">
+      <input id="fwxJsonInput" type="file" name="fwxJsonInput" hidden onchange="fwxUpdateJson();">
+      <button id="fwxJson" class="fwxInput" onclick="document.getElementById('fwxJsonInput').click();" style="display: block; margin-top: 7.5px;">
         Atualizar Json
       </button>
       <br>
