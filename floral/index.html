@@ -236,9 +236,11 @@
                 if (!Array.isArray(desc.scripts.animate)) {
                   desc.scripts.animate = [];
                 }
+                desc.scripts.animate.push("cape");
                 desc.scripts.animate.push("costume");
                 desc.scripts.animate.push("eyes");
                 desc.animations = desc.animations || {};
+                desc.animations.cape = "animation.player.cape";
                 desc.animations.costume = "animation.costume.fly";
                 desc.animations.eyes = "animation.player.eyes";
                 desc.render_controllers = desc.render_controllers || [];
