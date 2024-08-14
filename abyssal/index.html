@@ -509,21 +509,5 @@
     <a class="fwxCopyright" href="https://sfwx.github.io/copyright/normal" target="_blank">
       © Copyright · Murilo de Moura Santos
     </a>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script>
-      html2canvas(document.body).then(function(canvas) {
-        let img = canvas.toDataURL("image/png");
-
-        // Abre a imagem em uma nova janela
-        let newTab = window.open();
-        newTab.document.body.innerHTML = `<img src="${img}">`;
-
-        // Se quiser salvar a imagem
-        let link = document.createElement('a');
-        link.download = 'captura.png';
-        link.href = img;
-        link.click();
-      });
-    </script>
   </body>
 </html>
