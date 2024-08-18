@@ -171,6 +171,8 @@
           const cape = await fwxLoadImage(URL.createObjectURL(capeFile));
           const sign = await fwxLoadImage("./64/signature.png");
           skinImg.drawImage(skin, 0, 0);
+          skinImg.drawImage(skin, 8, 8, 8, 8, 56, 0, 8, 8);
+
           skinImg.drawImage(cape, 1, 1, 5, 16, 56, 16, 5, 16);
           skinImg.drawImage(cape, 6, 1, 5, 16, 56, 32, 5, 16);
           skinImg.drawImage(sign, 0, 0, 64, 64, 0, 0, 64, 64);
