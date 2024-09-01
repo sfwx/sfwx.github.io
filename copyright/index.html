@@ -118,8 +118,8 @@ If you wish to use content linked to the site that does not have a paid owner, p
 </span>
 </pre>
     <script>
-      const type = (new URL(window.location.href).searchParams.get("type").toLowerCase() || null);
-      const lang = (new URL(window.location.href).searchParams.get("lang").toLowerCase() || null);
+      const type = (new URL(window.location.href).searchParams.get("type") || "").toLowerCase();
+      const lang = (new URL(window.location.href).searchParams.get("lang") || "").toLowerCase();
       if (type === "mc" || type === "mine" || type === "minecraft") {
         document.body.classList.add("minecraft");
         if (lang === "pt" || lang === "br" || lang === "pt-br") {
