@@ -118,25 +118,26 @@ If you wish to use content linked to the site that does not have a paid owner, p
 </span>
 </pre>
     <script>
-      const type = (new URL(window.location.href).searchParams.get("type") || "normal").toLowerCase();
-      if (type === "mine" || type === "minecraft") {
+      const type = (new URL(window.location.href).searchParams.get("type").toLowerCase() || "normal");
+      const lang = (new URL(window.location.href).searchParams.get("lang").toLowerCase() || null);
+      if (type === "mc" || type === "mine" || type === "minecraft") {
         document.body.classList.add("minecraft");
-        if (new URL(window.location.href).searchParams.get("lang").toLowerCase() === "pt" || new URL(window.location.href).searchParams.get("lang").toLowerCase() === "br" || new URL(window.location.href).searchParams.get("lang").toLowerCase() === "pt-br") {
+        if (lang === "pt" || lang === "br" || lang === "pt-br") {
           document.getElementById("pt-BR").hidden = false;
           document.getElementById("line").hidden = true;
           document.getElementById("en-US").hidden = true;
         }
-        else if (new URL(window.location.href).searchParams.get("lang")) {
+        else if (lang) {
           document.getElementById("pt-BR").hidden = true;
           document.getElementById("line").hidden = true;
           document.getElementById("en-US").hidden = false;
         }
       }
       else if (type === "text" || type === "text-plain") {
-        if (new URL(window.location.href).searchParams.get("lang").toLowerCase() === "pt" || new URL(window.location.href).searchParams.get("lang").toLowerCase() === "br" || new URL(window.location.href).searchParams.get("lang").toLowerCase() === "pt-br") {
+        if (lang === "pt" || lang === "br" || lang === "pt-br") {
           window.location.href = "./pt-BR.txt";
         }
-        else if (new URL(window.location.href).searchParams.get("lang")) {
+        else if (lang) {
           window.location.href = "./en-US.txt";
         }
         else {
@@ -144,12 +145,12 @@ If you wish to use content linked to the site that does not have a paid owner, p
         }
       }
       else {
-        if (new URL(window.location.href).searchParams.get("lang").toLowerCase() === "pt" || new URL(window.location.href).searchParams.get("lang").toLowerCase() === "br" || new URL(window.location.href).searchParams.get("lang").toLowerCase() === "pt-br") {
+        if (lang === "pt" || lang === "br" || lang === "pt-br") {
           document.getElementById("pt-BR").hidden = false;
           document.getElementById("line").hidden = true;
           document.getElementById("en-US").hidden = true;
         }
-        else if (new URL(window.location.href).searchParams.get("lang")) {
+        else if (lang) {
           document.getElementById("pt-BR").hidden = true;
           document.getElementById("line").hidden = true;
           document.getElementById("en-US").hidden = false;
