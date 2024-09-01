@@ -133,7 +133,15 @@ If you wish to use content linked to the site that does not have a paid owner, p
         }
       }
       else if (type === "text" || type === "text-plain") {
-        alert("vai ser redirecionado de acordo com o idioma");
+        if (new URL(window.location.href).searchParams.get("lang").toLowerCase() === "pt" || new URL(window.location.href).searchParams.get("lang").toLowerCase() === "br" || new URL(window.location.href).searchParams.get("lang").toLowerCase() === "pt-br") {
+          window.location = "./pt-BR.txt";
+        }
+        else if (new URL(window.location.href).searchParams.get("lang")) {
+          window.location = "./en-US.txt";
+        }
+        else {
+          window.location = "./langs.txt";
+        }
       }
       else {
         if (new URL(window.location.href).searchParams.get("lang").toLowerCase() === "pt" || new URL(window.location.href).searchParams.get("lang").toLowerCase() === "br" || new URL(window.location.href).searchParams.get("lang").toLowerCase() === "pt-br") {
