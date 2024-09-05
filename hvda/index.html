@@ -546,8 +546,8 @@ Murilo de Moura Santos · FlowniX · Murilo de Moura Santos · FlowniX</pre>
           document.getElementById("fwxDownload").href = fwxImage;
           document.getElementById("fwxDownload").hidden = false;
           fwxPage.remove();
-          
-          document.documentElement.remove();
+
+          // Redefine o estilo do body e exibe a nova imagem
           document.body.style = "margin: 0px; height: 100%; background-color: rgb(14, 14, 14);";
           const img = document.createElement("img");
           document.body.appendChild(img);
