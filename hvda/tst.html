@@ -523,27 +523,5 @@ Murilo de Moura Santos · FlowniX · Murilo de Moura Santos · FlowniX</pre>
         </span>
       </div>
     </div>
-    <a id="fwxDownload" download="varejaoDosAmigos.png" hidden>
-      <img id="fwxImage" width="100%">
-    </a>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script>
-      window.onload = function() {
-        const fwxPage = document.getElementById("fwxPage");
-        const rect = fwxPage.getBoundingClientRect();
-        html2canvas(fwxPage, {
-          width: rect.width,
-          height: rect.height,
-          x: rect.left,
-          y: rect.top
-        }).then(function(canvas) {
-          let fwxImage = canvas.toDataURL("image/png");
-          document.getElementById("fwxImage").src = fwxImage;
-          document.getElementById("fwxDownload").href = fwxImage;
-          document.getElementById("fwxDownload").hidden = false;
-          fwxPage.remove();
-        });
-      };
-    </script>
   </body>
 </html>
