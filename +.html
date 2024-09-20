@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      FwX · FloralCape
+    </title>
+    <link rel="icon" type="image/png" sizes="350x350" href="https://sfwx.github.io/floral/pack_icon.png">
+    <meta name="author" content="FlowniX · Murilo de Moura S.">
+    <meta name="developer" content="FlowniX · Murilo de Moura S.">
+    <meta name="copyright" content="https://sfwx.github.io/copyright">
+    <meta name="twitter:creator" content="@FwX0_">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="https://sfwx.github.io/floral">
+    <meta name="twitter:site" content="@FwX0_">
+    <meta name="theme-color" content="#70922d">
+    <meta property="og:title" content="FwX · FloralCape">
+    <meta name="twitter:title" content="FwX · FloralCape">
+    <meta property="og:description" content="✨ FloralCape · Skin generator in FloralCape format.">
+    <meta name="twitter:description" content="✨ FloralCape · Skin generator in FloralCape format.">
+    <meta property="og:image" content="https://sfwx.github.io/floral/pack_icon.png">
+    <meta name="twitter:image" content="https://sfwx.github.io/floral/pack_icon.png">
+    <meta name="twitter:card" content="summary_small_image">  
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="preload" as="image" href="https://sfwx.github.io/floral/64/dummy.png">
+    <link rel="preload" as="image" href="https://sfwx.github.io/floral/128/dummy.png">
+    <link rel="preload" as="image" href="https://sfwx.github.io/floral/64/signature.png">
+    <link rel="preload" as="image" href="https://sfwx.github.io/floral/128/signature.png">
+    <link rel="preload" as="image" href="https://sfwx.github.io/floral/64/cape.png">
+    <link rel="preload" as="image" href="https://sfwx.github.io/floral/128/cape.png">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+      @font-face {
+        font-family: "Minecraft";
+        src: url("https://sfwx.github.io/floral/Minecraft.otf") format("opentype");
+      }
+      @font-face {
+        font-family: "Minecraft";
+        font-weight: bold;
+        src: url("https://sfwx.github.io/floral/MinecraftBold.otf") format("opentype");
+      }
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #191919;
+        margin: 0;
+      }
+      div.fwxHeader {
+        background-color: #e7e8ec;
+        box-shadow: #58585a 0 5px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+        padding: 10px;
+      }
+      div.fwxContainer {
+        padding: 20px;
+        margin: auto;
+        width: 345px;
+      }
+      @media (max-width: 480px) {
+        div.fwxContainer {
+          margin: auto -10px;
+        }
+      }
+      div.fwxDescription {
+        margin-bottom: 15px;
+        margin-left: 5px;
+        font-size: 18px;
+        color: white;
+      }
+      div.fwxGrid {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 2fr 1fr;
+        display: grid;
+        gap: 10px;
+      }
+      div.fwxCapePreview {
+        background-image: url("https://sfwx.github.io/floral/64/cape.png");
+        background-position: -17.5px -17.5px;
+        background-repeat: no-repeat;
+        image-rendering: pixelated;
+        background-size: 1050px;
+        background-color: white;
+        grid-row: 1 / span 4;
+        height: 261px;
+        width: 162.5px;
+        grid-column: 1;
+        margin: 0 auto;
+        display: flex;
+      }
+      div.fwxHeadPreview {
+        background-image: url("https://sfwx.github.io/floral/signature.png");
+        background-position: -175px -175px;
+        background-repeat: no-repeat;
+        border: 10px solid #e7e8ec;
+        image-rendering: pixelated;
+        box-shadow: #58585a 0 5px;
+        background-color: white;
+        background-size: 1400px;
+        display: flex;
+        height: 175px;
+        width: 175px;
+      }
+      div.fwxButtons {
+        flex-direction: column;
+        align-items: center;
+        margin-left: -5px;
+        grid-column: 2;
+        display: flex;
+        gap: 10px;
+      }
+      input.fwxButton, button.fwxButton {
+        border: 3.5px solid #e7e8ec;
+        background-color: #d0d1d5;
+        box-shadow: #58585a 0 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 195px;
+      }
+      input.fwxButton:hover, button.fwxButton:hover {
+        border: 3.5px solid #b3b4b7;
+        background-color: #c6c6c7;
+        box-shadow: #3c3c3c 0 5px;
+      }
+      button.fwxButton:nth-child(2) { grid-row: 1; }
+      button.fwxButton:nth-child(3) { grid-row: 2; }
+      button.fwxButton:nth-child(4) { grid-row: 3; }
+      button.fwxButton:nth-child(5) { grid-row: 4; }
+    </style>
+  </head>
+  <body>
+    <div class="fwxHeader">
+      FLORALCAPES | CAPE EDITOR
+    </div>
+    <div class="fwxContainer">
+      <div class="fwxDescription">
+        Fique à vontade para explorar nossa ferramenta de geração de capas! Estamos aqui para ajudar, então não hesite em usar todos os recursos disponíveis. Divirta-se!
+      </div>
+      <input type="button" class="fwxButton" style="margin-bottom: 10px; margin-left: 0.25px; width: 362.5px;" value="Import your skin" readonly>
+      <div class="fwxGrid">
+        <div class="fwxCapePreview"></div>
+        <div class="fwxButtons">
+          <div class="fwxHeadPreview"></div>
+          <button class="fwxButton">First color</button>
+          <button class="fwxButton">Second color</button>
+          <button class="fwxButton">Random</button>
+          <button class="fwxButton">Reset</button>
+          <button class="fwxButton">Save</button>
+          <button class="fwxButton">Undo</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
