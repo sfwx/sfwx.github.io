@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8">
     <title>
@@ -48,6 +48,13 @@
       * {
         font-family: "Minecraft";
       }
+      a.fwxCopyright {
+        text-decoration: none;
+        font-size: 12.5px;
+        margin-top: 2.5px;
+        display: block;
+        color: #cccccc;
+      }
       body {
         background-color: #191919;
         margin: 0;
@@ -78,24 +85,26 @@
         color: white;
       }
       div.fwxGrid {
-        grid-template-rows: repeat(4, 1fr);
-        grid-template-columns: 2fr 1fr;
+        // grid-template-rows: repeat(4, 1fr);
+        // grid-template-columns: 2fr 1fr;
         display: grid;
         gap: 10px;
       }
       div.fwxCapePreview {
         background-image: url("https://sfwx.github.io/floral/64/cape.png");
-        background-position: -17.5px -17.5px;
+        background-position: -15px -15px;
         background-repeat: no-repeat;
+        border: 10px solid #e7e8ec;
         image-rendering: pixelated;
-        background-size: 1050px;
-        background-color: white;
+        box-shadow: #58585a 0 5px;
+        background-size: 930px;
+        background-color: gray;
         grid-row: 1 / span 4;
-        height: 261px;
-        width: 162.5px;
         grid-column: 1;
         margin: 0 auto;
         display: flex;
+        height: 232px;
+        width: 144px;
       }
       div.fwxHeadPreview {
         background-image: url("https://sfwx.github.io/floral/64/dummy.png");
@@ -104,8 +113,8 @@
         border: 10px solid #e7e8ec;
         image-rendering: pixelated;
         box-shadow: #58585a 0 5px;
-        background-color: white;
         background-size: 1400px;
+        background-color: gray;
         display: flex;
         height: 175px;
         width: 175px;
@@ -118,24 +127,21 @@
         display: flex;
         gap: 10px;
       }
-      input.fwxButton, button.fwxButton {
+      button.fwxButton {
         border: 3.5px solid #e7e8ec;
         background-color: #d0d1d5;
         box-shadow: #58585a 0 5px;
         padding: 10px 20px;
         font-size: 16px;
         cursor: pointer;
-        width: 195px;
+        height: 47.1px;
+        width: 362.5px;
       }
-      input.fwxButton:hover, button.fwxButton:hover {
+      button.fwxButton:hover {
         border: 3.5px solid #b3b4b7;
         background-color: #c6c6c7;
         box-shadow: #3c3c3c 0 5px;
       }
-      button.fwxButton:nth-child(2) { grid-row: 1; }
-      button.fwxButton:nth-child(3) { grid-row: 2; }
-      button.fwxButton:nth-child(4) { grid-row: 3; }
-      button.fwxButton:nth-child(5) { grid-row: 4; }
     </style>
   </head>
   <body>
@@ -146,17 +152,26 @@
       <div class="fwxDescription">
         <strong>@</strong> Explore nossa ferramenta de geração de capas! Use todos os recursos disponíveis e divirta-se!
       </div>
-      <input type="button" class="fwxButton" style="margin-bottom: 10px; margin-left: 0.25px; width: 362.5px;" value="Import your skin" readonly>
+      <button class="fwxButton" style="margin-bottom: 10px; margin-left: 0.25px;">
+        Import your Skin
+      </button>
       <div class="fwxGrid">
         <div class="fwxCapePreview"></div>
         <div class="fwxButtons">
           <div class="fwxHeadPreview"></div>
-          <button class="fwxButton">Save</button>
-          <button class="fwxButton">Texture Pack</button>
-          <button class="fwxButton">Update Json</button>
-          <button class="fwxButton">Reset</button>
+          <button class="fwxButton" style="width: 195px;">Import your Cape</button>
         </div>
       </div>
+      <div class="fwxButtons" style="margin-left: 20px; margin-top: -20px;">
+        <button class="fwxButton">Save</button>
+        <button class="fwxButton">Texture Pack</button>
+        <button class="fwxButton">Update Json</button>
+      </div>
+      <center style="margin-top: 10px;">
+        <a id="fwxCopyright" href="https://sfwx.github.io/copyright?type=Minecraft" class="fwxCopyright">
+          &copy; Direitos Autorais · Murilo de Moura Santos
+        </a>
+      </center>
     </div>
   </body>
 </html>
