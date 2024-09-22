@@ -49,6 +49,7 @@
         font-family: "Minecraft";
       }
       a.fwxCopyright {
+        -webkit-tap-highlight-color: transparent;
         text-decoration: none;
         font-size: 12.5px;
         margin-top: 2.5px;
@@ -104,7 +105,7 @@
         height: 232px;
         width: 144px;
       }
-      div#fwxHeadPreview {
+      div#fwxSkinPreview {
         background-image: url("https://sfwx.github.io/floral/64/dummy.png");
         background-position: -175px -175px;
         background-repeat: no-repeat;
@@ -126,7 +127,6 @@
         gap: 10px;
       }
       button.fwxButton {
-        -webkit-tap-highlight-color: rgba(255, 255, 255, 0.25);
         border: 3.5px solid #e7e8ec;
         background-color: #d0d1d4;
         box-shadow: #58585a 0 5px;
@@ -146,7 +146,7 @@
         box-shadow: #1d4d13 0 5px;
         color: white;
       }
-      button:disabled {
+      button.fwxButton:disabled {
         pointer-events: none;
         cursor: not-allowed;
         opacity: 0.75;
@@ -162,15 +162,16 @@
       <div class="fwxDescription">
         <strong>@</strong> Explore nossa ferramenta de geração de capas! Use todos os recursos disponíveis e divirta-se!
       </div>
-      <button class="fwxButton" style="margin-bottom: 10px; margin-left: 0.25px;">
+      <input id="fwxFileInput" type="file" onchange="fwxHandleUpload();" hidden>
+      <canvas id="fwxSkin" width="64px" height="64px" hidden></canvas>
+      <button class="fwxButton" style="margin-bottom: 10px; margin-left: 0.25px;" onclick="document.getElementById('fwxFileInput').click();">
         Import your Skin (64x64)
       </button>
       <div class="fwxGrid">
-        <canvas id="fwxSkin" width="64px" height="64px" hidden></canvas>
-        <div id="fwxCapePreview"></div>
+        <div id="fwxCapePreview" style="background-image: url('https://sfwx.github.io/floral/64/cape.png');"></div>
         <div class="fwxButtons">
-          <div id="fwxHeadPreview"></div>
-          <button class="fwxButton" style="width: 195px;">
+          <div id="fwxSkinPreview" style="background-image: url('https://sfwx.github.io/floral/64/dummy.png');"></div>
+          <button class="fwxButton" style="width: 195px;" onclick="document.getElementById('fwxFileInput').click();">
             Import your Cape
           </button>
         </div>
@@ -184,27 +185,50 @@
             Texture Pack
           </button>
         </a>
-        <input id="fwxJsonInput" type="file" onchange="fwxUpdateJson();" hidden>
-        <button class="fwxButton" onclick="document.getElementById('fwxJsonInput').click();">
+        <button class="fwxButton" onclick="document.getElementById('fwxFileInput').click();">
           Update Json
         </button>
       </div>
     </div>
     <center style="margin-top: -10px;">
-      <a id="fwxCopyright" href="https://sfwx.github.io/copyright?type=Minecraft" class="fwxCopyright">
+      <a class="fwxCopyright" href="https://sfwx.github.io/copyright?type=Minecraft">
         &copy; Copyright · Murilo de Moura Santos
       </a>
     </center>
     <script>
+      async function fwxLoadImage(src) {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.onload = () => resolve(img);
+          img.onerror = reject;
+          img.src = src;
+        });
+      }
+      async function fwxCreateSkin(size, skinFile, capeFile) {
+        if (size === 64) {
+          const skinPreview = document.getElementById("fwxSkinPreview");
+          const skinCanvas = document.getElementById("fwxSkin");
+          const skinImg = skinCanvas.getContext("2d");
+          skinImg.clearRect(0, 0, skinCanvas.width, skinCanvas.height);
+          const skin = await fwxLoadImage(URL.createObjectURL(skinFile));
+          const cape = await fwxLoadImage(URL.createObjectURL(capeFile));
+          const sign = await fwxLoadImage("./64/signature.png");
+          skinImg.drawImage(skin, 0, 0);
+          skinImg.drawImage(skin, 8, 8, 8, 8, 56, 0, 8, 8);
+
+          skinImg.drawImage(cape, 1, 1, 5, 16, 56, 16, 5, 16);
+          skinImg.drawImage(cape, 6, 1, 5, 16, 56, 32, 5, 16);
+          skinImg.drawImage(sign, 0, 0, 64, 64, 0, 0, 64, 64);
+          skinPreview.style.backgroundImage = 'url(\'' + skinCanvas.toDataURL() + '\')';
+        }
+      }
       function fwxUpdateJson() {
-        const input = document.getElementById("fwxJsonInput");
-        const file = input.files[0];
+        const file = document.getElementById("fwxFileInput").files[0];
         if (file && file.type === "application/json") {
           const reader = new FileReader();
           reader.onload = function(event) {
             try {
               let json = JSON.parse(event.target.result);
-              // Verifique se as propriedades existem antes de modificá-las
               if (json["minecraft:client_entity"] && json["minecraft:client_entity"].description) {
                 let desc = json["minecraft:client_entity"].description;
                 desc.materials = desc.materials || {};
@@ -251,7 +275,6 @@
               else {
                 throw new Error("Estrutura do JSON inválida.");
               }
-              // Criação e download do novo JSON
               const blob = new Blob([JSON.stringify(json, null, 2)], { type: "application/json" });
               const link = document.createElement("a");
               link.href = URL.createObjectURL(blob);
@@ -259,14 +282,23 @@
               link.click();
               link.remove();
             }
-            catch (e) {
-              alert("Erro ao processar o JSON: " + e.message);
+            catch (error) {
+              alert("Erro ao processar o JSON: " + error.message);
             }
           };
           reader.readAsText(file);
         }
         else {
           alert("Por favor, selecione um arquivo JSON válido.");
+        }
+      }
+      function fwxHandleUpload() {
+        const file = document.getElementById("fwxFileInput").files[0];
+        if (file.type === "image/png") {
+          alert("true");
+        }
+        else if (file.type === "application/json") {
+          fwxUpdateJson();
         }
       }
     </script>
