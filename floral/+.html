@@ -294,11 +294,41 @@
       }
       function fwxHandleUpload() {
         const file = document.getElementById("fwxFileInput").files[0];
-        if (file.type === "image/png") {
-          alert("true");
+        if (file) {
+          if (file.type === "image/png") {
+            const capePreview = document.getElementById("fwxCapePreview");
+            const skinPreview = document.getElementById("fwxSkinPreview");
+            const reader = new FileReader();
+            reader.onload = function(e) {
+              const img = new Image();
+              img.onload = function() {
+                const width = img.width;
+                const height = img.height;
+                if (width === 64 && height === 64) {
+                  skinPreview.style.backgroundImage = 'url("' + e.target.result + '");';
+                }
+                else if (width === 128 && height === 128) {
+                  skinPreview.style.backgroundImage = 'url("' + e.target.result + '");';
+                }
+                else if (width === 64 && height === 32) {
+                  capePreview.style.backgroundImage = 'url("' + e.target.result + '");';
+                }
+                else if (width === 128 && height === 64) {
+                  capePreview.style.backgroundImage = 'url("' + e.target.result + '");';
+                }
+                else {
+                  
+                }
+              };
+            };
+            reader.readAsDataURL(file);
+          }
+          else if (file.type === "application/json") {
+            fwxUpdateJson();
+          }
         }
-        else if (file.type === "application/json") {
-          fwxUpdateJson();
+        else {
+          alert("O envio foi cancelado.");
         }
       }
     </script>
