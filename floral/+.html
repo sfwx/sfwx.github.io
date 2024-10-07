@@ -228,7 +228,7 @@
         fwxSkin.src = document.getElementById("fwxSkinPreview").style.backgroundImage.replace("url(\"", "").replace("\")", "");
         const link = document.createElement("a");
         link.download = fwxSkin.name;
-        link.href = skinCanvas.toDataURL();
+        link.href = fwxCanvas.toDataURL();
         link.click();
         link.remove();
       }
