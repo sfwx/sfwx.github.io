@@ -222,7 +222,7 @@
           fwxImage.drawImage(fwxSign, 0, 0, 64, 64, 0, 0, 64, 64);
         }
       }
-      function fwxSkinDownload() {
+      /*function fwxSkinDownload() {
         const fwxCanvas = document.getElementById("fwxCanvas");
         const fwxSkin = new Image();
         fwxSkin.src = document.getElementById("fwxSkinPreview").style.backgroundImage.replace("url(\"", "").replace("\")", "");
@@ -234,7 +234,32 @@
         link.href = fwxCanvas.toDataURL();
         link.click();
         link.remove();
+      }*/
+
+      async function fwxSkinDownload() {
+        const fwxCanvas = document.getElementById("fwxCanvas");
+        const fwxSkin = new Image();
+        // Obter a URL da imagem do elemento de visualização
+        fwxSkin.src = document.getElementById("fwxSkinPreview").style.backgroundImage.replace("url(\"", "").replace("\")", "");
+        // Aguardar o carregamento da imagem
+        await new Promise((resolve, reject) => {
+          fwxSkin.onload = () => {
+            console.log("Skin image loaded successfully");
+            resolve();
+          };
+          fwxSkin.onerror = () => {
+            console.error("Error loading skin image");
+            reject(new Error("Failed to load skin image"));
+          };
+        });
+        // Criar um link para download
+        const link = document.createElement("a");
+        link.download = fwxSkin.name || "floralCape"; // Se não houver nome, use um padrão
+        link.href = fwxCanvas.toDataURL();
+        link.click();
+        link.remove();
       }
+
       function fwxUpdateJson() {
         const file = document.getElementById("fwxFileInput").files[0];
         if (file && file.type === "application/json") {
