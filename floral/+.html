@@ -167,7 +167,7 @@
         <div class="fwxButtons">
           <div id="fwxSkinPreview" style="background-image: url('https://sfwx.github.io/floral/64/dummy.png');"></div>
           <button class="fwxButton" style="width: 195px;" onclick="document.getElementById('fwxFileInput').click();">
-            Import your Cape
+            Import your Cape (64x64)
           </button>
         </div>
       </div>
@@ -204,10 +204,10 @@
         fwxSkin.src = document.getElementById("fwxSkinPreview").style.backgroundImage.replace("url(\"", "").replace("\")", "");
         const fwxCape = new Image();
         fwxCape.src = document.getElementById("fwxCapePreview").style.backgroundImage.replace("url(\"", "").replace("\")", "");
-        /*await Promise.all([
+        await Promise.all([
           new Promise((resolve) => { fwxSkin.onload = resolve; }),
           new Promise((resolve) => { fwxCape.onload = resolve; }),
-        ]);*/
+        ]);
         const fwxSize = (fwxSkin.width == 128) || (fwxCape.width == 128) ? 128 : 64;
         if (fwxSize === 64) {
           const fwxSign = await fwxLoadImage("./64/signature.png");
@@ -226,6 +226,9 @@
         const fwxCanvas = document.getElementById("fwxCanvas");
         const fwxSkin = new Image();
         fwxSkin.src = document.getElementById("fwxSkinPreview").style.backgroundImage.replace("url(\"", "").replace("\")", "");
+        await Promise.all([
+          new Promise((resolve) => { fwxSkin.onload = resolve; })
+        ]);
         const link = document.createElement("a");
         link.download = fwxSkin.name;
         link.href = fwxCanvas.toDataURL();
