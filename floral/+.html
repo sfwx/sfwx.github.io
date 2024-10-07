@@ -160,7 +160,7 @@
       <input id="fwxFileInput" type="file" onchange="fwxHandleUpload();" multiple hidden>
       <canvas id="fwxCanvas" width="64px" height="64px" hidden></canvas>
       <button class="fwxButton" style="margin-bottom: 10px; margin-left: 0.25px;" onclick="document.getElementById('fwxFileInput').click();">
-        Import your Skin (64x64)
+        Import your Skin
       </button>
       <div class="fwxGrid">
         <div id="fwxCapePreview" style="background-image: url('https://sfwx.github.io/floral/64/cape.png');"></div>
@@ -204,21 +204,21 @@
         fwxSkin.src = document.getElementById("fwxSkinPreview").style.backgroundImage.replace("url(\"", "").replace("\")", "");
         const fwxCape = new Image();
         fwxCape.src = document.getElementById("fwxCapePreview").style.backgroundImage.replace("url(\"", "").replace("\")", "");
-        await Promise.all([
+        /*await Promise.all([
           new Promise((resolve) => { fwxSkin.onload = resolve; }),
           new Promise((resolve) => { fwxCape.onload = resolve; }),
-        ]);
+        ]);*/
         const fwxSize = (fwxSkin.width == 128) || (fwxCape.width == 128) ? 128 : 64;
         if (fwxSize === 64) {
           const fwxSign = await fwxLoadImage("./64/signature.png");
           const fwxCanvas = document.getElementById("fwxCanvas");
           const fwxImage = fwxCanvas.getContext("2d");
           fwxImage.clearRect(0, 0, 64, 64);
-          fwxImage.drawImage(fwxSkin, 0, 0);
-          fwxImage.drawImage(fwxSkin, 8, 8, 8, 8, 56, 0, 8, 8);
+          fwxImage.drawImage(fwxLoadImage(fwxSkin), 0, 0);
+          fwxImage.drawImage(fwxLoadImage(fwxSkin), 8, 8, 8, 8, 56, 0, 8, 8);
 
-          fwxImage.drawImage(fwxCape, 1, 1, 5, 16, 56, 16, 5, 16);
-          fwxImage.drawImage(fwxCape, 6, 1, 5, 16, 56, 32, 5, 16);
+          fwxImage.drawImage(fwxLoadImage(fwxCape), 1, 1, 5, 16, 56, 16, 5, 16);
+          fwxImage.drawImage(fwxLoadImage(fwxCape), 6, 1, 5, 16, 56, 32, 5, 16);
           fwxImage.drawImage(fwxSign, 0, 0, 64, 64, 0, 0, 64, 64);
         }
       }
