@@ -22,136 +22,178 @@
     <meta name="twitter:image" content="https://sfwx.github.io/floral/pack_icon.png">
     <meta name="twitter:card" content="summary_small_image">  
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <link rel="preload" as="image" href="https://sfwx.github.io/floral/64/dummy.png">
+    <!--link rel="preload" as="image" href="https://sfwx.github.io/floral/64/dummy.png">
     <link rel="preload" as="image" href="https://sfwx.github.io/floral/128/dummy.png">
     <link rel="preload" as="image" href="https://sfwx.github.io/floral/64/signature.png">
     <link rel="preload" as="image" href="https://sfwx.github.io/floral/128/signature.png">
     <link rel="preload" as="image" href="https://sfwx.github.io/floral/64/cape.png">
-    <link rel="preload" as="image" href="https://sfwx.github.io/floral/128/cape.png">
+    <link rel="preload" as="image" href="https://sfwx.github.io/floral/128/cape.png"-->
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
       @font-face {
+        font-family: "MinecraftTitle";
+        font-weight: bold;
+        src: url("https://sfwx.github.io/floral/MinecraftTitle.otf") format("opentype");
+      }
+      @font-face {
         font-family: "Minecraft";
-        src: url("./Minecraft.otf") format("opentype");
+        src: url("https://sfwx.github.io/floral/Minecraft.otf") format("opentype");
       }
       @font-face {
         font-family: "Minecraft";
         font-weight: bold;
-        src: url("./MinecraftBold.otf") format("opentype");
+        src: url("https://sfwx.github.io/floral/MinecraftBold.otf") format("opentype");
       }
-      a.fwxCopyright {
+      * {
+        font-family: "Minecraft";
+      }
+      div.fwxCopyright, div.fwxCopyright a {
+        -webkit-tap-highlight-color: transparent;
+        justify-content: center;
         text-decoration: none;
         font-size: 12.5px;
-        margin-top: 2.5px;
-        display: block;
+        margin-top: 1.25px;
         color: #cccccc;
+        display: flex;
       }
       body {
-        background-color: #5c7a20;
-        font-family: "Minecraft";
-        padding: 0;
+        background-color: #191919;
         margin: 0;
       }
-      div.fwxNavBar {
-        background-color: #496415;
-        align-items: center;
-        overflow: hidden;
+      div.fwxHeader {
+        font-family: "MinecraftTitle";
+        background-color: #e7e8ec;
+        box-shadow: #58585a 0 5px;
+        text-align: center;
+        font-weight: bold;
         font-size: 24px;
-        color: #f2f2f2;
-        display: flex;
         padding: 10px;
       }
-      div.fwxNavBar img {
-        margin-right: 10px;
-        height: 40px;
+      div.fwxContainer {
+        padding: 20px 0 10px 0px;
+        margin: auto;
+        width: 362.5px;
       }
-      div.fwxNavBar span {
-        text-decoration: none;
-        position: fixed;
-        color: #cccccc;
-        right: 15px;
+      div.fwxDescription {
+        margin-bottom: 15px;
+        margin-left: 7.5px;
+        font-size: 18px;
+        color: white;
       }
-      div.fwxNavBar a {
-        text-decoration: none;
-        color: #cccccc;
+      div.fwxGrid {
+        display: grid;
+        gap: 10px;
+      }
+      div#fwxCapePreview {
+        background-image: url("https://sfwx.github.io/floral/64/cape.png");
+        background-position: -15px -15px;
+        background-repeat: no-repeat;
+        border: 10px solid #e7e8ec;
+        image-rendering: pixelated;
+        box-shadow: #58585a 0 5px;
+        background-size: 930px;
+        background-color: gray;
+        grid-row: 1 / span 4;
+        grid-column: 1;
+        margin: 0 auto;
+        display: flex;
+        height: 232px;
+        width: 144px;
       }
       div#fwxSkinPreview {
         background-image: url("https://sfwx.github.io/floral/64/dummy.png");
+        background-position: -175px -175px;
+        background-repeat: no-repeat;
+        border: 10px solid #e7e8ec;
         image-rendering: pixelated;
-        background-color: #618023;
-        background-size: 325px;
-        height: 325px;
-        width: 325px;
+        box-shadow: #58585a 0 5px;
+        background-size: 1400px;
+        background-color: gray;
+        display: flex;
+        height: 175px;
+        width: 175px;
       }
-      button.fwxInput {
-        background-color: #496415;
-        font-family: "Minecraft";
-        font-size: 24px;
-        color: #f2f2f2;
-        height: 45px;
-        width: 325px;
-        border: none;
+      div.fwxButtons {
+        flex-direction: column;
+        align-items: center;
+        margin-left: -5px;
+        grid-column: 2;
+        display: flex;
+        gap: 10px;
+      }
+      button.fwxButton {
+        border: 3.5px solid #e7e8ec;
+        background-color: #d0d1d4;
+        box-shadow: #58585a 0 5px;
+        font-size: 16px;
+        height: 47.1px;
+        width: 362.5px;
+      }
+      button.fwxButton:hover {
+        border: 3.5px solid #b3b4b7;
+        background-color: #c6c6c7;
+        box-shadow: #3c3c3c 0 5px;
+      }
+      button.fwxButton:focus {
+        border: 3.5px solid #639d52;
+        background-color: #3c8527;
+        box-shadow: #1d4d13 0 5px;
+        color: white;
+      }
+      button.fwxButton:disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+        opacity: 0.75;
+        color: black;
       }
     </style>
   </head>
   <body>
-    <div class="fwxNavBar">
-      <img src="https://sfwx.github.io/floral/pack_icon.png">
-      FloralCape
-      <span>
-        <a id="fwxChangeLang" href="javascript:fwxChangeLang();">
-          pt
-        </a>
-        /
-        <a id="fwxHelp" href="./help">
-          ajuda >
-        </a>
-      </span>
+    <div class="fwxHeader">
+      Floral Capes
     </div>
-    <br><br>
-    <center>
-      <input id="fwxImagesInput" type="file" name="fwxImagesInput" multiple hidden onchange="fwxHandleUpload();">
-      <button id="fwxImages" class="fwxInput" onclick="document.getElementById('fwxImagesInput').click();">
-        Selecionar Skin & Capa
+    <div class="fwxContainer">
+      <div class="fwxDescription">
+        <strong>@</strong> Explore nossa ferramenta de geração de capas! Use todos os recursos disponíveis e divirta-se!
+      </div>
+      <input id="fwxFileInput" type="file" onchange="fwxHandleUpload();" multiple hidden>
+      <canvas id="fwxCanvas" width="64px" height="64px" hidden></canvas>
+      <img id="fwxPreview" src="https://sfwx.github.io/floral/64/dummy.png" style="background-color: #222222; image-rendering: pixelated; margin-bottom: 12.5px;">
+      <button class="fwxButton" style="margin-bottom: 10px; margin-left: 0.25px;" onclick="document.getElementById('fwxFileInput').click();">
+        Import your Skin (64x64)
       </button>
-      <br><br>
-      <canvas id="fwxSkin" width="64px" height="64px" hidden></canvas>
-      <div id="fwxSkinPreview" style="background-image: url('https://sfwx.github.io/floral/64/dummy.png');"></div>
-      <br>
-      <a href="https://github.com/sfwx/sfwx.github.io/raw/main/FloralCapes.mcpack" download>
-        <button id="fwxResource" class="fwxInput">
-          Pacote de Textura
+      <div class="fwxGrid">
+        <div id="fwxCapePreview" style="background-image: url('https://sfwx.github.io/floral/64/cape.png');"></div>
+        <div class="fwxButtons">
+          <div id="fwxSkinPreview" style="background-image: url('https://sfwx.github.io/floral/64/dummy.png');"></div>
+          <button class="fwxButton" style="width: 195px;" onclick="document.getElementById('fwxFileInput').click();">
+            Import your Cape
+          </button>
+        </div>
+      </div>
+      <div class="fwxButtons" style="margin-left: 1px; margin-top: -20px;">
+        <button id="fwxSaveButton" class="fwxButton" onclick="fwxCreateSkin(); //fwxSkinDownload();" disabled>
+          Save
         </button>
+        <a href="https://github.com/sfwx/sfwx.github.io/raw/main/FloralCapes.mcpack" download>
+          <button class="fwxButton">
+            Texture Pack
+          </button>
+        </a>
+        <button class="fwxButton" onclick="document.getElementById('fwxFileInput').click();">
+          Update Json
+        </button>
+      </div>
+    </div>
+    <div class="fwxCopyright">
+      <a href="https://sfwx.github.io/copyright?type=Minecraft">
+        &copy; Copyright · Murilo de Moura Santos
       </a>
-      <br>
-      <input id="fwxJsonInput" type="file" name="fwxJsonInput" hidden onchange="fwxUpdateJson();">
-      <button id="fwxJson" class="fwxInput" onclick="document.getElementById('fwxJsonInput').click();" style="display: block; margin-top: 7.5px;">
-        Atualizar Json
-      </button>
-      <br>
-      <a id="fwxCopyright" href="https://sfwx.github.io/copyright" class="fwxCopyright">© Direitos Autorais · Murilo de Moura Santos</a>
-    </center>
+    </div>
     <script>
-      function fwxChangeLang() {
-        if (document.documentElement.lang === "pt-BR") {
-          document.documentElement.lang = "en-US";
-          document.getElementById("fwxChangeLang").innerHTML = "en";
-          document.getElementById("fwxHelp").innerHTML = "help >";
-          document.getElementById("fwxImages").innerHTML = "Select Skin & Cape";
-          document.getElementById("fwxCopyright").innerHTML = "© Copyright · Murilo de Moura Santos";
-          document.getElementById("fwxResource").innerHTML = "Texture Pack";
-          document.getElementById("fwxJson").innerHTML = "Update Json";
-        }
-        else {
-          document.documentElement.lang = "pt-BR";
-          document.getElementById("fwxChangeLang").innerHTML = "pt";
-          document.getElementById("fwxHelp").innerHTML = "ajuda >";
-          document.getElementById("fwxCopyright").innerHTML = "© Direitos Autorais · Murilo de Moura Santos";
-          document.getElementById("fwxImages").innerHTML = "Selecionar Skin & Capa";
-          document.getElementById("fwxResource").innerHTML = "Pacote de Textura";
-          document.getElementById("fwxJson").innerHTML = "Atualizar Json";
-        }
+      function r() {
+        window.location.reload();
       }
       async function fwxLoadImage(src) {
         return new Promise((resolve, reject) => {
@@ -161,59 +203,49 @@
           img.src = src;
         });
       }
-      async function fwxCreateSkin(size, skinFile, capeFile) {
-        if (size === 64) {
-          const skinPreview = document.getElementById("fwxSkinPreview");
-          const skinCanvas = document.getElementById("fwxSkin");
-          const skinImg = skinCanvas.getContext("2d");
-          skinImg.clearRect(0, 0, skinCanvas.width, skinCanvas.height);
-          const skin = await fwxLoadImage(URL.createObjectURL(skinFile));
-          const cape = await fwxLoadImage(URL.createObjectURL(capeFile));
-          const sign = await fwxLoadImage("./64/signature.png");
-          skinImg.drawImage(skin, 0, 0);
-          skinImg.drawImage(skin, 8, 8, 8, 8, 56, 0, 8, 8);
-
-          skinImg.drawImage(cape, 1, 1, 5, 16, 56, 16, 5, 16);
-          skinImg.drawImage(cape, 6, 1, 5, 16, 56, 32, 5, 16);
-          skinImg.drawImage(sign, 0, 0, 64, 64, 0, 0, 64, 64);
-          skinPreview.style.backgroundImage = 'url(\'' + skinCanvas.toDataURL() + '\')';
+      async function fwxCreateSkin() {
+        const fwxSize = (fwxSkin.width == 128) || (fwxCape.width == 128) ? 128 : 64;
+        if (fwxSize === 64) {
+          fetch("https://sfwx.github.io/floral/64/cape.png")
+            .then(response => response.blob())
+            .then(blob => {
+              const fwxSign = new File([blob], "cape.png", { type: "image/png" });
+              const fwxCanvas = document.getElementById("fwxCanvas");
+              fwxCanvas.width = "64px";
+              fwxCanvas.height = "64px";
+              const fwxImage = fwxCanvas.getContext("2d");
+              fwxImage.clearRect(0, 0, 64, 64);
+              fwxImage.drawImage(fwxLoadImage(URL.createObjectURL(fwxSkin)), 0, 0);
+              //fwxImage.drawImage(fwxSkin, 8, 8, 8, 8, 56, 0, 8, 8);
+              //fwxImage.drawImage(fwxCape, 1, 1, 5, 16, 56, 16, 5, 16);
+              //fwxImage.drawImage(fwxCape, 6, 1, 5, 16, 56, 32, 5, 16);
+              //fwxImage.drawImage(fwxSign, 0, 0, 64, 64, 0, 0, 64, 64);
+              document.getElementById("fwxPreview").src = fwxCanvas.toDataURL();
+            })
+            .catch(error => {
+              console.error('Erro ao baixar a imagem:', error);
+            });
         }
-      }
-      function fwxHandleUpload() {
-        const skinFile = document.getElementById("fwxImagesInput").files[0];
-        const capeFile = document.getElementById("fwxImagesInput").files[1];
-        if (skinFile && capeFile && skinFile.type === "image/png" && capeFile.type === "image/png") {
-          const skinPreview = document.getElementById("fwxSkinPreview");
-          fwxCreateSkin(64, skinFile, capeFile);
-          skinPreview.onclick = fwxSkinDownload;
-        }
-        else {
-          if (document.documentElement.lang === "pt-BR") {
-            alert("Escolha os arquivos de Skin e uma Capa no formato png ao selecionar suas texturas.");
-          }
-          else {
-            alert("Choose Skin and Cape files in png format when selecting your textures.");
-          }
+        else if (fwxSize === 128) {
+          //Fazer depois
+          alert("sapoha ta mandando 128x128");
         }
       }
       function fwxSkinDownload() {
-        const skinCanvas = document.getElementById("fwxSkin");
-        const skinName = document.getElementById("fwxImagesInput").files[0].name;
+        const fwxCanvas = document.getElementById("fwxCanvas");
         const link = document.createElement("a");
-        link.download = skinName;
-        link.href = skinCanvas.toDataURL();
+        link.download = fwxSkin.name || "floralCapes";
+        link.href = fwxCanvas.toDataURL();
         link.click();
         link.remove();
       }
       function fwxUpdateJson() {
-        const input = document.getElementById("fwxJsonInput");
-        const file = input.files[0];
+        const file = document.getElementById("fwxFileInput").files[0];
         if (file && file.type === "application/json") {
           const reader = new FileReader();
           reader.onload = function(event) {
             try {
               let json = JSON.parse(event.target.result);
-              // Verifique se as propriedades existem antes de modificá-las
               if (json["minecraft:client_entity"] && json["minecraft:client_entity"].description) {
                 let desc = json["minecraft:client_entity"].description;
                 desc.materials = desc.materials || {};
@@ -260,7 +292,6 @@
               else {
                 throw new Error("Estrutura do JSON inválida.");
               }
-              // Criação e download do novo JSON
               const blob = new Blob([JSON.stringify(json, null, 2)], { type: "application/json" });
               const link = document.createElement("a");
               link.href = URL.createObjectURL(blob);
@@ -268,14 +299,78 @@
               link.click();
               link.remove();
             }
-            catch (e) {
-              alert("Erro ao processar o JSON: " + e.message);
+            catch (error) {
+              alert("Erro ao processar o JSON: " + error.message);
             }
           };
           reader.readAsText(file);
         }
         else {
           alert("Por favor, selecione um arquivo JSON válido.");
+        }
+      }
+      let fwxSkin;
+      let fwxCape;
+      function fwxHandleUpload() {
+        const file = document.getElementById("fwxFileInput").files[0];
+        if (file) {
+          if (file.type === "image/png") {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+              const img = new Image();
+              img.onload = function() {
+                const width = img.width;
+                const height = img.height;
+                if ((width === 64 && height === 64) || (width === 128 && height === 128)) {
+                  document.getElementById("fwxSkinPreview").style.backgroundImage = 'url("' + e.target.result + '")';
+                  document.getElementById("fwxSaveButton").disabled = false;
+                  fwxSkin = document.getElementById("fwxFileInput").files[0];
+                }
+                else if ((width === 64 && height === 32) || (width === 128 && height === 64)) {
+                  document.getElementById("fwxCapePreview").style.backgroundImage = 'url("' + e.target.result + '")';
+                  fwxCape = document.getElementById("fwxFileInput").files[0];
+                }
+                else {
+                  console.log("Dimensões não correspondem: " + width + "x" + height);
+                }
+              };
+              img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+          }
+          else if (file.type === "application/json") {
+            fwxUpdateJson();
+          }
+          else {
+            console.log("Arquivo não suportado: " + file.type);
+          }
+        }
+        else {
+          alert("O envio foi cancelado.");
+        }
+        if (document.getElementById("fwxFileInput").files[1] && document.getElementById("fwxFileInput").files[1].type === "image/png") {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            const img = new Image();
+            img.onload = function() {
+              const width = img.width;
+              const height = img.height;
+              if ((width === 64 && height === 64) || (width === 128 && height === 128)) {
+                document.getElementById("fwxSkinPreview").style.backgroundImage = 'url("' + e.target.result + '")';
+                document.getElementById("fwxSaveButton").disabled = false;
+                  fwxSkin = document.getElementById("fwxFileInput").files[1];
+              }
+              else if ((width === 64 && height === 32) || (width === 128 && height === 64)) {
+                document.getElementById("fwxCapePreview").style.backgroundImage = 'url("' + e.target.result + '")';
+                  fwxCape = document.getElementById("fwxFileInput").files[1];
+              }
+              else {
+                console.log("Dimensões não correspondem: " + width + "x" + height);
+              }
+            };
+            img.src = e.target.result;
+          };
+          reader.readAsDataURL(document.getElementById("fwxFileInput").files[1]);
         }
       }
     </script>
