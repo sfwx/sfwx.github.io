@@ -248,44 +248,43 @@
               let json = JSON.parse(event.target.result);
               if (json["minecraft:client_entity"] && json["minecraft:client_entity"].description) {
                 let desc = json["minecraft:client_entity"].description;
-                desc.materials = desc.materials || {};
-                desc.materials.costume = "entity";
-                desc.textures = desc.textures || {};
-                desc.textures.flownix = "textures/models/flownix";
-                desc.textures.friends = "textures/models/friends";
-                desc.textures.patcher = "textures/models/patcher";
-                desc.textures.greenBacker = "textures/models/greenBacker";
-                desc.textures.blueBacker = "textures/models/blueBacker";
-                desc.textures.pinkBacker = "textures/models/pinkBacker";
-                desc.textures.blackBacker = "textures/models/blackBacker";
-                desc.textures.whiteBacker = "textures/models/whiteBacker";
-                desc.textures.cape = "textures/models/floralCape64";
+                // desc.materials = desc.materials || {};
+                // desc.materials.costume = "entity";
+                // desc.textures = desc.textures || {};
+                // desc.textures.flownix = "textures/models/flownix";
+                // desc.textures.friends = "textures/models/friends";
+                // desc.textures.patcher = "textures/models/patcher";
+                // desc.textures.greenBacker = "textures/models/greenBacker";
+                // desc.textures.blueBacker = "textures/models/blueBacker";
+                // desc.textures.pinkBacker = "textures/models/pinkBacker";
+                // desc.textures.blackBacker = "textures/models/blackBacker";
+                // desc.textures.whiteBacker = "textures/models/whiteBacker";
                 desc.geometry = desc.geometry || {};
-                desc.geometry.flownix = "geometry.costume.flownix";
-                desc.geometry.cube = "geometry.costume.cube";
-                desc.geometry.backer = "geometry.costume.backer";
-                desc.geometry.cape = "geometry.flownix.cape";
+                // desc.geometry.flownix = "geometry.costume.flownix";
+                // desc.geometry.cube = "geometry.costume.cube";
+                // desc.geometry.backer = "geometry.costume.backer";
+                desc.geometry.floralCape = "geometry.flownix.cape";
                 desc.geometry.eyes = "geometry.player.eyes";
-                desc.scripts = desc.scripts || { animate: [] };
-                if (!Array.isArray(desc.scripts.animate)) {
-                  desc.scripts.animate = [];
-                }
-                desc.scripts.animate.push("costume");
+                // desc.scripts = desc.scripts || { animate: [] };
+                // if (!Array.isArray(desc.scripts.animate)) {
+                //   desc.scripts.animate = [];
+                // }
+                // desc.scripts.animate.push("costume");
                 desc.animations = desc.animations || {};
                 desc.animations.cape = "animation.player.cape";
-                desc.animations.costume = "animation.costume.fly";
+                // desc.animations.costume = "animation.costume.fly";
                 desc.render_controllers = desc.render_controllers || [];
                 if (!Array.isArray(desc.render_controllers)) {
                   desc.render_controllers = [];
                 }
-                desc.render_controllers.push({ "controller.render.costume.flownix": false });
-                desc.render_controllers.push({ "controller.render.costume.friends": false });
-                desc.render_controllers.push({ "controller.render.costume.patcher": false });
-                desc.render_controllers.push({ "controller.render.costume.greenBacker": false });
-                desc.render_controllers.push({ "controller.render.costume.blueBacker": false });
-                desc.render_controllers.push({ "controller.render.costume.pinkBacker": false });
-                desc.render_controllers.push({ "controller.render.costume.blackBacker": false });
-                desc.render_controllers.push({ "controller.render.costume.whiteBacker": false });
+                // desc.render_controllers.push({ "controller.render.costume.flownix": false });
+                // desc.render_controllers.push({ "controller.render.costume.friends": false });
+                // desc.render_controllers.push({ "controller.render.costume.patcher": false });
+                // desc.render_controllers.push({ "controller.render.costume.greenBacker": false });
+                // desc.render_controllers.push({ "controller.render.costume.blueBacker": false });
+                // desc.render_controllers.push({ "controller.render.costume.pinkBacker": false });
+                // desc.render_controllers.push({ "controller.render.costume.blackBacker": false });
+                // desc.render_controllers.push({ "controller.render.costume.whiteBacker": false });
                 desc.render_controllers.push({ "controller.render.player.floralCape": "(!variable.is_first_person || query.is_in_ui || variable.is_paperdoll) && !query.is_spectator && !variable.map_face_icon" });
                 desc.render_controllers.push({ "controller.render.player.eyes": "(!variable.is_first_person || query.is_in_ui || variable.is_paperdoll) && !query.is_spectator && !variable.map_face_icon" });
               }
