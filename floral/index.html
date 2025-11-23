@@ -1,283 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<title>
-FwX · FloralCape
-</title>
-<link rel="icon" type="image/png" sizes="350x350" href="https://sfwx.github.io/floral/pack_icon.png">
-<meta name="author" content="FlowniX · Murilo de Moura S.">
-<meta name="developer" content="FlowniX · Murilo de Moura S.">
-<meta name="copyright" content="https://sfwx.github.io/copyright">
-<meta name="twitter:creator" content="@FwX0_">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="https://sfwx.github.io/floral">
-<meta name="twitter:site" content="@FwX0_">
-<meta name="theme-color" content="#70922d">
-<meta property="og:title" content="FwX · FloralCape">
-<meta name="twitter:title" content="FwX · FloralCape">
-<meta property="og:description" content="✨ FloralCape · Skin generator in FloralCape format.">
-<meta name="twitter:description" content="✨ FloralCape · Skin generator in FloralCape format.">
-<meta property="og:image" content="https://sfwx.github.io/floral/pack_icon.png">
-<meta name="twitter:image" content="https://sfwx.github.io/floral/pack_icon.png">
-<meta name="twitter:card" content="summary_small_image">  
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      FwX · FloralCape
+    </title>
+    <link rel="icon" type="image/png" sizes="350x350" href="https://sfwx.github.io/floral/pack_icon.png">
+    <meta name="author" content="FlowniX · Murilo de Moura S.">
+    <meta name="developer" content="FlowniX · Murilo de Moura S.">
+    <meta name="copyright" content="https://sfwx.github.io/copyright">
+    <meta name="twitter:creator" content="@FwX0_">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="https://sfwx.github.io/floral">
+    <meta name="twitter:site" content="@FwX0_">
+    <meta name="theme-color" content="#70922d">
+    <meta property="og:title" content="FwX · FloralCape">
+    <meta name="twitter:title" content="FwX · FloralCape">
+    <meta property="og:description" content="✨ FloralCape · Skin generator in FloralCape format.">
+    <meta name="twitter:description" content="✨ FloralCape · Skin generator in FloralCape format.">
+    <meta property="og:image" content="https://sfwx.github.io/floral/pack_icon.png">
+    <meta name="twitter:image" content="https://sfwx.github.io/floral/pack_icon.png">
+    <meta name="twitter:card" content="summary_small_image">  
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<!--------------------------------------------------------------------
     <link rel="preload" as="image" href="https://sfwx.github.io/floral/64/dummy.png">
-   <link rel="preload" as="image" href="https://sfwx.github.io/floral/128/dummy.png">
-   <link rel="preload" as="image" href="https://sfwx.github.io/floral/64/signature.png">
-   <link rel="preload" as="image" href="https://sfwx.github.io/floral/128/signature.png">
-   <link rel="preload" as="image" href="https://sfwx.github.io/floral/64/cape.png">
+    <link rel="preload" as="image" href="https://sfwx.github.io/floral/128/dummy.png">
+    <link rel="preload" as="image" href="https://sfwx.github.io/floral/64/signature.png">
+    <link rel="preload" as="image" href="https://sfwx.github.io/floral/128/signature.png">
+    <link rel="preload" as="image" href="https://sfwx.github.io/floral/64/cape.png">
     <link rel="preload" as="image" href="https://sfwx.github.io/floral/128/cape.png">
-<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<style>
-@font-face {
-font-family: "Minecraft";
-        src: url("https://sfwx.github.io/Minecraft.otf") format("opentype");
-}
-@font-face {
-font-family: "Minecraft";
-font-weight: bold;
-        src: url("../MinecraftBold.otf") format("opentype");
-}
-      a.fwxCopyright {
-text-decoration: none;
-font-size: 12.5px;
-        margin-top: 2.5px;
-        display: block;
-color: #cccccc;
-}
-body {
-        background-color: #5c7a20;
-        font-family: "Minecraft";
-        padding: 0;
-margin: 0;
-}
-      div.fwxNavBar {
-        background-color: #496415;
-        align-items: center;
-        overflow: hidden;
-font-size: 24px;
-        color: #f2f2f2;
-        display: flex;
-padding: 10px;
-}
-      div.fwxNavBar img {
-        margin-right: 10px;
-        height: 40px;
-}
-      div.fwxNavBar span {
-        text-decoration: none;
-        position: fixed;
-        color: #cccccc;
-        right: 15px;
-}
-      div.fwxNavBar a {
-        text-decoration: none;
-        color: #cccccc;
-}
-div#fwxSkinPreview {
-background-image: url("https://sfwx.github.io/floral/64/dummy.png");
-image-rendering: pixelated;
-        background-color: #618023;
-        background-size: 325px;
-        height: 325px;
-        width: 325px;
-}
-      button.fwxInput {
-        background-color: #496415;
-        font-family: "Minecraft";
-        font-size: 24px;
-        color: #f2f2f2;
-        height: 45px;
-        width: 325px;
-        border: none;
-}
-</style>
-</head>
-<body>
-    <div class="fwxNavBar">
-      <img src="https://sfwx.github.io/floral/pack_icon.png">
-      FloralCape
-      <span>
-        <a id="fwxChangeLang" href="javascript:fwxChangeLang();">
-          pt
-        </a>
-        /
-        <a id="fwxHelp" href="./help">
-          ajuda >
-        </a>
-      </span>
-</div>
-    <br><br>
-    <center>
-      <input id="fwxImagesInput" type="file" name="fwxImagesInput" multiple hidden onchange="fwxHandleUpload();">
-      <button id="fwxImages" class="fwxInput" onclick="document.getElementById('fwxImagesInput').click();">
-        Selecionar Skin & Capa
-</button>
-      <br><br>
-      <canvas id="fwxSkin" width="64px" height="64px" hidden></canvas>
-      <div id="fwxSkinPreview" style="background-image: url('https://sfwx.github.io/floral/64/dummy.png');"></div>
-      <br>
-      <a href="https://github.com/sfwx/sfwx.github.io/raw/main/FloralCapes.mcpack" download>
-        <button id="fwxResource" class="fwxInput">
-          Pacote de Textura
-</button>
-</a>
-      <br>
-      <input id="fwxJsonInput" type="file" name="fwxJsonInput" hidden onchange="fwxUpdateJson();">
-      <button id="fwxJson" class="fwxInput" onclick="document.getElementById('fwxJsonInput').click();" style="display: block; margin-top: 7.5px;">
-        Atualizar Json
+--------------------------------------------------------------------!>
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="fwxHeader">
+      Floral Capes
+    </div>
+    <div class="fwxContainer">
+      <div class="fwxDescription">
+        <strong>@</strong> Explore nossa ferramenta de geração de capas! Use todos os recursos disponíveis e divirta-se!
+      </div>
+      <input id="fwxFileInput" type="file" onchange="fwxHandleUpload();" multiple hidden>
+      <canvas id="fwxCanvas" width="64px" height="64px" hidden></canvas>
+      <img id="fwxPreview" src="https://sfwx.github.io/floral/64/dummy.png" style="background-color: #222222; image-rendering: pixelated; margin-bottom: 12.5px;" hidden>
+      <button class="fwxButton" style="margin-bottom: 10px; margin-left: 0.25px;" onclick="document.getElementById('fwxFileInput').click();">
+        Import your Skin (64x64)
       </button>
-      <br>
-      <a id="fwxCopyright" href="https://sfwx.github.io/copyright" class="fwxCopyright">© Direitos Autorais · Murilo de Moura Santos</a>
-    </center>
-<script>
-      function fwxChangeLang() {
-        if (document.documentElement.lang === "pt-BR") {
-          document.documentElement.lang = "en-US";
-          document.getElementById("fwxChangeLang").innerHTML = "en";
-          document.getElementById("fwxHelp").innerHTML = "help >";
-          document.getElementById("fwxImages").innerHTML = "Select Skin & Cape";
-          document.getElementById("fwxCopyright").innerHTML = "© Copyright · Murilo de Moura Santos";
-          document.getElementById("fwxResource").innerHTML = "Texture Pack";
-          document.getElementById("fwxJson").innerHTML = "Update Json";
-        }
-        else {
-          document.documentElement.lang = "pt-BR";
-          document.getElementById("fwxChangeLang").innerHTML = "pt";
-          document.getElementById("fwxHelp").innerHTML = "ajuda >";
-          document.getElementById("fwxCopyright").innerHTML = "© Direitos Autorais · Murilo de Moura Santos";
-          document.getElementById("fwxImages").innerHTML = "Selecionar Skin & Capa";
-          document.getElementById("fwxResource").innerHTML = "Pacote de Textura";
-          document.getElementById("fwxJson").innerHTML = "Atualizar Json";
-        }
-}
-async function fwxLoadImage(src) {
-return new Promise((resolve, reject) => {
-const img = new Image();
-img.onload = () => resolve(img);
-img.onerror = reject;
-img.src = src;
-});
-}
-      async function fwxCreateSkin(size, skinFile, capeFile) {
-        if (size === 64) {
-          const skinPreview = document.getElementById("fwxSkinPreview");
-          const skinCanvas = document.getElementById("fwxSkin");
-          const skinImg = skinCanvas.getContext("2d");
-          skinImg.clearRect(0, 0, skinCanvas.width, skinCanvas.height);
-          const skin = await fwxLoadImage(URL.createObjectURL(skinFile));
-          const cape = await fwxLoadImage(URL.createObjectURL(capeFile));
-          const sign = await fwxLoadImage("./64/signature.png");
-          skinImg.drawImage(skin, 0, 0);
-          skinImg.drawImage(skin, 8, 8, 8, 8, 56, 0, 8, 8);
-
-          skinImg.drawImage(cape, 1, 1, 5, 16, 56, 16, 5, 16);
-          skinImg.drawImage(cape, 6, 1, 5, 16, 56, 32, 5, 16);
-          skinImg.drawImage(sign, 0, 0, 64, 64, 0, 0, 64, 64);
-          skinPreview.style.backgroundImage = 'url(\'' + skinCanvas.toDataURL() + '\')';
-        }
-      }
-      function fwxHandleUpload() {
-        const skinFile = document.getElementById("fwxImagesInput").files[0];
-        const capeFile = document.getElementById("fwxImagesInput").files[1];
-        if (skinFile && capeFile && skinFile.type === "image/png" && capeFile.type === "image/png") {
-          const skinPreview = document.getElementById("fwxSkinPreview");
-          fwxCreateSkin(64, skinFile, capeFile);
-          skinPreview.onclick = fwxSkinDownload;
-}
-        else {
-          if (document.documentElement.lang === "pt-BR") {
-            alert("Escolha os arquivos de Skin e uma Capa no formato png ao selecionar suas texturas.");
-          }
-          else {
-            alert("Choose Skin and Cape files in png format when selecting your textures.");
-          }
-}
-}
-function fwxSkinDownload() {
-        const skinCanvas = document.getElementById("fwxSkin");
-        const skinName = document.getElementById("fwxImagesInput").files[0].name;
-const link = document.createElement("a");
-        link.download = skinName;
-        link.href = skinCanvas.toDataURL();
-link.click();
-link.remove();
-}
-function fwxUpdateJson() {
-        const input = document.getElementById("fwxJsonInput");
-        const file = input.files[0];
-if (file && file.type === "application/json") {
-const reader = new FileReader();
-reader.onload = function(event) {
-try {
-let json = JSON.parse(event.target.result);
-              // Verifique se as propriedades existem antes de modificá-las
-if (json["minecraft:client_entity"] && json["minecraft:client_entity"].description) {
-let desc = json["minecraft:client_entity"].description;
-desc.materials = desc.materials || {};
-desc.materials.costume = "entity";
-desc.textures = desc.textures || {};
-desc.textures.flownix = "textures/models/flownix";
-desc.textures.friends = "textures/models/friends";
-desc.textures.patcher = "textures/models/patcher";
-desc.textures.greenBacker = "textures/models/greenBacker";
-desc.textures.blueBacker = "textures/models/blueBacker";
-desc.textures.pinkBacker = "textures/models/pinkBacker";
-desc.textures.blackBacker = "textures/models/blackBacker";
-desc.textures.whiteBacker = "textures/models/whiteBacker";
-desc.textures.cape = "textures/models/floralCape64";
-desc.geometry = desc.geometry || {};
-desc.geometry.flownix = "geometry.costume.flownix";
-desc.geometry.cube = "geometry.costume.cube";
-desc.geometry.backer = "geometry.costume.backer";
-desc.geometry.cape = "geometry.flownix.cape";
-desc.geometry.eyes = "geometry.player.eyes";
-desc.scripts = desc.scripts || { animate: [] };
-if (!Array.isArray(desc.scripts.animate)) {
-desc.scripts.animate = [];
-}
-desc.scripts.animate.push("costume");
-desc.animations = desc.animations || {};
-desc.animations.cape = "animation.player.cape";
-desc.animations.costume = "animation.costume.fly";
-desc.render_controllers = desc.render_controllers || [];
-if (!Array.isArray(desc.render_controllers)) {
-desc.render_controllers = [];
-}
-desc.render_controllers.push({ "controller.render.costume.flownix": false });
-desc.render_controllers.push({ "controller.render.costume.friends": false });
-desc.render_controllers.push({ "controller.render.costume.patcher": false });
-desc.render_controllers.push({ "controller.render.costume.greenBacker": false });
-desc.render_controllers.push({ "controller.render.costume.blueBacker": false });
-desc.render_controllers.push({ "controller.render.costume.pinkBacker": false });
-desc.render_controllers.push({ "controller.render.costume.blackBacker": false });
-desc.render_controllers.push({ "controller.render.costume.whiteBacker": false });
-desc.render_controllers.push({ "controller.render.player.floralCape": "(!variable.is_first_person || query.is_in_ui || variable.is_paperdoll) && !query.is_spectator && !variable.map_face_icon" });
-desc.render_controllers.push({ "controller.render.player.eyes": "(!variable.is_first_person || query.is_in_ui || variable.is_paperdoll) && !query.is_spectator && !variable.map_face_icon" });
-}
-else {
-throw new Error("Estrutura do JSON inválida.");
-}
-              // Criação e download do novo JSON
-const blob = new Blob([JSON.stringify(json, null, 2)], { type: "application/json" });
-const link = document.createElement("a");
-link.href = URL.createObjectURL(blob);
-link.download = file.name;
-link.click();
-link.remove();
-}
-            catch (e) {
-              alert("Erro ao processar o JSON: " + e.message);
-}
-};
-reader.readAsText(file);
-}
-else {
-alert("Por favor, selecione um arquivo JSON válido.");
-}
-}
-</script>
-</body>
-</html>
+      <div class="fwxGrid">
+        <div id="fwxCapePreview" style="background-image: url('https://sfwx.github.io/floral/64/cape.png');"></div>
+        <div class="fwxButtons">
+          <div id="fwxSkinPreview" style="background-image: url('https://sfwx.github.io/floral/64/dummy.png');"></div>
+          <button class="fwxButton" style="width: 195px;" onclick="document.getElementById('fwxFileInput').click();">
+            Import your Cape
+          </button>
+        </div>
+      </div>
+      <div class="fwxButtons" style="margin-left: 1px; margin-top: -20px;">
+        <button id="fwxSaveButton" class="fwxButton" onclick="fwxCreateSkin();" disabled>
+          Save
+        </button>
+        <a href="https://github.com/sfwx/sfwx.github.io/raw/main/FloralCapes.mcpack" download>
+          <button class="fwxButton">
+            Texture Pack
+          </button>
+        </a>
+        <button class="fwxButton" onclick="document.getElementById('fwxFileInput').click();">
+          Update Json
+        </button>
+      </div>
+    </div>
+    <div class="fwxCopyright">
+      <a href="https://sfwx.github.io/copyright?type=Minecraft">
+        &copy; Copyright · Murilo de Moura Santos
+      </a>
+    </div>
+    <div class="fwxContainer">
+      <div class="fwxConsoleContainer">
+        <div id="fwxConsole">Aguardando arquivo...</div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  </html>
