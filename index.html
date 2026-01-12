@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      FwX · Central de Projetos
+    </title>
+    <link rel="icon" type="image/png" sizes="350x350" href="https://sfwx.github.io/index.png">
+    <meta name="author" content="FlowniX · Murilo de Moura S.">
+    <meta name="developer" content="FlowniX · Murilo de Moura S.">
+    <meta name="copyright" content="https://sfwx.github.io/copyright">
+    <meta name="twitter:creator" content="@FwX0_">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="https://sfwx.github.io/floral">
+    <meta name="twitter:site" content="@FwX0_">
+    <meta name="theme-color" content="#1e90ff">
+    <meta property="og:title" content="FwX · Central de Projetos">
+    <meta name="twitter:title" content="FwX · Central de Projetos">
+    <meta property="og:description" content="Todos os meus projetos, máquinas, sistemas, aplicativos, easter eggs e outros redirecionamentos organizados em um único espaço, prontos para acesso imediato.">
+    <meta name="twitter:description" content="Todos os meus projetos, máquinas, sistemas, aplicativos, easter eggs e outros redirecionamentos organizados em um único espaço, prontos para acesso imediato.">
+    <meta property="og:image" content="https://sfwx.github.io/index.png">
+    <meta name="twitter:image" content="https://sfwx.github.io/index.png">
+    <meta name="twitter:card" content="summary_small_image">  
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="bg-gradient"></div>
+    <div class="bg-glow"></div>
+    <main class="glass-card">
+
+      <!-- BIO -->
+      <div id="bio-ui">
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <img src="https://sfwx.github.io/index0.png" alt="Icon1" class="brand-icon" style="margin-right: 1rem;">
+          <img src="https://sfwx.github.io/signature.png" alt="Icon2" class="brand-icon" style="margin-left: 1rem;">
+        </div>
+        <span class="nickname">
+          Murilo M.S. / FlowniX
+        </span>
+        <h1>
+          Central de Projetos
+        </h1>
+        <p class="bio-text">
+          Todos os meus projetos, máquinas, sistemas, aplicativos, easter eggs e outros redirecionamentos organizados em um único espaço, prontos para acesso imediato.
+        </p>
+        <div class="tag-container">
+          <span class="tag">
+            FlowniX
+          </span>
+          <span class="tag">
+            FwX
+          </span>
+          <span class="tag">
+            FwX404
+          </span>
+          <span class="tag">
+            TheCatDark
+          </span>
+          <span class="tag">
+            TCatDark
+          </span>
+          <span class="tag">
+            TCD
+          </span>
+        </div>
+        <div class="shortcut-wrapper">
+          <input type="number" class="shortcut-input" placeholder="0000" onkeydown="handleInput(event, this)">
+        </div>
+      </div>
+
+      <!-- REDIRECT -->
+      <div id="redirect-ui" style="display: none; padding: 1rem 0;">
+        <img src="https://sfwx.github.io/index0.png" alt="Icon" class="brand-icon">
+        <p class="nickname">
+          Acessando atalho
+          <span id="target-name" style="margin: 0.5rem 0; font-family: monospace; color: var(--accent);"></span>
+        </p>
+        <p style="font-size: 0.8rem; color: #64748b;">
+          Aguarde a conexão segura...
+        </p>
+        <div class="loader-track">
+          <div class="loader-fill" id="progress"></div>
+        </div>
+      </div>
+
+      <!-- ERROR -->
+      <div id="error-ui" style="display: none;">
+        <img src="https://sfwx.github.io/index0.png" alt="Icon" class="brand-icon">
+        <h1>
+          Área desconhecida!
+        </h1>
+        <p class="bio-text">
+          Você foi longe demais… esse atalho não está no mapa!
+        </p>
+        <div class="shortcut-wrapper">
+          <input type="number" class="shortcut-input" placeholder="Tentar novo ID..." onkeydown="handleInput(event, this)">
+        </div>
+      </div>
+
+      <footer class="footer-copyright">
+        © <span id="year"></span> FlowniX. Conteúdo Protegido.<br>
+        <a href="https://sfwx.github.io/copyright">
+          Direitos Autorais & Termos
+        </a>
+      </footer>
+    </main>
+    <script type="text/javascript" src="script.js" defer></script>
+  </body>
+</html>
