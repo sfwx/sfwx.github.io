@@ -125,30 +125,22 @@
             <h1>Editor de estrutura de Item</h1>
         </header>
 
-        <div class="full-width">
-            <label>Cole o JSON Completo aqui</label>
-            <textarea id="rawJsonInput" placeholder='Cole o conteúdo do seu arquivo de item json aqui...'>{"type":"compound","name":"","value":{"format_version":{"type":"int","value":1},"size":{"type":"list","value":{"type":"int","value":[1,1,1]}},"structure":{"type":"compound","value":{"block_indices":{"type":"list","value":{"type":"list","value":[{"type":"end","value":[]},{"type":"end","value":[]}]}},"entities":{"type":"list","value":{"type":"compound","value":[{"Age":{"type":"short","value":5975},"Chested":{"type":"byte","value":0},"Color":{"type":"byte","value":0},"Color2":{"type":"byte","value":0},"FallDistance":{"type":"float","value":0},"Health":{"type":"short","value":5},"Invulnerable":{"type":"byte","value":0},"IsAngry":{"type":"byte","value":0},"IsAutonomous":{"type":"byte","value":0},"IsBaby":{"type":"byte","value":0},"IsEating":{"type":"byte","value":0},"IsGliding":{"type":"byte","value":0},"IsGlobal":{"type":"byte","value":0},"IsIllagerCaptain":{"type":"byte","value":0},"IsOrphaned":{"type":"byte","value":0},"IsOutOfControl":{"type":"byte","value":0},"IsRoaring":{"type":"byte","value":0},"IsScared":{"type":"byte","value":0},"IsStunned":{"type":"byte","value":0},"IsSwimming":{"type":"byte","value":0},"IsTamed":{"type":"byte","value":0},"IsTrusting":{"type":"byte","value":0},"Item":{"type":"compound","value":{"Block":{"type":"compound","value":{"name":{"type":"string","value":"minecraft:glass"},"states":{"type":"compound","value":{}},"version":{"type":"int","value":18168865}}},"Count":{"type":"byte","value":1},"Damage":{"type":"short","value":0},"Name":{"type":"string","value":"minecraft:"},"WasPickedUp":{"type":"byte","value":0},"tag":{"value":{"display":{"value":{"Name":{"value":""},"Lore":{"value":{"value":[""]}}}},"ench":{"value":{"value":[]}},"Unbreakable":{"value":0}}}}},"LootDropped":{"type":"byte","value":0},"MarkVariant":{"type":"int","value":0},"Motion":{"type":"list","value":{"type":"float","value":[0,0,0]}},"OnGround":{"type":"byte","value":1},"OwnerID":{"type":"long","value":[-1,-1]},"OwnerNew":{"type":"long","value":[-1,-1]},"PortalCooldown":{"type":"int","value":0},"Pos":{"type":"list","value":{"type":"float","value":[0.5,0.5,0.5]}},"Rotation":{"type":"list","value":{"type":"float","value":[0,0]}},"Saddled":{"type":"byte","value":0},"Sheared":{"type":"byte","value":0},"ShowBottom":{"type":"byte","value":0},"Sitting":{"type":"byte","value":0},"SkinID":{"type":"int","value":0},"Strength":{"type":"int","value":0},"StrengthMax":{"type":"int","value":0},"Tags":{"type":"list","value":{"type":"end","value":["FwX404"]}},"UniqueID":{"type":"long","value":[-3,95]},"Variant":{"type":"int","value":0},"definitions":{"type":"list","value":{"type":"end","value":[]}},"identifier":{"type":"string","value":"minecraft:item"},"internalComponents":{"type":"compound","value":{}},"CustomName":{"value":""}}]}},"palette":{"type":"compound","value":{}}}},"structure_world_origin":{"type":"list","value":{"type":"int","value":[0,0,0]}}}}</textarea>
-            <button class="btn-apply btn-load" onclick="carregarDados()">Carregar dados para o editor</button>
-        </div>
-
-        <hr style="border: 0; border-top: 1px solid var(--border); margin: 30px 0;">
-
         <div class="form-grid">
             <div>
                 <label>Quantidade</label>
-                <input id="count" type="number">
+                <input id="count" type="number" placeholder="1 a 64">
             </div>
             <div>
                 <label>Item (ID)</label>
-                <input id="itemId" placeholder="minecraft:sword">
+                <input id="itemId" placeholder="minecraft:diamond">
             </div>
             <div class="full-width">
                 <label>Nome (Display)</label>
-                <input id="displayName">
+                <input id="displayName" placeholder="Diamante">
             </div>
             <div class="full-width">
                 <label>Descrição (Lore linha 1)</label>
-                <textarea id="lore"></textarea>
+                <textarea id="lore" placeholder="Diamante brilhante"></textarea>
             </div>
             <div class="full-width">
                 <label>Encantamentos (JSON bruto)</label>
@@ -156,15 +148,15 @@
             </div>
             <div>
                 <label>Inquebrável</label>
-                <input id="unbreakable" type="number">
+                <input id="unbreakable" type="number" placeholder="0 ou 1">
             </div>
             <div>
                 <label>Tag</label>
-                <input id="tag">
+                <input id="tag" placeholder="FwX404">
             </div>
             <div class="full-width">
                 <label>Custom Name</label>
-                <input id="customName">
+                <input id="customName" placeholder="Diamante">
             </div>
         </div>
 
@@ -184,7 +176,7 @@
             <a href="https://sfwx.github.io/copyright">Direitos Autorais & Termos</a>
         </footer>
     </main>
-
+    <script src="item.js"></script>
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
         let currentItemData = null; // Armazena o objeto JSON carregado
@@ -206,22 +198,35 @@
 
         // FUNÇÃO PARA CARREGAR O JSON DO TEXTAREA
         function carregarDados() {
-            const input = document.getElementById('rawJsonInput').value;
-            try {
-                currentItemData = JSON.parse(input);
-                const entity = currentItemData.value.structure.value.entities.value.value[0];
+          try {
+            // item vem direto do item.js
+            currentItemData = structuredClone(item);
 
-                document.getElementById('count').value = entity.Item?.value?.Count?.value ?? 1;
-                document.getElementById('itemId').value = entity.Item?.value?.Name?.value ?? "";
-                document.getElementById('displayName').value = entity.Item?.value?.tag?.value?.display?.value?.Name?.value ?? "";
-                document.getElementById('lore').value = entity.Item?.value?.tag?.value?.display?.value?.Lore?.value?.value?.[0] ?? "";
-                document.getElementById('ench').value = JSON.stringify(entity.Item?.value?.tag?.value?.ench?.value?.value ?? [], null, 0);
-                document.getElementById('unbreakable').value = entity.Item?.value?.tag?.value?.Unbreakable?.value ?? 0;
-                document.getElementById('tag').value = entity.Tags?.value?.value?.[0] ?? "";
-                document.getElementById('customName').value = entity.CustomName?.value ?? "";
-            } catch (e) {
-                alert("Erro ao ler JSON: Certifique-se de que o texto colado é um JSON válido.");
-            }
+            const entity = currentItemData.value.structure.value.entities.value.value[0];
+
+            document.getElementById('count').value = entity.Item?.value?.Count?.value ?? 1;
+
+            document.getElementById('itemId').value = entity.Item?.value?.Name?.value ?? "";
+
+            document.getElementById('displayName').value = entity.Item?.value?.tag?.value?.display?.value?.Name?.value ?? "";
+
+            document.getElementById('lore').value = entity.Item?.value?.tag?.value?.display?.value?.Lore?.value?.value?.[0] ?? "";
+
+            document.getElementById('ench').value = JSON.stringify(entity.Item?.value?.tag?.value?.ench?.value?.value ?? []);
+
+            document.getElementById('unbreakable').value =
+              entity.Item?.value?.tag?.value?.Unbreakable?.value ?? 0;
+
+            document.getElementById('tag').value =
+              entity.Tags?.value?.value?.[0] ?? "";
+
+            document.getElementById('customName').value =
+              entity.CustomName?.value ?? "";
+
+          } catch (e) {
+            alert("Erro ao carregar item.js");
+            console.error(e);
+          }
         }
 
         function aplicar() {
@@ -254,6 +259,7 @@
             a.click();
             URL.revokeObjectURL(url);
         }
+        window.addEventListener("load", carregarDados);
     </script>
 </body>
 </html>
