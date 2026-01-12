@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        FwX · Lista de Produtos
+    </title>
+    <link rel="icon" type="image/png" sizes="350x350" href="icon/v2.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Lilita+One&display=swap">
+    <style>
+        body {
+            font-family: "Open Sans", Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        h2 {
+            font-family: "Archivo Black", sans-serif;
+            font-size: 24px;
+            margin-top: 30px;
+            color: #4CAF50;
+        }
+
+        .product-list, .owned-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .product-list li, .owned-list li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-list li input[type="checkbox"] {
+            margin-right: 15px;
+        }
+
+        .owned-list li span {
+            font-size: 18px;
+            margin-right: 15px;
+            flex: 1;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            margin-top: 15px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            padding: 15px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button + button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Catálogo de Produtos</h1>
+    <ul id="productList" class="product-list">        <li><input type="checkbox" name="product" value="Abobrinha Itália"> Abobrinha Itália</li>
+        <li><input type="checkbox" name="product" value="Alho"> Alho</li>
+        <li><input type="checkbox" name="product" value="Alho-poró"> Alho-poró</li>
+        <li><input type="checkbox" name="product" value="Almeirão Amargo"> Almeirão Amargo</li>
+        <li><input type="checkbox" name="product" value="Almeirão Pão"> Almeirão Pão</li>
+        <li><input type="checkbox" name="product" value="Batata Doce"> Batata Doce</li>
+        <li><input type="checkbox" name="product" value="Batata Especial"> Batata Especial</li>
+        <li><input type="checkbox" name="product" value="Batata Lavada"> Batata Lavada</li>
+        <li><input type="checkbox" name="product" value="Berinjela"> Berinjela</li>
+        <li><input type="checkbox" name="product" value="Beterraba"> Beterraba</li>
+        <li><input type="checkbox" name="product" value="Brócolis Ninja"> Brócolis Ninja</li>
+        <li><input type="checkbox" name="product" value="Cebola"> Cebola</li>
+        <li><input type="checkbox" name="product" value="Cenoura"> Cenoura</li>
+        <li><input type="checkbox" name="product" value="Chuchu"> Chuchu</li>
+        <li><input type="checkbox" name="product" value="Coentro"> Coentro</li>
+        <li><input type="checkbox" name="product" value="Couve Manteiga"> Couve Manteiga</li>
+        <li><input type="checkbox" name="product" value="Couve-flor"> Couve-flor</li>
+        <li><input type="checkbox" name="product" value="Escarola"> Escarola</li>
+        <li><input type="checkbox" name="product" value="Gengibre"> Gengibre</li>
+        <li><input type="checkbox" name="product" value="Milho"> Milho</li>
+        <li><input type="checkbox" name="product" value="Pepino Comum"> Pepino Comum</li>
+        <li><input type="checkbox" name="product" value="Pepino Japonês"> Pepino Japonês</li>
+        <li><input type="checkbox" name="product" value="Pimentão Amarelo"> Pimentão Amarelo</li>
+        <li><input type="checkbox" name="product" value="Pimentão Verde"> Pimentão Verde</li>
+        <li><input type="checkbox" name="product" value="Pimentão Vermelho"> Pimentão Vermelho</li>
+        <li><input type="checkbox" name="product" value="Quiabo"> Quiabo</li>
+        <li><input type="checkbox" name="product" value="Repolho"> Repolho</li>
+        <li><input type="checkbox" name="product" value="Rúcula"> Rúcula</li>
+        <li><input type="checkbox" name="product" value="Salsa"> Salsa</li>
+        <li><input type="checkbox" name="product" value="Abacate"> Abacate</li>
+        <li><input type="checkbox" name="product" value="Abacaxi"> Abacaxi</li>
+        <li><input type="checkbox" name="product" value="Agrião"> Agrião</li>
+        <li><input type="checkbox" name="product" value="Alface Americana"> Alface Americana</li>
+        <li><input type="checkbox" name="product" value="Alface Crespa"> Alface Crespa</li>
+        <li><input type="checkbox" name="product" value="Alface Lisa"> Alface Lisa</li>
+        <li><input type="checkbox" name="product" value="Alface Mimosa"> Alface Mimosa</li>
+        <li><input type="checkbox" name="product" value="Ameixa"> Ameixa</li>
+        <li><input type="checkbox" name="product" value="Banana Nanica"> Banana Nanica</li>
+        <li><input type="checkbox" name="product" value="Banana Prata"> Banana Prata</li>
+        <li><input type="checkbox" name="product" value="Carambola"> Carambola</li>
+        <li><input type="checkbox" name="product" value="Coco Seco"> Coco Seco</li>
+        <li><input type="checkbox" name="product" value="Coco Verde"> Coco Verde</li>
+        <li><input type="checkbox" name="product" value="Goiaba"> Goiaba</li>
+        <li><input type="checkbox" name="product" value="Hortelã"> Hortelã</li>
+        <li><input type="checkbox" name="product" value="Jabuticaba"> Jabuticaba</li>
+        <li><input type="checkbox" name="product" value="Laranja Lima"> Laranja Lima</li>
+        <li><input type="checkbox" name="product" value="Laranja Pêra"> Laranja Pêra</li>
+        <li><input type="checkbox" name="product" value="Limão"> Limão</li>
+        <li><input type="checkbox" name="product" value="Maçã Fuji"> Maçã Fuji</li>
+        <li><input type="checkbox" name="product" value="Maçã Gala"> Maçã Gala</li>
+        <li><input type="checkbox" name="product" value="Mamão Formosa"> Mamão Formosa</li>
+        <li><input type="checkbox" name="product" value="Mamão Papaya"> Mamão Papaya</li>
+        <li><input type="checkbox" name="product" value="Mandioca"> Mandioca</li>
+        <li><input type="checkbox" name="product" value="Mandioquinha"> Mandioquinha</li>
+        <li><input type="checkbox" name="product" value="Manga Palmer"> Manga Palmer</li>
+        <li><input type="checkbox" name="product" value="Manga Tommy"> Manga Tommy</li>
+        <li><input type="checkbox" name="product" value="Maracujá"> Maracujá</li>
+        <li><input type="checkbox" name="product" value="Melancia"> Melancia</li>
+        <li><input type="checkbox" name="product" value="Melão"> Melão</li>
+        <li><input type="checkbox" name="product" value="Mexerica"> Mexerica</li>
+        <li><input type="checkbox" name="product" value="Morango"> Morango</li>
+        <li><input type="checkbox" name="product" value="Ovo"> Ovo</li>
+        <li><input type="checkbox" name="product" value="Pêra"> Pêra</li>
+        <li><input type="checkbox" name="product" value="Pêssego"> Pêssego</li>
+        <li><input type="checkbox" name="product" value="Tomate Cereja"> Tomate Cereja</li>
+        <li><input type="checkbox" name="product" value="Tomate Italiano"> Tomate Italiano</li>
+        <li><input type="checkbox" name="product" value="Uva Preta"> Uva Preta</li>
+        <li><input type="checkbox" name="product" value="Uva Verde"> Uva Verde</li>
+    </ul>
+
+    <h2>Produtos que você possui</h2>
+    <ul id="ownedList" class="owned-list"></ul>
+
+    <h2>Produtos que você não possui</h2>
+    <textarea id="result" readonly></textarea>
+
+    <button onclick="listProducts()">Listar Produtos</button>
+    <button onclick="copyToClipboard()">Copiar produtos em falta</button>
+
+    <script>
+        document.querySelectorAll('input[type="checkbox"]').forEach(item => {
+            item.addEventListener('change', function() {
+                const ownedList = document.getElementById('ownedList');
+
+                if (this.checked) {
+                    const listItem = document.createElement('li');
+                    listItem.setAttribute('data-product', this.value);
+                    
+                    const productName = document.createElement('span');
+                    productName.textContent = this.value;
+
+                    const inputBox = document.createElement('input');
+                    inputBox.type = 'text';
+                    inputBox.placeholder = 'Adicionar nota';
+                    inputBox.style.flex = '1';
+                    inputBox.style.marginLeft = '10px';
+
+                    listItem.appendChild(productName);
+                    listItem.appendChild(inputBox);
+
+                    ownedList.appendChild(listItem);
+                } else {
+                    const items = ownedList.querySelectorAll('li[data-product="' + this.value + '"]');
+                    items.forEach(item => ownedList.removeChild(item));
+                }
+            });
+        });
+
+        function listProducts() {
+            const products = document.querySelectorAll('input[type="checkbox"]');
+            const result = document.getElementById('result');
+            let output = "*Lista de produtos em falta:*\n\n";
+
+            products.forEach(item => {
+                if (!item.checked) {
+                    output += '- ' + item.value + '.\n';
+                } else {
+                    const ownedItem = document.querySelector('#ownedList li[data-product="' + item.value + '"]');
+                    const note = ownedItem.querySelector('input[type="text"]').value;
+                    if (note) {
+                        output += '- ' + item.value + ': `' + note + '.`\n';
+                    }
+                }
+            });
+            result.value = output.slice(0, -1);
+        }
+
+        function copyToClipboard() {
+            const result = document.getElementById('result');
+            result.select();
+            result.setSelectionRange(0, 99999); 
+            document.execCommand('copy');
+            alert('Texto copiado para a área de transferência!');
+        }
+    </script>
+</body>
+</html>
+
+<!--Abobrinha Itália | Abobrinha Itália-->
+<!--Alho | Alho-->
+<!--Alho-poró | Alho-poró-->
+<!--Almeirão Amargo | Almeirão Amargo-->
+<!--Almeirão Pão | Almeirão Pão-->
+<!--Batata Doce | Batata Doce-->
+<!--Batata Especial | Batata Especial-->
+<!--Batata Lavada | Batata Lavada-->
+<!--Berinjela | Berinjela-->
+<!--Beterraba | Beterraba-->
+<!--Brócolis Ninja | Brócolis Ninja-->
+<!--Cebola | Cebola-->
+<!--Cenoura | Cenoura-->
+<!--Chuchu | Chuchu-->
+<!--Coentro | Coentro-->
+<!--Couve Manteiga | Couve Manteiga-->
+<!--Couve-flor | Couve-flor-->
+<!--Escarola | Escarola-->
+<!--Gengibre | Gengibre-->
+<!--Milho | Milho-->
+<!--Pepino Comum | Pepino Comum-->
+<!--Pepino Japonês | Pepino Japonês-->
+<!--Pimentão Amarelo | Pimentão Amarelo-->
+<!--Pimentão Verde | Pimentão Verde-->
+<!--Pimentão Vermelho | Pimentão Vermelho-->
+<!--Quiabo | Quiabo-->
+<!--Repolho | Repolho-->
+<!--Rúcula | Rúcula-->
+<!--Salsa | Salsa-->
+<!--Abacate | Abacate-->
+<!--Abacaxi | Abacaxi-->
+<!--Agrião | Agrião-->
+<!--Alface Americana | Alface Americana-->
+<!--Alface Crespa | Alface Crespa-->
+<!--Alface Lisa | Alface Lisa-->
+<!--Alface Mimosa | Alface Mimosa-->
+<!--Ameixa | Ameixa-->
+<!--Banana Nanica | Banana Nanica-->
+<!--Banana Prata | Banana Prata-->
+<!--Carambola | Carambola-->
+<!--Coco Seco | Coco Seco-->
+<!--Coco Verde | Coco Verde-->
+<!--Goiaba | Goiaba-->
+<!--Hortelã | Hortelã-->
+<!--Jabuticaba | Jabuticaba-->
+<!--Laranja Lima | Laranja Lima-->
+<!--Laranja Pêra | Laranja Pêra-->
+<!--Limão | Limão-->
+<!--Maçã Fuji | Maçã Fuji-->
+<!--Maçã Gala | Maçã Gala-->
+<!--Mamão Formosa | Mamão Formosa-->
+<!--Mamão Papaya | Mamão Papaya-->
+<!--Mandioca | Mandioca-->
+<!--Mandioquinha | Mandioquinha-->
+<!--Manga Palmer | Manga Palmer-->
+<!--Manga Tommy | Manga Tommy-->
+<!--Maracujá | Maracujá-->
+<!--Melancia | Melancia-->
+<!--Melão | Melão-->
+<!--Mexerica | Mexerica-->
+<!--Morango | Morango-->
+<!--Ovo | Ovo-->
+<!--Pêra | Pêra-->
+<!--Pêssego | Pêssego-->
+<!--Tomate Cereja | Tomate Cereja-->
+<!--Tomate Italiano | Tomate Italiano-->
+<!--Uva Preta | Uva Preta-->
+<!--Uva Verde | Uva Verde-->
+
+<!--!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>
+      FwX · Lista de Produtos
+    </title>
+    <link rel="icon" type="image/png" sizes="350x350" href="images/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Lilita+One&display=swap">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .product-list, .owned-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .owned-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .owned-list span {
+            margin-right: 15px;
+            font-size: 18px;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            margin-top: 15px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 15px;
+            padding: 12px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+  <h1>Catálogo de Produtos</h1>
+  <ul id="productList" class="product-list">
+    <li><input type="checkbox" name="product" value="Abobrinha Itália"> Abobrinha Itália</li>
+    <li><input type="checkbox" name="product" value="Alho"> Alho</li>
+    <li><input type="checkbox" name="product" value="Alho-poró"> Alho-poró</li>
+    <li><input type="checkbox" name="product" value="Almeirão Amargo"> Almeirão Amargo</li>
+    <li><input type="checkbox" name="product" value="Almeirão Pão"> Almeirão Pão</li>
+    <li><input type="checkbox" name="product" value="Batata Doce"> Batata Doce</li>
+    <li><input type="checkbox" name="product" value="Batata Especial"> Batata Especial</li>
+    <li><input type="checkbox" name="product" value="Batata Lavada"> Batata Lavada</li>
+    <li><input type="checkbox" name="product" value="Berinjela"> Berinjela</li>
+    <li><input type="checkbox" name="product" value="Beterraba"> Beterraba</li>
+    <li><input type="checkbox" name="product" value="Brócolis Ninja"> Brócolis Ninja</li>
+    <li><input type="checkbox" name="product" value="Cebola"> Cebola</li>
+    <li><input type="checkbox" name="product" value="Cenoura"> Cenoura</li>
+    <li><input type="checkbox" name="product" value="Chuchu"> Chuchu</li>
+    <li><input type="checkbox" name="product" value="Coentro"> Coentro</li>
+    <li><input type="checkbox" name="product" value="Couve Manteiga"> Couve Manteiga</li>
+    <li><input type="checkbox" name="product" value="Couve-flor"> Couve-flor</li>
+    <li><input type="checkbox" name="product" value="Escarola"> Escarola</li>
+    <li><input type="checkbox" name="product" value="Gengibre"> Gengibre</li>
+    <li><input type="checkbox" name="product" value="Milho"> Milho</li>
+    <li><input type="checkbox" name="product" value="Pepino Comum"> Pepino Comum</li>
+    <li><input type="checkbox" name="product" value="Pepino Japonês"> Pepino Japonês</li>
+    <li><input type="checkbox" name="product" value="Pimentão Amarelo"> Pimentão Amarelo</li>
+    <li><input type="checkbox" name="product" value="Pimentão Verde"> Pimentão Verde</li>
+    <li><input type="checkbox" name="product" value="Pimentão Vermelho"> Pimentão Vermelho</li>
+    <li><input type="checkbox" name="product" value="Quiabo"> Quiabo</li>
+    <li><input type="checkbox" name="product" value="Repolho"> Repolho</li>
+    <li><input type="checkbox" name="product" value="Rúcula"> Rúcula</li>
+    <li><input type="checkbox" name="product" value="Salsa"> Salsa</li>
+    <li><input type="checkbox" name="product" value="Abacate"> Abacate</li>
+    <li><input type="checkbox" name="product" value="Abacaxi"> Abacaxi</li>
+    <li><input type="checkbox" name="product" value="Agrião"> Agrião</li>
+    <li><input type="checkbox" name="product" value="Alface Americana"> Alface Americana</li>
+    <li><input type="checkbox" name="product" value="Alface Crespa"> Alface Crespa</li>
+    <li><input type="checkbox" name="product" value="Alface Lisa"> Alface Lisa</li>
+    <li><input type="checkbox" name="product" value="Alface Mimosa"> Alface Mimosa</li>
+    <li><input type="checkbox" name="product" value="Ameixa"> Ameixa</li>
+    <li><input type="checkbox" name="product" value="Banana Nanica"> Banana Nanica</li>
+    <li><input type="checkbox" name="product" value="Banana Prata"> Banana Prata</li>
+    <li><input type="checkbox" name="product" value="Carambola"> Carambola</li>
+    <li><input type="checkbox" name="product" value="Coco Seco"> Coco Seco</li>
+    <li><input type="checkbox" name="product" value="Coco Verde"> Coco Verde</li>
+    <li><input type="checkbox" name="product" value="Goiaba"> Goiaba</li>
+    <li><input type="checkbox" name="product" value="Hortelã"> Hortelã</li>
+    <li><input type="checkbox" name="product" value="Jabuticaba"> Jabuticaba</li>
+    <li><input type="checkbox" name="product" value="Laranja Lima"> Laranja Lima</li>
+    <li><input type="checkbox" name="product" value="Laranja Pêra"> Laranja Pêra</li>
+    <li><input type="checkbox" name="product" value="Limão"> Limão</li>
+    <li><input type="checkbox" name="product" value="Maçã Fuji"> Maçã Fuji</li>
+    <li><input type="checkbox" name="product" value="Maçã Gala"> Maçã Gala</li>
+    <li><input type="checkbox" name="product" value="Mamão Formosa"> Mamão Formosa</li>
+    <li><input type="checkbox" name="product" value="Mamão Papaya"> Mamão Papaya</li>
+    <li><input type="checkbox" name="product" value="Mandioca"> Mandioca</li>
+    <li><input type="checkbox" name="product" value="Mandioquinha"> Mandioquinha</li>
+    <li><input type="checkbox" name="product" value="Manga Palmer"> Manga Palmer</li>
+    <li><input type="checkbox" name="product" value="Manga Tommy"> Manga Tommy</li>
+    <li><input type="checkbox" name="product" value="Maracujá"> Maracujá</li>
+    <li><input type="checkbox" name="product" value="Melancia"> Melancia</li>
+    <li><input type="checkbox" name="product" value="Melão"> Melão</li>
+    <li><input type="checkbox" name="product" value="Mexerica"> Mexerica</li>
+    <li><input type="checkbox" name="product" value="Morango"> Morango</li>
+    <li><input type="checkbox" name="product" value="Ovo"> Ovo</li>
+    <li><input type="checkbox" name="product" value="Pêra"> Pêra</li>
+    <li><input type="checkbox" name="product" value="Pêssego"> Pêssego</li>
+    <li><input type="checkbox" name="product" value="Tomate Cereja"> Tomate Cereja</li>
+    <li><input type="checkbox" name="product" value="Tomate Italiano"> Tomate Italiano</li>
+    <li><input type="checkbox" name="product" value="Uva Preta"> Uva Preta</li>
+    <li><input type="checkbox" name="product" value="Uva Verde"> Uva Verde</li>
+  </ul>
+  <h2>Produtos que você possui</h2>
+  <ul id="ownedList" class="owned-list"></ul>
+  <h2>Produtos que você não possui</h2>
+  <textarea id="result" readonly></textarea>
+  <button onclick="listProducts()">Listar Produtos</button>
+  <button onclick="copyToClipboard()">Copiar produtos em falta</button>
+
+  <script>
+    document.querySelectorAll('input[type="checkbox"]').forEach(item => {
+        item.addEventListener('change', function() {
+            const ownedList = document.getElementById('ownedList');
+
+            if (this.checked) {
+                const listItem = document.createElement('li');
+                listItem.setAttribute('data-product', this.value);
+                
+                // Criando um span para o nome do produto
+                const productName = document.createElement('span');
+                productName.textContent = this.value;
+
+                // Criando o input de nota
+                const inputBox = document.createElement('input');
+                inputBox.type = 'text';
+                inputBox.placeholder = 'Adicionar nota';
+
+                // Adicionando o nome do produto e o input ao listItem
+                listItem.appendChild(productName);
+                listItem.appendChild(inputBox);
+
+                ownedList.appendChild(listItem);
+            } else {
+                const items = ownedList.querySelectorAll('li[data-product="' + this.value + '"]');
+                items.forEach(item => ownedList.removeChild(item));
+            }
+        });
+    });
+
+    function listProducts() {
+        const products = document.querySelectorAll('input[type="checkbox"]');
+        const result = document.getElementById('result');
+        let output = "*Lista de produtos em falta:*\n\n";
+
+        products.forEach(item => {
+            if (!item.checked) {
+                output += '- ' + item.value + '.\n';
+            } else {
+                const ownedItem = document.querySelector('#ownedList li[data-product="' + item.value + '"]');
+                const note = ownedItem.querySelector('input[type="text"]').value;
+                if (note) {
+                    output += '- ' + item.value + ': `' + note + '.`\n';
+                }
+            }
+        });
+        result.value = output.slice(0, -1);
+    }
+
+    function copyToClipboard() {
+        const result = document.getElementById('result');
+        result.select();
+        result.setSelectionRange(0, 99999); // Para dispositivos móveis
+        document.execCommand('copy');
+        alert('Texto copiado para a área de transferência!');
+    }
+  </script>
+
+</body>
+</html-->

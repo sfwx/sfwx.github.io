@@ -1,0 +1,386 @@
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hortifriti Varejão dos Amigos</title>
+    <link rel="icon" href="https://sfwx.github.io/hvda/icon/v1.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        /* Container principal */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #990100; /* Cor primária */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Menu de navegação */
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        /* Seção de Destaques */
+        .destaques {
+            background-color: #eaeaea;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .destaques h2 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        /* Produtos */
+        .produtos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 30px 20px;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .produto {
+            background-color: #fff;
+            border-radius: 10px;
+            width: calc(25% - 20px); /* Tamanho padrão */
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .produto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .produto img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .produto img:hover {
+            transform: scale(1.05);
+        }
+
+        .produto h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .produto p {
+            font-size: 1em;
+            color: #666;
+            margin: 8px 0;
+        }
+
+        .produto .preco {
+            font-size: 1.5em;
+            color: #990100; /* Cor primária */
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .produto button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            background-color: #990100; /* Cor primária */
+            color: #fff;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .produto button:hover {
+            background-color: #8a0000; /* Cor hover */
+            transform: scale(1.05);
+        }
+
+        /* Avaliações */
+        .avaliacoes {
+            padding: 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .avaliacoes h2 {
+            margin-bottom: 15px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        .avaliacao {
+            margin: 10px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Contato */
+        .contato {
+            padding: 20px;
+            text-align: center;
+            background-color: #eaeaea;
+        }
+
+        .contato h2 {
+            margin-bottom: 15px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        .contato p {
+            margin: 5px 0;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #990100; /* Cor primária */
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-size: 0.9em;
+            position: relative;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsividade */
+        @media (max-width: 1200px) {
+            .produto {
+                width: calc(33.33% - 20px); /* 3 produtos por linha */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .produto {
+                width: calc(50% - 20px); /* 2 produtos por linha */
+            }
+
+            nav {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+                gap: 10px; /* Espaçamento entre os itens */
+            }
+
+            nav a {
+                margin: 0; /* Remove margens laterais */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .produto {
+                width: 100%; /* 1 produto por linha */
+            }
+
+            header h1 {
+                font-size: 2em; /* Tamanho menor do título */
+            }
+
+            nav {
+                grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+            }
+
+            nav a {
+                text-align: center; /* Centraliza o texto */
+                padding: 15px; /* Aumenta o padding */
+            }
+        }
+    </style>
+    <style id="__web-inspector-hide-shortcut-style__">
+.__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after
+{
+    visibility: hidden !important;
+}
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+        <header>
+            <h1>Hortifriti Varejão dos Amigos</h1>
+            <nav>
+                <!--a href="#home">Home</a-->
+                <!--a href="#produtos">Produtos</a-->
+                
+                <!--a href="#avaliacoes">Avaliações</a-->
+                <!--a href="#contato">Contato</a-->
+            </nav>
+        </header>
+
+        <section class="destaques">
+            <h2>Destaques do Mês</h2>
+            <p>Confira os produtos mais populares e em destaque!</p>
+        </section>
+
+        <section class="produtos" id="produtos">
+            <div class="produto">
+                <img src="https://sfwx.github.io/hvda/icon/v1.png" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p>Descrição breve do produto 1.</p>
+                <div class="preco">R$ 10,00</div>
+                <button><i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="https://sfwx.github.io/hvda/icon/v1.png" alt="Produto 2">
+                <h3>Produto 2</h3>
+                <p>Descrição breve do produto 2.</p>
+                <div class="preco">R$ 15,00</div>
+                <button><i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="https://sfwx.github.io/hvda/icon/v1.png" alt="Produto 3">
+                <h3>Produto 3</h3>
+                <p>Descrição breve do produto 3.</p>
+                <div class="preco">R$ 20,00</div>
+                <button><i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="https://sfwx.github.io/hvda/icon/v1.png" alt="Produto 4">
+                <h3>Produto 4</h3>
+                <p>Descrição breve do produto 4.</p>
+                <div class="preco">R$ 25,00</div>
+                <button><i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="https://sfwx.github.io/hvda/icon/v1.png" alt="Produto 5">
+                <h3>Produto 5</h3>
+                <p>Descrição breve do produto 5.</p>
+                <div class="preco">R$ 30,00</div>
+                <button><i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="https://sfwx.github.io/hvda/icon/v1.png" alt="Produto 6">
+                <h3>Produto 6</h3>
+                <p>Descrição breve do produto 6.</p>
+                <div class="preco">R$ 35,00</div>
+                <button><i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="https://sfwx.github.io/hvda/icon/v1.png" alt="Produto 7">
+                <h3>Produto 7</h3>
+                <p>Descrição breve do produto 7.</p>
+                <div class="preco">R$ 40,00</div>
+                <button><i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="https://sfwx.github.io/hvda/icon/v1.png" alt="Produto 8">
+                <h3>Produto 8</h3>
+                <p>Descrição breve do produto 8.</p>
+                <div class="preco">R$ 45,00</div>
+                <button><i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+            </div><div class="produto">
+                <img src="https://sfwx.github.io/hvda/icon/v1.png" alt="Produto 8">
+                <h3>Produto 8</h3>
+                <p>Descrição breve do produto 8.</p>
+                <div class="preco">R$ 45,00</div>
+                <button><i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+            </div><div class="produto">
+                <img src="https://sfwx.github.io/hvda/icon/v1.png" alt="Produto 8">
+                <h3>Produto 8</h3>
+                <p>Descrição breve do produto 8.</p>
+                <div class="preco">R$ 45,00</div>
+                <button><i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+            </div><div class="produto">
+                <img src="https://sfwx.github.io/hvda/icon/v1.png" alt="Produto 8">
+                <h3>Produto 8</h3>
+                <p>Descrição breve do produto 8.</p>
+                <div class="preco">R$ 45,00</div>
+                <button><i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+            </div><div class="produto">
+                <img src="https://sfwx.github.io/hvda/icon/v1.png" alt="Produto 8">
+                <h3>Produto 8</h3>
+                <p>Descrição breve do produto 8.</p>
+                <div class="preco">R$ 45,00</div>
+                <button><i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+            </div>
+        </section>
+
+        <section class="avaliacoes" id="avaliacoes">
+            <h2>Avaliações</h2>
+            <div class="avaliacao">
+                <p><strong>Cliente 1:</strong> Produto incrível! Recomendo a todos.</p>
+            </div>
+            <div class="avaliacao">
+                <p><strong>Cliente 2:</strong> Ótima qualidade e entrega rápida!</p>
+            </div>
+        </section>
+
+        <section class="contato" id="contato">
+            <h2>Contato</h2>
+            <p><i class="fa fa-location-dot"></i> Localização: Av. Cláudio Savietto, 188, Mauá, SP</p>
+            <p><i class="fas fa-phone"></i> Telefone: (11) 98447-2099</p>
+        </section>
+
+        <footer>
+            <p>© 2024 Hortifriti Varejão dos Amigos. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+  </body>
+</html>
