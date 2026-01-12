@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      FwX · FloralCape
+    </title>
+    <link rel="icon" type="image/png" sizes="350x350" href="https://sfwx.github.io/floral/index.png">
+    <meta name="author" content="FlowniX · Murilo de Moura S.">
+    <meta name="developer" content="FlowniX · Murilo de Moura S.">
+    <meta name="copyright" content="https://sfwx.github.io/copyright">
+    <meta name="twitter:creator" content="@FwX0_">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="https://sfwx.github.io/floral">
+    <meta name="twitter:site" content="@FwX0_">
+    <meta name="theme-color" content="#70922d">
+    <meta property="og:title" content="FwX · FloralCape">
+    <meta name="twitter:title" content="FwX · FloralCape">
+    <meta property="og:description" content="✨ FloralCape · Skin generator in FloralCape format.">
+    <meta name="twitter:description" content="✨ FloralCape · Skin generator in FloralCape format.">
+    <meta property="og:image" content="https://sfwx.github.io/floral/index.png">
+    <meta name="twitter:image" content="https://sfwx.github.io/floral/index.png">
+    <meta name="twitter:card" content="summary_small_image">  
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<!--------------------------------------------------------------------
+    <link rel="preload" as="image" href="https://sfwx.github.io/floral/64/dummy.png">
+    <link rel="preload" as="image" href="https://sfwx.github.io/floral/128/dummy.png">
+    <link rel="preload" as="image" href="https://sfwx.github.io/floral/64/signature.png">
+    <link rel="preload" as="image" href="https://sfwx.github.io/floral/128/signature.png">
+    <link rel="preload" as="image" href="https://sfwx.github.io/floral/64/cape.png">
+    <link rel="preload" as="image" href="https://sfwx.github.io/floral/128/cape.png">
+--------------------------------------------------------------------!>
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="fwxHeader">
+      Floral Capes
+    </div>
+    <div class="fwxContainer">
+      <div class="fwxDescription">
+        <strong>@</strong> Explore nossa ferramenta de geração de capas! Use todos os recursos disponíveis e divirta-se!
+      </div>
+      <input id="fwxFileInput" type="file" onchange="fwxHandleUpload();" multiple hidden>
+      <canvas id="fwxCanvas" width="64px" height="64px" hidden></canvas>
+      <img id="fwxPreview" src="https://sfwx.github.io/floral/64/dummy.png" style="background-color: #222222; image-rendering: pixelated; margin-bottom: 12.5px;" hidden>
+      <button class="fwxButton" style="margin-bottom: 10px; margin-left: 0.25px;" onclick="document.getElementById('fwxFileInput').click();">
+        Import your Skin (64x64)
+      </button>
+      <div class="fwxGrid">
+        <div id="fwxCapePreview" style="background-image: url('https://sfwx.github.io/floral/64/cape.png');"></div>
+        <div class="fwxButtons">
+          <div id="fwxSkinPreview" style="background-image: url('https://sfwx.github.io/floral/64/dummy.png');"></div>
+          <button class="fwxButton" style="width: 195px;" onclick="document.getElementById('fwxFileInput').click();">
+            Import your Cape
+          </button>
+        </div>
+      </div>
+      <div class="fwxButtons" style="margin-left: 1px; margin-top: -20px;">
+        <button id="fwxSaveButton" class="fwxButton" onclick="fwxCreateSkin();" disabled>
+          Save
+        </button>
+        <a href="https://github.com/sfwx/sfwx.github.io/raw/main/FloralCapes.mcpack" download>
+          <button class="fwxButton">
+            Texture Pack
+          </button>
+        </a>
+        <button class="fwxButton" onclick="document.getElementById('fwxFileInput').click();">
+          Update Json
+        </button>
+      </div>
+    </div>
+    <div class="fwxCopyright">
+      <a href="https://sfwx.github.io/copyright?type=Minecraft">
+        &copy; Copyright · Murilo de Moura Santos
+      </a>
+    </div>
+    <div class="fwxContainer">
+      <div class="fwxConsoleContainer">
+        <div id="fwxConsole">Aguardando arquivo...</div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  </html>
