@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <title>
+            FwX | Game Test
+        </title>
+        <link rel="icon" href="https://sfwx.github.io/index.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .FlowniX {
+                background-image: url("https://sfwx.github.io/gt/index.png");
+                background-color: forestgreen;
+                background-size: 700%;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+            }
+            body {
+                background-color: forestgreen;
+                overflow-y: hidden;
+                overflow-x: hidden;
+            }
+            #player {
+                transition: top 0.3s ease, left 0.3s ease;
+                background-image: url("https://sfwx.github.io/gt/index.png");
+                background-position: 0px 50px;
+                background-size: 700%;
+                position: absolute;
+                z-index: 5;
+                width: 50px;
+                height: 50px;
+                top: 0;
+                left: 0;
+            }
+            #item {
+                filter: brightness(0.75);
+                left: 42.5px;
+                pointer-events: none;
+            }
+            .seletor {
+                background-color: white;
+                position: absolute;
+                opacity: 25%;
+                width: 50px;
+                height: 50px;
+            }
+            .block {
+                background-image: url("https://sfwx.github.io/gt/index.png");
+                background-position: -300px 0px;
+                background-size: 700%;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+            }
+            .grama {
+                background-image: url("https://sfwx.github.io/gt/index.png");
+                background-color: forestgreen;
+                background-position: -50px 0px;
+                background-size: 700%;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+            }
+            .gramaTerra {
+                background-image: url("https://sfwx.github.io/gt/index.png");
+                background-color: forestgreen;
+                background-position: -100px 0px;
+                background-size: 700%;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+            }
+            .terra {
+                background-image: url("https://sfwx.github.io/gt/index.png");
+                background-color: saddlebrown;
+                background-position: -150px 0px;
+                background-size: 700%;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+            }
+            .pedra {
+                background-image: url("https://sfwx.github.io/gt/index.png");
+                background-color: grey;
+                background-position: -200px 0px;
+                background-size: 700%;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+            }
+        </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                if (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth > 768) {
+                const worlds = [
+                    {
+                        "size": [28, 16],
+                        "textures": {
+                            "grama": [],
+                            "terra": [],
+                            "pedra": []
+                        },
+                        "cubes": [
+                            []
+                        ],
+                        "spawn": [13, 7]
+                    },
+                    {
+                        "size": [28, 16],
+                        "textures": {
+                            "grama": [
+                                [7, 2], [8, 2],
+                                [6, 3], [9, 3],
+                                [16, 4], [17, 4],
+                                [17, 5], [18, 5],
+                                [0, 12], [1, 12], [2, 12], [3, 12], [4, 12], [5, 12], [6, 12], [7, 12], [8, 12], [9, 12],
+                                [10, 12], [14, 12], [15, 12], [16, 12], [17, 12], [18, 12], [19, 12],
+                                [20, 12], [21, 12], [22, 12], [23, 12], [24, 12]
+                            ],
+                            "terra": [
+                                [7, 3], [8, 3],
+                                [16, 5], [17, 5],
+                                [0, 13], [1, 13], [2, 13], [3, 13], [4, 13], [5, 13], [6, 13], [7, 13], [8, 13], [9, 13],
+                                [10, 13], [11, 13], [12, 13], [13, 13], [14, 13], [15, 13], [16, 13], [17, 13], [18, 13], [19, 13],
+                                [20, 13], [21, 13], [22, 13], [23, 13], [24, 13], [25, 13], [26, 13], [27, 13]
+                            ],
+                            "pedra": [
+                                [0, 0], [1, 0], [24, 0], [25, 0], [26, 0], [27, 0],
+                                [0, 1], [26, 1], [27, 1],
+                                [0, 2],
+                                [14, 4], [15, 4],
+                                [13, 5], [14, 5], [15, 5], [27, 5],
+                                [26, 6], [27, 6],
+                                [27, 7],
+                                [2, 8], [3, 8],
+                                [1, 9], [2, 9], [3, 9], [4, 9],
+                                [25, 11], [26, 11], [27, 11],
+                                [11, 12], [12, 12], [13, 12], [24, 12], [25, 12], [26, 12], [27, 12],
+                                [0, 14], [1, 14], [2, 14], [3, 14], [4, 14], [5, 14], [6, 14], [7, 14], [8, 14], [9, 14],
+                                [10, 14], [11, 14], [12, 14], [13, 14], [14, 14], [15, 14], [16, 14], [17, 14], [18, 14], [19, 14],
+                                [20, 14], [21, 14], [22, 14], [23, 14], [24, 14], [25, 14], [26, 14], [27, 14],
+                                [0, 15], [1, 15], [2, 15], [3, 15], [4, 15], [5, 15], [6, 15], [7, 15], [8, 15], [9, 15],
+                                [10, 15], [11, 15], [12, 15], [13, 15], [14, 15], [15, 15], [16, 15], [17, 15], [18, 15], [19, 15],
+                                [20, 15], [21, 15], [22, 15], [23, 15], [24, 15], [25, 15], [26, 15], [27, 15]
+                            ]
+                        },
+                        "cubes": [
+                            []
+                        ],
+                        "spawn": [13, 7]
+                    },
+                    {
+                        "size": [0, 0],
+                        "textures": {
+                            "grama": [],
+                            "terra": [],
+                            "pedra": []
+                        },
+                        "cubes": [
+                            []
+                        ],
+                        "spawn": [13, 6]
+                    }
+                ];
+                const playerFrame = [
+                    [ 0, 50 ],
+                    [ [ 50, 50 ], [ 100, 50 ] ],
+                    [ [ 150, 50 ], [ 200, 50 ] ],
+                    [ [ 250, 50 ], [ 300, 50 ] ],
+                    [ [ 350, 50 ], [ 400, 50 ] ]
+                ];
+                const worldDiv = document.getElementById("world");
+                for (let i = 0; i < worlds[0]["size"][1]; i++) {
+                    for (let j = 0; j < worlds[0]["size"][0]; j++) {
+                        let span = document.createElement("span");
+                        span.id = 'plotX' + i + 'Y' + j;
+                        span.classList.add("grama");
+                        span.style.transform = 'scaleX(' + (Math.random() < 0.5 ? -1 : 1) + ') scaleY(' + (Math.random() < 0.5 ? -1 : 1) + ') rotate(' + (Math.random() < 0.5 ? -90 : 0) + 'deg)';
+                        span.style.top = (i * 55) + 'px';
+                        span.style.left = (j * 55) + 'px';
+                        worldDiv.appendChild(span);
+                    };
+                };
+                for (let i = 0; i < worlds[0]["textures"]["grama"].length; i++) {
+                    let span = document.getElementById('plotX' + worlds[0]["textures"]["grama"][i][1] + 'Y' + worlds[0]["textures"]["grama"][i][0]);
+                    span.classList.remove("grama");
+                    span.classList.add("gramaTerra");
+                    span.style.transform = 'scaleX(' + (Math.random() < 0.5 ? -1 : 1) + ')';
+                };
+                for (let i = 0; i < worlds[0]["textures"]["terra"].length; i++) {
+                    let span = document.getElementById('plotX' + worlds[0]["textures"]["terra"][i][1] + 'Y' + worlds[0]["textures"]["terra"][i][0]);
+                    span.classList.remove("grama");
+                    span.classList.add("terra");
+                    span.style.transform = 'scaleX(' + (Math.random() < 0.5 ? -1 : 1) + ') scaleY(' + (Math.random() < 0.5 ? -1 : 1) + ') rotate(' + (Math.random() < 0.5 ? -90 : 0) + 'deg)';
+                };
+                for (let i = 0; i < worlds[0]["textures"]["pedra"].length; i++) {
+                    let span = document.getElementById('plotX' + worlds[0]["textures"]["pedra"][i][1] + 'Y' + worlds[0]["textures"]["pedra"][i][0]);
+                    span.classList.remove("grama");
+                    span.classList.add("pedra");
+                    span.style.transform = 'scaleX(' + (Math.random() < 0.5 ? -1 : 1) + ') scaleY(' + (Math.random() < 0.5 ? -1 : 1) + ') rotate(' + (Math.random() < 0.5 ? -90 : 0) + 'deg)';
+                };
+                const player = document.getElementById("player");
+                let direct = 1;
+                let leftPos = worlds[0]["spawn"][0] * 55;
+                let topPos = worlds[0]["spawn"][1] * 55;
+                player.style.top = topPos + 'px';
+                player.style.left = leftPos + 'px';
+                let automatic = false;
+                const movePlayer = (direction) => {
+                    switch((automatic ? letter[Math.floor(Math.random() * letter.length)] : direction)) {
+                        case " ":
+                            var worldNumber = Math.round(prompt("Carregar um novo mundo? Por padrão o mundo de inicio é Zero.", 1));
+                            if (worldNumber !== "" && !isNaN(worldNumber) && worlds[worldNumber]) {
+                                worldDiv.innerHTML = "";
+                                for (let i = 0; i < worlds[worldNumber]["size"][1]; i++) {
+                                    for (let j = 0; j < worlds[worldNumber]["size"][0]; j++) {
+                                        let span = document.createElement("span");
+                                        span.id = 'plotX' + i + 'Y' + j;
+                                        span.classList.add("grama");
+                                        span.style.transform = 'scaleX(' + (Math.random() < 0.5 ? -1 : 1) + ') scaleY(' + (Math.random() < 0.5 ? -1 : 1) + ') rotate(' + (Math.random() < 0.5 ? -90 : 0) + 'deg)';
+                                        span.style.top = (i * 55) + 'px';
+                                        span.style.left = (j * 55) + 'px';
+                                        worldDiv.appendChild(span);
+                                    };
+                                };
+                                for (let i = 0; i < worlds[worldNumber]["textures"]["grama"].length; i++) {
+                                    let span = document.getElementById('plotX' + worlds[worldNumber]["textures"]["grama"][i][1] + 'Y' + worlds[worldNumber]["textures"]["grama"][i][0]);
+                                    span.classList.remove("grama");
+                                    span.classList.add("gramaTerra");
+                                    span.style.transform = 'scaleX(' + (Math.random() < 0.5 ? -1 : 1) + ')';
+                                };
+                                for (let i = 0; i < worlds[worldNumber]["textures"]["terra"].length; i++) {
+                                    let span = document.getElementById('plotX' + worlds[worldNumber]["textures"]["terra"][i][1] + 'Y' + worlds[worldNumber]["textures"]["terra"][i][0]);
+                                    span.classList.remove("grama");
+                                    span.classList.add("terra");
+                                    span.style.transform = 'scaleX(' + (Math.random() < 0.5 ? -1 : 1) + ') scaleY(' + (Math.random() < 0.5 ? -1 : 1) + ') rotate(' + (Math.random() < 0.5 ? -90 : 0) + 'deg)';
+                                };
+                                for (let i = 0; i < worlds[worldNumber]["textures"]["pedra"].length; i++) {
+                                    let span = document.getElementById('plotX' + worlds[worldNumber]["textures"]["pedra"][i][1] + 'Y' + worlds[worldNumber]["textures"]["pedra"][i][0]);
+                                    span.classList.remove("grama");
+                                    span.classList.add("pedra");
+                                    span.style.transform = 'scaleX(' + (Math.random() < 0.5 ? -1 : 1) + ') scaleY(' + (Math.random() < 0.5 ? -1 : 1) + ') rotate(' + (Math.random() < 0.5 ? -90 : 0) + 'deg)';
+                                };
+                                leftPos = worlds[worldNumber]["spawn"][0] * 55;
+                                topPos = worlds[worldNumber]["spawn"][1] * 55;
+                                direct = 1;
+                            }
+                        break;
+                        case "w":
+                            topPos = (topPos > 0 ? topPos - 55 : topPos);
+                        break;
+                        case "s":
+                            topPos = (topPos < (window.innerHeight - 55) ? topPos + 55 : topPos);
+                        break;
+                        case "a":
+                            leftPos = (leftPos > 0 ? leftPos - 55 : leftPos);
+                            direct = -1;
+                        break;
+                        case "d":
+                            leftPos = (leftPos < (window.innerWidth - 55) ? leftPos + 55 : leftPos);
+                            direct = 1;
+                        break;
+                        case "m":
+                            autoMove = prompt("O jogador irá se mover a cada quantos milissegundos?", 500);
+                            if (autoMove !== null && autoMove !== "" && !isNaN(Math.round(autoMove))) {
+                                automatic = true;
+                                letter = ["w", "a", "s", "d"];
+                                setInterval(movePlayer, Math.round(autoMove));
+                            }
+                        break;
+                    }
+                    player.style.transform = 'scaleX(' + direct + ')';
+                    player.style.top = (topPos >= 0 && topPos < window.innerHeight ? topPos + 'px' : player.style.top);
+                    player.style.left = (leftPos >= 0 && leftPos < window.innerWidth ? leftPos + 'px' : player.style.left);
+                };
+                document.addEventListener("keydown", (event) => {
+                    movePlayer(event.key.toLowerCase());
+                });
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="world" style="position: absolute; top: 0; left: 0; filter: brightness(0.95);"></div>
+        <div id="cubes" style="position: absolute; top: 0; left: 0;"></div>
+        <img id="FlowniX" src="https://sfwx.github.io/index.png" style="position: absolute; z-index: 3; top: 25px; left: 25px; width: 100px; pointer-events: none;" alt="Pagina criada por FlowniX | Murilo de Moura S.">
+        <div id="player" style="background-position: 0px 50px;">
+            <div id="hand" style="display: none;">
+                <span class="seletor" style="left: -55px; top: -55px;" onclick="blockPose(-55, -55);"></span>
+                <span class="seletor" style="top: -55px;" onclick="blockPose(0, -55);"></span>
+                <span class="seletor" style="left: 55px; top: -55px;" onclick="blockPose(55, -55);"></span>
+                <span class="seletor" style="left: -55px;" onclick="blockPose(-55, 0);"></span>
+                <span class="seletor"></span>
+                <span class="seletor" style="left: 55px;" onclick="blockPose(55, 0);"></span>
+                <span class="seletor" style="left: -55px; top: 55px;" onclick="blockPose(-55, 55);"></span>
+                <span class="seletor" style="top: 55px;" onclick="blockPose(0, 55);"></span>
+                <span class="seletor" style="left: 55px; top: 55px;" onclick="blockPose(55, 55);"></span>
+                <span id="item" class="FlowniX"></span>
+            </div>
+        </div>
+    </body>
+</html>
