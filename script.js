@@ -1,13 +1,13 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
 const links = {
-  "0000": "#",
-  "0404": "/404",
-  "0626": "/626",
-  "1631": "...",
-  "2176": "...",
-  "1936": "...",
-  "1944": "..."
+  "0000": "+",
+  "0404": "404",
+  "0626": "626",
+  "1936": "giveOperatorShield",
+  "2176": "giveOperatorFirework",
+  "1944": "giveOperatorElytra",
+  "1631": "giveOperatorBow"
 };
 
 function handleInput(event, input) {
