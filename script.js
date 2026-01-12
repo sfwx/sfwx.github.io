@@ -4,6 +4,7 @@ const links = {
   "0000": "+",
   "0404": "404",
   "0626": "626",
+  "1398": "generator-item",
   "1936": "giveOperatorShield",
   "2176": "giveOperatorFirework",
   "1944": "giveOperatorElytra",
