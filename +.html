@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>FwX · Conversor</title>
+
+  <link rel="icon" type="image/png" sizes="350x350" href="https://sfwx.github.io/index.png">
+  <meta name="author" content="FlowniX · Murilo de Moura S.">
+  <meta name="theme-color" content="#1e90ff">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://sfwx.github.io/style.css">
+</head>
+
+<body>
+  <div class="bg-gradient"></div>
+  <div class="bg-glow"></div>
+  <main class="glass-card">
+
+    <!-- CONVERSOR -->
+    <div id="bio-ui">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="https://sfwx.github.io/index0.png" class="brand-icon" style="margin-right: 1rem;">
+      </div>
+      <h1>Conversor</h1>
+      <p class="bio-text">
+        Digite um nome ou comando para gerar uma tag numérica baseada em ASCII.
+      </p>
+      <div class="shortcut-wrapper">
+        <input type="text" class="shortcut-input" placeholder="Nome" oninput="convertText(this.value)">
+      </div>
+      <h2 id="result" style="margin-top: 1rem; font-weight: 800;">
+        #0000
+      </h2>
+    </div>
+
+    <footer class="footer-copyright">
+      © <span id="year"></span> FlowniX. Conteúdo Protegido.<br>
+      <a href="https://sfwx.github.io/copyright">Direitos Autorais & Termos</a>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function tagFromName(name) {
+      let sum = 0;
+      name = name.toLowerCase();
+      for (let c of name) sum += c.charCodeAt(0);
+      return String(sum % 10000).padStart(4, "0");
+    }
+
+    function convertText(text) {
+      if (!text) {
+        document.getElementById("result").textContent = "#0000";
+        history.replaceState(null, "", "#");
+        return;
+      }
+
+      const tag = tagFromName(text);
+      document.getElementById("result").textContent = "#" + tag;
+      location.hash = tag;
+    }
+
+    // se abrir com hash na URL
+    if (location.hash.length === 5) {
+      document.getElementById("result").textContent = "#" + location.hash.substring(1);
+    }
+  </script>
+
+</body>
+</html>
