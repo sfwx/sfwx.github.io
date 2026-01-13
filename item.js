@@ -187,6 +187,10 @@ let item = {
                               }
                             ]
                           }
+                        },
+                        "Unbreakable": {
+                          "type": "byte",
+                          "value": 0
                         }
                       }
                     }
