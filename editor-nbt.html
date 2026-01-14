@@ -431,12 +431,25 @@
           alert("Não foi possível carregar itemJson.js");
           return;
         }
-        const item = itemJson.value.structure.value.entities.value.value[0];
-        const count = Number(document.getElementById("count").value);
-        item.Item.value.Count.value = Math.min(Math.max(count, 1), 64);
-        item.Item.value.Name.value = document.getElementById("itemId").value;
-        item.Item.value.tag.value.display.value.Name.value = document.getElementById("displayName").value;
-        item.Item.value.tag.value.display.value.Lore.value.value = [ document.getElementById("lore").value ];
+        const json = structuredClone(itemJson);
+        const item = json.value.structure.value.entities.value.value[0];
+        item.Item.value.Count.value = Math.min(Math.max(Number(document.getElementById("count").value), 1), 64);
+        item.Item.value.Name.value = document.getElementById("itemId").value || "minecraft:diamond";
+        if (document.getElementById("displayName").value.trim()) {
+          item.Item.value.tag.value.display.value.Name.value = document.getElementById("displayName").value;
+        }
+        else {
+          delete item.Item.value.tag.value.display.value.Name;
+        }
+        if (document.getElementById("lore").value.trim()) {
+          item.Item.value.tag.value.display.value.Lore.value.value = [ document.getElementById("lore").value ];
+        }
+        else {
+          delete item.Item.value.tag.value.display.value.Lore;
+        }
+        if (!document.getElementById("displayName").value.trim() && !document.getElementById("lore").value.trim()) {
+          delete item.Item.value.tag.value.display;
+        }
         item.Item.value.tag.value.ench.value.value = [];
         try {
           item.Item.value.tag.value.ench.value.value = JSON.parse(document.getElementById("ench").value || "[]");
@@ -445,11 +458,18 @@
           alert("Json de encantamentos inválido.");
           return;
         }
-        item.Item.value.tag.value.Unbreakable.value = Number(document.getElementById("unbreakable").value) >= 1 ? 1 : 0;
+        if (!Number(document.getElementById("unbreakable").value)) {
+          delete item.Item.value.tag.value.Unbreakable;
+        }
         item.Tags.value.value = [ document.getElementById("tag").value ];
-        item.CustomName.value = document.getElementById("customName").value;
+        if (document.getElementById("customName").value.trim()) {
+          item.CustomName.value = document.getElementById("customName").value;
+        }
+        else {
+          delete item.CustomName;
+        }
         const blob = new Blob(
-          [JSON.stringify(itemJson, null, 2)],
+          [JSON.stringify(json, null, 2)],
           { type: "application/json" }
         );
         const url = URL.createObjectURL(blob);
