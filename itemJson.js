@@ -135,7 +135,7 @@ let itemJson = {
                   "value": {
                     "Count": {
                       "type": "byte",
-                      "value": 1
+                      "value": "NUMBER"
                     },
                     "Damage": {
                       "type": "short",
@@ -143,7 +143,7 @@ let itemJson = {
                     },
                     "Name": {
                       "type": "string",
-                      "value": "minecraft:diamond"
+                      "value": "minecraft:ITEM"
                     },
                     "WasPickedUp": {
                       "type": "byte",
@@ -157,14 +157,14 @@ let itemJson = {
                           "value": {
                             "Name": {
                               "type": "string",
-                              "value": "Diamante"
+                              "value": "DISPLAYNAME"
                             },
                             "Lore": {
                               "type": "list",
                               "value": {
                                 "type": "string",
                                 "value": [
-                                  "Diamante Brilhante"
+                                  "DESCRIPTION"
                                 ]
                               }
                             }
@@ -291,7 +291,7 @@ let itemJson = {
                   "value": {
                     "type": "string",
                     "value": [
-                      "FwX404"
+                      "TAG"
                     ]
                   }
                 },
@@ -323,7 +323,7 @@ let itemJson = {
                 },
                 "CustomName": {
                   "type": "string",
-                  "value": "Diamante"
+                  "value": "CUSTOMNAME"
                 }
               }
             ]
