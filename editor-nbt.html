@@ -152,13 +152,13 @@
           <label>
             Quantidade
           </label>
-          <input id="count" type="number" min="1" max="64" placeholder="1 a 64" value="1" required>
+          <input id="count" type="number" min="1" max="64" placeholder="1 a 64" value="1">
         </div>
         <div>
           <label>
             Item (ID)
           </label>
-          <input id="itemId" placeholder="minecraft:diamond" value="minecraft:diamond" required>
+          <input id="itemId" placeholder="minecraft:diamond" value="minecraft:diamond">
         </div>
         <div class="full-width">
           <label>
@@ -176,7 +176,7 @@
           <label>
             Encantamentos (JSON bruto)
           </label>
-          <textarea id="ench" placeholder="[]" required>[
+          <textarea id="ench" placeholder="[]">[
   {"id": {"type": "short","value": 28 },"lvl": {"type": "short","value": 1 }}
 ]</textarea>
         </div>
@@ -184,7 +184,7 @@
           <label>
             Inquebrável
           </label>
-          <input id="unbreakable" type="number" min="0" max="1" placeholder="0 ou 1" value="0" required>
+          <input id="unbreakable" type="number" min="0" max="1" placeholder="0 ou 1" value="0">
         </div>
         <div>
           <label>
@@ -450,9 +450,16 @@
         if (!document.getElementById("displayName").value.trim() && !document.getElementById("lore").value.trim()) {
           delete item.Item.value.tag.value.display;
         }
-        item.Item.value.tag.value.ench.value.value = [];
         try {
-          item.Item.value.tag.value.ench.value.value = JSON.parse(document.getElementById("ench").value || "[]");
+          if (!document.getElementById("ench").value.trim()) {
+            delete item.Item.value.tag.value.ench;
+          }
+          else {
+            item.Item.value.tag.value.ench.value.value = JSON.parse(document.getElementById("ench").value);
+            if (!item.Item.value.tag.value.ench.value.value.length) {
+              delete item.Item.value.tag.value.ench;
+            }
+          }
         }
         catch {
           alert("Json de encantamentos inválido.");
@@ -460,6 +467,9 @@
         }
         if (!Number(document.getElementById("unbreakable").value)) {
           delete item.Item.value.tag.value.Unbreakable;
+        }
+        if (!item.Item.value.tag.value.display && !item.Item.value.tag.value.ench && !item.Item.value.tag.value.Unbreakable) {
+          delete item.Item.value.tag;
         }
         item.Tags.value.value = [ document.getElementById("tag").value ];
         if (document.getElementById("customName").value.trim()) {
