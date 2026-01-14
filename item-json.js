@@ -1,4 +1,4 @@
-let item = {
+let itemJson = {
   "type": "compound",
   "name": "",
   "value": {
