@@ -190,7 +190,7 @@ let itemJson = {
                         },
                         "Unbreakable": {
                           "type": "byte",
-                          "value": 0
+                          "value": 1
                         }
                       }
                     }
