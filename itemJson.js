@@ -61,10 +61,10 @@ let itemJson = {
                       "type": "string",
                       "value": "minecraft:ITEM"
                     },
-                    "WasPickedUp": {
+                    /*"WasPickedUp": {
                       "type": "byte",
                       "value": 0
-                    },
+                    },*/
                     "tag": {
                       "type": "compound",
                       "value": {
