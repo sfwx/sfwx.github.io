@@ -126,11 +126,11 @@ let itemJson = {
                       0
                     ]
                   }
-                },*/
+                },
                 "OnGround": {
                   "type": "byte",
                   "value": 1
-                },
+                },*/
                 "Pos": {
                   "type": "list",
                   "value": {
