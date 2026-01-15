@@ -112,7 +112,7 @@ let itemJson = {
                     }
                   }
                 },
-                "LootDropped": {
+                /*"LootDropped": {
                   "type": "byte",
                   "value": 0
                 },
@@ -126,7 +126,7 @@ let itemJson = {
                       0
                     ]
                   }
-                },
+                },*/
                 "OnGround": {
                   "type": "byte",
                   "value": 1
@@ -142,7 +142,7 @@ let itemJson = {
                     ]
                   }
                 },
-                "Rotation": {
+                /*"Rotation": {
                   "type": "list",
                   "value": {
                     "type": "float",
@@ -151,7 +151,7 @@ let itemJson = {
                       0
                     ]
                   }
-                },
+                },*/
                 "Tags": {
                   "type": "list",
                   "value": {
