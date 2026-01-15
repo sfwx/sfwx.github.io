@@ -46,92 +46,6 @@ let itemJson = {
                   "type": "short",
                   "value": 5975
                 },
-/*********************************************************************
-                "Chested": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "Color": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "Color2": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "FallDistance": {***************
-                  "type": "float",
-                  "value": 0
-                },
-                "Health": {***************
-                  "type": "short",
-                  "value": 5
-                },
-                "Invulnerable": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "IsAngry": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "IsAutonomous": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "IsBaby": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "IsEating": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "IsGliding": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "IsGlobal": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "IsIllagerCaptain": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "IsOrphaned": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "IsOutOfControl": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "IsRoaring": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "IsScared": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "IsStunned": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "IsSwimming": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "IsTamed": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "IsTrusting": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-*********************************************************************/
                 "Item": {
                   "type": "compound",
                   "value": {
@@ -202,10 +116,6 @@ let itemJson = {
                   "type": "byte",
                   "value": 0
                 },
-//              "MarkVariant": {***************
-//                "type": "int",
-//                "value": 0
-//              },
                 "Motion": {
                   "type": "list",
                   "value": {
@@ -221,26 +131,6 @@ let itemJson = {
                   "type": "byte",
                   "value": 1
                 },
-/*********************************************************************
-                "OwnerID": {***************
-                  "type": "long",
-                  "value": [
-                    -1,
-                    -1
-                  ]
-                },
-                "OwnerNew": {***************
-                  "type": "long",
-                  "value": [
-                    -1,
-                    -1
-                  ]
-                },
-                "PortalCooldown": {***************
-                  "type": "int",
-                  "value": 0
-                },
-*********************************************************************/
                 "Pos": {
                   "type": "list",
                   "value": {
@@ -262,36 +152,6 @@ let itemJson = {
                     ]
                   }
                 },
-/*********************************************************************
-                "Saddled": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "Sheared": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "ShowBottom": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "Sitting": {***************
-                  "type": "byte",
-                  "value": 0
-                },
-                "SkinID": {***************
-                  "type": "int",
-                  "value": 0
-                },
-                "Strength": {***************
-                  "type": "int",
-                  "value": 0
-                },
-                "StrengthMax": {***************
-                  "type": "int",
-                  "value": 0
-                },
-*********************************************************************/
                 "Tags": {
                   "type": "list",
                   "value": {
@@ -301,34 +161,10 @@ let itemJson = {
                     ]
                   }
                 },
-/*********************************************************************
-                "UniqueID": {***************
-                  "type": "long",
-                  "value": [
-                    -4,
-                    5
-                  ]
-                },
-                "Variant": {***************
-                  "type": "int",
-                  "value": 0
-                },
-                "definitions": {******************************
-                  "type": "list",
-                  "value": {
-                    "type": "end",
-                    "value": []
-                  }
-                },
-*********************************************************************/
                 "identifier": {
                   "type": "string",
                   "value": "minecraft:item"
                 },
-//              "internalComponents": {***************
-//                "type": "compound",
-//                "value": {}
-//              },
                 "CustomName": {
                   "type": "string",
                   "value": "CUSTOMNAME"
