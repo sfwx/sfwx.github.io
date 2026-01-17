@@ -1,5 +1,5 @@
 // ===== YEAR =====
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("fwxYear").textContent = new Date().getFullYear();
 
 // ===== ACTIONS (NOVO FORMATO JSON) =====
 const actions = {
