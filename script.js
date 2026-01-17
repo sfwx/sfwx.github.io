@@ -58,9 +58,10 @@ function router() {
 
   const bio = document.getElementById("fwxBio");
   const redirect = document.getElementById("fwxRedirect");
+  const image = document.getElementById("fwxImage");
   const title = document.getElementById("fwxTitle");
   const description = document.getElementById("fwxDescription");
-  const progress = document.getElementById("fwxProgressBar");
+  const progressBar = document.getElementById("fwxProgressBar");
   const progress = document.getElementById("fwxProgress");
   const button = document.getElementById("fwxButton");
   const error = document.getElementById("fwxError");
