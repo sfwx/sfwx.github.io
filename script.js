@@ -4,43 +4,186 @@ document.getElementById("fwxYear").textContent = new Date().getFullYear();
 // ===== ACTIONS (NOVO FORMATO JSON) =====
 const actions = {
   "0000": {
-    id: "0000",
-    type: "navigate",
-    enabled: true,
-    title: "Home",
-    value: "+"
+    "id": "0000",
+    "enabled": true,
+    "type": "navigate",
+    "image": "https://sfwx.githut.io/index1.png",
+    "title": "Conversor numérico",
+    "description": "Conversor numérico para transformar palavras em uma numeração de 4 dígitos. Apenas para fins técnicos;",
+    "value": "../+",
+    "target": "_self",
+    "confirm": {
+      "enabled": false,
+      "message": "Acessar"
+    }
   },
-
   "0404": {
-    id: "0404",
-    type: "navigate",
-    enabled: true,
-    title: "404",
-    value: "404"
+    "id": "0404",
+    "enabled": true,
+    "type": "navigate",
+    "image": "https://sfwx.githut.io/index1.png",
+    "title": "Área desconhecida!",
+    "description": "Você foi longe demais… esse atalho não está no mapa!",
+    "value": "../404",
+    "target": "_self",
+    "confirm": {
+      "enabled": false,
+      "message": "Acessar"
+    }
   },
-
   "0626": {
-    id: "0626",
-    type: "navigate",
-    enabled: true,
-    title: "Projeto 626",
-    value: "626"
+    "id": "0626",
+    "enabled": true,
+    "type": "navigate",
+    "image": "https://sfwx.githut.io/index1.png",
+    "title": "FwX Perfil pessoal",
+    "description": "Ainda incompleto!!",
+    "value": "626",
+    "target": "_self",
+    "confirm": {
+      "enabled": false,
+      "message": "Acessar"
+    }
   },
-
+  "1016": {
+    "id": "1016",
+    "enabled": true,
+    "type": "navigator",
+    "image": "https://sfwx.githut.io/index1.png",
+    "title": "Acessando Editor NBT",
+    "description": "Editor online de NBT e JSON para itens, feito para criar, editar e validar dados de forma rápida e organizada.",
+    "value": "../editor-nbt",
+    "target": "_self",
+    "confirm": {
+      "enabled": false,
+      "message": "Acessar"
+    }
+  },
   "1631": {
-    id: "1631",
-    type: "file_download",
-    enabled: true,
-    title: "Bow",
-    value: "mcstructure/bow.mcstructure"
+    "id": "1631",
+    "enabled": true,
+    "type": "file_download",
+    "image": "https://sfwx.githut.io/index1.png",
+    "title": "Arco de Operador",
+    "description": "Clique para baixar o arquivo do incrível Arco de Operador!",
+    "value": "../mcstructure/bow.mcstructure",
+    "target": "_self",
+    "confirm": {
+      "enabled": true,
+      "message": "Baixar"
+    }
   },
-
   "2176": {
-    id: "2176",
-    type: "file_download",
-    enabled: true,
-    title: "Firework",
-    value: "mcstructure/firework.mcstructure"
+    "id": "2176",
+    "enabled": true,
+    "type": "file_download",
+    "image": "https://sfwx.githut.io/index1.png",
+    "title": "Fogos de Artifício",
+    "description": "Clique para baixar o arquivo de Fogos de Artifício de Operador!",
+    "value": "../mcstructure/firework.mcstructure",
+    "target": "_self",
+    "confirm": {
+      "enabled": true,
+      "message": "Baixar"
+    }
+  },
+  "1936": {
+    "id": "1936",
+    "enabled": true,
+    "type": "file_download",
+    "image": "https://sfwx.githut.io/index1.png",
+    "title": "Escudo de Operador",
+    "description": "Clique para baixar o arquivo do incrível Escudo de Operador!",
+    "value": "../mcstructure/shield.mcstructure",
+    "target": "_self",
+    "confirm": {
+      "enabled": true,
+      "message": "Baixar"
+    }
+  },
+  "1944": {
+    "id": "1944",
+    "enabled": true,
+    "type": "file_download",
+    "image": "https://sfwx.githut.io/index1.png",
+    "title": "Asas de Operador",
+    "description": "Clique para baixar o arquivo das incríveis Asas de Operador!",
+    "value": "1944../mcstructure/elytra.mcstructure",
+    "target": "_self",
+    "confirm": {
+      "enabled": true,
+      "message": "Baixar"
+    }
+  },
+  "1044": {
+    "id": "1044",
+    "enabled": true,
+    "type": "file_download",
+    "image": "https://sfwx.githut.io/index1.png",
+    "title": "Give Camera",
+    "description": "Clique para baixar o arquivo do Item de Câmera.",
+    "value": "../mcstructure/camera.mcstructure",
+    "target": "_self",
+    "confirm": {
+      "enabled": true,
+      "message": "Baixar"
+    }
+  },
+  "1731": {
+    "id": "1731",
+    "enabled": true,
+    "type": "file_download",
+    "image": "https://sfwx.githut.io/index1.png",
+    "title": "Give Nether Portal",
+    "description": "Clique para baixar o arquivo do Bloco de Portal do Nether.",
+    "value": "../mcstructure/nether_portal.mcstructure",
+    "target": "_self",
+    "confirm": {
+      "enabled": true,
+      "message": "Baixar"
+    }
+  },
+  "1396": {
+    "id": "1396",
+    "enabled": true,
+    "type": "file_download",
+    "image": "https://sfwx.githut.io/index1.png",
+    "title": "Give End Portal",
+    "description": "Clique para baixar o arquivo do Bloco de Portal do End.",
+    "value": "../mcstructure/end_portal.mcstructure",
+    "target": "_self",
+    "confirm": {
+      "enabled": true,
+      "message": "Baixar"
+    }
+  },
+  "1611": {
+    "id": "1611",
+    "enabled": true,
+    "type": "file_download",
+    "image": "https://sfwx.githut.io/index1.png",
+    "title": "Give Ender Portal",
+    "description": "Clique para baixar o arquivo do Bloco de Portal do Ender.",
+    "value": "../mcstructure/ender_portal.mcstructure",
+    "target": "_self",
+    "confirm": {
+      "enabled": true,
+      "message": "Baixar"
+    }
+  },
+  "1367": {
+    "id": "1367",
+    "enabled": true,
+    "type": "navigator",
+    "image": "https://sfwx.githut.io/index1.png",
+    "title": "Câmera Orbe",
+    "description": "Acessando editor online de NBT e JSON para itens, feito para criar, editar e validar dados de forma rápida e organizada.",
+    "value": "../editor-nbt",
+    "target": "_self",
+    "confirm": {
+      "enabled": false,
+      "message": "Confirmar"
+    }
   }
 };
 
