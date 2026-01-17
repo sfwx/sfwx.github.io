@@ -87,9 +87,11 @@
         <div id="fwxProgressBar" class="loader-track">
           <div id="fwxProgress" class="loader-fill"></div>
         </div>
-        <button id="fwxButton" class="tag" style="font-size: 1.5rem; display: none;">
-          Acessar
-        </button>
+        <div class="tag-container">
+          <button id="fwxButton" class="tag" style="font-size: 1.5rem; display: none;" onclick="executeAction(action);">
+            Acessar
+          </button>
+        </div>
       </div>
       <!-- ERROR -->
       <div id="fwxError" style="display: none;">
@@ -116,6 +118,6 @@
         </a>
       </footer>
     </main>
-    <script type="text/javascript" src="https://sfwx.github.io/script.js" defer></script>
+    <script type="text/javascript" src="script.js" defer></script>
   </body>
 </html>
