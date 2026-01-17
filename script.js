@@ -9,6 +9,7 @@ const links = {
   "2176": "mcstructure/firework.mcstructure",
   "1944": "mcstructure/elytra.mcstructure",
   "1631": "mcstructure/bow.mcstructure",
+  "1044": "mcstructure/camera.mcstructure",
   "1101": "editor-nbt"
 };
 
