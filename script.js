@@ -10,7 +10,10 @@ const links = {
   "1944": "mcstructure/elytra.mcstructure",
   "1631": "mcstructure/bow.mcstructure",
   "1044": "mcstructure/camera.mcstructure",
-  "1101": "editor-nbt"
+  "1731": "mcstructure/nether_portal.mcstructure",
+  "1396": "mcstructure/end_portal.mcstructure",
+  "1611": "mcstructure/ender_portal.mcstructure",
+  "1367": "editor-nbt"
 };
 
 function handleInput(event, input) {
