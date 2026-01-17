@@ -71,6 +71,7 @@ function router() {
   redirect.style.display = "none";
   error.style.display = "none";
   progress.style.width = "0%";
+  button.style.display = "none";
 
   if (!hash) {
     bio.style.display = "block";
