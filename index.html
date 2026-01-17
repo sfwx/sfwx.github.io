@@ -32,7 +32,7 @@
     <div class="bg-glow"></div>
     <main class="glass-card">
       <!-- BIO -->
-      <div id="bio-ui">
+      <div id="fwxBio">
         <div style="display: flex; justify-content: center; align-items: center;">
           <img src="https://sfwx.github.io/index1.png" alt="Icon1" class="brand-icon" style="margin-right: 1rem;">
           <img src="https://sfwx.github.io/signature.png" alt="Icon2" class="brand-icon" style="margin-left: 1rem;">
@@ -71,20 +71,25 @@
         </div>
       </div>
       <!-- REDIRECT -->
-      <div id="redirect-ui" style="display: none; padding: 1rem 0;">
+      <div id="fwxRedirect" style="display: block; padding: 1rem 0;">
         <div style="display: flex; justify-content: center; align-items: center;">
-          <img src="https://sfwx.github.io/index1.png" alt="Icon" class="brand-icon">
+          <img id="image" src="https://sfwx.github.io/index1.png" alt="FwX Icon" class="brand-icon">
         </div>
         <p class="nickname">
-          Acessando atalho
-          <span id="target-name" style="margin: 0.5rem 0; font-family: monospace; color: var(--accent);"></span>
+          FwX · TCatDark
         </p>
-        <p style="font-size: 0.8rem; color: #64748b;">
+        <h1 id="fwxTitle">
+          Acessando página
+        </h1>
+        <p id="fwxDescription" style="font-size: 0.8rem; color: #64748b;">
           Aguarde a conexão segura...
         </p>
-        <div class="loader-track">
-          <div class="loader-fill" id="progress"></div>
+        <div id="fwxProgressBar" class="loader-track">
+          <div id="fwxProgress" class="loader-fill"></div>
         </div>
+        <button class="tag" style="font-size: 1.5rem;">
+          Acessar
+        </button>
       </div>
       <!-- ERROR -->
       <div id="error-ui" style="display: none;">
