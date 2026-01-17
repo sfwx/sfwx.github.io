@@ -7,14 +7,14 @@ const actions = {
     "id": "0000",
     "enabled": true,
     "type": "navigate",
-    "image": "https://sfwx.github.io/default1x1.png",
+    "image": "https://sfwx.github.io/index1.png",
     "title": "Conversor numérico",
     "description": "Conversor numérico para transformar palavras em uma numeração de 4 dígitos. Apenas para fins técnicos;",
     "value": "../+",
     "target": "_self",
     "confirm": {
       "enabled": false,
-      "message": "Acessar"
+      "message": "Acessando página.."
     }
   },
   "0404": {
@@ -28,7 +28,7 @@ const actions = {
     "target": "_self",
     "confirm": {
       "enabled": false,
-      "message": "Acessar"
+      "message": "Acessando página.."
     }
   },
   "0626": {
@@ -42,7 +42,7 @@ const actions = {
     "target": "_self",
     "confirm": {
       "enabled": false,
-      "message": "Acessar"
+      "message": "Acessando página.."
     }
   },
   "1016": {
@@ -56,7 +56,7 @@ const actions = {
     "target": "_self",
     "confirm": {
       "enabled": false,
-      "message": "Acessar"
+      "message": "Acessando página.."
     }
   },
   "1631": {
@@ -182,21 +182,56 @@ const actions = {
     "target": "_self",
     "confirm": {
       "enabled": false,
-      "message": "Acessar"
+      "message": "Acessando página.."
     }
   }
 };
 
 // ===== INPUT =====
-function handleInput(event, input) {
+function fwxInput(event, input) {
   if (event.key === "Enter" && input.value.trim() !== "") {
     window.location.hash = input.value.trim().toLowerCase();
     input.value = "";
   }
 }
 
+// ===== DOWNLOAD LOCAL =====
+function fwxDownload(path) {
+  const a = document.createElement("a");
+  a.href = path;
+  a.download = "";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
+// ===== ACTION HANDLER =====
+function fwxRedirect(action) {
+  switch (action.type) {
+    case "navigate":
+      window.location.href = action.value;
+    break;
+
+    case "external_link":
+      window.open(action.value, "_blank");
+    break;
+
+    case "file_download":
+      downloadFile(action.value);
+    break;
+
+    case "download_redirect":
+      window.location.href = action.value;
+    break;
+
+    default:
+      console.warn("Tipo desconhecido:", action.type);
+    break;
+  }
+}
+
 // ===== ROUTER =====
-function router() {
+function fwxRouter() {
   const hash = window.location.hash.substring(1).toLowerCase();
 
   const bio = document.getElementById("fwxBio");
@@ -204,7 +239,6 @@ function router() {
   const image = document.getElementById("fwxImage");
   const title = document.getElementById("fwxTitle");
   const description = document.getElementById("fwxDescription");
-  const progressBar = document.getElementById("fwxProgressBar");
   const progress = document.getElementById("fwxProgress");
   const button = document.getElementById("fwxButton");
   const error = document.getElementById("fwxError");
@@ -212,7 +246,6 @@ function router() {
   // reset UI
   bio.style.display = "none";
   redirect.style.display = "none";
-  progressBar.style.display = "none";
   progress.style.width = "0%";
   button.style.display = "none";
   error.style.display = "none";
@@ -223,7 +256,6 @@ function router() {
   }
 
   const action = actions[hash];
-
   if (!action || action.enabled === false) {
     error.style.display = "block";
     return;
@@ -234,73 +266,26 @@ function router() {
   image.src = action.image;
   title.textContent = action.title;
   description.textContent = action.description;
-
-  /*if (!action.confirm.enabled) {
-    progressBar.style.display = "block";
-    requestAnimationFrame(() => {
-      progress.style.width = "100%";
-    });
-    setTimeout(() => {
-      executeAction(action);
-    }, 1300);
-  }
-  else {
-    button.textContent = action.confirm.message;
-    button.style.display = "block";
-  }*/
-  progressBar.style.display = "block";
   requestAnimationFrame(() => {
     progress.style.width = "100%";
   });
   setTimeout(() => {
     if (!action.confirm.enabled) {
-      executeAction(action);
-      button.textContent = "Acessando página";
-      button.style.disabled = "true";
+      button.textContent = action.confirm.message;
+      button.style.disabled = true;
       button.style.display = "block";
+      alert(action.value);
+      fwxRedirect(action);
     }
     else {
       button.textContent = action.confirm.message;
+      button.style.disabled = false;
       button.style.display = "block";
+      alert(action.value);
     }
   }, 1300);
-
-}
-
-// ===== ACTION HANDLER =====
-function executeAction(action) {
-  switch (action.type) {
-    case "navigate":
-      window.location.href = action.value;
-      break;
-
-    case "external_link":
-      window.open(action.value, "_blank");
-      break;
-
-    case "file_download":
-      downloadFile(action.value);
-      break;
-
-    case "download_redirect":
-      window.location.href = action.value;
-      break;
-
-    default:
-      console.warn("Tipo desconhecido:", action.type);
-  }
-}
-
-// ===== DOWNLOAD LOCAL =====
-function downloadFile(path) {
-  const a = document.createElement("a");
-  a.href = path;
-  a.download = "";
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
 }
 
 // ===== EVENTS =====
-window.addEventListener("load", router);
-window.addEventListener("hashchange", router);
+window.addEventListener("load", fwxRouter());
+window.addEventListener("hashchange", fwxRouter());
