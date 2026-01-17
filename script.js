@@ -5,10 +5,11 @@ const links = {
   "0404": "404",
   "0626": "626",
   "1016": "editor-nbt",
-  "1936": "giveOperatorShield",
-  "2176": "giveOperatorFirework",
-  "1944": "giveOperatorElytra",
-  "1631": "giveOperatorBow"
+  "1936": "mcstructure/shield.mcstructure",
+  "2176": "mcstructure/firework.mcstructure",
+  "1944": "mcstructure/elytra.mcstructure",
+  "1631": "mcstructure/bow.mcstructure",
+  "1101": "editor-nbt"
 };
 
 function handleInput(event, input) {
