@@ -265,13 +265,11 @@ function fwxRouter() {
   setTimeout(() => {
     if (!action.confirm.enabled) {
       button.textContent = action.confirm.message;
-      button.disabled = true;
       button.style.display = "block";
       fwxRedirect(action);
     }
     else {
       button.textContent = action.confirm.message;
-      button.disabled = false;
       button.style.display = "block";
     }
   }, 1300);
