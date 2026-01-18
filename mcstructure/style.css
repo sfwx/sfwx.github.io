@@ -1,1 +1,100 @@
-* {}
+
+      @font-face {
+        src: url("https://sfwx.github.io/MinecraftTitle.otf") format("opentype");
+        font-family: "MinecraftTitle";
+        font-weight: bold;
+      }
+      @font-face {
+        src: url("https://sfwx.github.io/Minecraft.otf") format("opentype");
+        font-family: "Minecraft";
+      }
+      @font-face {
+        src: url("https://sfwx.github.io/MinecraftBold.otf") format("opentype");
+        font-family: "Minecraft";
+        font-weight: bold;
+      }
+      * {
+        font-family: "Minecraft";
+      }
+      body {
+        overflow-y: auto;
+        padding: 40px 0;
+      }
+      .glass-card {
+        max-width: 650px;
+        text-align: left;
+        margin: auto;
+      }
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-top: 20px;
+      }
+      .full-width {
+        grid-column: span 2;
+      }
+      label {
+        display: block;
+        font-size: 0.75rem;
+        color: var(--accent);
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+      }
+      input, textarea {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 10px;
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+        outline: none;
+        transition: border-color 0.3s;
+      }
+      input:focus, textarea:focus {
+        border-color: var(--accent);
+      }
+      textarea {
+        height: 80px;
+        resize: vertical;
+      }
+      /* Destaque para o Input de JSON */
+      #rawJsonInput {
+        background: rgba(0, 0, 0, 0.3);
+        font-family: monospace;
+        font-size: 0.8rem;
+        border-style: dashed;
+      }
+      .table-container {
+        margin-top: 30px;
+        max-height: 300px;
+        overflow-y: auto;
+        border-radius: 12px;
+        background: rgba(0,0,0,0.2);
+        border: 1px solid var(--border);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+      }
+      th {
+        position: sticky;
+        top: 0;
+        background: #1e1b4b;
+        color: var(--accent);
+        padding: 10px;
+        text-align: left;
+      }
+      td {
+        padding: 8px 10px;
+        border-bottom: 1px solid var(--border);
+        color: #94a3b8;
+      }
+      tr:hover td {
+        color: #fff;
+        background: rgba(255,255,255,0.02);
+      }
