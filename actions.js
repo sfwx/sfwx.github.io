@@ -1,4 +1,3 @@
-// ===== ACTIONS (NOVO FORMATO JSON) =====
 const actions = {
   "0000": {
     "id": "0000",
@@ -98,8 +97,8 @@ const actions = {
       "message": "Baixar Arquivo"
     }
   },
-  "1944": {
-    "id": "giveOperator*****",
+  "1960": {
+    "id": "giveOperatorElytra",
     "enabled": true,
     "type": "file_download",
     "image": "https://sfwx.github.io/signature.png",
