@@ -1,15 +1,15 @@
 
       @font-face {
-        src: url("https://sfwx.github.io/MinecraftTitle.otf") format("opentype");
+        src: url("https://sfwx.github.io/font/MinecraftTitle.otf") format("opentype");
         font-family: "MinecraftTitle";
         font-weight: bold;
       }
       @font-face {
-        src: url("https://sfwx.github.io/Minecraft.otf") format("opentype");
+        src: url("https://sfwx.github.io/font/Minecraft.otf") format("opentype");
         font-family: "Minecraft";
       }
       @font-face {
-        src: url("https://sfwx.github.io/MinecraftBold.otf") format("opentype");
+        src: url("https://sfwx.github.io/font/MinecraftBold.otf") format("opentype");
         font-family: "Minecraft";
         font-weight: bold;
       }
