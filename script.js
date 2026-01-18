@@ -122,7 +122,7 @@ const actions = {
     "image": "https://sfwx.github.io/signature.png",
     "title": "Give Camera",
     "description": "Clique para baixar o arquivo do Item de Câmera.",
-    "value": "../mcstructure/camera.mcstructure",
+    "value": "mcstructure/camera.mcstructure",
     "target": "_self",
     "confirm": {
       "enabled": true,
