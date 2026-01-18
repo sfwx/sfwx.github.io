@@ -34,7 +34,7 @@ const actions = {
   "0626": {
     "id": "0626",
     "enabled": true,
-    "type": "external_link",
+    "type": "navigate",
     "image": "https://sfwx.github.io/index1.png",
     "title": "FwX Perfil pessoal",
     "description": "Ainda incompleto!!",
@@ -52,7 +52,7 @@ const actions = {
     "image": "https://sfwx.github.io/signature.png",
     "title": "Editor NBT",
     "description": "Acessando editor online de NBT e JSON para itens, feito para criar, editar e validar dados de forma rápida e organizada.",
-    "value": "editor-nbt",
+    "value": "mcstructure",
     "target": "_self",
     "confirm": {
       "enabled": false,
