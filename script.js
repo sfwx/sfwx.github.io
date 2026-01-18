@@ -273,7 +273,6 @@ function fwxRouter() {
       button.textContent = action.confirm.message;
       button.disabled = false;
       button.style.display = "block";
-      fwxRedirect(action);
     }
   }, 1300);
 }
