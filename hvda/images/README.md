@@ -3,7 +3,7 @@
 ## Copyright Notice
 
 © Copyright 2023 - Copyright Notice  
-https://sfwx.github.io/copyright?lang=en  
+https://sfwx.github.io/copyright 
 
 All content of this **[OFFER / BOOK / INTERNET WORKS]**, including but not limited to **texts**, **images**, **videos**, **graphics**, **logos**, **trademarks**, and other content directly linked to this notice page  
 (https://sfwx.github.io/copyright)  
