@@ -47,7 +47,7 @@ const actions = {
     "type": "navigate",
     "image": "https://sfwx.github.io/floral/index.png",
     "title": "Floral Capes",
-    "description": "Acessando gerador de Skins de formato FloralCapes.",
+    "description": "Acessando o gerador de skins FloralCapes, onde você pode criar skins com o capas personalizadas.",
     "value": "floral",
     "target": "_self",
     "confirm": {
