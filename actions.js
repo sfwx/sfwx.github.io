@@ -33,8 +33,22 @@ const actions = {
     "type": "navigate",
     "image": "https://sfwx.github.io/index1.png",
     "title": "FwX Perfil pessoal",
-    "description": "Ainda incompleto!!",
+    "description": "Ainda incompleto!! " + (626 * 0),
     "value": "626",
+    "target": "_self",
+    "confirm": {
+      "enabled": false,
+      "message": "Acessando página.."
+    }
+  },
+  "1164": {
+    "id": "floralCapes",
+    "enabled": true,
+    "type": "navigate",
+    "image": "https://sfwx.github.io/signature.png",
+    "title": "Floral Capes",
+    "description": "",
+    "value": "floral",
     "target": "_self",
     "confirm": {
       "enabled": false,
