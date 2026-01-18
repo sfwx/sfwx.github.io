@@ -202,9 +202,6 @@ function fwxRedirect(action) {
       if (action.target == "_self") {
         window.location.href = 'https://sfwx.github.io/' + action.value;
       }
-      else if (action.target == "_blank") {
-        window.open('https://sfwx.github.io/' + action.value, "_blank");
-      }
     break;
     case "external_link":
       if (action.target == "_self") {
@@ -225,9 +222,6 @@ function fwxRedirect(action) {
     case "download_redirect":
       if (action.target == "_self") {
         window.location.href = action.value;
-      }
-      else if (action.target == "_blank") {
-        window.open(action.value, "_blank");
       }
     break;
     default:
