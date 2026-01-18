@@ -1,46 +1,4 @@
-# © Copyright 2023 — Copyright Notice
-
-🔗 Página oficial:  
-- https://sfwx.github.io/copyright?lang=pt  
-- https://sfwx.github.io/copyright?lang=en  
-
----
-
-## 🇧🇷 Aviso de Copyright (Português)
-
-© Copyright 2023 - Aviso de Copyright  
-https://sfwx.github.io/copyright?lang=pt  
-
-Todo o conteúdo desta **[OFERTA / LIVRO / OBRAS DE INTERNET]**, incluindo, mas não se limitando a **textos**, **imagens**, **vídeos**, **gráficos**, **logotipos**, **marcas registradas** e outros conteúdos que apontam diretamente para esta página de aviso  
-(https://sfwx.github.io/copyright)  
-é protegido por **direitos autorais**.
-
-Salvo indicação expressa em contrário, os direitos autorais pertencem a **[FlowniX](https://sfwx.github.io)** ou a seus respectivos compradores.
-
-Caso deseje utilizar algum conteúdo vinculado ao site que **não possua proprietário pago**, sinta-se à vontade para entrar em contato (**em Português do Brasil**). Estamos disponíveis para esclarecer dúvidas e fornecer as informações necessárias.
-
-Conteúdos publicados sob a licença **Creative Commons** são devidamente identificados e podem ser utilizados conforme as condições especificadas pelo próprio proprietário  
-(**é necessário entrar em contato com o criador do conteúdo**).
-
-Qualquer modificação nos complementos é **estritamente proibida**.  
-A permissão para modificação só será aceita **exclusivamente para uso pessoal do próprio usuário**.
-
-Qualquer divulgação de complementos modificados sem autorização, ou distribuição sem a permissão e assistência do **[autor](https://sfwx.github.io)**, é classificada como:
-
-- **Violação de direitos autorais**  
-  https://www.planalto.gov.br/ccivil_03/leis/2003/l10.695.htm  
-- Violação dos **termos de serviço**  
-  https://sfwx.github.io/terms-of-services?lang
-
-Qualquer pessoa que viole direitos autorais (ex.: **imagens**, **textos** ou **scripts** copiados sem permissão) está sujeita a processo judicial conforme o **Art. 184**, incluindo advertências, custos e indenizações  
-(§1, §2, §3, §4).
-
-📧 **Forma de contato:**  
-direct.tcd@gmail.com  
-
----
-
-## 🇺🇸 Copyright Notice (English)
+## Copyright Notice
 
 © Copyright 2023 - Copyright Notice  
 https://sfwx.github.io/copyright?lang=en  
