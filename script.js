@@ -48,7 +48,7 @@ const actions = {
   "1016": {
     "id": "1016",
     "enabled": true,
-    "type": "navigator",
+    "type": "navigate",
     "image": "https://sfwx.github.io/signature.png",
     "title": "Editor NBT",
     "description": "Acessando editor online de NBT e JSON para itens, feito para criar, editar e validar dados de forma rápida e organizada.",
@@ -108,7 +108,7 @@ const actions = {
     "image": "https://sfwx.github.io/signature.png",
     "title": "Asas de Operador",
     "description": "Clique para baixar o arquivo das incríveis Asas de Operador!",
-    "value": "1944../mcstructure/elytra.mcstructure",
+    "value": "../mcstructure/elytra.mcstructure",
     "target": "_self",
     "confirm": {
       "enabled": true,
@@ -174,7 +174,7 @@ const actions = {
   "1367": {
     "id": "1367",
     "enabled": true,
-    "type": "navigator",
+    "type": "navigate",
     "image": "https://sfwx.github.io/signature.png",
     "title": "Câmera Orbe",
     "description": "Acessando editor online de NBT e JSON para itens, feito para criar, editar e validar dados de forma rápida e organizada.",
@@ -195,35 +195,26 @@ function fwxInput(event, input) {
   }
 }
 
-// ===== DOWNLOAD LOCAL =====
-function fwxDownload(path) {
-  const a = document.createElement("a");
-  a.href = path;
-  a.download = "";
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-}
-
 // ===== ACTION HANDLER =====
 function fwxRedirect(action) {
   switch (action.type) {
     case "navigate":
       window.location.href = action.value;
     break;
-
     case "external_link":
       window.open(action.value, "_blank");
     break;
-
     case "file_download":
-      downloadFile(action.value);
+      const a = document.createElement("a");
+      a.href = action.value;
+      a.download = "";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
     break;
-
     case "download_redirect":
       window.location.href = action.value;
     break;
-
     default:
       console.warn("Tipo desconhecido:", action.type);
     break;
@@ -231,6 +222,7 @@ function fwxRedirect(action) {
 }
 
 // ===== ROUTER =====
+let currentAction = null;
 function fwxRouter() {
   const hash = window.location.hash.substring(1).toLowerCase();
 
@@ -256,6 +248,7 @@ function fwxRouter() {
   }
 
   const action = actions[hash];
+  currentAction = action;
   if (!action || action.enabled === false) {
     error.style.display = "block";
     return;
@@ -272,20 +265,19 @@ function fwxRouter() {
   setTimeout(() => {
     if (!action.confirm.enabled) {
       button.textContent = action.confirm.message;
-      button.style.disabled = true;
+      button.disabled = true;
       button.style.display = "block";
-      alert(action.value);
       fwxRedirect(action);
     }
     else {
       button.textContent = action.confirm.message;
-      button.style.disabled = false;
+      button.disabled = false;
       button.style.display = "block";
-      alert(action.value);
+      fwxRedirect(action);
     }
   }, 1300);
 }
 
 // ===== EVENTS =====
-window.addEventListener("load", fwxRouter());
-window.addEventListener("hashchange", fwxRouter());
+window.addEventListener("load", fwxRouter);
+window.addEventListener("hashchange", fwxRouter);
