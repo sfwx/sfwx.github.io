@@ -199,10 +199,20 @@ function fwxInput(event, input) {
 function fwxRedirect(action) {
   switch (action.type) {
     case "navigate":
-      window.location.href = 'https://sfwx.github.io/' + action.value;
+      if (action.target == "_self") {
+        window.location.href = 'https://sfwx.github.io/' + action.value;
+      }
+      else if (action.target == "_blank") {
+        window.open('https://sfwx.github.io/' + action.value, "_blank");
+      }
     break;
     case "external_link":
-      window.open(action.value, "_blank");
+      if (action.target == "_self") {
+        window.location.href = action.value;
+      }
+      else if (action.target == "_blank") {
+        window.open(action.value, "_blank");
+      }
     break;
     case "file_download":
       const a = document.createElement("a");
@@ -213,7 +223,12 @@ function fwxRedirect(action) {
       document.body.removeChild(a);
     break;
     case "download_redirect":
-      window.location.href = action.value;
+      if (action.target == "_self") {
+        window.location.href = action.value;
+      }
+      else if (action.target == "_blank") {
+        window.open(action.value, "_blank");
+      }
     break;
     default:
       console.warn("Tipo desconhecido:", action.type);
