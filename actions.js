@@ -180,5 +180,19 @@ const actions = {
       "enabled": true,
       "message": "Baixar Arquivo"
     }
+  },
+  "0903": {
+    "id": "game-test",
+    "enabled": true,
+    "type": "navigate",
+    "image": "https://sfwx.github.io/image/icon1.png",
+    "title": "Game Test",
+    "description": "Acessando jogo independente pessoal para fins de teste.",
+    "value": "game-test",
+    "target": "_self",
+    "confirm": {
+      "enabled": false,
+      "message": "Acessando página.."
+    }
   }
 };
