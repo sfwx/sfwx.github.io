@@ -67,7 +67,7 @@
           </span>
         </div>
         <div class="shortcut-wrapper">
-          <input type="number" class="shortcut-input" placeholder="0000" onkeydown="fwxInput(event, this)">
+          <input type="number" class="shortcut-input" placeholder="0000" onkeydown="fwxInput(event, this);">
         </div>
       </div>
       <!-- REDIRECT -->
@@ -84,14 +84,12 @@
         <p id="fwxDescription" style="font-size: 0.8rem; color: #64748b;">
           Aguarde a conexão segura...
         </p>
-        <div id="fwxProgressBar" class="loader-track">
+        <div class="loader-track">
           <div id="fwxProgress" class="loader-fill"></div>
         </div>
-        <div class="tag-container">
-          <button id="fwxButton" class="tag" style="font-size: 1.5rem; display: none;" onclick="fwxRedirect(action);">
-            Acessar
-          </button>
-        </div>
+        <button id="fwxButton" class="btn-apply" style="display: none;" onclick="fwxRedirect(action);">
+          Acessando página..
+        </button>
       </div>
       <!-- ERROR -->
       <div id="fwxError" style="display: none;">
@@ -108,7 +106,7 @@
           Você foi longe demais… esse atalho não está no mapa!
         </p>
         <div class="shortcut-wrapper">
-          <input type="number" class="shortcut-input" placeholder="Tentar novo ID..." onkeydown="fwxInput(event, this)">
+          <input type="number" class="shortcut-input" placeholder="Tentar novo ID..." onkeydown="fwxInput(event, this);">
         </div>
       </div>
       <footer class="footer-copyright">
