@@ -1,95 +1,31 @@
-# FwX · Central de Projetos
+## Copyright Notice
 
-<p align="center">
-  <img src="https://sfwx.github.io/index.png" width="140" alt="FwX Logo">
-</p>
+© Copyright 2023 - Copyright Notice  
+https://sfwx.github.io/copyright?lang=en  
 
-<p align="center">
-  <strong>Central de Projetos • Sistemas • Experimentos • Redirecionamentos</strong>
-</p>
+All content of this **[OFFER / BOOK / INTERNET WORKS]**, including but not limited to **texts**, **images**, **videos**, **graphics**, **logos**, **trademarks**, and other content directly linked to this notice page  
+(https://sfwx.github.io/copyright)  
+is protected by **copyright**.
 
----
+Unless expressly stated otherwise, the copyrights belong to **[FlowniX](https://sfwx.github.io)** or its respective buyers.
 
-## 📌 Sobre o projeto
+If you wish to use content linked to the site that does not have a paid owner, feel free to contact us (**in Brazilian Portuguese**). We are available to answer your questions and provide the necessary information.
 
-**FwX · Central de Projetos** é um hub pessoal desenvolvido por **FlowniX (Murilo M.S.)**, criado para reunir e organizar projetos, máquinas, sistemas, aplicativos, easter eggs e outras experiências digitais em um único espaço.
+Content published under the **Creative Commons** license is clearly marked and may be used according to the license conditions specified by the respective owner  
+(**contacting the content creator is required**).
 
-O objetivo é oferecer um ponto central, limpo e direto, onde cada projeto possa ser acessado de forma rápida, mantendo identidade visual, organização e uma experiência fluida.
+Any modification to add-ons is **strictly prohibited**.  
+Permission for modification will only be granted **for the user's personal use only**.
 
----
+Any disclosure or distribution of modified add-ons without authorization or without the assistance of the **[author](https://sfwx.github.io)** is considered:
 
-## 🧠 Conceito
+- A **copyright violation**  
+  https://www.planalto.gov.br/ccivil_03/leis/2003/l10.695.htm  
+- A violation of the **terms of service**  
+  https://sfwx.github.io/terms-of-services?lang
 
-A Central funciona como um **mapa digital de projetos**, onde cada item representa uma área, experimento ou sistema independente, todos conectados por uma única interface.
+Any person who violates copyrights (e.g., **images**, **texts**, or **scripts** copied without permission) is subject to legal action under **Art. 184**, including warnings, legal costs, and payment for damages  
+(§1, §2, §3, §4).
 
-O visual segue um estilo:
-- Dark / Glassmorphism
-- Minimalista
-- Futurista
-- Focado em clareza e identidade
-
----
-
-## 🏷️ Identidades utilizadas
-
-O projeto também serve como ponto de convergência das identidades e aliases usados ao longo do tempo:
-
-- **FlowniX**
-- **FwX**
-- **FwX404**
-- **TheCatDark**
-- **TCatDark**
-- **TCD**
-
-Cada nome representa fases, estilos ou tipos diferentes de projetos.
-
----
-
-## 🎨 Design & UI
-
-Principais características visuais:
-
-- Fundo escuro com gradiente radial
-- Efeito de brilho dinâmico (glow)
-- Cartão central em vidro (glass-card)
-- Tipografia **Inter**
-- Animações suaves e discretas
-- Layout totalmente responsivo
-
----
-
-## ⚙️ Tecnologias utilizadas
-
-- **HTML5**
-- **CSS3**
-  - Variáveis CSS
-  - Animações (`@keyframes`)
-  - Glassmorphism
-- **JavaScript**
-  - Roteamento simples baseado em estado
-  - Controle de interface sem dependências externas
-
-Sem frameworks. Sem bibliotecas. Apenas código direto.
-
----
-
-## 🌐 Acesso
-
-🔗 **Projeto online:**  
-https://sfwx.github.io/floral
-
----
-
-## 📄 Licença & Direitos
-
-Todo o conteúdo, identidade visual e conceito pertencem a **FlowniX**.
-
-🔒 Conteúdo protegido  
-📜 Direitos autorais e termos:  
-https://sfwx.github.io/copyright
-
----
-
-<p align="center">
-  © FlowniX — Todos os direitos reservados
-</p>
+📧 **Contact:**  
+direct.tcd@gmail.com
