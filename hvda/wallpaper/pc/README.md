@@ -1,4 +1,4 @@
-# **`Papeis de parede Mobile`**
+# **`Papeis de parede Computador`**
 
 ## Copyright Notice
 
