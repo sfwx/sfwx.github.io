@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      FlowniX | Portal de Links
+    </title>
+    <meta name="color-scheme" content="dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+      @font-face {
+        font-family: "Minecraft";
+        src: url("https://sfwx.github.io/font/Minecraft.otf") format("opentype");
+      }
+      @font-face {
+        font-family: "Minecraft";
+        font-weight: bold;
+        src: url("https://sfwx.github.io/font/MinecraftBold.otf") format("opentype");
+      }
+      body {
+        font-family: "Minecraft";
+        background-color: #151515;
+      }
+      .fwx-layer {
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-position: 0 0;
+        background-size: cover;
+        background-image: url('https://sfwx.github.io/image/default1x2.png');
+      }
+      .fwx-overlay-back {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        height: 100%;
+        z-index: 0;
+      }
+      .fwx-overlay-front {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        height: 100%;
+        z-index: 0;
+      }
+      .fwx-loads {
+        position: relative;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+      }
+      .fwx-loadDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0px 3px;
+        width: 20%;
+        text-decoration: none;
+      }
+      .fwx-loadBar {
+        width: 100%;
+        height: 3.5px;
+        border-radius: 25px;
+        margin-bottom: 5px;
+        background-color: rgba(226, 226, 226, 0.75);
+      }
+      .fwx-progressBar {
+        width: 0%;
+        height: 3.5px;
+        border-radius: 25px;
+        background-color: #f3f3f3;
+      }
+      .fwx-icon {
+        color: rgba(243, 243, 243, 0.75);
+      }
+      .fwx-pages {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+      }
+      .fwx-page {
+        background-color: #e7e7e7;
+        border-radius: 50px;
+        width: 350px;
+        height: 500px;
+      }
+      .fwx-photo {
+        position: relative;
+        background-color: #f5f5f5;
+        border-radius: 30px;
+        height: 200px;
+        top: -50px;
+      }
+      .fwx-title {
+        position: relative;
+        color: #151515;
+        top: -60px;
+      }
+      .fwx-content {
+        color: #151515;
+      }
+      .fwx-description {
+        color: #151515;
+      }
+      .fwx-button {
+        position: relative;
+        font-family: "Minecraft";
+        background-color: #151515;
+        border-radius: 25px;
+        font-size: 25px;
+        color: #f5f5f5;
+        border: none;
+        width: 300px;
+        height: 100px;
+        z-index: 1;
+        top: 55px;
+      }
+      .fwx-author {
+        position: relative;
+        text-decoration: none;
+        font-size: 15px;
+        color: white;
+        z-index: 1;
+        top: -90px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fwx-loads">
+      <a href="#" class="fwx-loadDiv">
+        <div class="fwx-loadBar">
+          <div class="fwx-progressBar" id="indexBar"></div>
+        </div>
+        <i class="fwx-icon fa fa-bell" id="indexIcon"></i>
+      </a>
+      <a href="#instagram" class="fwx-loadDiv">
+        <div class="fwx-loadBar">
+          <div class="fwx-progressBar" id="instagramBar"></div>
+        </div>
+        <i class="fwx-icon fab fa-instagram" id="instagramIcon"></i>
+      </a>
+      <a href="#discord" class="fwx-loadDiv">
+        <div class="fwx-loadBar">
+          <div class="fwx-progressBar" id="discordBar"></div>
+        </div>
+        <i class="fwx-icon fab fa-discord" id="discordIcon"></i>
+      </a>
+      <a href="#youtube" class="fwx-loadDiv">
+        <div class="fwx-loadBar">
+          <div class="fwx-progressBar" id="youtubeBar"></div>
+        </div>
+        <i class="fwx-icon fab fa-youtube" id="youtubeIcon"></i>
+      </a>
+      <a href="#twitter"class="fwx-loadDiv">
+        <div class="fwx-loadBar">
+          <div class="fwx-progressBar" id="twitterBar"></div>
+        </div>
+        <i class="fwx-icon fab fa-twitter" id="twitterIcon"></i>
+      </a>
+      <a href="#twitch" class="fwx-loadDiv">
+        <div class="fwx-loadBar">
+          <div class="fwx-progressBar" id="twitchBar"></div>
+        </div>
+        <i class="fwx-icon fab fa-twitch" id="twitchIcon"></i>
+      </a>
+    </div>
+    <br>
+    <center>
+      <div class="fwx-pages">
+        <div id="indexPage" style="display: none;">
+          <div class="fwx-layer" id="indexBackground"></div>
+          <a href="#twitch"><div class="fwx-overlay-back"></div></a>
+          <a href="#instagram"><div class="fwx-overlay-front"></div></a>
+          <div class="fwx-page">
+            <img class="fwx-photo" src="https://sfwx.github.io/image/default1x1.png" id="indexPhoto">
+            <h1 class="fwx-title" id="indexTitle">
+              -------
+            </h1>
+            <div class="fwx-content" id="indexContent">
+              -------
+            </div>
+            <div class="fwx-description" id="indexDescription">
+              -------
+            </div>
+          </div>
+        </div>
+        <div id="instagramPage" style="display: none;">
+          <div class="fwx-layer" id="instagramBackground"></div>
+          <a href="#"><div class="fwx-overlay-back"></div></a>
+          <a href="#discord"><div class="fwx-overlay-front"></div></a>
+          <div class="fwx-page">
+            <img class="fwx-photo" src="https://sfwx.github.io/image/default1x1.png" id="instagramPhoto">
+            <h1 class="fwx-title" id="instagramTitle">
+              -------
+            </h1>
+            <div class="fwx-content" id="instagramContent">
+              -------
+            </div>
+            <div class="fwx-description" id="instagramDescription">
+              -------
+            </div>
+            <button class="fwx-button" href="#instagram" onclick="clickButton(this);" id="instagramButton">
+              -------
+            </button>
+          </div>
+        </div>
+        <div id="discordPage" style="display: none;">
+          <div class="fwx-layer" id="discordBackground"></div>
+          <a href="#instagram"><div class="fwx-overlay-back"></div></a>
+          <a href="#youtube"><div class="fwx-overlay-front"></div></a>
+          <div class="fwx-page">
+            <img class="fwx-photo" src="https://sfwx.github.io/image/default1x1.png" id="discordPhoto">
+            <h1 class="fwx-title" id="discordTitle">
+              -------
+            </h1>
+            <div class="fwx-content" id="discordContent">
+              -------
+            </div>
+            <div class="fwx-description" id="discordDescription">
+              -------
+            </div>
+            <button class="fwx-button" href="#discord" onclick="clickButton(this);" id="discordButton">
+              -------
+            </button>
+          </div>
+        </div>
+        <div id="youtubePage" style="display: none;">
+          <div class="fwx-layer" id="youtubeBackground"></div>
+          <a href="#discord"><div class="fwx-overlay-back"></div></a>
+          <a href="#twitter"><div class="fwx-overlay-front"></div></a>
+          <div class="fwx-page">
+            <img class="fwx-photo" src="https://sfwx.github.io/image/default1x1.png" id="youtubePhoto">
+            <h1 class="fwx-title" id="youtubeTitle">
+              -------
+            </h1>
+            <div class="fwx-content" id="youtubeContent">
+              -------
+            </div>
+            <div class="fwx-description" id="youtubeDescription">
+              -------
+            </div>
+            <button class="fwx-button" href="#youtube" onclick="clickButton(this);" id="youtubeButton">
+              -------
+            </button>
+          </div>
+        </div>
+        <div id="twitterPage" style="display: none;">
+          <div class="fwx-layer" id="twitterBackground"></div>
+          <a href="#youtube"><div class="fwx-overlay-back"></div></a>
+          <a href="#twitch"><div class="fwx-overlay-front"></div></a>
+          <div class="fwx-page">
+            <img class="fwx-photo" src="https://sfwx.github.io/image/default1x1.png" id="twitterPhoto">
+            <h1 class="fwx-title" id="twitterTitle">
+              -------
+            </h1>
+            <div class="fwx-content" id="twitterContent">
+              -------
+            </div>
+            <div class="fwx-description" id="twitterDescription">
+              -------
+            </div>
+            <button class="fwx-button" href="#twitter" onclick="clickButton(this);" id="twitterButton">
+              -------
+            </button>
+          </div>
+        </div>
+        <div id="twitchPage" style="display: none;">
+          <div class="fwx-layer" id="twitchBackground"></div>
+          <a href="#twitter"><div class="fwx-overlay-back"></div></a>
+          <a href="#"><div class="fwx-overlay-front"></div></a>
+          <div class="fwx-page">
+            <img class="fwx-photo" src="https://sfwx.github.io/image/default1x1.png" id="twitchPhoto">
+            <h1 class="fwx-title" id="twitchTitle">
+              -------
+            </h1>
+            <div class="fwx-content" id="twitchContent">
+              -------
+            </div>
+            <div class="fwx-description" id="twitchDescription">
+              -------
+            </div>
+            <button class="fwx-button" href="#twitch" onclick="clickButton(this);" id="twitchButton">
+              -------
+            </button>
+          </div>
+        </div>
+      </div>
+      <a class="fwx-author" href="https://sfwx.github.io/copyright" target="_blenk">
+        ©2023 FlowniX | TCatDark
+      </a>
+    </center>
+  </body>
+  <head>
+    <script>
+      let data = [
+        {
+          "instagram": 1, "insta": 1, "fotos": 1, "foto": 1, "~": 1,
+          "discord": 2, "server": 2, "guild": 2, "dc": 2, "gg": 2,
+          "youtube": 3, "channel": 3, "canal": 3, "yt": 3,
+          "twitter": 4, "postagens": 4, "postagem": 4, "posts": 4, "post": 4, "twit": 4,
+          "twitch": 5, "aovivo": 5, "live": 5, "tv": 5
+        },
+        [
+          {
+            "format": 0,
+            "name": "index",
+            "image": {
+              "icon": "https://sfwx.github.io/image/default1x1.png",
+              "photo": "https://sfwx.github.io/image/default1x1.png",
+              "background": "https://sfwx.github.io/image/default1x2.png"
+            },
+            "text": {
+              "title": "Portal de Links",
+              "content": "conteúdo",
+              "description": "Navegue facilmente pelos perfis e conteúdos online de FlowniX, tudo em um só lugar!"
+            }
+          },
+          {
+            "format": 1,
+            "name": "instagram",
+            "image": {
+              "icon": "https://sfwx.github.io/image/default1x1.png",
+              "photo": "https://sfwx.github.io/image/default1x1.png",
+              "background": "https://sfwx.github.io/image/default1x2.png"
+            },
+            "text": {
+              "title": "Instagram",
+              "content": "conteudo",
+              "description": "descrição"
+            },
+            "button": {
+              "text": "Abrir",
+              "color": "#151515"
+            },
+            "url": {
+              "hostname": "https://instagram.com",
+              "pathname": "/Murilo.fwx"
+            }
+          },
+          {
+            "format": 1,
+            "name": "discord",
+            "image": {
+              "icon": "https://sfwx.github.io/image/default1x1.png",
+              "photo": "https://sfwx.github.io/image/default1x1.png",
+              "background": "https://sfwx.github.io/image/default1x2.png"
+            },
+            "text": {
+              "title": "Discord",
+              "content": "conteudo",
+              "description": "descrição"
+            },
+            "button": {
+              "text": "Abrir",
+              "color": "#151515"
+            },
+            "url": {
+              "hostname": "https://discord.com",
+              "pathname": "/invite/6DgZah8Jny?event=966132080872394762"
+            }
+          },
+          {
+            "format": 1,
+            "name": "youtube",
+            "image": {
+              "icon": "https://sfwx.github.io/image/default1x1.png",
+              "photo": "https://sfwx.github.io/image/default1x1.png",
+              "background": "https://sfwx.github.io/image/default1x2.png"
+            },
+            "text": {
+              "title": "YouTube",
+              "content": "conteúdo",
+              "description": "descrição"
+            },
+            "button": {
+              "text": "Abrir",
+              "color": "#151515"
+            },
+            "url": {
+              "hostname": "https://youtube.com",
+              "pathname": "/FlowniX_"
+            }
+          },
+          {
+            "format": 1,
+            "name": "twitter",
+            "image": {
+              "icon": "https://sfwx.github.io/image/default1x1.png",
+              "photo": "https://sfwx.github.io/image/default1x1.png",
+              "background": "https://sfwx.github.io/image/default1x2.png"
+            },
+            "text": {
+              "title": "Twitter",
+              "content": "conteúdo",
+              "description": "descrição"
+            },
+            "button": {
+              "text": "Abrir",
+              "color": "#151515"
+            },
+            "url": {
+              "hostname": "https://twitter.com",
+              "pathname": "/TCatDark"
+            }
+          },
+          {
+            "format": 1,
+            "name": "twitch",
+            "image": {
+              "icon": "https://sfwx.github.io/image/default1x1.png",
+              "photo": "https://sfwx.github.io/image/default1x1.png",
+              "background": "https://sfwx.github.io/image/default1x2.png"
+            },
+            "text": {
+              "title": "Twitch",
+              "content": "conteúdo",
+              "description": "descrição"
+            },
+            "button": {
+              "text": "Abrir",
+              "color": "#151515"
+            },
+            "url": {
+              "hostname": "https://twitch.tv",
+              "pathname": "/FWXl_"
+            }
+          }
+        ]
+      ];
+      data[1].forEach(page => {
+        if (page["format"] === 0) {
+          document.getElementById(page["name"] + 'Background').style.backgroundImage = "url('" + page["image"]["background"] + "');";
+          document.getElementById(page["name"] + 'Photo').src = page["image"]["photo"];
+          document.getElementById(page["name"] + 'Title').innerHTML = page["text"]["title"];
+          document.getElementById(page["name"] + 'Content').innerHTML = page["text"]["content"];
+          document.getElementById(page["name"] + 'Description').innerHTML = page["text"]["description"];
+        }
+        else if (page["format"] === 1) {
+          document.getElementById(page["name"] + 'Background').style.backgroundImage = "url('" + page["image"]["background"] + "');";
+          document.getElementById(page["name"] + 'Photo').src = page["image"]["photo"];
+          document.getElementById(page["name"] + 'Title').innerHTML = page["text"]["title"];
+          document.getElementById(page["name"] + 'Content').innerHTML = page["text"]["content"];
+          document.getElementById(page["name"] + 'Description').innerHTML = page["text"]["description"];
+          document.getElementById(page["name"] + 'Button').innerHTML = page.button.text;
+          document.getElementById(page["name"] + 'Button').style.backgroundColor = page.button.color;
+          document.getElementById(page["name"] + 'Button').href = page.url.hostname + page.url.pathname;
+        }
+      });
+      let page;
+      let pages;
+      let progress;
+      function valuePage() {
+        if (window.location.pathname.substring(1) != "" && data[0][window.location.pathname.substring(1).toLowerCase()]) {
+          page = data[0][window.location.pathname.substring(1).toLowerCase()];
+        }
+        else if (window.location.hash.substring(1) != "" && data[0][window.location.hash.substring(1).toLowerCase()]) {
+            page = data[0][window.location.hash.substring(1).toLowerCase()];
+        }
+        else {
+          page = 0;
+        }
+      }
+      valuePage();
+      function clearBars(value = true) {
+        if (value && progress) {
+          clearInterval(progress);
+        }
+        data[1].forEach(page => {
+          if (document.getElementById(page["name"] + 'Bar').style) {
+            document.getElementById(page["name"] + 'Bar').removeAttribute("style");
+          }
+          if (document.getElementById(page["name"] + 'Icon').style) {
+            document.getElementById(page["name"] + 'Icon').removeAttribute("style");
+          }
+        });
+      }
+      function clearPages() {
+        data[1].forEach(page => {
+          if (window.getComputedStyle(document.getElementById(page["name"] + 'Page')).getPropertyValue('display')) {
+            document.getElementById(page["name"] + 'Page').style.display = "none";
+          }
+        });
+      }
+      function startPage(name) {
+        var bar = document.getElementById(name + 'Bar');
+        var icon = document.getElementById(name + 'Icon');
+        var page = document.getElementById(name + 'Page');
+        clearPages();
+        bar.style.width = "100%";
+        icon.style.color = "white";
+        page.removeAttribute("style")
+      }
+      function changePage(name) {
+        var bar = document.getElementById(name + 'Bar');
+        var icon = document.getElementById(name + 'Icon');
+        var page = document.getElementById(name + 'Page');
+        let width = 1;
+        clearPages();
+        page.removeAttribute("style");
+        if (progress) {
+          clearInterval(progress);
+        }
+        progress = setInterval(function() {
+          if (width >= 100) {
+            clearInterval(progress);
+            bar.style.width = "100%";
+            icon.style.color = "white";
+          }
+          else {
+            width++;
+            bar.style.width = width + '%';
+          }
+        }, 40);
+      }
+      function movePage() {
+        if (page == data[1].length) {
+          page = 0;
+          changePage(data[1][page]["name"]);
+          page = 1;
+          clearBars(false);
+        }
+        else {
+          changePage(data[1][page]["name"]);
+          page++;
+        }
+      }
+      function clickButton(thisv) {
+        window.open(thisv.href, "_blank");
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        if (page !== 0) {
+          startPage(data[1][page]["name"]);
+        }
+        else {
+          movePage();
+          pages = setInterval(movePage, 4775);
+        }
+        window.addEventListener("hashchange", function() {
+          valuePage();
+          if (page !== 0) {
+            if (progress) {
+              clearInterval(progress);
+            }
+            if (pages) {
+              clearInterval(pages);
+            }
+            clearBars(true);
+            clearPages();
+            startPage(data[1][page]["name"]);
+          }
+          else {
+            if (progress) {
+              clearInterval(progress);
+            }
+            if (pages) {
+              clearInterval(pages);
+            }
+            clearBars(false);
+            clearPages();
+            movePage();
+            pages = setInterval(movePage, 4775);
+          }
+        });
+      });
+      document.addEventListener("visibilitychange", function() {
+        if (pages) {
+          if (document.hidden) {
+            if (progress) {
+              clearInterval(progress);
+            }
+            if (pages) {
+              clearInterval(pages);
+            }
+          }
+          else {
+            page--;
+            movePage();
+            pages = setInterval(movePage, 4775);
+          }
+        }
+      });
+    </script>
+  </head>
+</html>
