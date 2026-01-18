@@ -15,7 +15,7 @@ const actions = {
     }
   },
   "0404": {
-    "id": "0404",
+    "id": "404",
     "enabled": true,
     "type": "navigate",
     "image": "https://sfwx.github.io/index1.png",
@@ -29,7 +29,7 @@ const actions = {
     }
   },
   "0626": {
-    "id": "0626",
+    "id": "626",
     "enabled": true,
     "type": "navigate",
     "image": "https://sfwx.github.io/index1.png",
@@ -43,7 +43,7 @@ const actions = {
     }
   },
   "1016": {
-    "id": "1016",
+    "id": "editor-nbt",
     "enabled": true,
     "type": "navigate",
     "image": "https://sfwx.github.io/signature.png",
@@ -57,7 +57,7 @@ const actions = {
     }
   },
   "1631": {
-    "id": "1631",
+    "id": "giveOperatorBow",
     "enabled": true,
     "type": "file_download",
     "image": "https://sfwx.github.io/signature.png",
@@ -71,7 +71,7 @@ const actions = {
     }
   },
   "2176": {
-    "id": "2176",
+    "id": "giveOperatorFirework",
     "enabled": true,
     "type": "file_download",
     "image": "https://sfwx.github.io/signature.png",
@@ -85,7 +85,7 @@ const actions = {
     }
   },
   "1936": {
-    "id": "1936",
+    "id": "giveOperatorShield",
     "enabled": true,
     "type": "file_download",
     "image": "https://sfwx.github.io/signature.png",
@@ -99,7 +99,7 @@ const actions = {
     }
   },
   "1944": {
-    "id": "1944",
+    "id": "giveOperator*****",
     "enabled": true,
     "type": "file_download",
     "image": "https://sfwx.github.io/signature.png",
@@ -113,7 +113,7 @@ const actions = {
     }
   },
   "1044": {
-    "id": "1044",
+    "id": "giveCamera",
     "enabled": true,
     "type": "file_download",
     "image": "https://sfwx.github.io/signature.png",
@@ -127,7 +127,7 @@ const actions = {
     }
   },
   "1731": {
-    "id": "1731",
+    "id": "giveNetherPortal",
     "enabled": true,
     "type": "file_download",
     "image": "https://sfwx.github.io/signature.png",
@@ -141,7 +141,7 @@ const actions = {
     }
   },
   "1396": {
-    "id": "1396",
+    "id": "giveEndPortal",
     "enabled": true,
     "type": "file_download",
     "image": "https://sfwx.github.io/signature.png",
@@ -155,7 +155,7 @@ const actions = {
     }
   },
   "1611": {
-    "id": "1611",
+    "id": "giveEnderPortal",
     "enabled": true,
     "type": "file_download",
     "image": "https://sfwx.github.io/signature.png",
@@ -166,20 +166,6 @@ const actions = {
     "confirm": {
       "enabled": true,
       "message": "Baixar Arquivo"
-    }
-  },
-  "1367": {
-    "id": "1367",
-    "enabled": true,
-    "type": "navigate",
-    "image": "https://sfwx.github.io/signature.png",
-    "title": "Câmera Orbe",
-    "description": "Acessando editor online de NBT e JSON para itens, feito para criar, editar e validar dados de forma rápida e organizada.",
-    "value": "editor-nbt",
-    "target": "_self",
-    "confirm": {
-      "enabled": false,
-      "message": "Acessando página.."
     }
   }
 };
