@@ -1,5 +1,5 @@
 .FlowniX {
-    background-image: url("https://sfwx.github.io/gt/signature.png");
+    background-image: url("https://sfwx.github.io/image/icon1.png");
     background-color: forestgreen;
     background-size: 700%;
     position: absolute;
@@ -13,7 +13,7 @@ body {
 }
 #player {
     transition: top 0.3s ease, left 0.3s ease;
-    background-image: url("https://sfwx.github.io/gt/index.png");
+    background-image: url("https://sfwx.github.io/game-test/index.png");
     background-position: 0px 50px;
     background-size: 700%;
     position: absolute;
@@ -36,7 +36,7 @@ body {
     height: 50px;
 }
 .block {
-    background-image: url("https://sfwx.github.io/gt/index.png");
+    background-image: url("https://sfwx.github.io/game-test/index.png");
     background-position: -300px 0px;
     background-size: 700%;
     position: absolute;
@@ -44,7 +44,7 @@ body {
     height: 50px;
 }
 .grama {
-    background-image: url("https://sfwx.github.io/gt/index.png");
+    background-image: url("https://sfwx.github.io/game-test/index.png");
     background-color: forestgreen;
     background-position: -50px 0px;
     background-size: 700%;
@@ -53,7 +53,7 @@ body {
     height: 50px;
 }
 .gramaTerra {
-    background-image: url("https://sfwx.github.io/gt/index.png");
+    background-image: url("https://sfwx.github.io/game-test/index.png");
     background-color: forestgreen;
     background-position: -100px 0px;
     background-size: 700%;
@@ -62,7 +62,7 @@ body {
     height: 50px;
 }
 .terra {
-    background-image: url("https://sfwx.github.io/gt/index.png");
+    background-image: url("https://sfwx.github.io/game-test/index.png");
     background-color: saddlebrown;
     background-position: -150px 0px;
     background-size: 700%;
@@ -71,7 +71,7 @@ body {
     height: 50px;
 }
 .pedra {
-    background-image: url("https://sfwx.github.io/gt/index.png");
+    background-image: url("https://sfwx.github.io/game-test/index.png");
     background-color: grey;
     background-position: -200px 0px;
     background-size: 700%;
