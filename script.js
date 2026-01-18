@@ -34,7 +34,7 @@ const actions = {
   "0626": {
     "id": "0626",
     "enabled": true,
-    "type": "navigate",
+    "type": "external_link",
     "image": "https://sfwx.github.io/index1.png",
     "title": "FwX Perfil pessoal",
     "description": "Ainda incompleto!!",
@@ -199,7 +199,7 @@ function fwxInput(event, input) {
 function fwxRedirect(action) {
   switch (action.type) {
     case "navigate":
-      window.location.href = action.value;
+      window.location.href = 'https://sfwx.github.io/' + action.value;
     break;
     case "external_link":
       window.open(action.value, "_blank");
