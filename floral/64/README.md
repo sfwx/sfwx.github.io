@@ -1,4 +1,4 @@
-# `Texturas 64x64`
+# **`Texturas 64x64`**
 
 ## Copyright Notice
 
