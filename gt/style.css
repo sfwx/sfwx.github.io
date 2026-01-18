@@ -1,0 +1,81 @@
+            .FlowniX {
+                background-image: url("https://sfwx.github.io/gt/signature.png");
+                background-color: forestgreen;
+                background-size: 700%;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+            }
+            body {
+                background-color: forestgreen;
+                overflow-y: hidden;
+                overflow-x: hidden;
+            }
+            #player {
+                transition: top 0.3s ease, left 0.3s ease;
+                background-image: url("https://sfwx.github.io/gt/index.png");
+                background-position: 0px 50px;
+                background-size: 700%;
+                position: absolute;
+                z-index: 5;
+                width: 50px;
+                height: 50px;
+                top: 0;
+                left: 0;
+            }
+            #item {
+                filter: brightness(0.75);
+                left: 42.5px;
+                pointer-events: none;
+            }
+            .seletor {
+                background-color: white;
+                position: absolute;
+                opacity: 25%;
+                width: 50px;
+                height: 50px;
+            }
+            .block {
+                background-image: url("https://sfwx.github.io/gt/index.png");
+                background-position: -300px 0px;
+                background-size: 700%;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+            }
+            .grama {
+                background-image: url("https://sfwx.github.io/gt/index.png");
+                background-color: forestgreen;
+                background-position: -50px 0px;
+                background-size: 700%;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+            }
+            .gramaTerra {
+                background-image: url("https://sfwx.github.io/gt/index.png");
+                background-color: forestgreen;
+                background-position: -100px 0px;
+                background-size: 700%;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+            }
+            .terra {
+                background-image: url("https://sfwx.github.io/gt/index.png");
+                background-color: saddlebrown;
+                background-position: -150px 0px;
+                background-size: 700%;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+            }
+            .pedra {
+                background-image: url("https://sfwx.github.io/gt/index.png");
+                background-color: grey;
+                background-position: -200px 0px;
+                background-size: 700%;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+            }
