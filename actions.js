@@ -201,8 +201,8 @@ const actions = {
     "type": "navigate",
     "image": "https://sfwx.github.io/image/icon1.png",
     "title": "Botões Pixelados",
-    "description": "Acessando mapa de texturas de botões pixelados.",
-    "value": "image/pixelated-buttons/index.png",
+    "description": "Essas texturas de botões estão assinadas com direitos autorais.",
+    "value": "copyright?type=minecraft",
     "target": "_self",
     "confirm": {
       "enabled": false,
