@@ -194,5 +194,19 @@ const actions = {
       "enabled": false,
       "message": "Acessando página.."
     }
+  },
+  "1788": {
+    "id": "pixelated-buttons",
+    "enabled": true,
+    "type": "navigate",
+    "image": "https://sfwx.github.io/image/icon1.png",
+    "title": "Botões Pixelados",
+    "description": "Acessando mapa de texturas de botões pixelados.",
+    "value": "image/pixelated-buttons/index.png",
+    "target": "_self",
+    "confirm": {
+      "enabled": false,
+      "message": "Acessando página.."
+    }
   }
 };
