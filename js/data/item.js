@@ -1,4 +1,4 @@
-let itemJson = {
+const itemJson = {
   "type": "compound",
   "name": "",
   "value": {
