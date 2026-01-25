@@ -54,6 +54,7 @@ function fwxRouter() {
   const redirect = document.getElementById("fwxRedirect");
   const image = document.getElementById("fwxImage");
   const title = document.getElementById("fwxTitle");
+  const subtitle = document.getElementById("fwxSubTitle");
   const description = document.getElementById("fwxDescription");
   const progress = document.getElementById("fwxProgress");
   const button = document.getElementById("fwxButton");
@@ -82,6 +83,7 @@ function fwxRouter() {
   redirect.style.display = "block";
   image.src = action.image;
   title.textContent = action.title;
+  subtitle.textContent = action.subtitle;
   description.textContent = action.description;
   requestAnimationFrame(() => {
     progress.style.width = "100%";
