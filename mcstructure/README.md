@@ -1,4 +1,4 @@
-# **`McStructure`**
+# **[McStructure](https://sfwx.github.io/mcstructure)**
 
 ## Copyright Notice
 
