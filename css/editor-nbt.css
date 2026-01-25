@@ -1,16 +1,1 @@
-body {
-  overflow-y: auto;
-  padding: 40px 0;
-}
-.glass-card {
-  max-width: 650px;
-  text-align: left;
-  margin: auto;
-}
-/* Destaque para o Input de JSON */
-#rawJsonInput {
-  background: rgba(0, 0, 0, 0.3);
-  font-family: monospace;
-  font-size: 0.8rem;
-  border-style: dashed;
-}
+// Haverá atualização futuramente.
