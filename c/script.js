@@ -18,7 +18,7 @@ function convertText(text) {
     document.getElementById("result").style.color = "lightCoral";
   }
   else {
-    document.getElementById("result").style.color.remove();
+    document.getElementById("result").removeAttribute("style");
   }
 }
 if (location.hash.length === 5) {
@@ -27,6 +27,6 @@ if (location.hash.length === 5) {
     document.getElementById("result").style.color = "lightCoral";
   }
   else {
-    document.getElementById("result").style.color.remove();
+    document.getElementById("result").removeAttribute("style");
   }
 }
