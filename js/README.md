@@ -1,4 +1,4 @@
-# **`Arquuvos JS`**
+# **`Arquivos JS`**
 
 ## Copyright Notice
 
