@@ -8,7 +8,7 @@ const actions = {
     "title": "FwX · TCatDark",
     "subtitle": "Conversor numérico",
     "description": "Conversor numérico para transformar palavras em uma numeração de 4 dígitos. Apenas para fins técnicos;",
-    "value": "c",
+    "value": "tag-generator",
     "target": "_self",
     "confirm": {
       "enabled": false,
