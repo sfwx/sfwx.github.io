@@ -6,8 +6,8 @@ const actions = {
     "type": "navigate",
     "image": "https://sfwx.github.io/image/icon0.png",
     "title": "FwX · TCatDark",
-    "subtitle": "Conversor numérico",
-    "description": "Conversor numérico para transformar palavras em uma numeração de 4 dígitos. Apenas para fins técnicos;",
+    "subtitle": "Gerador de Tag",
+    "description": "Gerador de Tag para transformar palavras em uma numeração de 4 dígitos. Apenas para fins técnicos;",
     "value": "tag-generator",
     "target": "_self",
     "confirm": {
