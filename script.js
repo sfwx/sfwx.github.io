@@ -47,7 +47,8 @@ function fwxRedirect(action) {
 // ===== ROUTER =====
 let currentAction = null;
 function fwxRouter() {
-  const hash = window.location.hash.substring(1).toLowerCase();
+  const rawHash = window.location.hash.substring(1).toLowerCase();
+  const hash = /^\d+$/.test(rawHash) ? rawHash.padStart(4, '0') : rawHash;
 
   const bio = document.getElementById("fwxBio");
   const redirect = document.getElementById("fwxRedirect");
