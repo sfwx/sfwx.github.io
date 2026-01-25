@@ -1,4 +1,4 @@
-# [**`Gerador de Tag`**](https://sfwx.github.io/tag-generator)
+# **[`Gerador de Tag`](https://sfwx.github.io/tag-generator)**
 
 ## Copyright Notice
 
