@@ -53,7 +53,6 @@ function fwxRouter() {
   const bio = document.getElementById("fwxBio");
   const redirect = document.getElementById("fwxRedirect");
   const image = document.getElementById("fwxImage");
-  const icon = document.querySelector("link[rel='icon']");
   const title = document.getElementById("fwxTitle");
   const subtitle = document.getElementById("fwxSubTitle");
   const description = document.getElementById("fwxDescription");
@@ -80,7 +79,6 @@ function fwxRouter() {
   }
 
   // ===== REDIRECT UI =====
-  icon.href = actions[hash].image;
   redirect.style.display = "block";
   image.src = actions[hash].image;
   title.textContent = actions[hash].title;
