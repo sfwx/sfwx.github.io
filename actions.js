@@ -6,7 +6,7 @@ const actions = {
     "image": "https://sfwx.github.io/image/icon0.png",
     "title": "Conversor numérico",
     "description": "Conversor numérico para transformar palavras em uma numeração de 4 dígitos. Apenas para fins técnicos;",
-    "value": "c",
+    "value": ((v) => v ? `c/#${v}` : 'c')(new URLSearchParams(location.search).get('v')),
     "target": "_self",
     "confirm": {
       "enabled": false,
