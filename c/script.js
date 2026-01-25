@@ -15,7 +15,3 @@ function convertText(text) {
   document.getElementById("result").textContent = "#" + tag;
   location.hash = tag;
 }
-// se abrir com hash na URL
-if (location.hash.length === 5) {
-  document.getElementById("result").textContent = "#" + location.hash.substring(1);
-}
