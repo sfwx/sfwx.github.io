@@ -72,30 +72,29 @@ function fwxRouter() {
     return;
   }
 
-  const action = actions[hash];
-  currentAction = action;
-  if (!action || action.enabled === false) {
+  currentAction = actions[hash];
+  if (!actions[hash] || actions[hash].enabled === false) {
     error.style.display = "block";
     return;
   }
 
   // ===== REDIRECT UI =====
   redirect.style.display = "block";
-  image.src = action.image;
-  title.textContent = action.title;
-  subtitle.textContent = action.subtitle;
-  description.textContent = action.description;
+  image.src = actions[hash].image;
+  title.textContent = actions[hash].title;
+  subtitle.textContent = actions[hash].subtitle;
+  description.textContent = actions[hash].description;
   requestAnimationFrame(() => {
     progress.style.width = "100%";
   });
   setTimeout(() => {
-    if (!action.confirm.enabled) {
-      button.textContent = action.confirm.message;
+    if (!actions[hash].confirm.enabled) {
+      button.textContent = actions[hash].confirm.message;
       button.style.display = "block";
-      fwxRedirect(action);
+      fwxRedirect(actions[hash]);
     }
     else {
-      button.textContent = action.confirm.message;
+      button.textContent = actions[hash].confirm.message;
       button.style.display = "block";
     }
   }, 1300);
