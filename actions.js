@@ -18,7 +18,7 @@ const actions = {
   "0404": {
     "id": "404",
     "enabled": true,
-    "type": "external_link",
+    "type": "navigate",
     "image": "https://sfwx.github.io/image/icon0.png",
     "title": "Área desconhecida!",
     "description": "Você foi longe demais… esse atalho não está no mapa!",
@@ -33,7 +33,7 @@ const actions = {
   "0626": {
     "id": "626",
     "enabled": true,
-    "type": "navigate",
+    "type": "external_link",
     "image": "https://sfwx.github.io/image/icon0.png",
     "title": "FwX Perfil pessoal",
     "description": "Acessando o perfil pessoal do Murilo",
