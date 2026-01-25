@@ -14,7 +14,7 @@ function convertText(text) {
   const tag = tagFromName(text);
   document.getElementById("result").textContent = "#" + tag;
   location.hash = tag;
-  if (actions[location.hash.substring(1)]) {
+  if (location.hash.substring(1) in actions) {
     document.getElementById("result").style.color = "lightCoral";
   }
   else {
@@ -23,7 +23,7 @@ function convertText(text) {
 }
 if (location.hash.length === 5) {
   document.getElementById("result").textContent = location.hash;
-  if (actions[location.hash.substring(1)]) {
+  if (location.hash.substring(1) in actions]) {
     document.getElementById("result").style.color = "lightCoral";
   }
   else {
