@@ -13,17 +13,17 @@ function convertText(text) {
   }
   const tag = tagFromName(text);
   document.getElementById("result").textContent = "#" + tag;
-  if (action[location.hash.substring(1)]) {
+  location.hash = tag;
+  if (actions[location.hash.substring(1)]) {
     document.getElementById("result").style.color = "lightCoral";
   }
   else {
     document.getElementById("result").style.color.remove();
   }
-  location.hash = tag;
 }
 if (location.hash.length === 5) {
-  document.getElementById("result").textContent = "#" + location.hash.substring(1);
-  if (action[location.hash.substring(1)]) {
+  document.getElementById("result").textContent = location.hash;
+  if (actions[location.hash.substring(1)]) {
     document.getElementById("result").style.color = "lightCoral";
   }
   else {
