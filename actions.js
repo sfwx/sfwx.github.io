@@ -67,7 +67,7 @@ const actions = {
     "id": "editor-nbt",
     "enabled": true,
     "type": "navigate",
-    "image": "https://sfwx.github.io/image/icon1.png",
+    "image": "https://sfwx.github.io/mcstructure/index.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Editor NBT",
     "description": "Acessando editor online de NBT e JSON para itens, feito para criar, editar e validar dados de forma rápida e organizada.",
