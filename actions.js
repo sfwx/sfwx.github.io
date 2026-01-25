@@ -282,7 +282,7 @@ const actions = {
     "enabled": true,
     "type": "file_download",
     "image": "https://sfwx.github.io/image/icon1.png",
-    "title": "FwX404 / Minecraft",
+    "title": "FwX404 · Minecraft",
     "subtitle": "Give Ender Portal",
     "description": "Clique para baixar o arquivo do Bloco de Portal do Ender.",
     "value": "mcstructure/ender_portal.mcstructure",
