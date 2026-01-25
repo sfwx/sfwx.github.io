@@ -1,7 +1,7 @@
 const actions = {
   // Redirecionamento para o conversor numérico.
   "0000": {
-    "id": "0000",
+    "id": "unknown",
     "enabled": true,
     "type": "navigate",
     "image": "https://sfwx.github.io/image/icon0.png",
