@@ -117,7 +117,7 @@ const actions = {
     "title": "FwX · TCatDark",
     "subtitle": "Instagram",
     "description": "Acessando o perfil secundário de Murilo no Instagram.",
-    "value": "https://instagram.com/fw.x0",
+    "value": "https://instagram.com/fw.x00",
     "target": "_self",
     "confirm": {
       "enabled": false,
