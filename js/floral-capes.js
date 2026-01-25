@@ -1,11 +1,11 @@
 const ELEMENTS = {
-    input: document.getElementById('fwxFileInput'),
-    canvas: document.getElementById('fwxCanvas'),
-    previewImg: document.getElementById('fwxPreview'),
-    skinPreview: document.getElementById('fwxSkinPreview'),
-    capePreview: document.getElementById('fwxCapePreview'),
-    console: document.getElementById('fwxConsole'),
-    saveButton: document.getElementById('fwxSaveButton'),
+    input: document.getElementById("fwxFileInput"),
+    canvas: document.getElementById("fwxCanvas"),
+    previewImg: document.getElementById("fwxPreview"),
+    skinPreview: document.getElementById("fwxSkinPreview"),
+    capePreview: document.getElementById("fwxCapePreview"),
+    console: document.getElementById("fwxConsole"),
+    saveButton: document.getElementById("fwxSaveButton"),
 };
 
 // Estado da aplicação
@@ -18,11 +18,11 @@ const STATE = {
 };
 
 // --- Utilitários de Log ---
-function log(msg, type = 'info') {
-    const color = type === 'error' ? '#ff5555' : (type === 'success' ? '#55ff55' : '#ffffff');
+function log(msg, type = "info") {
+    const color = type === "error" ? "#ff5555" : (type === "success" ? "#55ff55" : "#ffffff");
     ELEMENTS.console.innerHTML += `<br>
-<span style="color: ${color};">> ${msg}</span>`;
-    console.log(`[FloralCape] ${msg}`);
+<span style="color: ${color};">> ${msg)</span>`;
+    console.log('[FloralCape] ' + msg);
 }
 
 // --- Carregamento de Imagens ---
@@ -110,7 +110,7 @@ async function fwxCreateSkin() {
 
     log("Gerando FloralCape Skin...");
     
-    const ctx = ELEMENTS.canvas.getContext('2d');
+    const ctx = ELEMENTS.canvas.getContext("2d");
     
     // Define tamanho base (prioriza 64px por enquanto, mas preparado para lógica 128)
     const size = 64; 
@@ -167,7 +167,7 @@ async function fwxCreateSkin() {
 }
 
 function downloadCanvasAsImage() {
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     // Nome do arquivo baseado na skin original ou padrão
     const originalName = STATE.skinFile ? STATE.skinFile.name.replace(/\.[^/.]+$/, "") : "floral_skin";
     link.download = `${originalName}_floral.png`;
@@ -208,8 +208,8 @@ async function fwxUpdateJson(file) {
 
         // Remove duplicatas antigas para evitar array gigante
         desc.render_controllers = desc.render_controllers.filter(rc => {
-            if (typeof rc === 'string') return rc !== rcCape && rc !== rcEyes;
-            if (typeof rc === 'object') return !rc[rcCape] && !rc[rcEyes];
+            if (typeof rc === "string") return rc !== rcCape && rc !== rcEyes;
+            if (typeof rc === "object") return !rc[rcCape] && !rc[rcEyes];
             return true;
         });
 
@@ -234,5 +234,5 @@ async function fwxUpdateJson(file) {
 // Função helper para o botão de "Update Json" caso clique direto sem arquivo
 function triggerJsonUpload() {
     // Apenas clica no input, o handler cuida do resto
-    ELEMENTS.input.click(); 
-          }
+    ELEMENTS.input.click();
+}
