@@ -36,7 +36,7 @@ const actions = {
     "type": "external_link",
     "image": "https://sfwx.github.io/image/icon0.png",
     "title": "FwX Perfil pessoal",
-    "description": "Acessando o perfil pessoal do Murilo",
+    "description": "Acessando o perfil pessoal do Murilo.",
     "value": "https://instagram.com/fwx404",
     "target": "_self",
     "confirm": {
@@ -88,7 +88,48 @@ const actions = {
     }
   },
   // Redirecionamentos para projetos externos.
-  "4155": {},
+  "1783": {
+    "id": "instagram-primary",
+    "enabled": true,
+    "type": "external_link",
+    "image": "https://sfwx.github.io/image/icon0.png",
+    "title": "Instagram",
+    "description": "Acessando o perfil pessoal de Murilo no Instagram.",
+    "value": "https://instagram.com/fwx404",
+    "target": "_self",
+    "confirm": {
+      "enabled": false,
+      "message": "Acessando página.."
+    }
+  },
+  "1979": {
+    "id": "instagram-secondary",
+    "enabled": true,
+    "type": "external_link",
+    "image": "https://sfwx.github.io/image/icon0.png",
+    "title": "Instagram",
+    "description": "Acessando o perfil secundário de Murilo no Instagram.",
+    "value": "https://instagram.com/fw.x0",
+    "target": "_self",
+    "confirm": {
+      "enabled": false,
+      "message": "Acessando página.."
+    }
+  },
+  "1954": {
+    "id": "inventory-standoff2",
+    "enabled": true,
+    "type": "external_link",
+    "image": "https://sfwx.github.io/image/icon0.png",
+    "title": "Inventário Standoff2",
+    "description": "Acessando o Inventário pessoal do Murilo.",
+    "value": "https://instagram.com/inv.fwx",
+    "target": "_self",
+    "confirm": {
+      "enabled": false,
+      "message": "Acessando página.."
+    }
+  },
   // Redirecionamentos para direitos autorais.
   "1788": {
     "id": "pixelated-buttons",
