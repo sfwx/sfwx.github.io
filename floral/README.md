@@ -1,4 +1,4 @@
-# **`FloralCapes`**
+# **[`FloralCapes`](https://sfwx.github.io/floral)**
 
 ## Copyright Notice
 
