@@ -131,7 +131,7 @@ const actions = {
     "target": "_self",
     "confirm": {
       "enabled": true,
-      "message": "Baixar Estrutura"
+      "message": "Baixar Arquivo"
     }
   },
   "2176": {
