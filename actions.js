@@ -1,4 +1,5 @@
 const actions = {
+  // Redirecionamento para o conversor numérico.
   "0000": {
     "id": "0000",
     "enabled": true,
@@ -13,10 +14,11 @@ const actions = {
       "message": "Acessando página.."
     }
   },
+  // Redirecionamento para página de erro.
   "0404": {
     "id": "404",
     "enabled": true,
-    "type": "navigate",
+    "type": "external_link",
     "image": "https://sfwx.github.io/image/icon0.png",
     "title": "Área desconhecida!",
     "description": "Você foi longe demais… esse atalho não está no mapa!",
@@ -27,20 +29,22 @@ const actions = {
       "message": "Acessando página.."
     }
   },
+  // Redirecionamento para a página de perfil.
   "0626": {
     "id": "626",
     "enabled": true,
     "type": "navigate",
     "image": "https://sfwx.github.io/image/icon0.png",
     "title": "FwX Perfil pessoal",
-    "description": "Ainda incompleto!! " + (626 * 0),
-    "value": "626",
+    "description": "Acessando o perfil pessoal do Murilo",
+    "value": "https://instagram.com/fwx404",
     "target": "_self",
     "confirm": {
       "enabled": false,
       "message": "Acessando página.."
     }
   },
+  // Redirecionamentos para projetos locais.
   "1164": {
     "id": "floralCapes",
     "enabled": true,
@@ -69,6 +73,53 @@ const actions = {
       "message": "Acessando página.."
     }
   },
+  "0903": {
+    "id": "game-test",
+    "enabled": true,
+    "type": "navigate",
+    "image": "https://sfwx.github.io/image/icon1.png",
+    "title": "Game Test",
+    "description": "Acessando jogo independente pessoal para fins de teste.",
+    "value": "game-test",
+    "target": "_self",
+    "confirm": {
+      "enabled": false,
+      "message": "Acessando página.."
+    }
+  },
+  // Redirecionamentos para projetos externos.
+  "4155": {},
+  // Redirecionamentos para direitos autorais.
+  "1788": {
+    "id": "pixelated-buttons",
+    "enabled": true,
+    "type": "navigate",
+    "image": "https://sfwx.github.io/image/icon1.png",
+    "title": "Botões Pixelados",
+    "description": "Este conteúdo encontra-se protegido pela legislação de direitos autorais.",
+    "value": "copyright?type=minecraft",
+    "target": "_self",
+    "confirm": {
+      "enabled": false,
+      "message": "Acessando página.."
+    }
+  },
+  // Redirecionamentos de arquivos para download.
+  "2409": {
+    "id": "floralCapes-texturePack",
+    "enabled": true,
+    "type": "file_download",
+    "image": "https://sfwx.github.io/floral/index.png",
+    "title": "Floral Capes",
+    "description": "Clique para baixar o pacote de textura do FloralCapes.",
+    "value": "floral/fwxTexture.mcpack",
+    "target": "_self",
+    "confirm": {
+      "enabled": true,
+      "message": "Baixar Pacote"
+    }
+  },
+  // Redirecionamentos para arquivos de estrutura.
   "1631": {
     "id": "giveOperatorBow",
     "enabled": true,
@@ -80,7 +131,7 @@ const actions = {
     "target": "_self",
     "confirm": {
       "enabled": true,
-      "message": "Baixar Arquivo"
+      "message": "Baixar Estrutura"
     }
   },
   "2176": {
@@ -179,34 +230,6 @@ const actions = {
     "confirm": {
       "enabled": true,
       "message": "Baixar Arquivo"
-    }
-  },
-  "0903": {
-    "id": "game-test",
-    "enabled": true,
-    "type": "navigate",
-    "image": "https://sfwx.github.io/image/icon1.png",
-    "title": "Game Test",
-    "description": "Acessando jogo independente pessoal para fins de teste.",
-    "value": "game-test",
-    "target": "_self",
-    "confirm": {
-      "enabled": false,
-      "message": "Acessando página.."
-    }
-  },
-  "1788": {
-    "id": "pixelated-buttons",
-    "enabled": true,
-    "type": "navigate",
-    "image": "https://sfwx.github.io/image/icon1.png",
-    "title": "Botões Pixelados",
-    "description": "Este conteúdo encontra-se protegido pela legislação de direitos autorais.",
-    "value": "copyright?type=minecraft",
-    "target": "_self",
-    "confirm": {
-      "enabled": false,
-      "message": "Acessando página.."
     }
   }
 };
