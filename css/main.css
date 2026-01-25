@@ -201,7 +201,7 @@ label {
   margin-bottom: 5px;
   letter-spacing: 1px;
 }
-input, textarea {
+.fwxInput, textarea {
   width: 100%;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border);
@@ -212,17 +212,12 @@ input, textarea {
   outline: none;
   transition: border-color 0.3s;
 }
-input:focus, textarea:focus {
+.fwxInput:focus, textarea:focus {
   border-color: var(--accent);
 }
 textarea {
   height: 80px;
   resize: vertical;
-}
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.85rem;
 }
 .table-container {
   margin-top: 30px;
@@ -231,6 +226,11 @@ table {
   border-radius: 12px;
   background: rgba(0,0,0,0.2);
   border: 1px solid var(--border);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
 }
 th {
   position: sticky;
