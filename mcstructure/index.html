@@ -23,12 +23,9 @@
     <meta name="twitter:card" content="summary_small_image">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="preconnect" href="https://sfwx.github.io/css/main.css">
-    <link rel="preconnect" href="https://sfwx.github.io/css/editor-nbt.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://sfwx.github.io/css/main.css">
-    <link rel="stylesheet" href="https://sfwxx.github.io/css/editor-nbt.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap">
   </head>
   <body style="overflow-y: auto; padding: 40px 0;">
@@ -49,31 +46,31 @@
           <label>
             Quantidade
           </label>
-          <input id="count" type="number" min="1" max="64" placeholder="1 a 64" value="1">
+          <input id="count" name="count" type="number" min="1" max="64" placeholder="1 a 64" value="1" class="fwxInput">
         </div>
         <div>
           <label>
             Item (ID)
           </label>
-          <input id="itemId" placeholder="minecraft:diamond" value="minecraft:diamond">
+          <input id="itemId" name="itemId" placeholder="minecraft:diamond" value="minecraft:diamond" class="fwxInput">
         </div>
         <div class="full-width">
           <label>
             Nome (Display)
           </label>
-          <input id="displayName" placeholder="Diamante" value="Diamante">
+          <input id="displayName" name="displayName" placeholder="Diamante" value="Diamante" class="fwxInput">
         </div>
         <div class="full-width">
           <label>
             Descrição (Lore linha 1)
           </label>
-          <textarea id="lore" placeholder="Diamante brilhante">Diamante brilhante</textarea>
+          <textarea id="lore" name="lore" placeholder="Diamante brilhante">Diamante brilhante</textarea>
         </div>
         <div class="full-width">
           <label>
             Encantamentos (JSON bruto)
           </label>
-          <textarea id="ench" placeholder="[]">[
+          <textarea id="ench" name="ench" placeholder="[]">[
   {"id": {"type": "short","value": 28 },"lvl": {"type": "short","value": 1 }}
 ]</textarea>
         </div>
@@ -81,19 +78,19 @@
           <label>
             Inquebrável
           </label>
-          <input id="unbreakable" type="number" min="0" max="1" placeholder="0 ou 1" value="0">
+          <input id="unbreakable" name="unbreakble" type="number" min="0" max="1" placeholder="0 ou 1" value="0" class="fwxInput">
         </div>
         <div>
           <label>
             Tag
           </label>
-          <input id="tag" placeholder="FwX404" value="FwX404">
+          <input id="tag" name="tag" placeholder="FwX404" value="FwX404" class="fwxInput">
         </div>
         <div class="full-width">
           <label>
             Custom Name
           </label>
-          <input id="customName" placeholder="Diamante" value="Diamante">
+          <input id="customName" name="customName" placeholder="Diamante" value="Diamante" class="fwxInput">
         </div>
       </div>
       <button class="btn-apply" onclick="generateJson();">
