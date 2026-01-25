@@ -1,4 +1,4 @@
-# **`Images e Botões`**
+# **`Imagens e Botões`**
 
 ## Copyright Notice
 
