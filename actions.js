@@ -4,11 +4,15 @@ const actions = {
     "id": "unknown",
     "enabled": true,
     "type": "navigate",
-    "image": "https://sfwx.github.io/image/icon0.png",
     "meta": {
+      "image": {
+        "value": "",
+        "size": "summary"
+      },
       "title": "Gerador de Tag",
       "description": "Gerador de Tag para transformar palavras em uma numeração de 4 dígitos. Apenas para fins técnicos;"
     },
+    "image": "https://sfwx.github.io/image/icon0.png",
     "title": "FwX · TCatDark",
     "subtitle": "Gerador de Tag",
     "description": "Gerador de Tag para transformar palavras em uma numeração de 4 dígitos. Apenas para fins técnicos;",
@@ -24,11 +28,15 @@ const actions = {
     "id": "404",
     "enabled": true,
     "type": "navigate",
-    "image": "https://sfwx.github.io/image/icon0.png",
     "meta": {
+      "image": {
+        "value": "",
+        "size": "summary"
+      },
       "title": "",
       "description": ""
     },
+    "image": "https://sfwx.github.io/image/icon0.png",
     "title": "FwX · TCatDark",
     "subtitle": "Área desconhecida!",
     "description": "Você foi longe demais… esse atalho não está no mapa!",
@@ -44,11 +52,15 @@ const actions = {
     "id": "626",
     "enabled": true,
     "type": "external_link",
-    "image": "https://sfwx.github.io/image/icon0.png",
     "meta": {
+      "image": {
+        "value": "",
+        "size": "summary"
+      },
       "title": "",
       "description": ""
     },
+    "image": "https://sfwx.github.io/image/icon0.png",
     "title": "FwX · TCatDark",
     "subtitle": "Perfil pessoal",
     "description": "Acessando o perfil pessoal do Murilo.",
@@ -64,11 +76,15 @@ const actions = {
     "id": "floralCapes",
     "enabled": true,
     "type": "navigate",
-    "image": "https://sfwx.github.io/floral/index.png",
     "meta": {
+      "image": {
+        "value": "",
+        "size": "summary"
+      },
       "title": "",
       "description": ""
     },
+    "image": "https://sfwx.github.io/floral/index.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Floral Capes",
     "description": "Acessando o gerador de skins FloralCapes, onde você pode criar skins com o capas personalizadas.",
@@ -83,11 +99,15 @@ const actions = {
     "id": "editor-nbt",
     "enabled": true,
     "type": "navigate",
-    "image": "https://sfwx.github.io/mcstructure/index.png",
     "meta": {
+      "image": {
+        "value": "",
+        "size": "summary"
+      },
       "title": "",
       "description": ""
     },
+    "image": "https://sfwx.github.io/mcstructure/index.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Editor NBT",
     "description": "Acessando editor online de NBT e JSON para itens, feito para criar, editar e validar dados de forma rápida e organizada.",
@@ -102,11 +122,15 @@ const actions = {
     "id": "game-test",
     "enabled": true,
     "type": "navigate",
-    "image": "https://sfwx.github.io/image/icon1.png",
     "meta": {
+      "image": {
+        "value": "",
+        "size": "summary"
+      },
       "title": "",
       "description": ""
     },
+    "image": "https://sfwx.github.io/image/icon1.png",
     "title": "FwX · TCatDark",
     "subtitle": "Game Test",
     "description": "Acessando jogo independente pessoal para fins de teste.",
@@ -122,11 +146,15 @@ const actions = {
     "id": "instagram-primary",
     "enabled": true,
     "type": "external_link",
-    "image": "https://sfwx.github.io/image/icon0.png",
     "meta": {
+      "image": {
+        "value": "",
+        "size": "summary"
+      },
       "title": "",
       "description": ""
     },
+    "image": "https://sfwx.github.io/image/icon0.png",
     "title": "FwX · TCatDark",
     "subtitle": "Instagram",
     "description": "Acessando o perfil pessoal de Murilo no Instagram.",
@@ -141,11 +169,15 @@ const actions = {
     "id": "instagram-secondary",
     "enabled": true,
     "type": "external_link",
-    "image": "https://sfwx.github.io/image/icon0.png",
     "meta": {
+      "image": {
+        "value": "",
+        "size": "summary"
+      },
       "title": "",
       "description": ""
     },
+    "image": "https://sfwx.github.io/image/icon0.png",
     "title": "FwX · TCatDark",
     "subtitle": "Instagram",
     "description": "Acessando o perfil secundário de Murilo no Instagram.",
@@ -160,11 +192,15 @@ const actions = {
     "id": "inventory-standoff2",
     "enabled": true,
     "type": "external_link",
-    "image": "https://sfwx.github.io/image/icon0.png",
     "meta": {
+      "image": {
+        "value": "",
+        "size": "summary"
+      },
       "title": "",
       "description": ""
     },
+    "image": "https://sfwx.github.io/image/icon0.png",
     "title": "FwXs · Standoff2",
     "subtitle": "Inventário",
     "description": "Acessando o Inventário pessoal do Murilo.",
@@ -180,11 +216,15 @@ const actions = {
     "id": "pixelated-buttons",
     "enabled": true,
     "type": "navigate",
-    "image": "https://sfwx.github.io/image/icon1.png",
     "meta": {
+      "image": {
+        "value": "",
+        "size": "summary"
+      },
       "title": "",
       "description": ""
     },
+    "image": "https://sfwx.github.io/image/icon1.png",
     "title": "FwX · Copyright",
     "subtitle": "Botões Pixelados",
     "description": "Este conteúdo encontra-se protegido pela legislação de direitos autorais.",
@@ -200,11 +240,15 @@ const actions = {
     "id": "floralCapes-texturePack",
     "enabled": true,
     "type": "file_download",
-    "image": "https://sfwx.github.io/floral/index.png",
     "meta": {
+      "image": {
+        "value": "",
+        "size": "summary"
+      },
       "title": "",
       "description": ""
     },
+    "image": "https://sfwx.github.io/floral/index.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Floral Capes",
     "description": "Clique para baixar o pacote de textura do FloralCapes.",
@@ -220,11 +264,15 @@ const actions = {
     "id": "giveOperatorBow",
     "enabled": true,
     "type": "file_download",
-    "image": "https://sfwx.github.io/image/icon1.png",
     "meta": {
+      "image": {
+        "value": "",
+        "size": "summary"
+      },
       "title": "",
       "description": ""
     },
+    "image": "https://sfwx.github.io/image/icon1.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Arco de Operador",
     "description": "Clique para baixar o arquivo do incrível Arco de Operador!",
@@ -239,11 +287,15 @@ const actions = {
     "id": "giveOperatorFirework",
     "enabled": true,
     "type": "file_download",
-    "image": "https://sfwx.github.io/image/icon1.png",
     "meta": {
+      "image": {
+        "value": "",
+        "size": "summary"
+      },
       "title": "",
       "description": ""
     },
+    "image": "https://sfwx.github.io/image/icon1.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Fogos de Artifício",
     "description": "Clique para baixar o arquivo de Fogos de Artifício de Operador!",
@@ -258,11 +310,15 @@ const actions = {
     "id": "giveOperatorShield",
     "enabled": true,
     "type": "file_download",
-    "image": "https://sfwx.github.io/image/icon1.png",
     "meta": {
+      "image": {
+        "value": "",
+        "size": "summary"
+      },
       "title": "",
       "description": ""
     },
+    "image": "https://sfwx.github.io/image/icon1.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Escudo de Operador",
     "description": "Clique para baixar o arquivo do incrível Escudo de Operador!",
@@ -277,11 +333,15 @@ const actions = {
     "id": "giveOperatorElytra",
     "enabled": true,
     "type": "file_download",
-    "image": "https://sfwx.github.io/image/icon1.png",
     "meta": {
+      "image": {
+        "value": "",
+        "size": "summary"
+      },
       "title": "",
       "description": ""
     },
+    "image": "https://sfwx.github.io/image/icon1.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Asas de Operador",
     "description": "Clique para baixar o arquivo das incríveis Asas de Operador!",
@@ -296,11 +356,15 @@ const actions = {
     "id": "giveCamera",
     "enabled": true,
     "type": "file_download",
-    "image": "https://sfwx.github.io/image/icon1.png",
     "meta": {
+      "image": {
+        "value": "",
+        "size": "summary"
+      },
       "title": "",
       "description": ""
     },
+    "image": "https://sfwx.github.io/image/icon1.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Give Camera",
     "description": "Clique para baixar o arquivo do Item de Câmera.",
@@ -315,11 +379,15 @@ const actions = {
     "id": "giveNetherPortal",
     "enabled": true,
     "type": "file_download",
-    "image": "https://sfwx.github.io/image/icon1.png",
     "meta": {
+      "image": {
+        "value": "",
+        "size": "summary"
+      },
       "title": "",
       "description": ""
     },
+    "image": "https://sfwx.github.io/image/icon1.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Give Nether Portal",
     "description": "Clique para baixar o arquivo do Bloco de Portal do Nether.",
@@ -334,11 +402,15 @@ const actions = {
     "id": "giveEndPortal",
     "enabled": true,
     "type": "file_download",
-    "image": "https://sfwx.github.io/image/icon1.png",
     "meta": {
+      "image": {
+        "value": "",
+        "size": "summary"
+      },
       "title": "",
       "description": ""
     },
+    "image": "https://sfwx.github.io/image/icon1.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Give End Portal",
     "description": "Clique para baixar o arquivo do Bloco de Portal do End.",
@@ -353,11 +425,15 @@ const actions = {
     "id": "giveEnderPortal",
     "enabled": true,
     "type": "file_download",
-    "image": "https://sfwx.github.io/image/icon1.png",
     "meta": {
+      "image": {
+        "value": "",
+        "size": "summary"
+      },
       "title": "",
       "description": ""
     },
+    "image": "https://sfwx.github.io/image/icon1.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Give Ender Portal",
     "description": "Clique para baixar o arquivo do Bloco de Portal do Ender.",
