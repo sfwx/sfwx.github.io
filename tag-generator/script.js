@@ -1,4 +1,3 @@
-document.getElementById("year").textContent = new Date().getFullYear();
 function tagFromName(name) {
   let sum = 0;
   name = name.toLowerCase();
