@@ -1,2 +1,2 @@
 console.log("FwX: Olá mundo!");
-if (document.getElementById("fwxYear")) document.getElementById("fwxYear").innerHTML = 0000;
+if (document.getElementById("fwxYear")) document.getElementById("fwxYear").innerHTML = new Date().getFullYear();
