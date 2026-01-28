@@ -17,7 +17,6 @@
         if (typeof actions !== "undefined") {
           for (const tag in actions) {
             if (actions[tag] && actions[tag].enabled) {
-//↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
               if (actions[tag].type == "navigate" && actions[tag].target == "_self") {
                 confirm = null;
                 script = `document.getElementById("fwxButton").style.display = "block";
@@ -41,22 +40,21 @@
                 confirm =  `window.location.href = '` + actions[tag].value + `';`;
                 script = `document.getElementById("fwxButton").style.display = "block";`;
               }
-//↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
               try {
                 let content = template.value
-                  .replaceAll("{{FWX.VALUE}}", actions[tag].value || "")
-                  .replaceAll("{{FWX.META.IMAGE.VALUE}}", actions[tag].meta?.image?.value || actions[tag].image || "")
-                  .replaceAll("{{FWX.META.IMAGE.SIZE}}", actions[tag].meta?.image?.size || "summary")
-                  .replaceAll("{{FWX.META.TITLE}}", actions[tag].meta?.title || actions[tag].subtitle || "")
-                  .replaceAll("{{FWX.META.DESCRIPTION}}", actions[tag].meta?.description || actions[tag].description || "")
-                  .replaceAll("{{FWX.IMAGE}}", actions[tag].image || actions[tag].meta?.image?.value || "")
-                  .replaceAll("{{FWX.TITLE}}", actions[tag].title ||  "FwX · TCatDark")
-                  .replaceAll("{{FWX.SUBTITLE}}", actions[tag].subtitle || actions[tag].meta?.title || "")
-                  .replaceAll("{{FWX.DESCRIPTION}}", actions[tag].description || actions[tag].meta?.description || "")
-                  .replaceAll("{{FWX.CONFIRM.MESSAGE}}", actions[tag].confirm?.message || "")
-                  .replaceAll("{{FWX.CONFIRM.SCRIPT}}", confirm || "")
-                  .replaceAll("{{FWX.SCRIPT}}", script || "");
-                zip.file(tag + '.txt', content);
+                  .replaceAll("{{FWX.VALUE}}", actions[tag].value)
+                  .replaceAll("{{FWX.META.IMAGE.VALUE}}", actions[tag].meta?.image?.value)
+                  .replaceAll("{{FWX.META.IMAGE.SIZE}}", actions[tag].meta?.image?.size)
+                  .replaceAll("{{FWX.META.TITLE}}", actions[tag].meta?.title)
+                  .replaceAll("{{FWX.META.DESCRIPTION}}", actions[tag].meta?.description)
+                  .replaceAll("{{FWX.IMAGE}}", actions[tag].image)
+                  .replaceAll("{{FWX.TITLE}}", actions[tag].title)
+                  .replaceAll("{{FWX.SUBTITLE}}", actions[tag].subtitle)
+                  .replaceAll("{{FWX.DESCRIPTION}}", actions[tag].description)
+                  .replaceAll("{{FWX.CONFIRM.MESSAGE}}", actions[tag].confirm?.message)
+                  .replaceAll("{{FWX.CONFIRM.SCRIPT}}", confirm)
+                  .replaceAll("{{FWX.SCRIPT}}", script);
+                zip.file(tag + '.html', content);
               }
               catch (e) {
                 console.warn(`Erro ao processar a tag ${tag}:`, e);
@@ -72,6 +70,7 @@
             a.click();
             document.body.removeChild(a);
             URL.revokeObjectURL(a.href);
+            window.close();
           }
           catch (err) {
             console.error("Erro ao gerar o arquivo ZIP:", err);
@@ -84,17 +83,79 @@
     </script>
   </head>
   <body height=100% width=100%>
-    <textarea id="template" style="height: 100%; width: 100%;">{{FWX.VALUE}}
-{{FWX.META.IMAGE.VALUE}}
-{{FWX.META.IMAGE.SIZE}}
-{{FWX.META.TITLE}}
-{{FWX.META.DESCRIPTION}}
-{{FWX.IMAGE}}
-{{FWX.TITLE}}
-{{FWX.SUBTITLE}}
-{{FWX.DESCRIPTION}}
-{{FWX.CONFIRM.MESSAGE}}
-{{FWX.CONFIRM.SCRIPT}}
-{{FWX.SCRIPT}}</textarea>
+    <textarea id="template" style="height: 100%; width: 100%;"><!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      FwX · {{FWX.META.TITLE}}
+    </title>
+    <link rel="icon" type="image/png" sizes="350x350" href="https://sfwx.github.io/index.png">
+    <meta name="article:author" content="FlowniX · Murilo de Moura S.">
+    <meta name="author" content="FlowniX · Murilo de Moura S.">
+    <meta name="developer" content="FlowniX · Murilo de Moura S.">
+    <meta name="copyright" content="https://sfwx.github.io/copyright">
+    <meta name="twitter:site" content="@FwX0_">
+    <meta name="twitter:creator" content="@FwX0_">
+    <meta name="og:type" content="website">
+    <meta name="theme-color" content="#1e90ff">
+    <meta property="og:site_name" content="{{FWX.TITLE}}">
+    <meta name="og:title" content="FwX · {{FWX.META.TITLE}}">
+    <meta name="twitter:title" content="FwX · {{FWX.META.TITLE}}">
+    <meta name="og:description" content="{{FWX.META.DESCRIPTION}}">
+    <meta name="twitter:description" content="{{FWX.META.DESCRIPTION}}">
+    <meta name="og:image" content="{{FWX.META.IMAGE.VALUE}}">
+    <meta name="twitter:image" content="{{FWX.META.IMAGE.VALUE}}">
+    <meta name="twitter:card" content="{{FWX.META.IMAGE.SIZE}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="preconnect" href="https://sfwx.github.io">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://sfwx.github.io/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap">
+  </head>
+  <body>
+    <div class="bg-gradient"></div>
+    <div class="bg-glow"></div>
+    <main class="glass-card">
+      <div style="padding: 1rem 0;">
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <img src="{{FWX.IMAGE}}" alt="FwX:Icon" class="brand-icon">
+        </div>
+        <p class="nickname">
+          {{FWX.TITLE}}
+        </p>
+        <h1>
+          {{FWX.SUBTITLE}}
+        </h1>
+        <p style="font-size: 0.8rem; color: #64748b;">
+          {{FWX.DESCRIPTION}}
+        </p>
+        <div class="loader-track">
+          <div id="fwxProgress" class="loader-fill"></div>
+        </div>
+        <a id="fwxButton" class="btn-apply" style="display: none;" onclick="{{FWX.CONFIRM.SCRIPT}}">
+          {{FWX.CONFIRM.MESSAGE}}
+        </a>
+      </div>
+      <footer class="footer-copyright">
+        &copy; <span id="fwxYear">0626</span> FlowniX. Conteúdo Protegido.<br>
+        <a href="https://sfwx.github.io/copyright">
+          Direitos Autorais & Termos
+        </a>
+      </footer>
+    </main>
+    <script type="text/javascript" src="https://sfwx.github.io/main.js" defer></script>
+    <script type="text/javascript" src="https://sfwx.github.io/actions.js" defer></script>
+    <script type="text/javascript" defer>
+      requestAnimationFrame(() => {
+        document.getElementById("fwxProgress").style.width = "100%";
+      });
+      setTimeout(() => {
+        {{FWX.SCRIPT}}
+      }, 1300);
+    </script>
+  </body>
+</html></textarea>
   </body>
 </html>
