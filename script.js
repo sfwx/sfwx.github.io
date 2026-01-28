@@ -1,6 +1,3 @@
-// ===== YEAR =====
-document.getElementById("fwxYear").textContent = new Date().getFullYear();
-
 // ===== INPUT =====
 function fwxInput(event, input) {
   if (event.key === "Enter" && input.value.trim() !== "") {
