@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      FwX · Gerador de Tag
+    </title>
+    <link rel="icon" type="image/png" sizes="350x350" href="https://sfwx.github.io/index.png">
+    <meta name="author" content="FlowniX · Murilo de Moura S.">
+    <meta name="developer" content="FlowniX · Murilo de Moura S.">
+    <meta name="copyright" content="https://sfwx.github.io/copyright">
+    <meta name="theme-color" content="#1e90ff">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="FlowniX · TCatDark">
+    <meta property="og:title" content="Gerador de Tag">
+    <meta property="og:description" content="Gerador de Tag para transformar palavras em uma numeração de 4 dígitos. Apenas para fins técnicos;">
+    <meta property="og:image" content="https://sfwx.github.io/image/icon1.png">
+    <meta property="article:author" content="FlowniX · TCatDark">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@FwX0_">
+    <meta name="twitter:creator" content="@FwX0_">
+    <meta name="twitter:title" content="Gerador de Tag">
+    <meta name="twitter:description" content="Gerador de Tag para transformar palavras em uma numeração de 4 dígitos. Apenas para fins técnicos;">
+    <meta name="twitter:image" content="https://sfwx.github.io/image/icon1.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="preconnect" href="https://sfwx.github.io/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://sfwx.github.io/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
+    <script type="text/javascript" src="https://sfwx.github.io/build-pages/actions.js" defer></script>
+    <script type="text/javascript" src="https://sfwx.github.io/build-pages/script.js" defer></script>
+  </head>
+  <body>
+    <textarea id="template" hidden><!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      FwX · {{FWX.META.TITLE}}
+    </title>
+    <link rel="icon" type="image/png" sizes="350x350" href="https://sfwx.github.io/index.png">
+    <meta name="author" content="FlowniX · Murilo de Moura S.">
+    <meta name="developer" content="FlowniX · Murilo de Moura S.">
+    <meta name="copyright" content="https://sfwx.github.io/copyright">
+    <meta name="theme-color" content="#1e90ff">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="FlowniX · TCatDark">
+    <meta property="og:title" content="{{FWX.META.TITLE}}">
+    <meta property="og:description" content="{{FWX.META.DESCRIPTION}}">
+    <meta property="og:image" content="{{FWX.META.IMAGE.VALUE}}">
+    <meta property="article:author" content="FlowniX · TCatDark">
+    <meta name="twitter:card" content="{{FWX.META.IMAGE.SIZE}}">
+    <meta name="twitter:site" content="@FwX0_">
+    <meta name="twitter:creator" content="@FwX0_">
+    <meta name="twitter:title" content="{{FWX.META.TITLE}}">
+    <meta name="twitter:description" content="{{FWX.META.DESCRIPTION}}">
+    <meta name="twitter:image" content="{{FWX.META.IMAGE.VALUE}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="preconnect" href="https://sfwx.github.io">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://sfwx.github.io/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap">
+  </head>
+  <body>
+    <div class="bg-gradient"></div>
+    <div class="bg-glow"></div>
+    <main class="glass-card">
+      <div style="padding: 1rem 0;">
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <img src="{{FWX.IMAGE}}" alt="FwX:Icon" class="brand-icon">
+        </div>
+        <p class="nickname">
+          {{FWX.TITLE}}
+        </p>
+        <h1>
+          {{FWX.SUBTITLE}}
+        </h1>
+        <p style="font-size: 0.8rem; color: #64748b;">
+          {{FWX.DESCRIPTION}}
+        </p>
+        <div class="loader-track">
+          <div id="fwxProgress" class="loader-fill"></div>
+        </div>
+        <a id="fwxButton" class="btn-apply" style="display: none;" onclick="{{FWX.CONFIRM.SCRIPT}}">
+          {{FWX.CONFIRM.MESSAGE}}
+        </a>
+      </div>
+      <footer class="footer-copyright">
+        &copy; <span id="fwxYear">0626</span> FlowniX. Conteúdo Protegido.<br>
+        <a href="https://sfwx.github.io/copyright">
+          Direitos Autorais & Termos
+        </a>
+      </footer>
+    </main>
+    <script type="text/javascript" src="https://sfwx.github.io/main.js" defer></script>
+    <script type="text/javascript" src="https://sfwx.github.io/actions.js" defer></script>
+    <script type="text/javascript" defer>
+      requestAnimationFrame(() => {
+        document.getElementById("fwxProgress").style.width = "100%";
+      });
+      setTimeout(() => {
+        {{FWX.SCRIPT}}
+      }, 1300);
+    </script>
+  </body>
+</html></textarea>
+  </body>
+</html>
