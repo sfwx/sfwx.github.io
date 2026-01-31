@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      FwX · Console
+    </title>
+    <link rel="icon" type="image/png" sizes="350x350" href="https://sfwx.github.io/index.png">
+    <meta name="author" content="FlowniX · Murilo de Moura S.">
+    <meta name="developer" content="FlowniX · Murilo de Moura S.">
+    <meta name="copyright" content="https://sfwx.github.io/copyright">
+    <meta name="theme-color" content="#1e90ff">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="FlowniX · TCatDark">
+    <meta property="og:title" content="Console ...">
+    <meta property="og:description" content="Apenas para fins de teste.">
+    <meta property="og:image" content="https://sfwx.github.io/index.png">
+    <meta property="article:author" content="FlowniX · Murilo de Moura S.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@FwX0_">
+    <meta name="twitter:creator" content="@FwX0_">
+    <meta name="twitter:title" content="Console ...">
+    <meta name="twitter:description" content="Apenas para fins de teste.">
+    <meta name="twitter:image" content="https://sfwx.github.io/index.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+      body.fwxConsole {
+        font-family: Consolas, Monaco, monospace;
+        box-sizing: border-box;
+        background: #0f1115;
+        color: #e6e6e6;
+        margin: 0;
+      }
+      body.fwxConsole header {
+        border-bottom: 1px solid rgba(0,0,0,.1);
+        justify-content: space-between;
+        box-sizing: border-box;
+        align-items: center;
+        background: #151821;
+        padding: 10px 16px;
+        display: flex;
+      }
+      body.fwxConsole header h1 {
+        box-sizing: border-box;
+        font-weight: normal;
+        font-size: 14px;
+        opacity: .8;
+        margin: 0;
+      }
+      @keyframes fwxConsoleInput {
+        0%, 49% {
+          border-left-color: transparent;
+        }
+        50%, 100% {
+          border-left-color: #e6e6e6;
+        }
+      }
+      body.fwxConsole header input {
+        animation: fwxConsoleInput 1s steps(1) infinite;
+        border-bottom: 1.25px dashed #5c6370;
+        border-left: 2.5px solid #e6e6e6;
+        font-family: monospace;
+        background: #191e26;
+        border-right: 0;
+        border-top: 0;
+        outline: none;
+        width: 62.5%;
+        color: white;
+      }
+      body.fwxConsole header input:focus {
+        border-left: 0;
+      }
+      body.fwxConsole pre {
+        box-sizing: border-box;
+        padding: 0px 16px;
+        white-space: pre;
+        line-height: 1.5;
+        font-size: 13px;
+      }
+      body.fwxConsole pre .text      { color: #e6e6e6; }
+      body.fwxConsole pre .tag       { color: #c678dd; }
+      body.fwxConsole pre .attr-name { color: #e5c07b; }
+      body.fwxConsole pre .attr-val  { color: #61afef; }
+      body.fwxConsole pre .comment   { color: #5c6370; }
+      body.fwxConsole pre .doctype   { color: #7f848e; }
+    </style>
+  </head>
+  <body class="fwxConsole">
+    <header>
+      <input id="fwxConsoleInput" type="text">
+      <h1>
+        FwX · Console
+      </h1>
+    </header>
+    <pre>> Teste de console.
+<span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr-name">lang</span>=<span class="attr-val">"pt-BR"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr-name">charset</span>=<span class="attr-val">"utf-8"</span><span class="tag">&gt;</span>
+    <span class="comment">&lt;!-- Comentário --&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+  <span class="tag">&lt;body&gt;</span>
+    <span class="text">Olá mundo</span>
+  <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></pre>
+</html>
