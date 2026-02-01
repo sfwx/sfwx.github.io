@@ -150,7 +150,7 @@ body.fwxApp main div div.fwxInput input::placeholder {
   font-size: 0.85rem;
   color: #475569;
 }
-body.fwxApp main div div.fwxProgressBar {
+body.fwxApp main div div.fwxProgress {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   overflow: hidden;
@@ -158,7 +158,7 @@ body.fwxApp main div div.fwxProgressBar {
   height: 4px;
   width: 100%;
 }
-body.fwxApp main div div.fwxProgressBar div.fwxProgress {
+body.fwxApp main div div.fwxProgress div {
   background: linear-gradient(90deg, var(--accent), #a855f7);
   transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 0 20px var(--accent);
