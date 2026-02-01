@@ -146,8 +146,7 @@ body.fwxMain main * div.fwxInput input::placeholder {
   font-size: 0.85rem;
   color: #475569;
 }
-/********************************************************/
-body.fwxMain main * div.fwxPrograssBar {
+body.fwxMain main * div.fwxProgressBar {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   overflow: hidden;
@@ -155,14 +154,13 @@ body.fwxMain main * div.fwxPrograssBar {
   height: 4px;
   width: 100%;
 }
-body.fwxMain main * div.fwxPrograssBar div.fwxPrograss {
+body.fwxMain main * div.fwxProgressBar div.fwxProgress {
   background: linear-gradient(90deg, var(--accent), #a855f7);
   transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 0 20px var(--accent);
   height: 100%;
   width: 0%;
 }
-/********************************************************/
 body.fwxMain main footer {
   border-top: 1px solid var(--border);
   padding-top: 1.5rem;
