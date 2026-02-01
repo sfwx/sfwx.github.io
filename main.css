@@ -69,12 +69,12 @@ body.fwxMain main {
   max-width: 440px;
   width: 90%;
 }
-body.fwxMain main div div {
+body.fwxMain main div div.fwxImage {
   justify-content: center;
   align-items: center;
   display: flex;
 }
-body.fwxMain main div div img {
+body.fwxMain main div div.fwxImage img {
   filter: drop-shadow(0 0 15px var(--accent-glow));
   transition: transform 0.3s ease;
   border-radius: 12.5px;
@@ -82,7 +82,7 @@ body.fwxMain main div div img {
   height: 90px;
   width: 90px;
 }
-body.fwxMain main div div img:hover {
+body.fwxMain main div div.fwxImage img:hover {
   transform: scale(1.05) rotate(5deg);
 }
 body.fwxMain main div span span {
