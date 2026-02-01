@@ -29,57 +29,61 @@
     <link rel="stylesheet" href="https://sfwx.github.io/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap">
   </head>
-  <body>
-    <div class="bg-gradient"></div>
-    <div class="bg-glow"></div>
-    <main class="glass-card">
+  <body class="fwxMain">
+    <div class="gradient"></div>
+    <div class="glow"></div>
+    <main>
       <!-- BIO -->
       <div id="fwxBio" style="display: none;">
-        <div style="display: flex; justify-content: center; align-items: center;">
-          <img src="https://sfwx.github.io/image/icon0.png" alt="FwX:Icon1" class="brand-icon" style="margin-right: 1rem;">
-          <img src="https://sfwx.github.io/image/icon1.png" alt="FwX:Icon2" class="brand-icon" style="margin-left: 1rem;">
+        <div>
+          <img src="https://sfwx.github.io/image/icon0.png" alt="FwX:Icon1" style="margin-right: 1rem;">
+          <img src="https://sfwx.github.io/image/icon1.png" alt="FwX:Icon2" style="margin-left: 1rem;">
         </div>
-        <span class="nickname">
-          Murilo M.S. / FlowniX
+        <span>
+          <span>
+            Murilo M.S. / FlowniX
+          </span>
         </span>
         <h1>
           Central de Projetos
         </h1>
-        <p class="bio-text">
+        <p>
           Todos os meus projetos, máquinas, sistemas, aplicativos, easter eggs e outros redirecionamentos organizados em um único espaço, prontos para acesso imediato.
         </p>
-        <div class="tag-container">
-          <span class="tag">
+        <div class="tags">
+          <span>
             FlowniX
           </span>
-          <span class="tag">
+          <span>
             FwX
           </span>
-          <span class="tag">
+          <span>
             FwX404
           </span>
-          <span class="tag">
+          <span>
             TheCatDark
           </span>
-          <span class="tag">
+          <span>
             TCatDark
           </span>
-          <span class="tag">
+          <span>
             TCD
           </span>
         </div>
-        <div class="shortcut-wrapper">
-          <input type="number" class="shortcut-input" placeholder="0000" onkeydown="fwxInput(event, this);">
+        <div class="input">
+          <input type="number" placeholder="0000" onkeydown="fwxInput(event, this);">
         </div>
       </div>
       <!-- REDIRECT -->
       <div id="fwxRedirect" style="display: none; padding: 1rem 0;">
-        <div style="display: flex; justify-content: center; align-items: center;">
-          <img id="fwxImage" src="https://sfwx.github.io/image/icon0.png" alt="FwX:Icon" class="brand-icon">
+        <div>
+          <img id="fwxImage" src="https://sfwx.github.io/image/icon0.png" alt="FwX:Icon">
         </div>
-        <p id="fwxTitle" class="nickname">
-          FwX · TCatDark
-        </p>
+        <span>
+          <span id="fwxTitle">
+            FwX · TCatDark
+          </span>
+        </span>
         <h1 id="fwxSubTitle">
           Acessando página
         </h1>
@@ -95,23 +99,23 @@
       </div>
       <!-- ERROR -->
       <div id="fwxError" style="display: none;">
-        <div style="display: flex; justify-content: center; align-items: center;">
-          <img src="https://sfwx.github.io/image/icon0.png" alt="FwX:Icon" class="brand-icon">
+        <div>
+          <img src="https://sfwx.github.io/image/icon0.png" alt="FwX:Icon">
         </div>
-        <span class="nickname">
+        <span>
           Erro 404
         </span>
         <h1>
           Área desconhecida!
         </h1>
-        <p class="bio-text">
+        <p>
           Você foi longe demais… esse atalho não está no mapa!
         </p>
-        <div class="shortcut-wrapper">
-          <input type="number" class="shortcut-input" placeholder="Tentar novo ID..." onkeydown="fwxInput(event, this);">
+        <div class="input">
+          <input type="number" placeholder="Tentar novo ID..." onkeydown="fwxInput(event, this);">
         </div>
       </div>
-      <footer class="footer-copyright">
+      <footer>
         &copy; <span id="fwxYear">0626</span> FlowniX. Conteúdo Protegido.<br>
         <a href="https://sfwx.github.io/copyright">
           Direitos Autorais & Termos
