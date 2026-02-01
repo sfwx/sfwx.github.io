@@ -69,7 +69,7 @@ body.fwxMain main {
   max-width: 440px;
   width: 90%;
 }
-body.fwcMain main * div {
+body.fwxMain main * div {
   justify-content: center;
   align-items: center;
   display: flex;
