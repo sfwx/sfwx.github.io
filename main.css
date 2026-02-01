@@ -190,7 +190,7 @@ body.fwxMain main footer a {
   font-weight: 600;
   color: #64748b;
 }
-/********************************************************/
+/********************************************************
 .form-grid {
   grid-template-columns: 1fr 1fr;
   margin-top: 20px;
@@ -257,7 +257,7 @@ tr:hover td {
   background: rgba(255,255,255,0.02);
   color: #fff;
 }
-/********************************************************/
+********************************************************/
 /* FwX: CONSOLE */
 body.fwxConsole *, body.fwxConsole *::before, body.fwxConsole *::after {
   box-sizing: border-box;
