@@ -1,5 +1,5 @@
 window.addEventListener("load", async function() {
-  const template = document.getElementById("template");
+  const template = document.getElementById("fwxTemplate");
   if (!template) {
     console.error("Erro: Elemento #template não encontrado.");
     return;
