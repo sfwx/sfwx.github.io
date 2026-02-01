@@ -84,19 +84,19 @@ body.fwxMain main * div img {
 body.fwxMain main * div img:hover {
   transform: scale(1.05) rotate(5deg);
 }
-body.fwxMain main * h1 {
-  letter-spacing: -1px;
-  font-size: 1.8rem;
-  font-weight: 800;
-  margin: 0.5rem 0;
-  color: #ffffff;
-}
 body.fwxMain main * span span {
   text-transform: uppercase;
   color: var(--accent);
   letter-spacing: 2px;
   font-size: 0.9rem;
   font-weight: 600;
+}
+body.fwxMain main * h1 {
+  letter-spacing: -1px;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0.5rem 0;
+  color: #ffffff;
 }
 body.fwxMain main * p {
   font-size: 0.95rem;
@@ -154,7 +154,7 @@ body.fwxMain main * div.fwxPrograssBar {
   height: 4px;
   width: 100%;
 }
-body.fwxMain main * div.fwxPrograss {
+body.fwxMain main * div.fwxPrograssBar div.fwxPrograss {
   background: linear-gradient(90deg, var(--accent), #a855f7);
   transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 0 20px var(--accent);
