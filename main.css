@@ -1,4 +1,4 @@
-/* FwX: CONSOLE */
+/* FwX: VARIÁVEIS */
 :root {
   --accent: #6366f1;
   --accent-glow: rgba(99, 102, 241, 0.3);
@@ -6,6 +6,7 @@
   --glass: rgba(15, 23, 42, 0.8);
   --border: rgba(255, 255, 255, 0.08);
 }
+/* FwX: MAIN */
 body.fwxMain *, body.fwxMain *::before, body.fwxMain *::after {
   box-sizing: border-box;
 }
