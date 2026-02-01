@@ -7,7 +7,7 @@
   --accent: #6366f1;
 }
 /* FwX: MAIN */
-body.fwxMain *, body.fwxMain *::before, body.fwxMain *::after {
+body.fwxApp *, body.fwxApp *::before, body.fwxApp *::after {
   box-sizing: border-box;
 }
 body.fwxApp {
