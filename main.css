@@ -249,7 +249,7 @@ tr:hover td {
   color: #fff;
   background: rgba(255,255,255,0.02);
 }
-// CSS CONSOLE
+/* CSS CONSOLE */
 body.fwxConsole {
   font-family: Consolas, Monaco, monospace;
   box-sizing: border-box;
