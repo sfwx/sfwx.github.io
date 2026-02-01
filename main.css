@@ -90,7 +90,7 @@ body.fwxApp main div div.fwxImage img:hover {
   transform: scale(1.05) rotate(5deg);
 }
 body.fwxApp main div span span {
-  // text-transform: uppercase;
+  text-transform: uppercase;
   color: var(--accent);
   letter-spacing: 2px;
   font-size: 0.9rem;
