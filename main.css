@@ -6,6 +6,10 @@
   --bg-dark: #020617;
   --accent: #6366f1;
 }
+.fwxBorder {
+  background: rgba(240, 128, 128, 0.125);
+  border: 5px dashed rgba(240, 128, 128, 0.75);
+}
 /* FwX: MAIN */
 body.fwxApp *, body.fwxApp *::before, body.fwxApp *::after {
   box-sizing: border-box;
