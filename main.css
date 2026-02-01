@@ -294,10 +294,10 @@ body.fwxConsole header input {
   font-family: monospace;
   background: #191e26;
   border-right: 0;
+  color: #e6e6e6;
   border-top: 0;
   outline: none;
   width: 62.5%;
-  color: #e6e6e6;
 }
 body.fwxConsole header input:focus {
   border-left: 0;
