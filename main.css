@@ -161,7 +161,7 @@ body.fwxMain main * div.fwxProgressBar div.fwxProgress {
   height: 100%;
   width: 0%;
 }
-body.fwxMain main * button.fwxButton {
+body.fwxMain main * a.fwxButton, body.fwxMain main * button.fwxButton {
   transition: transform 0.2s, box-shadow 0.2s;
   text-transform: uppercase;
   background: var(--accent);
@@ -174,7 +174,7 @@ body.fwxMain main * button.fwxButton {
   color: white;
   width: 100%;
 }
-body.fwxMain main * button.fwxButton:hover {
+body.fwxMain main * a.fwxButton:hover, body.fwxMain main * button.fwxButton:hover {
   box-shadow: 0 10px 20px var(--accent-glow);
   transform: translateY(-2px);
 }
