@@ -1,22 +1,15 @@
-/* FwX: VARIÁVEIS */
-:root {
-  --accent-glow: rgba(99, 102, 241, 0.3);
-  --border: rgba(255, 255, 255, 0.08);
-  --glass: rgba(15, 23, 42, 0.8);
-  --bg-dark: #020617;
-  --accent: #6366f1;
-}
+/* FwX: MAIN */
 .fwxDebug {
   border: 1.25px dashed rgba(240, 128, 128, 0.75);
   background: rgba(240, 128, 128, 0.125);
 }
-/* FwX: MAIN */
+/* FwX: APP */
 body.fwxApp *, body.fwxApp *::before, body.fwxApp *::after {
   box-sizing: border-box;
 }
 body.fwxApp {
-  background-color: #020617;
   font-family: "Inter", sans-serif;
+  background-color: #020617;
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -62,10 +55,10 @@ body.fwxApp div.fwxGlow {
 }
 body.fwxApp main {
   box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
-  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(20px);
   border-radius: 32px;
   text-align: center;
   position: relative;
@@ -91,10 +84,10 @@ body.fwxApp main div div.fwxImage img:hover {
 }
 body.fwxApp main div span span {
   text-transform: uppercase;
-  color: #6366f1;
   letter-spacing: 2px;
   font-size: 0.9rem;
   font-weight: 600;
+  color: #6366f1;
 }
 body.fwxApp main div h1 {
   letter-spacing: -1px;
@@ -117,8 +110,8 @@ body.fwxApp main div div.fwxTags {
   gap: 8px;
 }
 body.fwxApp main div div.fwxTags span {
-  background: rgba(99, 102, 241, 0.1);
   border: 1px solid rgba(99, 102, 241, 0.2);
+  background: rgba(99, 102, 241, 0.1);
   border-radius: 50px;
   font-size: 0.7rem;
   padding: 5px 14px;
@@ -133,8 +126,8 @@ body.fwxApp main div div.fwxInput {
 }
 body.fwxApp main div div.fwxInput input {
   border-bottom: 1px solid #6366f1;
-  box-shadow: 0 1px 0 #6366f1;
   font-family: "Inter", sans-serif;
+  box-shadow: 0 1px 0 #6366f1;
   background: transparent;
   text-align: center;
   font-size: 1rem;
@@ -168,8 +161,8 @@ body.fwxApp main div div.fwxProgress div {
 body.fwxApp main div a {
   transition: transform 0.2s, box-shadow 0.2s;
   text-transform: uppercase;
-  background: #6366f1;
   border-radius: 12px;
+  background: #6366f1;
   font-weight: 800;
   margin-top: 25px;
   cursor: pointer;
@@ -206,16 +199,16 @@ body.fwxApp main footer a {
 }
 label {
   text-transform: uppercase;
-  color: #6366f1;
   letter-spacing: 1px;
   margin-bottom: 5px;
   font-size: 0.75rem;
   font-weight: 600;
   display: block;
+  color: #6366f1;
 }
 .fwxInput, textarea {
-  background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
   font-family: 'Inter', sans-serif;
   transition: border-color 0.3s;
   border-radius: 8px;
