@@ -69,12 +69,12 @@ body.fwxMain main {
   max-width: 440px;
   width: 90%;
 }
-body.fwxMain main * div {
+body.fwxMain main div div {
   justify-content: center;
   align-items: center;
   display: flex;
 }
-body.fwxMain main * div img {
+body.fwxMain main div div img {
   filter: drop-shadow(0 0 15px var(--accent-glow));
   transition: transform 0.3s ease;
   border-radius: 12.5px;
@@ -82,37 +82,37 @@ body.fwxMain main * div img {
   height: 90px;
   width: 90px;
 }
-body.fwxMain main * div img:hover {
+body.fwxMain main div div img:hover {
   transform: scale(1.05) rotate(5deg);
 }
-body.fwxMain main * span span {
+body.fwxMain main div span span {
   text-transform: uppercase;
   color: var(--accent);
   letter-spacing: 2px;
   font-size: 0.9rem;
   font-weight: 600;
 }
-body.fwxMain main * h1 {
+body.fwxMain main div h1 {
   letter-spacing: -1px;
   font-size: 1.8rem;
   font-weight: 800;
   margin: 0.5rem 0;
   color: #ffffff;
 }
-body.fwxMain main * p {
+body.fwxMain main div p {
   font-size: 0.95rem;
   line-height: 1.7;
   margin: 1.5rem 0;
   color: #94a3b8;
 }
-body.fwxMain main * div.fwxTags {
+body.fwxMain main div div.fwxTags {
   justify-content: center;
   margin-bottom: 2rem;
   flex-wrap: wrap;
   display: flex;
   gap: 8px;
 }
-body.fwxMain main * div.fwxTags span {
+body.fwxMain main div div.fwxTags span {
   background: rgba(99, 102, 241, 0.1);
   border: 1px solid rgba(99, 102, 241, 0.2);
   border-radius: 50px;
@@ -121,13 +121,13 @@ body.fwxMain main * div.fwxTags span {
   font-weight: 600;
   color: #a5b4fc;
 }
-body.fwxMain main * div.fwxInput {
+body.fwxMain main div div.fwxInput {
   position: relative;
   margin-top: 1rem;
   width: 80%;
   left: 10%;
 }
-body.fwxMain main * div.fwxInput input {
+body.fwxMain main div div.fwxInput input {
   border-bottom: 1px solid var(--accent);
   box-shadow: 0 1px 0 var(--accent);
   font-family: "Inter", sans-serif;
@@ -140,13 +140,13 @@ body.fwxMain main * div.fwxInput input {
   border: none;
   width: 100%;
 }
-body.fwxMain main * div.fwxInput input::placeholder {
+body.fwxMain main div div.fwxInput input::placeholder {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.85rem;
   color: #475569;
 }
-body.fwxMain main * div.fwxProgressBar {
+body.fwxMain main div div.fwxProgressBar {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   overflow: hidden;
@@ -154,14 +154,14 @@ body.fwxMain main * div.fwxProgressBar {
   height: 4px;
   width: 100%;
 }
-body.fwxMain main * div.fwxProgressBar div.fwxProgress {
+body.fwxMain main div div.fwxProgressBar div.fwxProgress {
   background: linear-gradient(90deg, var(--accent), #a855f7);
   transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 0 20px var(--accent);
   height: 100%;
   width: 0%;
 }
-body.fwxMain main * a.fwxButton {
+body.fwxMain main div a.fwxButton {
   transition: transform 0.2s, box-shadow 0.2s;
   text-transform: uppercase;
   background: var(--accent);
@@ -174,7 +174,7 @@ body.fwxMain main * a.fwxButton {
   color: white;
   width: 100%;
 }
-body.fwxMain main * a.fwxButton:hover {
+body.fwxMain main div a.fwxButton:hover {
   box-shadow: 0 10px 20px var(--accent-glow);
   transform: translateY(-2px);
 }
