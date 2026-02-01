@@ -309,8 +309,8 @@ body.fwxConsole pre {
   font-size: 13px;
   color: #e6e6e6;
 }
-body.fwxConsole pre span.doctype   { color: #7f848e; }
-body.fwxConsole pre span.tag       { color: #c678dd; }
-body.fwxConsole pre span.attr-name { color: #e5c07b; }
-body.fwxConsole pre span.attr-val  { color: #61afef; }
-body.fwxConsole pre span.comment   { color: #5c6370; }
+body.fwxConsole pre span.doctype { color: slategray; }
+body.fwxConsole pre span.tag { color: mediumorchid; }
+body.fwxConsole pre span.attr-name { color: khaki; }
+body.fwxConsole pre span.attr-val { color: cornflowerblue; }
+body.fwxConsole pre span.comment { color: dimgray; }
