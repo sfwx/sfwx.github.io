@@ -21,7 +21,7 @@ body.fwxMain {
   display: flex;
   margin: 0;
 }
-body.fwxMain div.gradient {
+body.fwxMain div.fwxGradient {
   background: radial-gradient(
     circle at 50% 50%,
     #1e1b4b 0%,
@@ -31,7 +31,7 @@ body.fwxMain div.gradient {
   z-index: -2;
   inset: 0;
 }
-body.fwxMain div.glow {
+body.fwxMain div.fwxGlow {
   animation: pulse 8s infinite alternate ease-in-out;
   transform: translate(-50%, -50%);
   background: var(--accent);
@@ -104,14 +104,14 @@ body.fwxMain main * p {
   margin: 1.5rem 0;
   color: #94a3b8;
 }
-body.fwxMain main * div.tags {
+body.fwxMain main * div.fwxTags {
   justify-content: center;
   margin-bottom: 2rem;
   flex-wrap: wrap;
   display: flex;
   gap: 8px;
 }
-body.fwxMain main * div.tags span {
+body.fwxMain main * div.fwxTags span {
   background: rgba(99, 102, 241, 0.1);
   border: 1px solid rgba(99, 102, 241, 0.2);
   border-radius: 50px;
@@ -120,13 +120,13 @@ body.fwxMain main * div.tags span {
   font-weight: 600;
   color: #a5b4fc;
 }
-body.fwxMain main * div.input {
+body.fwxMain main * div.fwxInput {
   position: relative;
   margin-top: 1rem;
   width: 80%;
   left: 10%;
 }
-body.fwxMain main * div.input input {
+body.fwxMain main * div.fwxInput input {
   border-bottom: 1px solid var(--accent);
   box-shadow: 0 1px 0 var(--accent);
   font-family: "Inter", sans-serif;
@@ -139,14 +139,14 @@ body.fwxMain main * div.input input {
   border: none;
   width: 100%;
 }
-body.fwxMain main * div.input input::placeholder {
+body.fwxMain main * div.fwxInput input::placeholder {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.85rem;
   color: #475569;
 }
 /********************************************************/
-.loader-track {
+body.fwxMain main * div.fwxPrograssBar {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   overflow: hidden;
@@ -154,7 +154,7 @@ body.fwxMain main * div.input input::placeholder {
   height: 4px;
   width: 100%;
 }
-.loader-fill {
+body.fwxMain main * div.fwxPrograss {
   background: linear-gradient(90deg, var(--accent), #a855f7);
   transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 0 20px var(--accent);
@@ -175,7 +175,7 @@ body.fwxMain main footer a {
   color: #64748b;
 }
 /********************************************************/
-.btn-apply {
+body.fwxMain main * button.fwxButton {
   transition: transform 0.2s, box-shadow 0.2s;
   text-transform: uppercase;
   background: var(--accent);
@@ -188,7 +188,7 @@ body.fwxMain main footer a {
   color: white;
   width: 100%;
 }
-.btn-apply:hover {
+body.fwxMain main * button.fwxButton:hover {
   box-shadow: 0 10px 20px var(--accent-glow);
   transform: translateY(-2px);
 }
