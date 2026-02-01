@@ -10,7 +10,7 @@
 body.fwxMain *, body.fwxMain *::before, body.fwxMain *::after {
   box-sizing: border-box;
 }
-body.fwxMain {
+body.fwxApp {
   background-color: var(--bg-dark);
   font-family: "Inter", sans-serif;
   justify-content: center;
@@ -22,7 +22,7 @@ body.fwxMain {
   display: flex;
   margin: 0;
 }
-body.fwxMain div.fwxGradient {
+body.fwxApp div.fwxGradient {
   background: radial-gradient(
     circle at 50% 50%,
     #1e1b4b 0%,
@@ -32,7 +32,7 @@ body.fwxMain div.fwxGradient {
   z-index: -2;
   inset: 0;
 }
-body.fwxMain div.fwxGlow {
+body.fwxApp div.fwxGlow {
   animation: pulse 8s infinite alternate ease-in-out;
   transform: translate(-50%, -50%);
   background: var(--accent);
@@ -56,7 +56,7 @@ body.fwxMain div.fwxGlow {
     opacity: 0.2;
   }
 }
-body.fwxMain main {
+body.fwxApp main {
   box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border);
@@ -69,12 +69,12 @@ body.fwxMain main {
   max-width: 440px;
   width: 90%;
 }
-body.fwxMain main div div.fwxImage {
+body.fwxApp main div div.fwxImage {
   justify-content: center;
   align-items: center;
   display: flex;
 }
-body.fwxMain main div div.fwxImage img {
+body.fwxApp main div div.fwxImage img {
   filter: drop-shadow(0 0 15px var(--accent-glow));
   transition: transform 0.3s ease;
   border-radius: 12.5px;
@@ -82,37 +82,37 @@ body.fwxMain main div div.fwxImage img {
   height: 90px;
   width: 90px;
 }
-body.fwxMain main div div.fwxImage img:hover {
+body.fwxApp main div div.fwxImage img:hover {
   transform: scale(1.05) rotate(5deg);
 }
-body.fwxMain main div span span {
+body.fwxApp main div span span {
   text-transform: uppercase;
   color: var(--accent);
   letter-spacing: 2px;
   font-size: 0.9rem;
   font-weight: 600;
 }
-body.fwxMain main div h1 {
+body.fwxApp main div h1 {
   letter-spacing: -1px;
   font-size: 1.8rem;
   font-weight: 800;
   margin: 0.5rem 0;
   color: #ffffff;
 }
-body.fwxMain main div p {
+body.fwxApp main div p {
   font-size: 0.95rem;
   line-height: 1.7;
   margin: 1.5rem 0;
   color: #94a3b8;
 }
-body.fwxMain main div div.fwxTags {
+body.fwxApp main div div.fwxTags {
   justify-content: center;
   margin-bottom: 2rem;
   flex-wrap: wrap;
   display: flex;
   gap: 8px;
 }
-body.fwxMain main div div.fwxTags span {
+body.fwxApp main div div.fwxTags span {
   background: rgba(99, 102, 241, 0.1);
   border: 1px solid rgba(99, 102, 241, 0.2);
   border-radius: 50px;
@@ -121,13 +121,13 @@ body.fwxMain main div div.fwxTags span {
   font-weight: 600;
   color: #a5b4fc;
 }
-body.fwxMain main div div.fwxInput {
+body.fwxApp main div div.fwxInput {
   position: relative;
   margin-top: 1rem;
   width: 80%;
   left: 10%;
 }
-body.fwxMain main div div.fwxInput input {
+body.fwxApp main div div.fwxInput input {
   border-bottom: 1px solid var(--accent);
   box-shadow: 0 1px 0 var(--accent);
   font-family: "Inter", sans-serif;
@@ -140,13 +140,13 @@ body.fwxMain main div div.fwxInput input {
   border: none;
   width: 100%;
 }
-body.fwxMain main div div.fwxInput input::placeholder {
+body.fwxApp main div div.fwxInput input::placeholder {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.85rem;
   color: #475569;
 }
-body.fwxMain main div div.fwxProgressBar {
+body.fwxApp main div div.fwxProgressBar {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   overflow: hidden;
@@ -154,14 +154,14 @@ body.fwxMain main div div.fwxProgressBar {
   height: 4px;
   width: 100%;
 }
-body.fwxMain main div div.fwxProgressBar div.fwxProgress {
+body.fwxApp main div div.fwxProgressBar div.fwxProgress {
   background: linear-gradient(90deg, var(--accent), #a855f7);
   transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 0 20px var(--accent);
   height: 100%;
   width: 0%;
 }
-body.fwxMain main div a.fwxButton {
+body.fwxApp main div a.fwxButton {
   transition: transform 0.2s, box-shadow 0.2s;
   text-transform: uppercase;
   background: var(--accent);
@@ -174,18 +174,18 @@ body.fwxMain main div a.fwxButton {
   color: white;
   width: 100%;
 }
-body.fwxMain main div a.fwxButton:hover {
+body.fwxApp main div a.fwxButton:hover {
   box-shadow: 0 10px 20px var(--accent-glow);
   transform: translateY(-2px);
 }
-body.fwxMain main footer {
+body.fwxApp main footer {
   border-top: 1px solid var(--border);
   padding-top: 1.5rem;
   font-size: 0.75rem;
   margin-top: 2rem;
   color: #475569;
 }
-body.fwxMain main footer a {
+body.fwxApp main footer a {
   text-decoration: none;
   font-weight: 600;
   color: #64748b;
