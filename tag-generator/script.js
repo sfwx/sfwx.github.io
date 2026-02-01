@@ -6,26 +6,26 @@ function tagFromName(name) {
 }
 function convertText(text) {
   if (!text) {
-    document.getElementById("result").textContent = "#0000";
+    document.getElementById("fwxResult").textContent = "#0000";
     history.replaceState(null, "", "#");
     return;
   }
   const tag = tagFromName(text);
-  document.getElementById("result").textContent = "#" + tag;
+  document.getElementById("fwxResult").textContent = "#" + tag;
   location.hash = tag;
   if (tag in actions) {
-    document.getElementById("result").style.color = "lightCoral";
+    document.getElementById("fwxResult").style.color = "lightCoral";
   }
   else {
-    document.getElementById("result").removeAttribute("style");
+    document.getElementById("fwxResult").removeAttribute("style");
   }
 }
 if (location.hash.length === 5) {
-  document.getElementById("result").textContent = location.hash;
+  document.getElementById("fwxResult").textContent = location.hash;
   if (location.hash.substring(1) in actions) {
-    document.getElementById("result").style.color = "lightCoral";
+    document.getElementById("fwxResult").style.color = "lightCoral";
   }
   else {
-    document.getElementById("result").removeAttribute("style");
+    document.getElementById("fwxResult").removeAttribute("style");
   }
 }
