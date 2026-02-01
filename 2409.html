@@ -29,31 +29,33 @@
     <link rel="stylesheet" href="https://sfwx.github.io/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap">
   </head>
-  <body>
-    <div class="bg-gradient"></div>
-    <div class="bg-glow"></div>
-    <main class="glass-card">
-      <div style="padding: 1rem 0;">
-        <div style="display: flex; justify-content: center; align-items: center;">
-          <img src="https://sfwx.github.io/floral/index.png" alt="FwX:Icon" class="brand-icon">
+  <body class="fwxApp">
+    <div class="fwxGradient"></div>
+    <div class="fwxGlow"></div>
+    <main>
+      <div style="padding: 1rem 0;" class="fwxBorder">
+        <div>
+          <img src="https://sfwx.github.io/floral/index.png" alt="FwX:Icon">
         </div>
-        <p class="nickname">
-          FwX404 · Minecraft
-        </p>
+        <span>
+          <span>
+            FwX404 · Minecraft
+          </span>
+        </span>
         <h1>
           Floral Capes
         </h1>
         <p style="font-size: 0.8rem; color: #64748b;">
           Clique para baixar o pacote de textura do FloralCapes.
         </p>
-        <div class="loader-track">
-          <div id="fwxProgress" class="loader-fill"></div>
+        <div class="fwxProgress">
+          <div id="fwxProgress"></div>
         </div>
-        <a id="fwxButton" class="btn-apply" style="display: none;" onclick="window.location.href = 'https://sfwx.github.io/floral/fwxTexture.mcpack';">
+        <a id="fwxButton" style="display: none;" onclick="window.location.href = 'https://sfwx.github.io/floral/fwxTexture.mcpack';">
           Baixar Pacote
         </a>
       </div>
-      <footer class="footer-copyright">
+      <footer>
         © <span id="fwxYear">0626</span> FlowniX. Conteúdo Protegido.<br>
         <a href="https://sfwx.github.io/copyright">
           Direitos Autorais & Termos
