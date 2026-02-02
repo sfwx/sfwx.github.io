@@ -1,7 +1,18 @@
 /* FwX: MAIN */
 .fwxDebug {
-  border: 1.25px dashed rgba(240, 128, 128, 0.75);
-  background: rgba(240, 128, 128, 0.125);
+  box-sizing: border-box;
+  position: relative;
+}
+.fwxDebug::before {
+  background-image:
+    linear-gradient(to right, rgba(30, 144, 255, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 144, 255, 0.25) 1px, transparent 1px);
+  background-size: 10px 10px;
+  border: 1px solid rgba(30, 144, 255, 0.25);
+  pointer-events: none;
+  position: absolute;
+  content: "";
+  inset: 0;
 }
 /* FwX: APP */
 body.fwxApp *, body.fwxApp *::before, body.fwxApp *::after {
