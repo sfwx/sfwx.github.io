@@ -25,15 +25,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="preconnect" href="https://sfwx.github.io/main.css">
     <link rel="stylesheet" href="https://sfwx.github.io/main.css">
+    <style>
+      * {
+        transition: all 2.5px;
+      }
+      textarea {
+        border: 2.5px dashed lightcoral;
+        background: transparent;
+        width: 98.25%;
+        height: 75px;
+      }
+    </style>
   </head>
   <body>
-    <div id="fwxPreview" style="border: 2.5px dashed lightcoral; display: center;"></div>
+    <div id="fwxPreview" style="border: 2.5px dashed lightcoral;"></div>
     <hr style="border-color: lightcoral;">
-    <textarea id="fwxStyle" style="border: 2.5px dashed lightcoral; background: transparent; height: 75px; width: 98.25%;">background: cyan;
+    <textarea id="fwxStyle">background: cyan;
 height: 100px;
 width: 100px;</textarea>
     <hr style="border-color: lightcoral;">
-    <textarea id="fwxElement" style="border: 2.5px dashed lightcoral; background: transparent; height: 75px; width: 98.25%;"><div style="<!--STYLE-->"></div></textarea>
+    <textarea id="fwxElement"><div style="<!--STYLE-->"></div></textarea>
     <script type="text/javascript" defer>
       const style = document.getElementById("fwxStyle");
       const preview = document.getElementById("fwxPreview");
