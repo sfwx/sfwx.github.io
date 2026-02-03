@@ -36,11 +36,12 @@ window.addEventListener("load", async function() {
         try {
           let content = template.value
             .replaceAll("{{FWX.VALUE}}", actions[tag].value)
-            .replaceAll("{{FWX.COLOR}}", actions[tag].color)
+            .replaceAll("{{FWX.META.COLOR}}", actions[tag].meta?.color)
             .replaceAll("{{FWX.META.IMAGE.VALUE}}", actions[tag].meta?.image?.value)
             .replaceAll("{{FWX.META.IMAGE.SIZE}}", actions[tag].meta?.image?.size)
             .replaceAll("{{FWX.META.TITLE}}", actions[tag].meta?.title)
             .replaceAll("{{FWX.META.DESCRIPTION}}", actions[tag].meta?.description)
+            .replaceAll("{{FWX.COLOR}}", actions[tag].color)
             .replaceAll("{{FWX.IMAGE}}", actions[tag].image)
             .replaceAll("{{FWX.TITLE}}", actions[tag].title)
             .replaceAll("{{FWX.SUBTITLE}}", actions[tag].subtitle)
