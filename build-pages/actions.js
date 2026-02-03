@@ -9,7 +9,8 @@ const actions = {
       "title": "Gerador de Tag",
       "description": "Gerador de Tag para transformar palavras em uma numeração de 4 dígitos. Apenas para fins técnicos;",
       "image": {
-        "value": "https://sfwx.github.io/index.png",
+        "icon": "https://sfwx.github.io/index.png",
+        "thumbnail": "https://sfwx.github.io/index.png",
         "size": "summary"
       }
     },
@@ -35,7 +36,8 @@ const actions = {
       "title": "Área desconhecida!",
       "description": "Você foi longe demais… esse atalho não está no mapa!",
       "image": {
-        "value": "https://sfwx.github.io/index.png",
+        "icon": "https://sfwx.github.io/index.png",
+        "thumbnail": "https://sfwx.github.io/index.png",
         "size": "summary"
       }
     },
@@ -61,7 +63,8 @@ const actions = {
       "title": "Perfil pessoal",
       "description": "Este é o perfil pessoal do Murilo.",
       "image": {
-        "value": "https://sfwx.github.io/index.png",
+        "icon": "https://sfwx.github.io/index.png",
+        "thumbnail": "https://sfwx.github.io/index.png",
         "size": "summary"
       }
     },
@@ -87,7 +90,8 @@ const actions = {
       "title": "FloralCapes",
       "description": "Skin generator in FloralCape format.",
       "image": {
-        "value": "https://sfwx.github.io/floral/index.png",
+        "icon": "https://sfwx.github.io/image/icon1.png",
+        "thumbnail": "https://sfwx.github.io/floral/index.png",
         "size": "summary"
       }
     },
@@ -112,7 +116,8 @@ const actions = {
       "title": "Editor de Item",
       "description": "Editor online de NBT e JSON para itens, feito para criar, editar e validar dados de forma rápida e organizada.",
       "image": {
-        "value": "https://sfwx.github.io/mcstructure/index.png",
+        "icon": "https://sfwx.github.io/image/icon1.png",
+        "thumbnail": "https://sfwx.github.io/mcstructure/index.png",
         "size": "summary"
       }
     },
@@ -137,7 +142,8 @@ const actions = {
       "title": "Game Teste",
       "description": "💀💀💀",
       "image": {
-        "value": "https://sfwx.github.io/image/icon1.png",
+        "icon": "https://sfwx.github.io/image/icon1.png",
+        "thumbnail": "https://sfwx.github.io/image/icon1.png",
         "size": "summary"
       }
     },
@@ -163,7 +169,8 @@ const actions = {
       "title": "Instagram",
       "description": "Acesse o Instagram principal @FwX404",
       "image": {
-        "value": "https://sfwx.github.io/index.png",
+        "icon": "https://sfwx.github.io/index.png",
+        "thumbnail": "https://sfwx.github.io/index.png",
         "size": "summary"
       }
     },
@@ -188,7 +195,8 @@ const actions = {
       "title": "Instagram",
       "description": "Acesse o Instagram secundário @Fw.X00",
       "image": {
-        "value": "https://sfwx.github.io/index.png",
+        "icon": "https://sfwx.github.io/index.png",
+        "thumbnail": "https://sfwx.github.io/index.png",
         "size": "summary"
       }
     },
@@ -213,7 +221,8 @@ const actions = {
       "title": "Inventário Standoff2",
       "description": "Veja meu inventário no Standoff2.",
       "image": {
-        "value": "https://sfwx.github.io/index.png",
+        "icon": "https://sfwx.github.io/index.png",
+        "thumbnail": "https://sfwx.github.io/index.png",
         "size": "summary"
       }
     },
@@ -239,7 +248,8 @@ const actions = {
       "title": "Botões Pixelados",
       "description": "Este conteúdo encontra-se protegido pela legislação de direitos autorais.",
       "image": {
-        "value": "https://sfwx.github.io/image/pixelated-buttons/atlas.png",
+        "icon": "https://sfwx.github.io/image/icon1.png",
+        "thumbnail": "https://sfwx.github.io/image/pixelated-buttons/atlas.png",
         "size": "summary_large_image"
       }
     },
@@ -265,7 +275,8 @@ const actions = {
       "title": "FloralCapes Texture",
       "description": "Acessse para baixar o pacote de textura do FloralCapes.",
       "image": {
-        "value": "https://sfwx.github.io/floral/index.png",
+        "icon": "https://sfwx.github.io/image/icon1.png",
+        "thumbnail": "https://sfwx.github.io/floral/index.png",
         "size": "summary"
       }
     },
@@ -291,7 +302,8 @@ const actions = {
       "title": "Arco de Operador",
       "description": "Acesse para baixar o arquivo do incrível Arco de Operador!",
       "image": {
-        "value": "https://sfwx.github.io/mcstructure/index.png",
+        "icon": "https://sfwx.github.io/image/icon1.png",
+        "thumbnail": "https://sfwx.github.io/mcstructure/index.png",
         "size": "summary"
       }
     },
@@ -316,7 +328,8 @@ const actions = {
       "title": "Fogos de Artifício",
       "description": "Acesse para baixar o arquivo de Fogos de Artifício de Operador!",
       "image": {
-        "value": "https://sfwx.github.io/mcstructure/index.png",
+        "icon": "https://sfwx.github.io/image/icon1.png",
+        "thumbnail": "https://sfwx.github.io/mcstructure/index.png",
         "size": "summary"
       }
     },
@@ -341,7 +354,8 @@ const actions = {
       "title": "Escudo de Operador",
       "description": "Acesse para baixar o arquivo do incrível Escudo de Operador!",
       "image": {
-        "value": "https://sfwx.github.io/mcstructure/index.png",
+        "icon": "https://sfwx.github.io/image/icon1.png",
+        "thumbnail": "https://sfwx.github.io/mcstructure/index.png",
         "size": "summary"
       }
     },
@@ -366,7 +380,8 @@ const actions = {
       "title": "Asas de Operador",
       "description": "Acesse para baixar o arquivo das incríveis Asas de Operador!",
       "image": {
-        "value": "https://sfwx.github.io/mcstructure/index.png",
+        "icon": "https://sfwx.github.io/image/icon1.png",
+        "thumbnail": "https://sfwx.github.io/mcstructure/index.png",
         "size": "summary"
       }
     },
@@ -391,7 +406,8 @@ const actions = {
       "title": "Camera Fotográfica",
       "description": "Acesse para baixar o arquivo do Item de Câmera.",
       "image": {
-        "value": "https://sfwx.github.io/mcstructure/index.png",
+        "icon": "https://sfwx.github.io/image/icon1.png",
+        "thumbnail": "https://sfwx.github.io/mcstructure/index.png",
         "size": "summary"
       }
     },
@@ -416,7 +432,8 @@ const actions = {
       "title": "Nether Portal",
       "description": "Acesse para baixar o arquivo do Bloco de Portal do Nether.",
       "image": {
-        "value": "https://sfwx.github.io/mcstructure/index.png",
+        "icon": "https://sfwx.github.io/image/icon1.png",
+        "thumbnail": "https://sfwx.github.io/mcstructure/index.png",
         "size": "summary"
       }
     },
@@ -441,7 +458,8 @@ const actions = {
       "title": "End Portal",
       "description": "Acesse para baixar o arquivo do Bloco de Portal do End.",
       "image": {
-        "value": "https://sfwx.github.io/mcstructure/index.png",
+        "icon": "https://sfwx.github.io/image/icon1.png",
+        "thumbnail": "https://sfwx.github.io/mcstructure/index.png",
         "size": "summary"
       }
     },
@@ -466,7 +484,8 @@ const actions = {
       "title": "Ender Portal",
       "description": "Acesse para baixar o arquivo do Bloco de Portal do Ender.",
       "image": {
-        "value": "https://sfwx.github.io/mcstructure/index.png",
+        "icon": "https://sfwx.github.io/image/icon1.png",
+        "thumbnail": "https://sfwx.github.io/mcstructure/index.png",
         "size": "summary"
       }
     },
