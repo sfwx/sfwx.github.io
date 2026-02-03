@@ -42,7 +42,6 @@ window.addEventListener("load", async function() {
             .replaceAll("{{FWX.META.IMAGE.ICON}}", actions[tag].meta?.image?.icon)
             .replaceAll("{{FWX.META.IMAGE.THUMBNAIL}}", actions[tag].meta?.image?.thumbnail)
             .replaceAll("{{FWX.META.IMAGE.SIZE}}", actions[tag].meta?.image?.size)
-            .replaceAll("{{FWX.COLOR}}", actions[tag].color)
             .replaceAll("{{FWX.IMAGE}}", actions[tag].image)
             .replaceAll("{{FWX.TITLE}}", actions[tag].title)
             .replaceAll("{{FWX.SUBTITLE}}", actions[tag].subtitle)
