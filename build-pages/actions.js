@@ -216,6 +216,7 @@ const actions = {
     "id": "pixelated-buttons",
     "enabled": true,
     "type": "navigate",
+    "color": "#efefef",
     "meta": {
       "title": "Botões Pixelados",
       "description": "Este conteúdo encontra-se protegido pela legislação de direitos autorais.",
