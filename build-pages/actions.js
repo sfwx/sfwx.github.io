@@ -83,7 +83,7 @@ const actions = {
     "enabled": true,
     "type": "navigate",
     "meta": {
-      "color": "#1e90ff",
+      "color": "#73912d",
       "title": "FloralCapes",
       "description": "Skin generator in FloralCape format.",
       "image": {
@@ -261,7 +261,7 @@ const actions = {
     "enabled": true,
     "type": "file_download",
     "meta": {
-      "color": "#1e90ff",
+      "color": "#73912d",
       "title": "FloralCapes Texture",
       "description": "Acessse para baixar o pacote de textura do FloralCapes.",
       "image": {
