@@ -235,7 +235,7 @@ const actions = {
     "enabled": true,
     "type": "navigate",
     "meta": {
-      "color": "#efefef",
+      "color": "#cccccc",
       "title": "Botões Pixelados",
       "description": "Este conteúdo encontra-se protegido pela legislação de direitos autorais.",
       "image": {
@@ -243,7 +243,7 @@ const actions = {
         "size": "summary_large_image"
       }
     },
-    "color": "#efefef",
+    "color": "#cccccc",
     "image": "https://sfwx.github.io/image/icon1.png",
     "title": "FwX · Copyright",
     "subtitle": "Botões Pixelados",
