@@ -37,11 +37,11 @@ window.addEventListener("load", async function() {
           let content = template.value
             .replaceAll("{{FWX.VALUE}}", actions[tag].value)
             .replaceAll("{{FWX.META.COLOR}}", actions[tag].meta?.color)
+            .replaceAll("{{FWX.META.TITLE}}", actions[tag].meta?.title)
+            .replaceAll("{{FWX.META.DESCRIPTION}}", actions[tag].meta?.description)
             .replaceAll("{{FWX.META.IMAGE.ICON}}", actions[tag].meta?.image?.icon)
             .replaceAll("{{FWX.META.IMAGE.THUMBNAIL}}", actions[tag].meta?.image?.thumbnail)
             .replaceAll("{{FWX.META.IMAGE.SIZE}}", actions[tag].meta?.image?.size)
-            .replaceAll("{{FWX.META.TITLE}}", actions[tag].meta?.title)
-            .replaceAll("{{FWX.META.DESCRIPTION}}", actions[tag].meta?.description)
             .replaceAll("{{FWX.COLOR}}", actions[tag].color)
             .replaceAll("{{FWX.IMAGE}}", actions[tag].image)
             .replaceAll("{{FWX.TITLE}}", actions[tag].title)
