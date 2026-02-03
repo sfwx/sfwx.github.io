@@ -36,6 +36,7 @@ window.addEventListener("load", async function() {
         try {
           let content = template.value
             .replaceAll("{{FWX.VALUE}}", actions[tag].value)
+            .replaceAll("{{FWX.COLOR}}", actions[tag].color)
             .replaceAll("{{FWX.META.IMAGE.VALUE}}", actions[tag].meta?.image?.value)
             .replaceAll("{{FWX.META.IMAGE.SIZE}}", actions[tag].meta?.image?.size)
             .replaceAll("{{FWX.META.TITLE}}", actions[tag].meta?.title)
