@@ -163,8 +163,8 @@ const actions = {
       "title": "Instagram",
       "description": "Acesse o Instagram principal @FwX404",
       "image": {
-        "value": "https://sfwx.github.io/image/pixelated-buttons/atlas.png",
-        "size": "summary_large_image"
+        "value": "https://sfwx.github.io/index.png",
+        "size": "summary"
       }
     },
     "color": "#1e90ff",
@@ -239,8 +239,8 @@ const actions = {
       "title": "Botões Pixelados",
       "description": "Este conteúdo encontra-se protegido pela legislação de direitos autorais.",
       "image": {
-        "value": "https://sfwx.github.io/image/icon1.png",
-        "size": "summary"
+        "value": "https://sfwx.github.io/image/pixelated-buttons/atlas.png",
+        "size": "summary_large_image"
       }
     },
     "color": "#efefef",
