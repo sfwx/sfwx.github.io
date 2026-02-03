@@ -163,8 +163,8 @@ const actions = {
       "title": "Instagram",
       "description": "Acesse o Instagram principal @FwX404",
       "image": {
-        "value": "https://sfwx.github.io/index.png",
-        "size": "summary"
+        "value": "https://sfwx.github.io/image/pixelated-buttons/atlas.png",
+        "size": "summary_large_image"
       }
     },
     "color": "#1e90ff",
