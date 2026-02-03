@@ -37,7 +37,8 @@ window.addEventListener("load", async function() {
           let content = template.value
             .replaceAll("{{FWX.VALUE}}", actions[tag].value)
             .replaceAll("{{FWX.META.COLOR}}", actions[tag].meta?.color)
-            .replaceAll("{{FWX.META.IMAGE.VALUE}}", actions[tag].meta?.image?.value)
+            .replaceAll("{{FWX.META.IMAGE.ICON}}", actions[tag].meta?.image?.icon)
+            .replaceAll("{{FWX.META.IMAGE.THUMBNAIL}}", actions[tag].meta?.image?.thumbnail)
             .replaceAll("{{FWX.META.IMAGE.SIZE}}", actions[tag].meta?.image?.size)
             .replaceAll("{{FWX.META.TITLE}}", actions[tag].meta?.title)
             .replaceAll("{{FWX.META.DESCRIPTION}}", actions[tag].meta?.description)
