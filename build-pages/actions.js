@@ -14,7 +14,6 @@ const actions = {
         "size": "summary"
       }
     },
-    "color": "#1e90ff",
     "image": "https://sfwx.github.io/image/icon0.png",
     "title": "FwX · TCatDark",
     "subtitle": "Gerador de Tag",
@@ -41,7 +40,6 @@ const actions = {
         "size": "summary"
       }
     },
-    "color": "#1e90ff",
     "image": "https://sfwx.github.io/image/icon0.png",
     "title": "FwX · TCatDark",
     "subtitle": "Área desconhecida!",
@@ -68,7 +66,6 @@ const actions = {
         "size": "summary"
       }
     },
-    "color": "#1e90ff",
     "image": "https://sfwx.github.io/image/icon0.png",
     "title": "FwX · TCatDark",
     "subtitle": "Perfil pessoal",
@@ -95,7 +92,6 @@ const actions = {
         "size": "summary"
       }
     },
-    "color": "#1e90ff",
     "image": "https://sfwx.github.io/floral/index.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Floral Capes",
@@ -121,7 +117,6 @@ const actions = {
         "size": "summary"
       }
     },
-    "color": "#1e90ff",
     "image": "https://sfwx.github.io/mcstructure/index.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Editor NBT",
@@ -147,7 +142,6 @@ const actions = {
         "size": "summary"
       }
     },
-    "color": "#1e90ff",
     "image": "https://sfwx.github.io/image/icon1.png",
     "title": "FwX · TCatDark",
     "subtitle": "Game Test",
@@ -174,7 +168,6 @@ const actions = {
         "size": "summary"
       }
     },
-    "color": "#1e90ff",
     "image": "https://sfwx.github.io/image/icon0.png",
     "title": "FwX · TCatDark",
     "subtitle": "Instagram",
@@ -200,7 +193,6 @@ const actions = {
         "size": "summary"
       }
     },
-    "color": "#1e90ff",
     "image": "https://sfwx.github.io/image/icon0.png",
     "title": "FwX · TCatDark",
     "subtitle": "Instagram",
@@ -226,7 +218,6 @@ const actions = {
         "size": "summary"
       }
     },
-    "color": "#1e90ff",
     "image": "https://sfwx.github.io/image/icon0.png",
     "title": "FwXs · Standoff2",
     "subtitle": "Inventário",
@@ -253,7 +244,6 @@ const actions = {
         "size": "summary_large_image"
       }
     },
-    "color": "#cccccc",
     "image": "https://sfwx.github.io/image/icon1.png",
     "title": "FwX · Copyright",
     "subtitle": "Botões Pixelados",
@@ -280,7 +270,6 @@ const actions = {
         "size": "summary"
       }
     },
-    "color": "#1e90ff",
     "image": "https://sfwx.github.io/floral/index.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Floral Capes",
@@ -307,7 +296,6 @@ const actions = {
         "size": "summary"
       }
     },
-    "color": "#1e90ff",
     "image": "https://sfwx.github.io/mcstructure/index.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Arco de Operador",
@@ -333,7 +321,6 @@ const actions = {
         "size": "summary"
       }
     },
-    "color": "#1e90ff",
     "image": "https://sfwx.github.io/mcstructure/index.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Fogos de Artifício",
@@ -359,7 +346,6 @@ const actions = {
         "size": "summary"
       }
     },
-    "color": "#1e90ff",
     "image": "https://sfwx.github.io/mcstructure/index.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Escudo de Operador",
@@ -385,7 +371,6 @@ const actions = {
         "size": "summary"
       }
     },
-    "color": "#1e90ff",
     "image": "https://sfwx.github.io/mcstructure/index.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Asas de Operador",
@@ -411,7 +396,6 @@ const actions = {
         "size": "summary"
       }
     },
-    "color": "#1e90ff",
     "image": "https://sfwx.github.io/mcstructure/index.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Camera Fotográfica",
@@ -437,7 +421,6 @@ const actions = {
         "size": "summary"
       }
     },
-    "color": "#1e90ff",
     "image": "https://sfwx.github.io/mcstructure/index.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Nether Portal",
@@ -463,7 +446,6 @@ const actions = {
         "size": "summary"
       }
     },
-    "color": "#1e90ff",
     "image": "https://sfwx.github.io/mcstructure/index.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "End Portal",
@@ -489,7 +471,6 @@ const actions = {
         "size": "summary"
       }
     },
-    "color": "#1e90ff",
     "image": "https://sfwx.github.io/mcstructure/index.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Ender Portal",
