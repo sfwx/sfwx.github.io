@@ -84,12 +84,12 @@ const actions = {
     "type": "navigate",
     "meta": {
       "color": "#73912d",
-      "title": "FloralCapes",
+      "title": "FloralCapes / Minecraft",
       "description": "Explore our cape creation tool! Customize your skin with unique capes.",
       "image": {
         "icon": "https://sfwx.github.io/image/icon1.png",
-        "thumbnail": "https://sfwx.github.io/floral/index.png",
-        "size": "summary"
+        "thumbnail": "https://sfwx.github.io/floral/card.png",
+        "size": "summary_large_image"
       }
     },
     "image": "https://sfwx.github.io/floral/index.png",
