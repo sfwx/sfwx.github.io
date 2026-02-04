@@ -3,7 +3,7 @@
   box-sizing: border-box;
   position: relative;
 }
-.fwxDebug::before {
+.fwxDebugA::after {
   background-image:
     linear-gradient(to right, rgba(30, 144, 255, 0.25) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(30, 144, 255, 0.25) 1px, transparent 1px);
@@ -12,6 +12,19 @@
   pointer-events: none;
   position: absolute;
   content: "";
+  z-index: 1;
+  inset: 0;
+}
+.fwxDebugB::before {
+  background-image:
+    linear-gradient(to right, rgba(30, 144, 255, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 144, 255, 0.25) 1px, transparent 1px);
+  background-size: 10px 10px;
+  border: 1px solid rgba(30, 144, 255, 0.25);
+  pointer-events: none;
+  position: absolute;
+  content: "";
+  z-index: -1;
   inset: 0;
 }
 /* FwX: APP */
