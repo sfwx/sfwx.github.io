@@ -1,1 +1,252 @@
 /* FwX: APP */
+body.fwxApp *, body.fwxApp *::before, body.fwxApp *::after {
+  box-sizing: border-box;
+}
+body.fwxApp {
+  font-family: "Inter", sans-serif;
+  background-color: #020617;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  color: #f1f5f9;
+  display: flex;
+  margin: 0;
+}
+body.fwxApp div.fwxGradient {
+  background: radial-gradient(
+    circle at 50% 50%,
+    #1e1b4b 0%,
+    #020617 100%
+  );
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+}
+body.fwxApp div.fwxGlow {
+  animation: pulse 8s infinite alternate ease-in-out;
+  transform: translate(-50%, -50%);
+  background: #6366f1;
+  filter: blur(140px);
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0.15;
+  height: 500px;
+  width: 500px;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+}
+@keyframes pulse {
+  from {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.1;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.2;
+  }
+}
+body.fwxApp main {
+  box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(20px);
+  border-radius: 32px;
+  text-align: center;
+  position: relative;
+  padding: 3rem 2rem;
+  max-width: 440px;
+  width: 90%;
+}
+body.fwxApp main div div.fwxImage {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+body.fwxApp main div div.fwxImage img {
+  filter: drop-shadow(0 0 15px rgba(99, 102, 241, 0.3));
+  transition: transform 0.3s ease;
+  border-radius: 12.5px;
+  margin-bottom: 1.5rem;
+  height: 90px;
+  width: 90px;
+}
+body.fwxApp main div div.fwxImage img:hover {
+  transform: scale(1.05) rotate(5deg);
+}
+body.fwxApp main div span span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #6366f1;
+}
+body.fwxApp main div h1 {
+  letter-spacing: -1px;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0.5rem 0;
+  color: #ffffff;
+}
+body.fwxApp main div p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 1.5rem 0;
+  color: #94a3b8;
+}
+body.fwxApp main div div.fwxTags {
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 8px;
+}
+body.fwxApp main div div.fwxTags span {
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 50px;
+  font-size: 0.7rem;
+  padding: 5px 14px;
+  font-weight: 600;
+  color: #a5b4fc;
+}
+body.fwxApp main div div.fwxInput {
+  position: relative;
+  margin-top: 1rem;
+  width: 80%;
+  left: 10%;
+}
+body.fwxApp main div div.fwxInput input {
+  border-bottom: 1px solid #6366f1;
+  font-family: "Inter", sans-serif;
+  box-shadow: 0 1px 0 #6366f1;
+  background: transparent;
+  text-align: center;
+  font-size: 1rem;
+  padding: 10px 0;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  width: 100%;
+}
+body.fwxApp main div div.fwxInput input::placeholder {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  color: #475569;
+}
+body.fwxApp main div div.fwxProgress {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 2rem 0;
+  height: 4px;
+  width: 100%;
+}
+body.fwxApp main div div.fwxProgress div {
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 20px #6366f1;
+  height: 100%;
+  width: 0%;
+}
+body.fwxApp main div a {
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-transform: uppercase;
+  border-radius: 12px;
+  background: #6366f1;
+  font-weight: 800;
+  margin-top: 25px;
+  cursor: pointer;
+  padding: 15px;
+  border: none;
+  color: white;
+  width: 100%;
+}
+body.fwxApp main div a:hover {
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+  transform: translateY(-2px);
+}
+body.fwxApp main footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1.5rem;
+  font-size: 0.75rem;
+  margin-top: 2rem;
+  color: #475569;
+}
+body.fwxApp main footer a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #64748b;
+}
+/********************************************************
+.form-grid {
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
+  display: grid;
+  gap: 15px;
+}
+.full-width {
+  grid-column: span 2;
+}
+label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: block;
+  color: #6366f1;
+}
+.fwxInput, textarea {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.3s;
+  border-radius: 8px;
+  padding: 10px;
+  outline: none;
+  width: 100%;
+  color: #fff;
+}
+.fwxInput:focus, textarea:focus {
+  border-color: #6366f1;
+}
+textarea {
+  resize: vertical;
+  height: 80px;
+}
+.table-container {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0,0,0,0.2);
+  border-radius: 12px;
+  max-height: 300px;
+  margin-top: 30px;
+  overflow-y: auto;
+}
+table {
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  width: 100%;
+}
+th {
+  color: #6366f1;
+  background: #1e1b4b;
+  text-align: left;
+  position: sticky;
+  padding: 10px;
+  top: 0;
+}
+td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 8px 10px;
+  color: #94a3b8;
+}
+tr:hover td {
+  background: rgba(255,255,255,0.02);
+  color: #fff;
+}
+********************************************************/
