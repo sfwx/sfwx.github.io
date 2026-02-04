@@ -85,7 +85,7 @@ const actions = {
     "meta": {
       "color": "#73912d",
       "title": "FloralCapes",
-      "description": "Skin generator in FloralCape format.",
+      "description": "Explore our cover generation tool! Take advantage of all the available features, customize your skin, and have fun creating unique capes.",
       "image": {
         "icon": "https://sfwx.github.io/image/icon1.png",
         "thumbnail": "https://sfwx.github.io/floral/index.png",
