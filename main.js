@@ -1,3 +1,5 @@
+console.log("FwX: Olá mundo!");
+
 (function () {
   const path = window.location.pathname;
 
@@ -12,5 +14,4 @@
   }
 })();
 
-console.log("FwX: Olá mundo!");
 if (document.getElementById("fwxYear")) document.getElementById("fwxYear").innerHTML = new Date().getFullYear();
