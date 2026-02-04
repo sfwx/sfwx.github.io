@@ -1,0 +1,114 @@
+/* FwX: MINECRAFTUI */
+@font-face {
+  src: url("https://sfwx.github.io/font/MinecraftTitle.otf") format("opentype");
+  font-family: "MinecraftTitle";
+  font-weight: bold;
+}
+@font-face {
+  src: url("https://sfwx.github.io/font/Minecraft.otf") format("opentype");
+  font-family: "Minecraft";
+}
+@font-face {
+  src: url("https://sfwx.github.io/font/MinecraftBold.otf") format("opentype");
+  font-family: "Minecraft";
+  font-weight: bold;
+}
+/* FwX: MINECRAFT */
+body.fwxMinecraftUI *, body.fwxMinecraftUI *::before, body.fwxMinecraftUI *::after {
+  font-family: "Minecraft";
+  //box-sizing: border-box;
+}
+body.fwxMinecraftUI {
+  background-color: #191919;
+  margin: 0;
+}
+body.fwxMinecraftUI header {
+  font-family: "MinecraftTitle";
+  box-shadow: 0 5px 0 #58585a;
+  background-color: #e7e8ec;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 10px;
+}
+body.fwxMinecraftUI main {
+  padding: 20px 0 10px 0px;
+  margin: auto;
+  width: 355px;
+}
+body.fwxMinecraftUI main div.fwxDescription {
+  margin: auto auto 15px auto;
+  font-size: 18px;
+  width: 337.5px;
+  color: white;
+}
+body.fwxMinecraftUI main button {
+  box-shadow: 0 5px 0 #58585a;
+  border: 3.5px solid #e7e8ec;
+  background-color: #d0d1d4;
+  transition: all 0.1s;
+  margin-bottom: 10px;
+  font-size: 16px;
+  height: 44.25px;
+  width: 355px;
+}
+body.fwxMinecraftUI main button:hover {
+  border: 3.5px solid #b3b4b7;
+  box-shadow: 0 5px 0 #3c3c3c;
+  background-color: #c6c6c7;
+}
+body.fwxMinecraftUI main button:focus {
+  border: 3.5px solid #639d52;
+  box-shadow: 0 5px 0 #1d4d13;
+  background-color: #3c8527;
+  color: white;
+}
+body.fwxMinecraftUI main button:active {
+  box-shadow: 0 1px 0 #3c3c3c;
+  transform: translateY(4px);
+}
+body.fwxMinecraftUI main button:disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.75;
+  color: black;
+}
+body.fwxMinecraftUI main img#fwxPreview {
+  image-rendering: pixelated;
+  background-color: #222222;
+  margin-bottom: 12.5px;
+  border: 10px solid #e7e8ec;
+  box-shadow: 0 5px 0 #58585a;
+  width: 335px;
+}
+body.fwxMinecraftUI a.fwxCopyright {
+  -webkit-tap-highlight-color: transparent;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 12.5px;
+  margin-top: 1.25px;
+  color: #cccccc;
+  display: flex;
+}
+body.fwxMinecraftUI div#fwxConsole {
+  margin: 50px auto 325px auto;
+  box-shadow: 0 5px 0 #58585a;
+  border: 10px solid #e7e8ec;
+  background-color: #222222;
+  overflow-y: auto;
+  font-size: 12px;
+  color: #55ff55;
+  padding: 10px;
+  height: 200px;
+  width: 312.5px;
+}
+body.fwxMinecraftUI div#fwxConsole::-webkit-scrollbar {
+  width: 10px;
+}
+body.fwxMinecraftUI div#fwxConsole::-webkit-scrollbar-track {
+  background: #111111;
+}
+body.fwxMinecraftUI div#fwxConsole::-webkit-scrollbar-thumb {
+  border: 2px solid #111111;
+  background: #3c8527;
+}
