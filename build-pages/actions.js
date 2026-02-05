@@ -109,12 +109,12 @@ const actions = {
     "type": "navigate",
     "meta": {
       "color": "#1e90ff",
-      "title": "Editor de Item",
+      "title": "Editor de Item / Minecraft",
       "description": "Editor online de NBT e JSON para itens, feito para criar, editar e validar dados de forma rápida e organizada.",
       "image": {
         "icon": "https://sfwx.github.io/image/icon/fwx404.png",
         "thumbnail": "https://sfwx.github.io/image/icon/mcstructure.png",
-        "size": "summary"
+        "size": "summary_large_image"
       }
     },
     "image": "https://sfwx.github.io/image/icon/mcstructure.png",
