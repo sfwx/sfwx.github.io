@@ -83,7 +83,7 @@ const actions = {
     "enabled": true,
     "type": "navigate",
     "meta": {
-      "color": "#73912d",
+      "color": "#86d562",
       "title": "FloralCapes / Minecraft",
       "description": "Explore our cape creation tool! Customize your skin with unique capes.",
       "image": {
@@ -261,7 +261,7 @@ const actions = {
     "enabled": true,
     "type": "file_download",
     "meta": {
-      "color": "#73912d",
+      "color": "#86d562",
       "title": "FloralCapes Texture",
       "description": "Acessse para baixar o pacote de textura do FloralCapes.",
       "image": {
