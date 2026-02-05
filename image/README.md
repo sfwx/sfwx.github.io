@@ -1,4 +1,4 @@
-# **`Imagens e Ícones`**
+# **`Imagens Salvas`**
 
 ## Copyright Notice
 
