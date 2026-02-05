@@ -262,7 +262,7 @@ const actions = {
     "type": "file_download",
     "meta": {
       "color": "#86d562",
-      "title": "FloralCapes Texture",
+      "title": "FloralCapes / Minecraft Texture",
       "description": "Acessse para baixar o pacote de textura do FloralCapes.",
       "image": {
         "icon": "https://sfwx.github.io/image/icon/fwx404.png",
