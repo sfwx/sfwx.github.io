@@ -113,11 +113,11 @@ const actions = {
       "description": "Editor online de NBT e JSON para itens, feito para criar, editar e validar dados de forma rápida e organizada.",
       "image": {
         "icon": "https://sfwx.github.io/image/icon/fwx404.png",
-        "thumbnail": "https://sfwx.github.io/image/icon/editor-nbt.png",
+        "thumbnail": "https://sfwx.github.io/image/icon/mcstructure.png",
         "size": "summary"
       }
     },
-    "image": "https://sfwx.github.io/image/icon/editor-nbt.png",
+    "image": "https://sfwx.github.io/image/icon/mcstructure.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Editor NBT",
     "description": "Acessando editor online de NBT e JSON para itens, feito para criar, editar e validar dados de forma rápida e organizada.",
@@ -292,11 +292,11 @@ const actions = {
       "description": "Acesse para baixar o arquivo do incrível Arco de Operador!",
       "image": {
         "icon": "https://sfwx.github.io/image/icon/fwx404.png",
-        "thumbnail": "https://sfwx.github.io/image/icon/editor-nbt.png",
+        "thumbnail": "https://sfwx.github.io/image/icon/mcstructure.png",
         "size": "summary"
       }
     },
-    "image": "https://sfwx.github.io/image/icon/editor-nbt.png",
+    "image": "https://sfwx.github.io/image/icon/mcstructure.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Arco de Operador",
     "description": "Clique para baixar o arquivo do incrível Arco de Operador!",
@@ -317,11 +317,11 @@ const actions = {
       "description": "Acesse para baixar o arquivo de Fogos de Artifício de Operador!",
       "image": {
         "icon": "https://sfwx.github.io/image/icon/fwx404.png",
-        "thumbnail": "https://sfwx.github.io/image/icon/editor-nbt.png",
+        "thumbnail": "https://sfwx.github.io/image/icon/mcstructure.png",
         "size": "summary"
       }
     },
-    "image": "https://sfwx.github.io/image/icon/editor-nbt.png",
+    "image": "https://sfwx.github.io/image/icon/mcstructure.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Fogos de Artifício",
     "description": "Clique para baixar o arquivo de Fogos de Artifício de Operador!",
@@ -342,11 +342,11 @@ const actions = {
       "description": "Acesse para baixar o arquivo do incrível Escudo de Operador!",
       "image": {
         "icon": "https://sfwx.github.io/image/icon/fwx404.png",
-        "thumbnail": "https://sfwx.github.io/image/icon/editor-nbt.png",
+        "thumbnail": "https://sfwx.github.io/image/icon/mcstructure.png",
         "size": "summary"
       }
     },
-    "image": "https://sfwx.github.io/image/icon/editor-nbt.png",
+    "image": "https://sfwx.github.io/image/icon/mcstructure.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Escudo de Operador",
     "description": "Clique para baixar o arquivo do incrível Escudo de Operador!",
@@ -367,11 +367,11 @@ const actions = {
       "description": "Acesse para baixar o arquivo das incríveis Asas de Operador!",
       "image": {
         "icon": "https://sfwx.github.io/image/icon/fwx404.png",
-        "thumbnail": "https://sfwx.github.io/image/icon/editor-nbt.png",
+        "thumbnail": "https://sfwx.github.io/image/icon/mcstructure.png",
         "size": "summary"
       }
     },
-    "image": "https://sfwx.github.io/image/icon/editor-nbt.png",
+    "image": "https://sfwx.github.io/image/icon/mcstructure.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Asas de Operador",
     "description": "Clique para baixar o arquivo das incríveis Asas de Operador!",
@@ -392,11 +392,11 @@ const actions = {
       "description": "Acesse para baixar o arquivo do Item de Câmera.",
       "image": {
         "icon": "https://sfwx.github.io/image/icon/fwx404.png",
-        "thumbnail": "https://sfwx.github.io/image/icon/editor-nbt.png",
+        "thumbnail": "https://sfwx.github.io/image/icon/mcstructure.png",
         "size": "summary"
       }
     },
-    "image": "https://sfwx.github.io/image/icon/editor-nbt.png",
+    "image": "https://sfwx.github.io/image/icon/mcstructure.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Camera Fotográfica",
     "description": "Clique para baixar o arquivo do Item de Câmera.",
@@ -417,11 +417,11 @@ const actions = {
       "description": "Acesse para baixar o arquivo do Bloco de Portal do Nether.",
       "image": {
         "icon": "https://sfwx.github.io/image/icon/fwx404.png",
-        "thumbnail": "https://sfwx.github.io/image/icon/editor-nbt.png",
+        "thumbnail": "https://sfwx.github.io/image/icon/mcstructure.png",
         "size": "summary"
       }
     },
-    "image": "https://sfwx.github.io/image/icon/editor-nbt.png",
+    "image": "https://sfwx.github.io/image/icon/mcstructure.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Nether Portal",
     "description": "Clique para baixar o arquivo do Bloco de Portal do Nether.",
@@ -442,11 +442,11 @@ const actions = {
       "description": "Acesse para baixar o arquivo do Bloco de Portal do End.",
       "image": {
         "icon": "https://sfwx.github.io/image/icon/fwx404.png",
-        "thumbnail": "https://sfwx.github.io/image/icon/editor-nbt.png",
+        "thumbnail": "https://sfwx.github.io/image/icon/mcstructure.png",
         "size": "summary"
       }
     },
-    "image": "https://sfwx.github.io/image/icon/editor-nbt.png",
+    "image": "https://sfwx.github.io/image/icon/mcstructure.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "End Portal",
     "description": "Clique para baixar o arquivo do Bloco de Portal do End.",
@@ -467,11 +467,11 @@ const actions = {
       "description": "Acesse para baixar o arquivo do Bloco de Portal do Ender.",
       "image": {
         "icon": "https://sfwx.github.io/image/icon/fwx404.png",
-        "thumbnail": "https://sfwx.github.io/image/icon/editor-nbt.png",
+        "thumbnail": "https://sfwx.github.io/image/icon/mcstructure.png",
         "size": "summary"
       }
     },
-    "image": "https://sfwx.github.io/image/icon/editor-nbt.png",
+    "image": "https://sfwx.github.io/image/icon/mcstructure.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Ender Portal",
     "description": "Clique para baixar o arquivo do Bloco de Portal do Ender.",
