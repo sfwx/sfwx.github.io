@@ -65,7 +65,7 @@ window.addEventListener("load", async function() {
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(a.href);
-      window.close();
+      location.replace("https://github.com/sfwx/sfwx.github.io/upload");
     }
     catch (err) {
       console.error("Erro ao gerar o arquivo ZIP:", err);
