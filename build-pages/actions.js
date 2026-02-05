@@ -9,12 +9,12 @@ const actions = {
       "title": "Gerador de Tag",
       "description": "Gerador de Tag para transformar palavras em uma numeração de 4 dígitos. Apenas para fins técnicos;",
       "image": {
-        "icon": "https://sfwx.github.io/index.png",
-        "thumbnail": "https://sfwx.github.io/index.png",
+        "icon": "https://sfwx.github.io/image/icon/index.png",
+        "thumbnail": "https://sfwx.github.io/image/icon/index.png",
         "size": "summary"
       }
     },
-    "image": "https://sfwx.github.io/image/icon0.png",
+    "image": "https://sfwx.github.io/image/icon/fwx.png",
     "title": "FwX · TCatDark",
     "subtitle": "Gerador de Tag",
     "description": "Gerador de Tag para transformar palavras em uma numeração de 4 dígitos. Apenas para fins técnicos;",
@@ -35,12 +35,12 @@ const actions = {
       "title": "Área desconhecida!",
       "description": "Você foi longe demais… esse atalho não está no mapa!",
       "image": {
-        "icon": "https://sfwx.github.io/index.png",
-        "thumbnail": "https://sfwx.github.io/index.png",
+        "icon": "https://sfwx.github.io/image/icon/index.png",
+        "thumbnail": "https://sfwx.github.io/image/icon/index.png",
         "size": "summary"
       }
     },
-    "image": "https://sfwx.github.io/image/icon0.png",
+    "image": "https://sfwx.github.io/image/icon/fwx.png",
     "title": "FwX · TCatDark",
     "subtitle": "Área desconhecida!",
     "description": "Você foi longe demais… esse atalho não está no mapa!",
@@ -61,12 +61,12 @@ const actions = {
       "title": "Perfil pessoal",
       "description": "Este é o perfil pessoal do Murilo.",
       "image": {
-        "icon": "https://sfwx.github.io/index.png",
-        "thumbnail": "https://sfwx.github.io/index.png",
+        "icon": "https://sfwx.github.io/image/icon/index.png",
+        "thumbnail": "https://sfwx.github.io/image/icon/index.png",
         "size": "summary"
       }
     },
-    "image": "https://sfwx.github.io/image/icon0.png",
+    "image": "https://sfwx.github.io/image/icon/fwx.png",
     "title": "FwX · TCatDark",
     "subtitle": "Perfil pessoal",
     "description": "Acessando o perfil pessoal do Murilo.",
@@ -87,12 +87,12 @@ const actions = {
       "title": "FloralCapes / Minecraft",
       "description": "Explore our cape creation tool! Customize your skin with unique capes.",
       "image": {
-        "icon": "https://sfwx.github.io/image/icon1.png",
-        "thumbnail": "https://sfwx.github.io/floral/card.png",
+        "icon": "https://sfwx.github.io/image/icon/fwx404.png",
+        "thumbnail": "https://sfwx.github.io/image/card/floral-capes.png",
         "size": "summary_large_image"
       }
     },
-    "image": "https://sfwx.github.io/floral/index.png",
+    "image": "https://sfwx.github.io/image/icon/floral-capes.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Floral Capes",
     "description": "Acessando o gerador de skins FloralCapes, onde você pode criar skins com o capas personalizadas.",
@@ -112,12 +112,12 @@ const actions = {
       "title": "Editor de Item",
       "description": "Editor online de NBT e JSON para itens, feito para criar, editar e validar dados de forma rápida e organizada.",
       "image": {
-        "icon": "https://sfwx.github.io/image/icon1.png",
-        "thumbnail": "https://sfwx.github.io/mcstructure/index.png",
+        "icon": "https://sfwx.github.io/image/icon/fwx404.png",
+        "thumbnail": "https://sfwx.github.io/image/icon/editor-nbt.png",
         "size": "summary"
       }
     },
-    "image": "https://sfwx.github.io/mcstructure/index.png",
+    "image": "https://sfwx.github.io/image/icon/editor-nbt.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Editor NBT",
     "description": "Acessando editor online de NBT e JSON para itens, feito para criar, editar e validar dados de forma rápida e organizada.",
@@ -137,12 +137,12 @@ const actions = {
       "title": "Game Teste",
       "description": "💀💀💀",
       "image": {
-        "icon": "https://sfwx.github.io/image/icon1.png",
-        "thumbnail": "https://sfwx.github.io/image/icon1.png",
+        "icon": "https://sfwx.github.io/image/icon/fwx404.png",
+        "thumbnail": "https://sfwx.github.io/image/icon/fwx404.png",
         "size": "summary"
       }
     },
-    "image": "https://sfwx.github.io/image/icon1.png",
+    "image": "https://sfwx.github.io/image/icon/fwx404.png",
     "title": "FwX · TCatDark",
     "subtitle": "Game Test",
     "description": "Acessando jogo independente pessoal para fins de teste.",
@@ -163,12 +163,12 @@ const actions = {
       "title": "Instagram",
       "description": "Acesse o Instagram principal @FwX404",
       "image": {
-        "icon": "https://sfwx.github.io/index.png",
-        "thumbnail": "https://sfwx.github.io/index.png",
+        "icon": "https://sfwx.github.io/image/icon/index.png",
+        "thumbnail": "https://sfwx.github.io/image/icon/index.png",
         "size": "summary"
       }
     },
-    "image": "https://sfwx.github.io/image/icon0.png",
+    "image": "https://sfwx.github.io/image/icon/fwx.png",
     "title": "FwX · TCatDark",
     "subtitle": "Instagram",
     "description": "Acessando o perfil pessoal de Murilo no Instagram.",
@@ -188,12 +188,12 @@ const actions = {
       "title": "Instagram",
       "description": "Acesse o Instagram secundário @Fw.X00",
       "image": {
-        "icon": "https://sfwx.github.io/index.png",
-        "thumbnail": "https://sfwx.github.io/index.png",
+        "icon": "https://sfwx.github.io/image/icon/index.png",
+        "thumbnail": "https://sfwx.github.io/image/icon/index.png",
         "size": "summary"
       }
     },
-    "image": "https://sfwx.github.io/image/icon0.png",
+    "image": "https://sfwx.github.io/image/icon/fwx.png",
     "title": "FwX · TCatDark",
     "subtitle": "Instagram",
     "description": "Acessando o perfil secundário de Murilo no Instagram.",
@@ -213,12 +213,12 @@ const actions = {
       "title": "Inventário Standoff2",
       "description": "Veja meu inventário no Standoff2.",
       "image": {
-        "icon": "https://sfwx.github.io/index.png",
-        "thumbnail": "https://sfwx.github.io/index.png",
+        "icon": "https://sfwx.github.io/image/icon/index.png",
+        "thumbnail": "https://sfwx.github.io/image/icon/index.png",
         "size": "summary"
       }
     },
-    "image": "https://sfwx.github.io/image/icon0.png",
+    "image": "https://sfwx.github.io/image/icon/fwx.png",
     "title": "FwXs · Standoff2",
     "subtitle": "Inventário",
     "description": "Acessando o Inventário pessoal do Murilo.",
@@ -239,12 +239,12 @@ const actions = {
       "title": "Botões Pixelados",
       "description": "Este conteúdo encontra-se protegido pela legislação de direitos autorais.",
       "image": {
-        "icon": "https://sfwx.github.io/image/icon1.png",
+        "icon": "https://sfwx.github.io/image/icon/fwx404.png",
         "thumbnail": "https://sfwx.github.io/image/pixelated-buttons/atlas.png",
         "size": "summary_large_image"
       }
     },
-    "image": "https://sfwx.github.io/image/icon1.png",
+    "image": "https://sfwx.github.io/image/icon/fwx404.png",
     "title": "FwX · Copyright",
     "subtitle": "Botões Pixelados",
     "description": "Este conteúdo encontra-se protegido pela legislação de direitos autorais.",
@@ -265,12 +265,12 @@ const actions = {
       "title": "FloralCapes Texture",
       "description": "Acessse para baixar o pacote de textura do FloralCapes.",
       "image": {
-        "icon": "https://sfwx.github.io/image/icon1.png",
-        "thumbnail": "https://sfwx.github.io/floral/index.png",
+        "icon": "https://sfwx.github.io/image/icon/fwx404.png",
+        "thumbnail": "https://sfwx.github.io/image/icon/floral-capes.png",
         "size": "summary"
       }
     },
-    "image": "https://sfwx.github.io/floral/index.png",
+    "image": "https://sfwx.github.io/image/icon/floral-capes.png",
     "title": "FwX404 · Minecraft",
     "subtitle": "Floral Capes",
     "description": "Clique para baixar o pacote de textura do FloralCapes.",
