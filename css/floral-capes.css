@@ -1,9 +1,9 @@
 /* FwX: FLORALCAPES */
-body.fwxMinecraftUI.fwxFloralCapes main div.fwxLayout {
+body.fwxMinecraftUI.fwxFloralCapes > main > div.fwxLayout {
   grid-template-columns: auto auto auto;
   display: grid;
 }
-body.fwxMinecraftUI.fwxFloralCapes main div.fwxLayout div#fwxCapePreview {
+body.fwxMinecraftUI.fwxFloralCapes > main > div.fwxLayout div#fwxCapePreview {
   background-image: url("https://sfwx.github.io/floral/64/cape.png");
   background-position: -14px -14px;
   background-repeat: no-repeat;
@@ -16,7 +16,7 @@ body.fwxMinecraftUI.fwxFloralCapes main div.fwxLayout div#fwxCapePreview {
   height: 224px;
   width: 140px;
 }
-body.fwxMinecraftUI.fwxFloralCapes main div.fwxLayout div#fwxSkinPreview {
+body.fwxMinecraftUI.fwxFloralCapes > main > div.fwxLayout > div#fwxSkinPreview {
   background-image: url("https://sfwx.github.io/floral/64/dummy.png");
   background-position: -170px -170px;
   background-repeat: no-repeat;
