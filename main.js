@@ -15,7 +15,7 @@ console.log("FwX: Olá mundo!");
   document.querySelectorAll("*").forEach(element => {
     setTimeout(() => {
       element.classList.add("fwx");
-    }, 20)
+    }, 20);
   });
 })();
 
