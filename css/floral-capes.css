@@ -16,7 +16,7 @@ body.fwxMinecraftUI.fwxFloralCapes > main > div.fwxLayout > div#fwxCapePreview {
   height: 224px;
   width: 140px;
 }
-body.fwxMinecraftUI.fwxFloralCapes > main > div.fwxLayout > div#fwxSkinPreview {
+body.fwxMinecraftUI.fwxFloralCapes > main > div.fwxLayout > div > div#fwxSkinPreview {
   background-image: url("https://sfwx.github.io/floral/64/dummy.png");
   background-position: -170px -170px;
   background-repeat: no-repeat;
