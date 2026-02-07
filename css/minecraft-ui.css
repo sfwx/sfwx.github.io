@@ -13,7 +13,7 @@
   font-family: "Minecraft";
   font-weight: bold;
 }
-body.fwx.minecraft-ui *, body.fwx.minecraft-ui *::before, body.fwx.minecraft-ui *::after {
+html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui *, body.fwx.minecraft-ui *::before, body.fwx.minecraft-ui *::after {
   font-family: "Minecraft";
   // box-sizing: border-box;
 }
