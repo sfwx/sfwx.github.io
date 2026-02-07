@@ -2,6 +2,9 @@
 /* Todos os direitos são reservados */
 /* https://sfwx.github.io/copyright */
 
+*:not(.fwx) {
+  display: none !important;
+}
 body.fwxConsole *, body.fwxConsole *::before, body.fwxConsole *::after {
   box-sizing: border-box;
 }
