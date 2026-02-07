@@ -8,7 +8,7 @@ console.log("FwX: Olá mundo!");
     const newPath = path.replace(/\.html$/, "");
     window.location.replace(newPath + window.location.search + window.location.hash);
   } else if (pach == "index") {
-    window.location.replace("..");
+    window.location.replace("/");
   }
   document.querySelectorAll("*").forEach(element => {
     setTimeout(() => {
