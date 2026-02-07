@@ -3,7 +3,8 @@
 /* https://sfwx.github.io/copyright */
 
 *:not(.fwx) {
-  display: none !important;
+  // display: none !important;
+  filter: blur(5px);
 }
 body.fwxApp *, body.fwxApp *::before, body.fwxApp *::after {
   box-sizing: border-box;
