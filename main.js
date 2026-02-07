@@ -12,8 +12,8 @@ console.log("FwX: Olá mundo!");
     const newPath = path.replace(/\.html$/, "");
     window.location.replace(newPath + window.location.search + window.location.hash);
   }
-  document.querySelectorsAll("*").forEach(el > {
-    el.classList.add = "fwx";
+  document.querySelectorAll("*").forEach(element => {
+    element.classList.add = "fwx";
   });
 })();
 
