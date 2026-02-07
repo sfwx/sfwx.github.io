@@ -13,15 +13,15 @@
   font-family: "Minecraft";
   font-weight: bold;
 }
-html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui *, body.fwx.minecraft-ui *::before, body.fwx.minecraft-ui *::after {
+html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui *, html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui *::before, html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui *::after {
   font-family: "Minecraft";
   // box-sizing: border-box;
 }
-body.fwx.minecraft-ui {
+html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui {
   background-color: #191919;
   margin: 0;
 }
-body.fwx.minecraft-ui > header.fwx {
+html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui > header.fwx {
   font-family: "MinecraftTitle";
   box-shadow: 0 5px 0 #58585a;
   background-color: #e7e8ec;
@@ -30,18 +30,18 @@ body.fwx.minecraft-ui > header.fwx {
   font-size: 24px;
   padding: 10px;
 }
-body.fwx.minecraft-ui > main.fwx {
+html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui > main.fwx {
   padding: 20px 0 10px 0px;
   margin: auto;
   width: 355px;
 }
-body.fwx.minecraft-ui > main.fwx > div.fwx.description {
+html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui > main.fwx > div.fwx.description {
   margin: auto auto 15px auto;
   font-size: 18px;
   width: 337.5px;
   color: white;
 }
-body.fwx.minecraft-ui > main.fwx > :is(button.fwx, * button.fwx) {
+html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui > main.fwx > :is(button.fwx, * button.fwx) {
   box-shadow: 0 5px 0 #58585a;
   border: 3.5px solid #e7e8ec;
   background-color: #d0d1d4;
@@ -51,28 +51,28 @@ body.fwx.minecraft-ui > main.fwx > :is(button.fwx, * button.fwx) {
   height: 44.25px;
   width: 355px;
 }
-body.fwx.minecraft-ui > main.fwx > :is(button.fwx, * button.fwx):hover {
+html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui > main.fwx > :is(button.fwx, * button.fwx):hover {
   border: 3.5px solid #b3b4b7;
   box-shadow: 0 5px 0 #3c3c3c;
   background-color: #c6c6c7;
 }
-body.fwx.minecraft-ui > main.fwx > :is(button.fwx, * button.fwx):focus {
+html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui > main.fwx > :is(button.fwx, * button.fwx):focus {
   border: 3.5px solid #639d52;
   box-shadow: 0 5px 0 #1d4d13;
   background-color: #3c8527;
   color: white;
 }
-body.fwx.minecraft-ui > main.fwx > :is(button.fwx, * button.fwx):active {
+html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui > main.fwx > :is(button.fwx, * button.fwx):active {
   box-shadow: 0 1px 0 #3c3c3c;
   transform: translateY(4px);
 }
-body.fwx.minecraft-ui > main.fwx > :is(button.fwx, * button.fwx):disabled {
+html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui > main.fwx > :is(button.fwx, * button.fwx):disabled {
   pointer-events: none;
   cursor: not-allowed;
   opacity: 0.75;
   color: black;
 }
-body.fwx.minecraft-ui > main.fwx > img#fwxPreview.fwx {
+html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui > main.fwx > img#fwxPreview.fwx {
   image-rendering: pixelated;
   background-color: #222222;
   margin-bottom: 12.5px;
@@ -80,7 +80,7 @@ body.fwx.minecraft-ui > main.fwx > img#fwxPreview.fwx {
   box-shadow: 0 5px 0 #58585a;
   width: 335px;
 }
-body.fwx.minecraft-ui > a.fwx.copyright {
+html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui > a.fwx.copyright {
   -webkit-tap-highlight-color: transparent;
   justify-content: center;
   text-decoration: none;
@@ -89,7 +89,7 @@ body.fwx.minecraft-ui > a.fwx.copyright {
   color: #cccccc;
   display: flex;
 }
-body.fwx.minecraft-ui > div#fwxConsole.fwx {
+html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui > div#fwxConsole.fwx {
   margin: 50px auto 325px auto;
   box-shadow: 0 5px 0 #58585a;
   border: 10px solid #e7e8ec;
@@ -101,13 +101,13 @@ body.fwx.minecraft-ui > div#fwxConsole.fwx {
   height: 200px;
   width: 312.5px;
 }
-body.fwx.minecraft-ui > div#fwxConsole.fwx::-webkit-scrollbar {
+html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui > div#fwxConsole.fwx::-webkit-scrollbar {
   width: 10px;
 }
-body.fwx.minecraft-ui > div#fwxConsole.fwx::-webkit-scrollbar-track {
+html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui > div#fwxConsole.fwx::-webkit-scrollbar-track {
   background: #111111;
 }
-body.fwx.minecraft-ui > div#fwxConsole.fwx::-webkit-scrollbar-thumb {
+html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui > div#fwxConsole.fwx::-webkit-scrollbar-thumb {
   border: 2px solid #111111;
   background: #3c8527;
 }
