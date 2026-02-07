@@ -41,8 +41,7 @@ body.fwx.minecraft-ui > main.fwx > div.fwx.description {
   width: 337.5px;
   color: white;
 }
-body.fwx.minecraft-ui > main.fwx > button.fwx,
-body.fwx.minecraft-ui > main.fwx > * button.fwx {
+body.fwx.minecraft-ui > main.fwx > :is(button.fwx, * button.fwx) {
   box-shadow: 0 5px 0 #58585a;
   border: 3.5px solid #e7e8ec;
   background-color: #d0d1d4;
@@ -52,26 +51,22 @@ body.fwx.minecraft-ui > main.fwx > * button.fwx {
   height: 44.25px;
   width: 355px;
 }
-body.fwx.minecraft-ui > main.fwx > button.fwx:hover,
-body.fwx.minecraft-ui > main.fwx > * button.fwx:hover {
+body.fwx.minecraft-ui > main.fwx > :is(button.fwx, * button.fwx):hover {
   border: 3.5px solid #b3b4b7;
   box-shadow: 0 5px 0 #3c3c3c;
   background-color: #c6c6c7;
 }
-body.fwx.minecraft-ui > main.fwx > button.fwx:focus,
-body.fwx.minecraft-ui > main.fwx > * button.fwx:focus {
+body.fwx.minecraft-ui > main.fwx > :is(button.fwx, * button.fwx):focus {
   border: 3.5px solid #639d52;
   box-shadow: 0 5px 0 #1d4d13;
   background-color: #3c8527;
   color: white;
 }
-body.fwx.minecraft-ui > main.fwx > button.fwx:active,
-body.fwx.minecraft-ui > main.fwx > * button.fwx:active {
+body.fwx.minecraft-ui > main.fwx > :is(button.fwx, * button.fwx):active {
   box-shadow: 0 1px 0 #3c3c3c;
   transform: translateY(4px);
 }
-body.fwx.minecraft-ui > main.fwx > button.fwx:disabled,
-body.fwx.minecraft-ui > main.fwx > * button.fwx:disabled {
+body.fwx.minecraft-ui > main.fwx > :is(button.fwx, * button.fwx):disabled {
   pointer-events: none;
   cursor: not-allowed;
   opacity: 0.75;
