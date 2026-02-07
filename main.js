@@ -4,13 +4,11 @@ console.log("FwX: Olá mundo!");
   const path = window.location.pathname;
 
   // ignora index.html e páginas especiais
-  if (
-    path.endsWith(".html") &&
-    path !== "/index.html" &&
-    !path.endsWith("/404.html")
-  ) {
+  if (path.endsWith(".html")) {
     const newPath = path.replace(/\.html$/, "");
     window.location.replace(newPath + window.location.search + window.location.hash);
+  } else if (pach == "index") {
+    window.location.replace("..");
   }
   document.querySelectorAll("*").forEach(element => {
     setTimeout(() => {
