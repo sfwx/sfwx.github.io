@@ -3,7 +3,8 @@
 /* https://sfwx.github.io/copyright */
 
 *:not(.fwx) {
-  display: none !important;
+  // display: none !important;
+  filter: blur(5px);
 }
 html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui.floral-capes > main.fwx > div.fwx.layout {
   grid-template-columns: auto auto auto;
