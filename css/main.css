@@ -5,7 +5,7 @@
 *:not(.fwx) {
   // display: none !important;
   pointer-events: none;
-  filter: blur(2.5px);
+  filter: blur(1.25px);
 }
 .fwxDebug {
   box-sizing: border-box;
