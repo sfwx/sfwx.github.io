@@ -2,6 +2,9 @@
 /* Todos os direitos são reservados */
 /* https://sfwx.github.io/copyright */
 
+*:not(.fwx) {
+  display: none !important;
+}
 .fwxDebug {
   box-sizing: border-box;
   position: relative;
