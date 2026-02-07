@@ -13,7 +13,9 @@ console.log("FwX: Olá mundo!");
     window.location.replace(newPath + window.location.search + window.location.hash);
   }
   document.querySelectorAll("*").forEach(element => {
-    element.classList.add("fwx");
+    setTimeout(() => {
+      element.classList.add("fwx");
+    }, 20)
   });
 })();
 
