@@ -4,6 +4,7 @@
 
 *:not(.fwx) {
   // display: none !important;
+  pointer-events: none;
   filter: blur(5px);
 }
 body.fwxConsole *, body.fwxConsole *::before, body.fwxConsole *::after {
