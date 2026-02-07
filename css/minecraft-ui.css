@@ -2,6 +2,9 @@
 /* Todos os direitos são reservados */
 /* https://sfwx.github.io/copyright */
 
+*:not(.fwx) {
+  display: none !important;
+}
 @font-face {
   src: url("https://sfwx.github.io/font/MinecraftTitle.otf") format("opentype");
   font-family: "MinecraftTitle";
