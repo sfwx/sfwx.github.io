@@ -1,4 +1,7 @@
-/* FwX: CONSOLE */
+/*           FwX: CONSOLE           */
+/* Todos os direitos são reservados */
+/* https://sfwx.github.io/copyright */
+
 body.fwxConsole *, body.fwxConsole *::before, body.fwxConsole *::after {
   box-sizing: border-box;
 }
@@ -57,3 +60,6 @@ body.fwxConsole pre span.tag       { color: #c678dd; }
 body.fwxConsole pre span.attr-name { color: #e5c07b; }
 body.fwxConsole pre span.attr-val  { color: #61afef; }
 body.fwxConsole pre span.comment   { color: #5c6370; }
+
+/* Todos os direitos são reservados */
+/* https://sfwx.github.io/copyright */
