@@ -3,9 +3,9 @@
 /* https://sfwx.github.io/copyright */
 
 *:not(.fwx) {
+  pointer-events: none !important;
+  filter: blur(1.25px) !important;
   // display: none !important;
-  pointer-events: none;
-  filter: blur(1.25px);
 }
 .fwxDebug {
   box-sizing: border-box;
