@@ -13,19 +13,7 @@
   box-sizing: border-box;
   position: relative;
 }
-[data-fwx].debug.a::after {
-  background-image:
-    linear-gradient(to right, rgba(30, 144, 255, 0.25) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(30, 144, 255, 0.25) 1px, transparent 1px);
-  background-size: 10px 10px;
-  border: 1px solid rgba(30, 144, 255, 0.25);
-  pointer-events: none;
-  position: absolute;
-  content: "";
-  z-index: 1;
-  inset: 0;
-}
-[data-fwx].debug.b::before {
+[data-fwx].debug.a::before {
   background-image:
     linear-gradient(to right, rgba(30, 144, 255, 0.25) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(30, 144, 255, 0.25) 1px, transparent 1px);
@@ -35,6 +23,18 @@
   position: absolute;
   content: "";
   z-index: -1;
+  inset: 0;
+}
+[data-fwx].debug.b::after {
+  background-image:
+    linear-gradient(to right, rgba(30, 144, 255, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 144, 255, 0.25) 1px, transparent 1px);
+  background-size: 10px 10px;
+  border: 1px solid rgba(30, 144, 255, 0.25);
+  pointer-events: none;
+  position: absolute;
+  content: "";
+  z-index: 1;
   inset: 0;
 }
 
