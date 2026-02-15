@@ -17,7 +17,7 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   display: flex;
   margin: 0;
 }
-html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > div[data-fwx].gradient {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > div[data-fwx].background.gradient {
   background: radial-gradient(
     circle at 50% 50%,
     #1e1b4b 0%,
@@ -37,7 +37,7 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
     opacity: 0.2;
   }
 }
-html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > div[data-fwx].glow {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > div[data-fwx].background.glow {
   animation: pulse 8s infinite alternate ease-in-out;
   transform: translate(-50%, -50%);
   background: #6366f1;
