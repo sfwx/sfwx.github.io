@@ -2,11 +2,11 @@
 /* Todos os direitos são reservados */
 /* https://sfwx.github.io/copyright */
 
-html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui.floral-capes > main.fwx > div.fwx.layout {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui.floral-capes > main[data-fwx] > div[data-fwx].layout {
   grid-template-columns: auto auto auto;
   display: grid;
 }
-html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui.floral-capes > main.fwx > div.fwx.layout > div.fwx#fwxCapePreview.fwx {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui.floral-capes > main[data-fwx] > div[data-fwx].layout > div[data-fwx]#fwxCapePreview {
   background-image: url("https://sfwx.github.io/floral/64/cape.png");
   background-position: -14px -14px;
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@ html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.i
   height: 224px;
   width: 140px;
 }
-html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"].fwx > body.fwx.minecraft-ui.floral-capes > main.fwx > div.fwx.layout > div.fwx > div#fwxSkinPreview.fwx {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui.floral-capes > main[data-fwx] > div[data-fwx].layout > div[data-fwx] > div[data-fwx]#fwxSkinPreview {
   background-image: url("https://sfwx.github.io/floral/64/dummy.png");
   background-position: -170px -170px;
   background-repeat: no-repeat;
@@ -32,6 +32,17 @@ html[data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.i
   margin-left: 5px;
   height: 170px;
   width: 170px;
+}
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui.floral-capes > main[data-fwx] > div[data-fwx].layout > div[data-fwx] > button[data-fwx] {
+  
+}
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > main[data-fwx] > img[data-fwx]#fwxPreview {
+  image-rendering: pixelated;
+  background-color: #222222;
+  margin-bottom: 12.5px;
+  border: 10px solid #e7e8ec;
+  box-shadow: 0 5px 0 #58585a;
+  width: 335px;
 }
 
 /* Todos os direitos são reservados */

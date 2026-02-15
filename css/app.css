@@ -2,10 +2,10 @@
 /* Todos os direitos são reservados */
 /* https://sfwx.github.io/copyright */
 
-body.fwxApp *, body.fwxApp *::before, body.fwxApp *::after {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app *, html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app *::before, html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app *::after {
   box-sizing: border-box;
 }
-body.fwxApp {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app {
   font-family: "Inter", sans-serif;
   background-color: #020617;
   justify-content: center;
@@ -17,7 +17,7 @@ body.fwxApp {
   display: flex;
   margin: 0;
 }
-body.fwxApp div.fwxGradient {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > div[data-fwx].gradient {
   background: radial-gradient(
     circle at 50% 50%,
     #1e1b4b 0%,
@@ -27,7 +27,17 @@ body.fwxApp div.fwxGradient {
   z-index: -2;
   inset: 0;
 }
-body.fwxApp div.fwxGlow {
+@keyframes pulse {
+  from {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.1;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.2;
+  }
+}
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > div[data-fwx].glow {
   animation: pulse 8s infinite alternate ease-in-out;
   transform: translate(-50%, -50%);
   background: #6366f1;
@@ -41,17 +51,7 @@ body.fwxApp div.fwxGlow {
   left: 50%;
   top: 50%;
 }
-@keyframes pulse {
-  from {
-    transform: translate(-50%, -50%) scale(0.9);
-    opacity: 0.1;
-  }
-  to {
-    transform: translate(-50%, -50%) scale(1.1);
-    opacity: 0.2;
-  }
-}
-body.fwxApp main {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] {
   box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.08);
   -webkit-backdrop-filter: blur(20px);
@@ -64,12 +64,12 @@ body.fwxApp main {
   max-width: 440px;
   width: 90%;
 }
-body.fwxApp main div div.fwxImage {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > div[data-fwx].image {
   justify-content: center;
   align-items: center;
   display: flex;
 }
-body.fwxApp main div div.fwxImage img {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > div[data-fwx].image > img[data-fwx] {
   filter: drop-shadow(0 0 15px rgba(99, 102, 241, 0.3));
   transition: transform 0.3s ease;
   border-radius: 12.5px;
@@ -77,37 +77,37 @@ body.fwxApp main div div.fwxImage img {
   height: 90px;
   width: 90px;
 }
-body.fwxApp main div div.fwxImage img:hover {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > div[data-fwx].image > img[data-fwx]:hover {
   transform: scale(1.05) rotate(5deg);
 }
-body.fwxApp main div span span {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > span[data-fwx] > span[data-fwx] {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.9rem;
   font-weight: 600;
   color: #6366f1;
 }
-body.fwxApp main div h1 {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > h1[data-fwx] {
   letter-spacing: -1px;
   font-size: 1.8rem;
   font-weight: 800;
   margin: 0.5rem 0;
   color: #ffffff;
 }
-body.fwxApp main div p {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > p[data-fwx] {
   font-size: 0.95rem;
   line-height: 1.7;
   margin: 1.5rem 0;
   color: #94a3b8;
 }
-body.fwxApp main div div.fwxTags {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > div[data-fwx].tags > {
   justify-content: center;
   margin-bottom: 2rem;
   flex-wrap: wrap;
   display: flex;
   gap: 8px;
 }
-body.fwxApp main div div.fwxTags span {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > div[data-fwx].tags > span[data-fwx] {
   border: 1px solid rgba(99, 102, 241, 0.2);
   background: rgba(99, 102, 241, 0.1);
   border-radius: 50px;
@@ -116,13 +116,13 @@ body.fwxApp main div div.fwxTags span {
   font-weight: 600;
   color: #a5b4fc;
 }
-body.fwxApp main div div.fwxInput {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > div[data-fwx].input {
   position: relative;
   margin-top: 1rem;
   width: 80%;
   left: 10%;
 }
-body.fwxApp main div div.fwxInput input {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > div[data-fwx].input > input[data-fwx] {
   border-bottom: 1px solid #6366f1;
   font-family: "Inter", sans-serif;
   box-shadow: 0 1px 0 #6366f1;
@@ -135,13 +135,13 @@ body.fwxApp main div div.fwxInput input {
   border: none;
   width: 100%;
 }
-body.fwxApp main div div.fwxInput input::placeholder {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > div[data-fwx].input > input[data-fwx]::placeholder {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.85rem;
   color: #475569;
 }
-body.fwxApp main div div.fwxProgress {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > div[data-fwx].progress {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   overflow: hidden;
@@ -149,14 +149,14 @@ body.fwxApp main div div.fwxProgress {
   height: 4px;
   width: 100%;
 }
-body.fwxApp main div div.fwxProgress div {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > div[data-fwx].progress > div[data-fwx] {
   background: linear-gradient(90deg, #6366f1, #a855f7);
   transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 0 20px #6366f1;
   height: 100%;
   width: 0%;
 }
-body.fwxApp main div a {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > a[data-fwx] {
   transition: transform 0.2s, box-shadow 0.2s;
   text-transform: uppercase;
   border-radius: 12px;
@@ -169,18 +169,18 @@ body.fwxApp main div a {
   color: white;
   width: 100%;
 }
-body.fwxApp main div a:hover {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > a[data-fwx]:hover {
   box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
   transform: translateY(-2px);
 }
-body.fwxApp main footer {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > footer[data-fwx] {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 1.5rem;
   font-size: 0.75rem;
   margin-top: 2rem;
   color: #475569;
 }
-body.fwxApp main footer a {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > footer[data-fwx] > a[data-fwx] {
   text-decoration: none;
   font-weight: 600;
   color: #64748b;
