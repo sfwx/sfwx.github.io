@@ -10,7 +10,7 @@ console.log("FwX: Olá mundo!");
   }
   document.querySelectorAll("*").forEach(element => {
     setTimeout(() => {
-      element.classList.add("fwx");
+      element.setAttribute("data-fwx");
     }, 100);
   });
 })();
