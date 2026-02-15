@@ -100,7 +100,7 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   margin: 1.5rem 0;
   color: #94a3b8;
 }
-html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > div[data-fwx].tags > {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > div[data-fwx].tags {
   justify-content: center;
   margin-bottom: 2rem;
   flex-wrap: wrap;
