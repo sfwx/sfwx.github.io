@@ -1,33 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html data-fwx lang="pt-BR">
   <head>
-    <meta charset="UTF-8">
+    <meta data-fwx charset="UTF-8">
     <title>
       FwX · Console
     </title>
-    <link rel="icon" type="image/png" sizes="350x350" href="https://sfwx.github.io/image/icon/index.png">
-    <meta name="author" content="FlowniX · Murilo de Moura S.">
-    <meta name="developer" content="FlowniX · Murilo de Moura S.">
-    <meta name="copyright" content="https://sfwx.github.io/copyright">
-    <meta name="theme-color" content="#1e90ff">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="FwX   ( FlowniX · TCatDark )">
-    <meta property="og:title" content="console://...">
-    <meta property="og:description" content="Console de página apenas para fins de teste.">
-    <meta property="og:image" content="https://sfwx.github.io/image/icon/index.png">
-    <meta property="article:author" content="FlowniX · Murilo de Moura S.">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@FwX0_">
-    <meta name="twitter:creator" content="@FwX0_">
-    <meta name="twitter:title" content="console://...">
-    <meta name="twitter:description" content="Console de página apenas para fins de teste.">
-    <meta name="twitter:image" content="https://sfwx.github.io/image/icon/index.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="preconnect" href="https://sfwx.github.io/main.css">
-    <link rel="stylesheet" href="https://sfwx.github.io/main.css">
+    <link data-fwx rel="icon" type="image/png" sizes="350x350" href="https://sfwx.github.io/image/icon/index.png">
+    <meta data-fwx name="author" content="FlowniX · Murilo de Moura S.">
+    <meta data-fwx name="developer" content="FlowniX · Murilo de Moura S.">
+    <meta data-fwx name="copyright" content="https://sfwx.github.io/copyright">
+    <meta data-fwx name="theme-color" content="#1e90ff">
+    <meta data-fwx property="og:type" content="website">
+    <meta data-fwx property="og:site_name" content="FwX   ( FlowniX · TCatDark )">
+    <meta data-fwx property="og:title" content="console://...">
+    <meta data-fwx property="og:description" content="Console de página apenas para fins de teste.">
+    <meta data-fwx property="og:image" content="https://sfwx.github.io/image/icon/index.png">
+    <meta data-fwx property="article:author" content="FlowniX · Murilo de Moura S.">
+    <meta data-fwx name="twitter:card" content="summary">
+    <meta data-fwx name="twitter:site" content="@FwX0_">
+    <meta data-fwx name="twitter:creator" content="@FwX0_">
+    <meta data-fwx name="twitter:title" content="console://...">
+    <meta data-fwx name="twitter:description" content="Console de página apenas para fins de teste.">
+    <meta data-fwx name="twitter:image" content="https://sfwx.github.io/image/icon/index.png">
+    <meta data-fwx name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link data-fwx rel="preconnect" href="https://sfwx.github.io/main.css">
+    <link data-fwx rel="stylesheet" href="https://sfwx.github.io/main.css">
     <style>
       * {
-        transition: all 2.5s;
+        transition: all 5s;
+      }
+      hr {
+        border-color: lightcoral;
       }
       textarea {
         border: 2.5px dashed lightcoral;
@@ -38,14 +41,14 @@
     </style>
   </head>
   <body>
-    <div id="fwxPreview" style="border: 2.5px dashed lightcoral;"></div>
-    <hr style="border-color: lightcoral;">
-    <textarea id="fwxStyle">background: cyan;
+    <div data-fwx id="fwxPreview" style="border: 2.5px dashed lightcoral;"></div>
+    <hr>
+    <textarea data-fwx id="fwxStyle">background: cyan;
 height: 100px;
 width: 100px;</textarea>
-    <hr style="border-color: lightcoral;">
-    <textarea id="fwxElement"><div style="<!--STYLE-->"></div></textarea>
-    <script type="text/javascript" defer>
+    <hr>
+    <textarea data-fwx id="fwxElement"><div style="<!--STYLE-->"></div></textarea>
+    <script data-fwx type="text/javascript" defer>
       const style = document.getElementById("fwxStyle");
       const preview = document.getElementById("fwxPreview");
       const element = document.getElementById("fwxElement");
