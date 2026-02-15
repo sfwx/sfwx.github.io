@@ -3,11 +3,8 @@
 /* https://sfwx.github.io/copyright */
 
 *:not([data-fwx]) {
-  background-color: red !important;
   pointer-events: none !important;
-  filter: blur(1.25px) !important;
-  // display: none !important;
-  opacity: 0.5 !important;
+  display: none !important;
 }
 [data-fwx].debug {
   box-sizing: border-box;
