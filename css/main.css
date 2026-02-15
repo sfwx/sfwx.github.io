@@ -7,6 +7,7 @@
   pointer-events: none !important;
   filter: blur(1.25px) !important;
   display: none !important;
+  opacity: 0.5 !important;
 }
 [data-fwx].debug {
   box-sizing: border-box;
