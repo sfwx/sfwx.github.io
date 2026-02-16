@@ -2,7 +2,12 @@
 /* Todos os direitos são reservados */
 /* https://sfwx.github.io/copyright */
 
-*:not([data-fwx]) {
+
+html:not([data-fwx]) {
+  pointer-events: none !important;
+  background-image: url("https://sfwx.github.io/image/teste.png");
+}
+html *:not([data-fwx]) {
   pointer-events: none !important;
   display: none !important;
 }
