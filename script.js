@@ -1,7 +1,7 @@
 // ===== INPUT =====
 function fwxInput(event, input) {
   if (event.key === "Enter" && input.value.trim() !== "") {
-    window.location.hash = input.value.trim().toLowerCase();
+    window.location.href = /^\d+$/.test(input.value) ? input.value.padStart(4, '0') : input.value;;
     input.value = "";
   }
 }
