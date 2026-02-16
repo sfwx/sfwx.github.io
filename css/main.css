@@ -4,8 +4,9 @@
 
 
 html:not([data-fwx]) {
+  background-image: url("https://sfwx.github.io/image/teste.png") !important;
+  image-rendering: pixelated !important;
   pointer-events: none !important;
-  background-image: url("https://sfwx.github.io/image/teste.png");
 }
 html *:not([data-fwx]) {
   pointer-events: none !important;
