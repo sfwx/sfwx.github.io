@@ -2,13 +2,41 @@
 /* Todos os direitos são reservados */
 /* https://sfwx.github.io/copyright */
 
-
 html:not([data-fwx]) {
-  background-image: url("https://sfwx.github.io/image/teste.png") !important;
+  --cell: 25vw; /* 4 células = 100vw */
+  background:
+    linear-gradient(90deg,
+      #323232 0 var(--cell),
+      #191919 var(--cell) calc(var(--cell)*2),
+      #ff00ff calc(var(--cell)*2) calc(var(--cell)*3),
+      #ca05df calc(var(--cell)*3) calc(var(--cell)*4)
+    ),
+    linear-gradient(90deg,
+      #191919 0 var(--cell),
+      #000000 var(--cell) calc(var(--cell)*2),
+      #ca05df calc(var(--cell)*2) calc(var(--cell)*3),
+      #96109e calc(var(--cell)*3) calc(var(--cell)*4)
+    ),
+    linear-gradient(90deg,
+      #ff00ff 0 var(--cell),
+      #ca05df var(--cell) calc(var(--cell)*2),
+      #323232 calc(var(--cell)*2) calc(var(--cell)*3),
+      #191919 calc(var(--cell)*3) calc(var(--cell)*4)
+    ),
+    linear-gradient(90deg,
+      #ca05df 0 var(--cell),
+      #96109e var(--cell) calc(var(--cell)*2),
+      #191919 calc(var(--cell)*2) calc(var(--cell)*3),
+      #000000 calc(var(--cell)*3) calc(var(--cell)*4)
+    );
+  background-size: 100vw 100vw;
+  background-repeat: repeat-y;
+  
+  /* background-image: url("https://sfwx.github.io/image/teste.png") !important;
   background-position: center !important;
   image-rendering: pixelated !important;
   background-size: cover !important;
-  pointer-events: none !important;
+  pointer-events: none !important; */
 }
 html *:not([data-fwx]) {
   pointer-events: none !important;
