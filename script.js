@@ -1,3 +1,7 @@
+/*            FwX: INDEX            */
+/* Todos os direitos são reservados */
+/* https://sfwx.github.io/copyright */
+
 window.addEventListener("load", () => {
   const hash = window.location.hash;
   if (hash) {
@@ -14,3 +18,6 @@ function fwxInput(event, input) {
     input.value = "";
   }
 }
+
+/* Todos os direitos são reservados */
+/* https://sfwx.github.io/copyright */
