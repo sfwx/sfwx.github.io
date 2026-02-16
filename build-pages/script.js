@@ -1,3 +1,7 @@
+/*         FwX: BUILD-PAGES         */
+/* Todos os direitos são reservados */
+/* https://sfwx.github.io/copyright */
+
 window.addEventListener("load", async function() {
   const template = document.getElementById("fwxTemplate");
   if (!template) {
@@ -75,3 +79,6 @@ window.addEventListener("load", async function() {
     alert("Erro: O objeto 'actions' não foi encontrado. Verifique se o script actions.js carregou.");
   }
 });
+
+/* Todos os direitos são reservados */
+/* https://sfwx.github.io/copyright */
