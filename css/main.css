@@ -3,34 +3,43 @@
 /* https://sfwx.github.io/copyright */
 
 html:not([data-fwx]) {
-  --cell: 25vw; /* 4 células = 100vw */
-  background:
-    linear-gradient(90deg,
-      #323232 0 var(--cell),
-      #191919 var(--cell) calc(var(--cell)*2),
-      #ff00ff calc(var(--cell)*2) calc(var(--cell)*3),
-      #ca05df calc(var(--cell)*3) calc(var(--cell)*4)
+  width: 100%;
+  height: 400px; /* Ou o tamanho que desejar */
+  
+  /* Definindo o tamanho do bloco completo (os 16 quadradinhos) */
+  background-size: 200px 200px;
+  
+  background-image: 
+    /* Linha 1 e 2 */
+    linear-gradient(to right, 
+      #323232 0% 25%, #191919 25% 50%, #ff00ff 50% 75%, #ca05df 75% 100%
     ),
-    linear-gradient(90deg,
-      #191919 0 var(--cell),
-      #000000 var(--cell) calc(var(--cell)*2),
-      #ca05df calc(var(--cell)*2) calc(var(--cell)*3),
-      #96109e calc(var(--cell)*3) calc(var(--cell)*4)
-    ),
-    linear-gradient(90deg,
-      #ff00ff 0 var(--cell),
-      #ca05df var(--cell) calc(var(--cell)*2),
-      #323232 calc(var(--cell)*2) calc(var(--cell)*3),
-      #191919 calc(var(--cell)*3) calc(var(--cell)*4)
-    ),
-    linear-gradient(90deg,
-      #ca05df 0 var(--cell),
-      #96109e var(--cell) calc(var(--cell)*2),
-      #191919 calc(var(--cell)*2) calc(var(--cell)*3),
-      #000000 calc(var(--cell)*3) calc(var(--cell)*4)
+    /* Linha 3 e 4 */
+    linear-gradient(to right, 
+      #ca05df 0% 25%, #96109e 25% 50%, #191919 50% 75%, #000000 75% 100%
     );
-  background-size: 100vw 100vw;
-  background-repeat: repeat-y;
+
+  /* Ajustando a posição e repetição para criar as linhas C e D */
+  background-image: 
+    /* Bloco Superior Esquerdo (A e B) */
+    linear-gradient(to bottom, transparent 50%, #191919 50% 75%, #000000 75% 100%),
+    linear-gradient(to right, #323232 25%, #191919 25% 50%, #ff00ff 50% 75%, #ca05df 75% 100%);
+    
+  /* Versão mais limpa usando múltiplos gradientes para as 4 zonas */
+  background-image:
+    /* Linha 4: C, D, C, D (Magenta/Preto) */
+    linear-gradient(to right, #ca05df 25%, #96109e 25% 50%, #191919 50% 75%, #000000 75% 100%),
+    /* Linha 3: A, B, A, B (Magenta/Preto) */
+    linear-gradient(to right, #ff00ff 25%, #ca05df 25% 50%, #323232 50% 75%, #191919 75% 100%),
+    /* Linha 2: C, D, C, D (Preto/Magenta) */
+    linear-gradient(to right, #191919 25%, #000000 25% 50%, #ca05df 50% 75%, #96109e 75% 100%),
+    /* Linha 1: A, B, A, B (Preto/Magenta) */
+    linear-gradient(to right, #323232 25%, #191919 25% 50%, #ff00ff 50% 75%, #ca05df 75% 100%);
+
+  /* Define onde cada linha começa e termina verticalmente */
+  background-repeat: repeat;
+  background-position: 0 0, 0 25%, 0 50%, 0 75%;
+  background-size: 100% 25%; /* Cada gradiente ocupa 25% da altura do bloco pai */
   
   /* background-image: url("https://sfwx.github.io/image/teste.png") !important;
   background-position: center !important;
