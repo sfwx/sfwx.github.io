@@ -11,6 +11,8 @@ console.log("FwX: Olá mundo!");
   document.querySelectorAll("*").forEach(element => {
     setTimeout(() => {
       element.setAttribute("data-fwx", "");
+      element.setAttribute("data-origin", "https://sfwx.github.io");
+      element.setAttribute("data-copyright", "https://sfwx.github.io/copyright");
     }, 100);
   });
 })();
