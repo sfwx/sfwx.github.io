@@ -34,7 +34,8 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   width: 170px;
 }
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui.floral-capes > main[data-fwx] > div[data-fwx].layout > div[data-fwx] > button[data-fwx] {
-  
+  margin-left: 5px;
+  width: 190px;
 }
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > main[data-fwx] > img[data-fwx]#fwxPreview {
   image-rendering: pixelated;
