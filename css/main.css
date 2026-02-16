@@ -5,14 +5,19 @@
 
 html:not([data-fwx]) {
   background-image: url("https://sfwx.github.io/image/teste.png") !important;
+  background-position: center !important;
   image-rendering: pixelated !important;
+  background-size: cover !important;
   pointer-events: none !important;
 }
 html *:not([data-fwx]) {
   pointer-events: none !important;
-  transition: opacity 5s;
-  opacity: 0;
+  transition: opacity 5s !important;
+  opacity: 0 !important;
   // display: none !important;
+}
+html *[data-fwx] {
+  opacity: 1;
 }
 [data-fwx].debug {
   box-sizing: border-box;
