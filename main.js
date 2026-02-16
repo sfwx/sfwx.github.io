@@ -1,3 +1,7 @@
+/*            FwX: MAIN             */
+/* Todos os direitos são reservados */
+/* https://sfwx.github.io/copyright */
+
 console.log("FwX: Olá mundo!");
 
 (function () {
@@ -18,3 +22,6 @@ console.log("FwX: Olá mundo!");
 })();
 
 if (document.getElementById("fwxYear")) document.getElementById("fwxYear").innerHTML = new Date().getFullYear();
+
+/* Todos os direitos são reservados */
+/* https://sfwx.github.io/copyright */
