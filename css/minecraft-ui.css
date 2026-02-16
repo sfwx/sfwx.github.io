@@ -84,7 +84,7 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   color: #cccccc;
   display: flex;
 }
-html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > div#fwxConsole[data-fwx] {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > div[data-fwx]#fwxConsole {
   margin: 50px auto 325px auto;
   box-shadow: 0 5px 0 #58585a;
   border: 10px solid #e7e8ec;
@@ -96,13 +96,13 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   height: 200px;
   width: 312.5px;
 }
-html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > div#fwxConsole[data-fwx]::-webkit-scrollbar {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > div[data-fwx]#fwxConsole::-webkit-scrollbar {
   width: 10px;
 }
-html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > div#fwxConsole[data-fwx]::-webkit-scrollbar-track {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > div[data-fwx]#fwxConsole::-webkit-scrollbar-track {
   background: #111111;
 }
-html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > div#fwxConsole[data-fwx]::-webkit-scrollbar-thumb {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > div[data-fwx]#fwxConsole::-webkit-scrollbar-thumb {
   border: 2px solid #111111;
   background: #3c8527;
 }
