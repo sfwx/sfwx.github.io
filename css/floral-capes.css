@@ -37,7 +37,7 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   margin-left: 5px;
   width: 190px;
 }
-html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > main[data-fwx] > img[data-fwx]#fwxPreview {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui.floral-capes > main[data-fwx] > img[data-fwx]#fwxPreview {
   image-rendering: pixelated;
   background-color: #222222;
   margin-bottom: 12.5px;
