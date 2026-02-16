@@ -1,3 +1,7 @@
+/*        FwX: TAG-GENERATOR        */
+/* Todos os direitos são reservados */
+/* https://sfwx.github.io/copyright */
+
 function tagFromName(name) {
   let sum = 0;
   name = name.toLowerCase();
@@ -29,3 +33,6 @@ if (location.hash.length === 5) {
     document.getElementById("fwxResult").removeAttribute("style");
   }
 }
+
+/* Todos os direitos são reservados */
+/* https://sfwx.github.io/copyright */
