@@ -6,6 +6,7 @@ html:not([data-fwx]) {
   background-image: url("https://sfwx.github.io/image/debug.png") !important;
   background-size: 80px 80px !important;
   image-rendering: pixelated !important;
+  background-color: black !important;
   pointer-events: none !important;
 }
 html *:not([data-fwx]) {
