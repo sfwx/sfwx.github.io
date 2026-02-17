@@ -9,7 +9,7 @@ html:not([data-fwx]) {
   pointer-events: none !important;
 }
 html * {
-  transition: opacity 2.5s ease !important;
+  transition: opacity 1.25s ease !important;
 }
 html *:not([data-fwx]) {
   pointer-events: none !important;
