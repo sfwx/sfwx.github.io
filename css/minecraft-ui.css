@@ -100,11 +100,11 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   width: 10px;
 }
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > div[data-fwx]#fwxConsole::-webkit-scrollbar-track {
-  background: #111111;
+  background-color: #111111;
 }
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > div[data-fwx]#fwxConsole::-webkit-scrollbar-thumb {
+  background-color: #3c8527;
   border: 2px solid #111111;
-  background: #3c8527;
 }
 
 /* Todos os direitos são reservados */
