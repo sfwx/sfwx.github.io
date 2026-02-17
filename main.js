@@ -8,11 +8,11 @@ console.log("FwX: Olá mundo!");
   const path = window.location.pathname;
 
   // ignora index.html e páginas especiais
-  /* if (path.endsWith(".html")) {
+  if (path.endsWith(".html")) {
     const newPath = path.replace(/\.html$/, "");
     window.location.replace(newPath + window.location.search + window.location.hash);
-  } */
-  document.querySelectorAll("*").forEach(element => {
+  }
+  document.querySelectorAll("*:not([data-fwx])").forEach(element => {
     setTimeout(() => {
       element.setAttribute("data-fwx", "");
       element.setAttribute("data-origin", "https://sfwx.github.io");
