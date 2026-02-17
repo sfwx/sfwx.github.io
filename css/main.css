@@ -13,11 +13,11 @@ html *:not([data-fwx]) {
   pointer-events: none !important;
   display: none !important;
 }
-[data-fwx].debug {
+[data-fwx].debug.a, [data-fwx].debug.b {
   box-sizing: border-box;
   position: relative;
 }
-[data-fwx].debug.a::after {
+[data-fwx].debug.a::after, [data-fwx].debug.b::before {
   background-image:
     linear-gradient(to right, rgba(30, 144, 255, 0.25) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(30, 144, 255, 0.25) 1px, transparent 1px);
@@ -26,20 +26,13 @@ html *:not([data-fwx]) {
   pointer-events: none;
   position: absolute;
   content: "";
-  z-index: 1;
   inset: 0;
 }
+[data-fwx].debug.a::after {
+  z-index: 1;
+}
 [data-fwx].debug.b::before {
-  background-image:
-    linear-gradient(to right, rgba(30, 144, 255, 0.25) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(30, 144, 255, 0.25) 1px, transparent 1px);
-  border: 1px solid rgba(30, 144, 255, 0.25);
-  background-size: 10px 10px;
-  pointer-events: none;
-  position: absolute;
-  content: "";
   z-index: -1;
-  inset: 0;
 }
 
 /* Todos os direitos são reservados */
