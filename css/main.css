@@ -15,7 +15,6 @@ html *:not([data-fwx]) {
 }
 [data-fwx].debug {
   box-sizing: border-box;
-  pointer-events: none;
   position: relative;
 }
 [data-fwx].debug.a::after {
