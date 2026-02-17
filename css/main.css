@@ -10,12 +10,12 @@ html:not([data-fwx]) {
 }
 html *:not([data-fwx]) {
   pointer-events: none !important;
-  transition: opacity 25s !important;
+  transition: opacity 25s ease !important;
   opacity: 0 !important;
   // display: none !important;
 }
 html *[data-fwx] {
-  opacity: 1;
+  opacity: 1 !important;
 }
 [data-fwx].debug {
   box-sizing: border-box;
