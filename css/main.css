@@ -8,9 +8,11 @@ html:not([data-fwx]) {
   image-rendering: pixelated !important;
   pointer-events: none !important;
 }
+html * {
+  transition: opacity 2.5s ease !important;
+}
 html *:not([data-fwx]) {
   pointer-events: none !important;
-  transition: opacity 25s ease !important;
   opacity: 0 !important;
   // display: none !important;
 }
