@@ -13,7 +13,7 @@ console.log("FwX: Olá mundo!");
     window.location.replace(newPath + window.location.search + window.location.hash);
   }
   if (path == "/index") {
-    window.location.replace(window.location.search + window.location.hash);
+    window.location.replace("/" + window.location.search + window.location.hash);
   }
   document.querySelectorAll("*:not([data-fwx])").forEach(element => {
     setTimeout(() => {
