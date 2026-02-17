@@ -14,23 +14,31 @@ html *:not([data-fwx]) {
   display: none !important;
 }
 [data-fwx].debug {
+  box-sizing: border-box;
+  pointer-events: none;
+  position: relative;
+}
+[data-fwx].debug.a::after {
   background-image:
     linear-gradient(to right, rgba(30, 144, 255, 0.25) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(30, 144, 255, 0.25) 1px, transparent 1px);
   border: 1px solid rgba(30, 144, 255, 0.25);
   background-size: 10px 10px;
-  box-sizing: border-box;
   pointer-events: none;
-  position: relative;
-  content: "";
-}
-[data-fwx].debug.a::after {
   position: absolute;
+  content: "";
   z-index: 1;
   inset: 0;
 }
 [data-fwx].debug.b::before {
+  background-image:
+    linear-gradient(to right, rgba(30, 144, 255, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 144, 255, 0.25) 1px, transparent 1px);
+  border: 1px solid rgba(30, 144, 255, 0.25);
+  background-size: 10px 10px;
+  pointer-events: none;
   position: absolute;
+  content: "";
   z-index: -1;
   inset: 0;
 }
