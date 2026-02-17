@@ -9,15 +9,15 @@ html:not([data-fwx]) {
   pointer-events: none !important;
 }
 html * {
-  transition: opacity 1.25s ease !important;
+  transition: filter 1.25s ease !important;
 }
 html *:not([data-fwx]) {
   pointer-events: none !important;
-  opacity: 0 !important;
+  filter: blur(2.5px) !important;
   // display: none !important;
 }
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] *[data-fwx] {
-  opacity: 1 !important;
+  filter: blur(0px) !important;
 }
 [data-fwx].debug {
   box-sizing: border-box;
