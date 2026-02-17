@@ -8,16 +8,9 @@ html:not([data-fwx]) {
   image-rendering: pixelated !important;
   pointer-events: none !important;
 }
-html * {
-  transition: filter 1.25s ease !important;
-}
 html *:not([data-fwx]) {
   pointer-events: none !important;
-  filter: blur(2.5px) !important;
-  // display: none !important;
-}
-html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] *[data-fwx] {
-  filter: blur(0px) !important;
+  display: none !important;
 }
 [data-fwx].debug {
   box-sizing: border-box;
