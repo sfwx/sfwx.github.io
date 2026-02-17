@@ -6,14 +6,13 @@ console.log("FwX: Olá mundo!");
 
 (function () {
   const path = window.location.pathname;
-
-  // ignora index.html e páginas especiais
   if (path.endsWith(".html")) {
     const newPath = path.replace(/\.html$/, "");
     window.location.replace(newPath + window.location.search + window.location.hash);
   }
-  else if (path == "/index") {
-    window.location.replace("/" + window.location.search + window.location.hash);
+  else if (path.endsWith("/index")) {
+    const newPath = path.replace(/\/index$/, "/");
+    window.location.replace(newPath + window.location.search + window.location.hash);
   }
   document.querySelectorAll("*:not([data-fwx])").forEach(element => {
     setTimeout(() => {
