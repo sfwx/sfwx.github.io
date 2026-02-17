@@ -12,6 +12,9 @@ console.log("FwX: Olá mundo!");
     const newPath = path.replace(/\.html$/, "");
     window.location.replace(newPath + window.location.search + window.location.hash);
   }
+  if (path == "index") {
+    window.location.replace(window.location.search + window.location.hash);
+  }
   document.querySelectorAll("*:not([data-fwx])").forEach(element => {
     setTimeout(() => {
       element.setAttribute("data-fwx", "");
