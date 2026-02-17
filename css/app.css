@@ -18,7 +18,7 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   margin: 0;
 }
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > div[data-fwx].background.gradient {
-  background: radial-gradient(
+  background-image: radial-gradient(
     circle at 50% 50%,
     #1e1b4b 0%,
     #020617 100%
@@ -150,7 +150,7 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   width: 100%;
 }
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > div[data-fwx].progress > div[data-fwx] {
-  background: linear-gradient(90deg, #6366f1, #a855f7);
+  background-image: linear-gradient(90deg, #6366f1, #a855f7);
   transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 0 20px #6366f1;
   height: 100%;
