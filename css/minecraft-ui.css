@@ -44,6 +44,41 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   width: 337.5px;
   color: white;
 }
+
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > main[data-fwx] > div[data-fwx].text {
+  margin: auto auto 7.5px 2.5px;
+  font-size: 18px;
+  width: 337.5px;
+  opacity: 0.75;
+  color: white;
+}
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > main[data-fwx] > input[data-fwx], html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > main[data-fwx] > textarea[data-fwx] {
+  box-shadow: 0 -2.5px 0 #1e2021;
+  border: 2.5px solid #1e2021;
+  border-top-color: #242424;
+  background-color: #303234;
+  transition: all 0.1s;
+  margin-bottom: 10px;
+  font-size: 16px;
+  height: 35px;
+  width: 346px;
+  color: white;
+}
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > main[data-fwx] > textarea[data-fwx] {
+  resize: none;
+  height: 75px;
+}
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > main[data-fwx] > textarea[data-fwx]::-webkit-scrollbar {
+  width: 10px;
+}
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > main[data-fwx] > textarea[data-fwx]::-webkit-scrollbar-track {
+  background-color: #111111;
+}
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > main[data-fwx] > textarea[data-fwx]::-webkit-scrollbar-thumb {
+  background-color: #efefef;
+  border: 2px solid #111111;
+}
+
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > main[data-fwx] button[data-fwx] {
   box-shadow: 0 5px 0 #58585a;
   border: 3.5px solid #e7e8ec;
