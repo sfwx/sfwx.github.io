@@ -7,7 +7,7 @@ console.log("FwX: Olá mundo!");
 (function () {
   const path = window.location.pathname;
   if (path.endsWith("/index.html")) {
-    const newPath = path.replace(/\/index.html$/, "");
+    const newPath = path.replace(/\/index.html$/, "/");
     window.location.replace(newPath + window.location.search + window.location.hash);
   }
   else if (path.endsWith(".html")) {
@@ -15,7 +15,7 @@ console.log("FwX: Olá mundo!");
     window.location.replace(newPath + window.location.search + window.location.hash);
   }
   else if (path.endsWith("/index")) {
-    const newPath = path.replace(/\/index$/, "");
+    const newPath = path.replace(/\/index$/, "/");
     window.location.replace(newPath + window.location.search + window.location.hash);
   }
   document.querySelectorAll("*:not([data-fwx])").forEach(element => {
