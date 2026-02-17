@@ -4,7 +4,7 @@
 
 html:not([data-fwx]) {
   background-image: url("https://sfwx.github.io/image/dace.png") !important;
-  background-size: 128px !important;
+  background-size: 96px !important;
   image-rendering: pixelated !important;
   pointer-events: none !important;
 }
