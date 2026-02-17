@@ -14,7 +14,7 @@ html *:not([data-fwx]) {
   opacity: 0 !important;
   // display: none !important;
 }
-html *[data-fwx] {
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] *[data-fwx] {
   opacity: 1 !important;
 }
 [data-fwx].debug {
