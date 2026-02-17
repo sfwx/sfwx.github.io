@@ -38,11 +38,11 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   width: 190px;
 }
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui.floral-capes > main[data-fwx] > img[data-fwx]#fwxPreview {
+  box-shadow: 0 5px 0 #58585a;
   image-rendering: pixelated;
+  border: 10px solid #e7e8ec;
   background-color: #222222;
   margin-bottom: 12.5px;
-  border: 10px solid #e7e8ec;
-  box-shadow: 0 5px 0 #58585a;
   width: 335px;
 }
 
