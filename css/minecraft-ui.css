@@ -53,9 +53,8 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   color: white;
 }
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > main[data-fwx] > input[data-fwx], html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > main[data-fwx] > textarea[data-fwx] {
-  box-shadow: 0 -2.5px 0 #1e2021;
+  box-shadow: 0 2.5px 0 #242424;
   border: 2.5px solid #1e2021;
-  border-top-color: #242424;
   background-color: #303234;
   transition: all 0.1s;
   margin-bottom: 10px;
