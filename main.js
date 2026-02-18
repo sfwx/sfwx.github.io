@@ -5,7 +5,7 @@
 console.log("FwX: Olá mundo!");
 
 (function () {
-  if (false) {
+  if (true) {
     const path = window.location.pathname;
     if (path.endsWith("/index.html")) {
       const newPath = path.replace(/\/index.html$/, "/");
