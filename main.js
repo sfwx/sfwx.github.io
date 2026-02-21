@@ -41,6 +41,9 @@ window.fwx = {
         element.setAttribute("data-copyright", "https://sfwx.github.io/copyright");
       }, 100);
     })
+  },
+  data: {
+    // solicite os valores.
   }
 };
 
