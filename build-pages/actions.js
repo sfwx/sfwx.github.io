@@ -1,4 +1,4 @@
-const actions = {
+fwx.actions = {
   // Redirecionamento para o conversor numérico.
   "0000": {
     "id": "unknown",
