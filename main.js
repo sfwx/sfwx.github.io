@@ -14,7 +14,7 @@ window.fwx = {
     }
   },
   log(type, text, popup = false) {
-    // Pregação para o futuro;
+    // Preparação para o futuro;
     console.log("FwX:", text);
   },
   extension(active = false) {
