@@ -47,10 +47,10 @@ window.fwx = {
 fwx.extension(false);
 fwx.log("Olá mundo!");
 
-(function () {
+window.addEventListener("load", () => {
   fwx.year();
   fwx.attributeData();
-})();
+});
 
 /* Todos os direitos são reservados */
 /* https://sfwx.github.io/copyright */
