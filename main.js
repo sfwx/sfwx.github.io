@@ -6,10 +6,10 @@ window.fwx = {
   version: [ 4, 0, 4 ],
   license: {},
   log(text) {
-    console.log(text);
+    console.log('FwX: ' + text);
   }
 };
-console.log("FwX: Olá mundo!");
+fwx.log("Olá mundo!");
 
 (function () {
   if (true) {
