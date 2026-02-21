@@ -10,47 +10,47 @@ window.addEventListener("load", async function() {
   }
   const zip = new JSZip();
   let script = null;
-  let confirm= null;
-  if (typeof actions !== "undefined") {
-    for (const tag in actions) {
-      if (actions[tag] && actions[tag].enabled) {
-        if (actions[tag].type == "navigate" && actions[tag].target == "_self") {
+  let confirm = null;
+  if (typeof fwx.actions !== "undefined") {
+    for (const tag in fwx.actions) {
+      if (fwx.actions[tag] && fwx.actions[tag].enabled) {
+        if (fwx.actions[tag].type == "navigate" && fwx.actions[tag].target == "_self") {
           confirm = null;
           script = `document.getElementById("fwxButton").style.display = "block";
-        window.location.href = "https://sfwx.github.io/` + actions[tag].value + `";`;
+        window.location.href = "https://sfwx.github.io/` + fwx.actions[tag].value + `";`;
         }
-        if (actions[tag].type == "external_link" && actions[tag].target == "_self") {
+        if (actions[tag].type == "external_link" && fwx.actions[tag].target == "_self") {
           confirm = null;
           script = `document.getElementById("fwxButton").style.display = "block";
-        window.location.href = "` + actions[tag].value + `";`;
+        window.location.href = "` + fwx.actions[tag].value + `";`;
         }
-        if (actions[tag].type == "external_link" && actions[tag].target == "_blank") {
+        if (actions[tag].type == "external_link" && fwx.actions[tag].target == "_blank") {
           confirm = null;
           script = `document.getElementById("fwxButton").style.display = "block";
-        window.open("` + actions[tag].value + `", "_blank");`;
+        window.open("` + fwx.actions[tag].value + `", "_blank");`;
         }
-        if (actions[tag].type == "file_download" && actions[tag].target == "_self") {
-          confirm =  `window.location.href = 'https://sfwx.github.io/` + actions[tag].value + `';`;
+        if (actions[tag].type == "file_download" && fwx.actions[tag].target == "_self") {
+          confirm =  `window.location.href = 'https://sfwx.github.io/` + fwx.actions[tag].value + `';`;
           script = `document.getElementById("fwxButton").style.display = "block";`;
         }
-        if (actions[tag].type == "download_redirect" && actions[tag].target == "_self") {
-          confirm =  `window.location.href = '` + actions[tag].value + `';`;
+        if (fwx.actions[tag].type == "download_redirect" && fwx.actions[tag].target == "_self") {
+          confirm =  `window.location.href = '` + fwx.actions[tag].value + `';`;
           script = `document.getElementById("fwxButton").style.display = "block";`;
         }
         try {
           let content = template.value
-            .replaceAll("{{FWX.VALUE}}", actions[tag].value)
-            .replaceAll("{{FWX.META.COLOR}}", actions[tag].meta?.color)
-            .replaceAll("{{FWX.META.TITLE}}", actions[tag].meta?.title)
-            .replaceAll("{{FWX.META.DESCRIPTION}}", actions[tag].meta?.description)
-            .replaceAll("{{FWX.META.IMAGE.ICON}}", actions[tag].meta?.image?.icon)
-            .replaceAll("{{FWX.META.IMAGE.THUMBNAIL}}", actions[tag].meta?.image?.thumbnail)
-            .replaceAll("{{FWX.META.IMAGE.SIZE}}", actions[tag].meta?.image?.size)
-            .replaceAll("{{FWX.IMAGE}}", actions[tag].image)
-            .replaceAll("{{FWX.TITLE}}", actions[tag].title)
-            .replaceAll("{{FWX.SUBTITLE}}", actions[tag].subtitle)
-            .replaceAll("{{FWX.DESCRIPTION}}", actions[tag].description)
-            .replaceAll("{{FWX.CONFIRM.MESSAGE}}", actions[tag].confirm?.message)
+            .replaceAll("{{FWX.VALUE}}", fwx.actions[tag].value)
+            .replaceAll("{{FWX.META.COLOR}}", fwx.actions[tag].meta?.color)
+            .replaceAll("{{FWX.META.TITLE}}", fwx.actions[tag].meta?.title)
+            .replaceAll("{{FWX.META.DESCRIPTION}}", fwx.actions[tag].meta?.description)
+            .replaceAll("{{FWX.META.IMAGE.ICON}}", fwx.actions[tag].meta?.image?.icon)
+            .replaceAll("{{FWX.META.IMAGE.THUMBNAIL}}", fwx.actions[tag].meta?.image?.thumbnail)
+            .replaceAll("{{FWX.META.IMAGE.SIZE}}", fwx.actions[tag].meta?.image?.size)
+            .replaceAll("{{FWX.IMAGE}}", fwx.actions[tag].image)
+            .replaceAll("{{FWX.TITLE}}", fwx.actions[tag].title)
+            .replaceAll("{{FWX.SUBTITLE}}", fwx.actions[tag].subtitle)
+            .replaceAll("{{FWX.DESCRIPTION}}", fwx.actions[tag].description)
+            .replaceAll("{{FWX.CONFIRM.MESSAGE}}", fwx.actions[tag].confirm?.message)
             .replaceAll("{{FWX.CONFIRM.SCRIPT}}", confirm)
             .replaceAll("{{FWX.SCRIPT}}", script);
           zip.file(tag + '.html', content);
@@ -76,7 +76,7 @@ window.addEventListener("load", async function() {
     }
   }
   else {
-    alert("Erro: O objeto 'actions' não foi encontrado. Verifique se o script actions.js carregou.");
+    alert("Erro: O objeto 'fwx.actions' não foi encontrado. Verifique se o script actions.js carregou.");
   }
 });
 
