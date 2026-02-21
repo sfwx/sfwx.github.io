@@ -3,10 +3,10 @@
 /* https://sfwx.github.io/copyright */
 
 window.fwx = {
-  version: [ 4, 0, 4 ],
+  version: [ 4, 0, 4 ].join("."),
   license: {
     year: new Date().getFullYear(),
-    text: ["©", fwx.license.year, "FlowniX. Todos os Direitos são Reservados."].join(" "),
+    text: ["©", new Date().getFullYear(), "FlowniX. Todos os Direitos são Reservados."].join(" "),
     url: "https://sfwx.github.io/copyright"
   },
   log(text) {
