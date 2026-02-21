@@ -5,7 +5,8 @@
 window.fwx = {
   version: [ 4, 0, 4 ],
   license: {
-    text: "©${year} FlowniX. Todos os Direitos são Reservados.",
+    year: new Date().getFullYear(),
+    text: ["©", fwx.license.year, "FlowniX. Todos os Direitos são Reservados."].join(" "),
     url: "https://sfwx.github.io/copyright"
   },
   log(text) {
