@@ -3,9 +3,9 @@
 /* https://sfwx.github.io/copyright */
 
 window.addEventListener("load", async function() {
-  const template = document.getElementById("fwxTemplate");
-  if (!template) {
-    console.error("Erro: Elemento #template não encontrado.");
+  const fwx.page.template = document.getElementById("fwxTemplate").value;
+  if (!fwx.page.template) {
+    fwx.log("error", "Elemento #fwxTemplate não encontrado.", true);
     return;
   }
   const zip = new JSZip();
@@ -38,7 +38,7 @@ window.addEventListener("load", async function() {
           script = `document.getElementById("fwxButton").style.display = "block";`;
         }
         try {
-          let content = template.value
+          let fwx.page.return = fwx.page.template
             .replaceAll("{{FWX.VALUE}}", fwx.actions[tag].value)
             .replaceAll("{{FWX.META.COLOR}}", fwx.actions[tag].meta?.color)
             .replaceAll("{{FWX.META.TITLE}}", fwx.actions[tag].meta?.title)
@@ -55,8 +55,8 @@ window.addEventListener("load", async function() {
             .replaceAll("{{FWX.SCRIPT}}", script);
           zip.file(tag + '.html', content);
         }
-        catch (e) {
-          console.warn(`Erro ao processar a tag ${tag}:`, e);
+        catch (error) {
+          fwx.log("warn", ["Erro ao processar a tag", tag, error].join(" "));
         }
       }
     }
@@ -71,12 +71,12 @@ window.addEventListener("load", async function() {
       URL.revokeObjectURL(a.href);
       location.replace("https://github.com/sfwx/sfwx.github.io/upload");
     }
-    catch (err) {
-      console.error("Erro ao gerar o arquivo ZIP:", err);
+    catch (error) {
+      fwx.log("error", ["Erro ao gerar o arquivo ZIP:", error].join(" "));
     }
   }
   else {
-    alert("Erro: O objeto 'fwx.actions' não foi encontrado. Verifique se o script actions.js carregou.");
+    fwx.log("error" "Erro: O objeto 'fwx.actions' não foi encontrado. Verifique se o script actions.js carregou.", true);
   }
 });
 
