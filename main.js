@@ -46,7 +46,7 @@ window.fwx = {
 };
 
 fwx.extension(false);
-fwx.log("log", "Olá mundo!");
+fwx.log("fwx", "Olá mundo!");
 
 window.addEventListener("load", () => {
   fwx.year();
