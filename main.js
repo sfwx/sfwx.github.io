@@ -43,6 +43,7 @@ window.fwx = {
     })
   }
 };
+
 fwx.extension(false);
 fwx.log("Olá mundo!");
 
