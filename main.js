@@ -5,7 +5,7 @@
 window.fwx = {
   version: [ 4, 0, 4 ],
   license: {},
-  log(text) function () {
+  log(text) {
     console.log(text);
   }
 };
