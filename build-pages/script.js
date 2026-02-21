@@ -19,17 +19,17 @@ window.addEventListener("load", async function() {
           script = `document.getElementById("fwxButton").style.display = "block";
         window.location.href = "https://sfwx.github.io/` + fwx.actions[tag].value + `";`;
         }
-        if (actions[tag].type == "external_link" && fwx.actions[tag].target == "_self") {
+        if (fwx.actions[tag].type == "external_link" && fwx.actions[tag].target == "_self") {
           confirm = null;
           script = `document.getElementById("fwxButton").style.display = "block";
         window.location.href = "` + fwx.actions[tag].value + `";`;
         }
-        if (actions[tag].type == "external_link" && fwx.actions[tag].target == "_blank") {
+        if (fwx.actions[tag].type == "external_link" && fwx.actions[tag].target == "_blank") {
           confirm = null;
           script = `document.getElementById("fwxButton").style.display = "block";
         window.open("` + fwx.actions[tag].value + `", "_blank");`;
         }
-        if (actions[tag].type == "file_download" && fwx.actions[tag].target == "_self") {
+        if (fwx.actions[tag].type == "file_download" && fwx.actions[tag].target == "_self") {
           confirm =  `window.location.href = 'https://sfwx.github.io/` + fwx.actions[tag].value + `';`;
           script = `document.getElementById("fwxButton").style.display = "block";`;
         }
