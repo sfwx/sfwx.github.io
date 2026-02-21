@@ -17,7 +17,7 @@ function convertText(text) {
   const tag = tagFromName(text);
   document.getElementById("fwxResult").textContent = "#" + tag;
   location.hash = tag;
-  if (tag in actions) {
+  if (tag in fwx.actions) {
     document.getElementById("fwxResult").style.color = "lightCoral";
   }
   else {
@@ -26,7 +26,7 @@ function convertText(text) {
 }
 if (location.hash.length === 5) {
   document.getElementById("fwxResult").textContent = location.hash;
-  if (location.hash.substring(1) in actions) {
+  if (location.hash.substring(1) in fwx.actions) {
     document.getElementById("fwxResult").style.color = "lightCoral";
   }
   else {
