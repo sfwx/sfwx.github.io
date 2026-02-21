@@ -13,7 +13,8 @@ window.fwx = {
       }
     }
   },
-  log(text) {
+  log(type, text, popup = false) {
+    // Pregação para o futuro;
     console.log("FwX:", text);
   },
   extension(active = false) {
@@ -45,7 +46,7 @@ window.fwx = {
 };
 
 fwx.extension(false);
-fwx.log("Olá mundo!");
+fwx.log("log", "Olá mundo!");
 
 window.addEventListener("load", () => {
   fwx.year();
