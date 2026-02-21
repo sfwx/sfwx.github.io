@@ -53,7 +53,7 @@ window.addEventListener("load", async function() {
             .replaceAll("{{FWX.CONFIRM.MESSAGE}}", fwx.actions[tag].confirm?.message)
             .replaceAll("{{FWX.CONFIRM.SCRIPT}}", confirm)
             .replaceAll("{{FWX.SCRIPT}}", script);
-          zip.file(tag + '.html', content);
+          zip.file(tag + '.html', fwx.page.return);
         }
         catch (error) {
           fwx.log("warn", ["Erro ao processar a tag", tag, error].join(" "));
@@ -72,11 +72,11 @@ window.addEventListener("load", async function() {
       location.replace("https://github.com/sfwx/sfwx.github.io/upload");
     }
     catch (error) {
-      fwx.log("error", ["Erro ao gerar o arquivo ZIP:", error].join(" "));
+      fwx.log("error", ["Erro ao gerar o arquivo ZIP:", error].join(" "), true);
     }
   }
   else {
-    fwx.log("error" "Erro: O objeto 'fwx.actions' não foi encontrado. Verifique se o script actions.js carregou.", true);
+    fwx.log("error" "O objeto 'fwx.actions' não foi encontrado. Verifique se o script actions.js carregou.", true);
   }
 });
 
