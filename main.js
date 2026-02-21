@@ -5,9 +5,13 @@
 window.fwx = {
   version: [ 4, 0, 4 ].join("."),
   license: {
-    year: new Date().getFullYear(),
     text: ["©", new Date().getFullYear(), "FlowniX. Todos os Direitos são Reservados."].join(" "),
-    url: "https://sfwx.github.io/copyright"
+    url: "https://sfwx.github.io/copyright",
+    year() {
+      if (document.getElementById("fwxCopyrightYear")) {
+        document.getElementById("fwxCopyrightYear").innerHTML = new Date().getFullYear();
+      }
+    }
   },
   log(text) {
     console.log("FwX:", text);
@@ -39,8 +43,6 @@ fwx.log("Olá mundo!");
     }, 100);
   });
 })();
-
-if (document.getElementById("fwxYear")) document.getElementById("fwxYear").innerHTML = new Date().getFullYear();
 
 /* Todos os direitos são reservados */
 /* https://sfwx.github.io/copyright */
