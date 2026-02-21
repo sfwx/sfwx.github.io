@@ -4,7 +4,10 @@
 
 window.fwx = {
   version: [ 4, 0, 4 ],
-  license: {},
+  license: {
+    text: "©${year} FlowniX. Todos os Direitos são Reservados.",
+    url: "https://sfwx.github.io/copyright"
+  },
   log(text) {
     console.log("FwX:", text);
   }
