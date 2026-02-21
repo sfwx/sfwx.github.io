@@ -2,6 +2,13 @@
 /* Todos os direitos são reservados */
 /* https://sfwx.github.io/copyright */
 
+window.fwx = {
+  version: [ 4, 0, 4 ],
+  license: {},
+  log(text) function () {
+    console.log(text);
+  }
+};
 console.log("FwX: Olá mundo!");
 
 (function () {
