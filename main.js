@@ -15,7 +15,7 @@ window.fwx = {
   },
   log(text) {
     console.log("FwX:", text);
-  }
+  },
   extension(active = false) {
     if (!active) {
       const path = window.location.pathname;
