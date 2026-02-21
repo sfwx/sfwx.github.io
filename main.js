@@ -49,7 +49,7 @@ fwx.extension(false);
 fwx.log("fwx", "Olá mundo!");
 
 window.addEventListener("load", () => {
-  fwx.year();
+  fwx.license.year();
   fwx.attributeData();
 });
 
