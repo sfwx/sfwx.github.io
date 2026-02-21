@@ -127,6 +127,7 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   font-family: "Inter", sans-serif;
   background-color: transparent;
   box-shadow: 0 1px 0 #6366f1;
+  -moz-appearance: textfield;
   text-align: center;
   font-size: 1rem;
   padding: 10px 0;
@@ -134,6 +135,10 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   outline: none;
   border: none;
   width: 100%;
+}
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > div[data-fwx].input > input[data-fwx]::-webkit-outer-spin-button, html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > div[data-fwx].input > input[data-fwx]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].app > main[data-fwx] > div[data-fwx] > div[data-fwx].input > input[data-fwx]::placeholder {
   text-transform: uppercase;
