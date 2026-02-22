@@ -56,7 +56,7 @@ fwx.log("fwx", "Olá mundo!");
 window.addEventListener("load", () => {
   fwx.license.year();
   fwx.attributeData().then(res => {
-    document.html.classList.add("fwx");
+    document.documentElement.classList.add("fwx");
   });
 });
 
