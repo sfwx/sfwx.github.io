@@ -10,16 +10,15 @@ html:not([data-fwx]) {
   pointer-events: none !important;
 }
 html::after {
-  background-image: url("https://sfwx.github.io/image/debug.png");
-  background-position: center;
-  background-size: 80px 80px;
-  image-rendering: pixelated;
-  background-color: black;
-  pointer-events: none;
-  position: fixed;
-  z-index: 999999;
-  content: "";
-  inset: 0;
+  background-image: url("https://sfwx.github.io/image/debug.png") !important;
+  background-size: 80px 80px !important;
+  image-rendering: pixelated !important;
+  background-color: black !important;
+  pointer-events: none !important;
+  position: fixed !important;
+  z-index: 999999 !important;
+  content: "" !important;
+  inset: 0 !important;
 }
 html *:not([data-fwx]) {
   pointer-events: none !important;
