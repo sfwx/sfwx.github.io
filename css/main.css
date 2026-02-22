@@ -11,7 +11,6 @@ html:not([data-fwx]) {
 }
 html::after {
   background-image: url("https://sfwx.github.io/image/debug.png");
-  background-repeat: no-repeat;
   background-position: center;
   background-size: 80px 80px;
   image-rendering: pixelated;
