@@ -9,6 +9,15 @@ html:not([data-fwx]) {
   background-color: black !important;
   pointer-events: none !important;
 }
+html:after {
+  background-image: url("https://sfwx.github.io/image/debug.png") !important;
+  background-size: 80px 80px !important;
+  image-rendering: pixelated !important;
+  background-color: black !important;
+  pointer-events: none !important;  
+  z-index: 100 !important;
+  inset: 0 !important;
+}
 html *:not([data-fwx]) {
   pointer-events: none !important;
   display: none !important;
