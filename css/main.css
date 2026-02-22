@@ -13,7 +13,7 @@ html:not([data-fwx]):not(.fwx)::after {
   content: "" !important;
   inset: 0 !important;
 }
-*:not([data-fwx]) {
+html *:not([data-fwx]) {
   pointer-events: none !important;
   display: none !important;
 }
