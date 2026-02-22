@@ -5,7 +5,10 @@
 window.fwx = {
   version: "4.0.4",
   license: {
-    text: "© FlowniX. Todos os Direitos são Reservados.",
+    text: [
+      "© 2026 FlowniX. Conteúdo Protegido.",
+      "Direitos Autorais & Termos"
+    ],
     url: "https://sfwx.github.io/copyright",
     year() {
       if (document.getElementById("fwxCopyrightYear")) {
