@@ -37,7 +37,7 @@ window.fwx = {
   },
   attributeData() {
     document.querySelectorAll("*:not([data-fwx])").forEach(element => {
-      element.setAttribute("data-fwx", "");
+      element.setAttribute("data-fwx", fwx.version);
       element.setAttribute("data-origin", "https://sfwx.github.io");
       element.setAttribute("data-copyright", "https://sfwx.github.io/copyright");
     })
