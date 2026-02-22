@@ -2,14 +2,7 @@
 /* Todos os direitos são reservados */
 /* https://sfwx.github.io/copyright */
 
-html:not([data-fwx]) {
-  background-image: url("https://sfwx.github.io/image/debug.png") !important;
-  background-size: 80px 80px !important;
-  image-rendering: pixelated !important;
-  background-color: black !important;
-  pointer-events: none !important;
-}
-html::after {
+html:not([data-fwx])::after {
   background-image: url("https://sfwx.github.io/image/debug.png") !important;
   background-size: 80px 80px !important;
   image-rendering: pixelated !important;
