@@ -16,7 +16,7 @@ window.fwx = {
       }
     }
   },
-  log(type, text, popup = false, sholl = true) {
+  log(type, text, scroll = true, popup = false) {
     // Preparação para o futuro;
     console.log("FwX:", text);
     if (popup) alert(text);
