@@ -51,7 +51,6 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   opacity: 0.75;
   color: white;
 }
-
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > main[data-fwx] > input[data-fwx], html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > main[data-fwx] > textarea[data-fwx] {
   box-shadow: 0 2.5px 0 #242424;
   border: 2.5px solid #1e2021;
@@ -86,7 +85,6 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   background-color: #efefef;
   border: 2px solid #111111;
 }
-
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > main[data-fwx] button[data-fwx] {
   box-shadow: 0 5px 0 #58585a;
   border: 3.5px solid #e7e8ec;
@@ -118,7 +116,6 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   opacity: 0.75;
   color: black;
 }
-
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > a[data-fwx].copyright {
   -webkit-tap-highlight-color: transparent;
   justify-content: center;
@@ -128,7 +125,6 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   color: #cccccc;
   display: flex;
 }
-
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > div[data-fwx]#fwxConsole {
   margin: 50px auto 325px auto;
   box-shadow: 0 5px 0 #58585a;
