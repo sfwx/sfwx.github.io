@@ -18,6 +18,10 @@ window.fwx = {
   },
   log(type, text, scroll = true, popup = false) {
     // Preparação para o futuro;
+    if (type == "fwx") {}
+    if (type == "success") {}
+    if (type == "error") {}
+    if (type == "warn") {}
     console.log("FwX:", text);
     if (popup) alert(text);
   },
