@@ -144,7 +144,7 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   background-color: #111111;
 }
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > div[data-fwx].console::-webkit-scrollbar-thumb {
-  background-color: #3c8527;
+  background-color: lightgreen;
   border: 2px solid #111111;
 }
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > div[data-fwx].console > pre[data-fwx]#fwxConsole {
