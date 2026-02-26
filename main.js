@@ -74,7 +74,7 @@ window.fwx = {
   }
 };
 
-fwx.extension(true);
+fwx.extension(false);
 fwx.log("fwx", "Olá mundo!");
 
 window.addEventListener("load", () => {
