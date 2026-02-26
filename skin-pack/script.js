@@ -104,7 +104,7 @@ async function handleFWX(event) {
         // SKINS FIXAS
         // ==================================================
 
-        fwx.log("info", "Adicionando skins fixas ao pacote..");
+        fwx.log("info", "Adicionando skins fixas ao pacote..\n");
         for (const entry of contents.content) {
 
             if (
@@ -190,7 +190,7 @@ async function handleFWX(event) {
                 fwx.log("success", ` > ${styleName} - ${cape.name}`);
             }
         }        
-        fwx.log("info", "Adicionando skins dinâmicas ao pacote..");
+        fwx.log("info", "\nAdicionando skins dinâmicas ao pacote..");
         // ==================================================
         // GERAR skins.json
         // ==================================================
