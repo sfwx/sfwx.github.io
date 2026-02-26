@@ -38,11 +38,11 @@ html *:not([data-fwx]) {
 [data-fwx].debug.b::before {
   z-index: -1;
 }
-div[data-fwx].console > span[data-fwx].fwx { color: violet; }
-div[data-fwx].console > span[data-fwx].info { color: lightskyblue; }
-div[data-fwx].console > span[data-fwx].success { color: lightgreen; }
-div[data-fwx].console > span[data-fwx].warn { color: palegoldenrod; }
-div[data-fwx].console > span[data-fwx].error { color: lightcoral; }
+div[data-fwx].console > pre[data-fwx]#fwxConsole > span[data-fwx].fwx { color: violet; }
+div[data-fwx].console > pre[data-fwx]#fwxConsole > span[data-fwx].info { color: lightskyblue; }
+div[data-fwx].console > pre[data-fwx]#fwxConsole > span[data-fwx].success { color: lightgreen; }
+div[data-fwx].console > pre[data-fwx]#fwxConsole > span[data-fwx].warn { color: palegoldenrod; }
+div[data-fwx].console > pre[data-fwx]#fwxConsole > span[data-fwx].error { color: lightcoral; }
 
 /* Todos os direitos são reservados */
 /* https://sfwx.github.io/copyright */
