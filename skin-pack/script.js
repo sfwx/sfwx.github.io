@@ -143,7 +143,7 @@ async function handleFWX(event) {
         // GERAR SKINS DINÂMICAS
         // ==================================================
 
-        fwx.log("info", "</tbody</table>\nGerando skins dinâmicas..\n<table data-fwx><tbody>");
+        fwx.log("info", "</tbody</table>\nGerando skins dinâmicas..\n<table data-fwx><tbody data-fwx>");
         for (const style of styleEntries) {
 
             const styleBlob = await zip.file(style.path).async("blob");
