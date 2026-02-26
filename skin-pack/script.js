@@ -104,7 +104,7 @@ async function handleFWX(event) {
         // SKINS FIXAS
         // ==================================================
 
-        fwx.log("info", "Adicionando skins fixas ao pacote..\n");
+        fwx.log("info", "Adicionando skins fixas ao pacote..\n<table data-fwx><tbody data-fwx>");
         for (const entry of contents.content) {
 
             if (
@@ -133,7 +133,8 @@ async function handleFWX(event) {
                         key: `${name}.${cape.name}`,
                         value: `${removeFWX(name)} | ${cape.name}`
                     });
-                    fwx.log("success", ` > ${name} - ${cape.name}`);
+                    // fwx.log("success", ` > ${name} - ${cape.name}`);
+                    fwx.log("info", `<tr>${name}</tr><tr>${cape.name}</tr>`);
                 }
             }
         }
@@ -142,7 +143,7 @@ async function handleFWX(event) {
         // GERAR SKINS DINÂMICAS
         // ==================================================
 
-        fwx.log("info", "\nGerando skins dinâmicas..\n");
+        fwx.log("info", "</tbody</table>\nGerando skins dinâmicas..\n<table data-fwx><tbody>");
         for (const style of styleEntries) {
 
             const styleBlob = await zip.file(style.path).async("blob");
@@ -187,10 +188,11 @@ async function handleFWX(event) {
                     key: `${styleName}.${cape.name}`,
                     value: `${removeFWX(styleName)} | ${cape.name}`
                 });
-                fwx.log("success", ` > ${styleName} - ${cape.name}`);
+                //fwx.log("success", ` > ${styleName} - ${cape.name}`);
+                fwx.log("info", `<tr>${stylename}</tr><tr>${cape.name}</tr>`);
             }
         }        
-        fwx.log("info", "\nAdicionando skins dinâmicas ao pacote..");
+        fwx.log("info", "</tbody></table>\nAdicionando skins dinâmicas ao pacote..");
         // ==================================================
         // GERAR skins.json
         // ==================================================
