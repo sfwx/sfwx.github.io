@@ -16,7 +16,7 @@ window.fwx = {
       }
     }
   },
-  log(type, text, popup = false, scroll = true) {
+  /*log(type, text, popup = false, scroll = true) {
     if (type === "fwx" || type === "info" || type === "success" || type === "warn" || type === "error") return;
     if (type === "fwx") {
       console.error(`%c${text}`, "color: violet;");
@@ -45,7 +45,7 @@ window.fwx = {
       }
     }
     if (popup) alert(text);
-  },
+  },*/
   extension(active = false) {
     if (!active) {
       const path = window.location.pathname;
