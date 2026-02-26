@@ -24,7 +24,7 @@ window.fwx = {
       warn: { label: "", color: "palegoldenrod" },
       error: { label: "", color: "lightcoral" }
     };
-    if (!types[type]||!text) return;
+    if (!types[type] || !text) return;
     const { label, color } = types[type];
     if (type === "warn") {
       console.warn(`%c${label}${text}`, `color: ${color};`);
@@ -42,7 +42,7 @@ window.fwx = {
       span.textContent = `${label}${text}\n`;
       fwxConsole.appendChild(span);
       if (scroll) {
-        fwxConsole.scrollTop = fwxConsole.scrollHeight;
+        document.querySelector("[data-fwx].console").scrollTop = fwxConsole.scrollHeight;
       }
     }
     if (popup) alert(text);
