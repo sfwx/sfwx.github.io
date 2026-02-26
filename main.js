@@ -16,21 +16,23 @@ window.fwx = {
       }
     }
   },
-  log(type, text, scroll = true, popup = false) {
-    // Preparação para o futuro;
-    switch (type) {
-      case "fwx":
-        break;
-      case "info":
-        break;
-      case "success":
-        break;
-      case "warn":
-        break;
-      case "error":
-        break;
+  log(type, text, popup = false, scroll = true) {
+    if (document.getElementById("fwxConsole")) {
+      switch (type) {
+        case "fwx":
+          console.log("FwX:", text);
+          break;
+        case "info":
+          console.log("FwX:", text);
+          break;
+        case "success":
+          break;
+        case "warn":
+          break;
+        case "error":
+          break;
+      }
     }
-    console.log("FwX:", text);
     if (popup) alert(text);
   },
   extension(active = false) {
