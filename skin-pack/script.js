@@ -189,10 +189,12 @@ async function handleFWX(event) {
                 });
                 fwx.log("success", ` > ${styleName} - ${cape.name}`);
             }
-        }
+        }        
+        fwx.log("info", "Adicionando skins dinâmicas ao pacote..");
         // ==================================================
         // GERAR skins.json
         // ==================================================
+        fwx.log("info", "Adicionando skins.json ao pacote..");
         const skinsJSON = {
             ...metadata,
             localization_name: "FlowniX",
@@ -200,8 +202,7 @@ async function handleFWX(event) {
             skins: skinSlots
         };
 
-        newZip.file("skins.json", JSON.stringify(skinsJSON, null, 2));        
-        fwx.log("info", "Adicionando skins ao pacote..");
+        newZip.file("skins.json", JSON.stringify(skinsJSON, null, 2));
 
         // ==================================================
         // GERAR LANG
