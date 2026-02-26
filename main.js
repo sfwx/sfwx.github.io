@@ -17,51 +17,44 @@ window.fwx = {
     }
   },
   log(type, text, popup = false, scroll = true) {
-    switch (type) {
-      case "fwx":
-        console.log("violet", "FwX:", text);
-        break;
-      case "info":
-        console.log("lightskyblue", "INFO:", text);
-        break;
-      case "success":
-        console.success("lightgreen", "SUCESSO:", text);
-        break;
-      case "warn":
-        console.warn("palegoldenrod", "AVISO:", text);
-        break;
-      case "error":
-        console.error("lightcoral", "ERRO:", text);
-        break;
+  const types = {
+    fwx: { label: "FwX:", color: "violet" },
+    info: { label: "INFO:", color: "lightskyblue" },
+    success: { label: "SUCESSO:", color: "lightgreen" },
+    warn: { label: "AVISO:", color: "palegoldenrod" },
+    error: { label: "ERRO:", color: "lightcoral" }
+  };
+
+  if (!types[type]) return;
+
+  const { label, color } = types[type];
+
+  // Console colorido
+  if (type === "warn") {
+    console.warn(`%c${label} ${text}`, `color: ${color};`);
+  } else if (type === "error") {
+    console.error(`%c${label} ${text}`, `color: ${color};`);
+  } else {
+    console.log(`%c${label} ${text}`, `color: ${color};`);
+  }
+
+  // Console customizado na página
+  const fwxConsole = document.getElementById("fwxConsole");
+  if (fwxConsole) {
+    const span = document.createElement("span");
+    span.setAttribute("data-fwx", "");
+    span.classList.add(type);
+    span.textContent = `${label} ${text}`;
+
+    fwxConsole.appendChild(span);
+
+    if (scroll) {
+      fwxConsole.scrollTop = fwxConsole.scrollHeight;
     }
-    if (document.getElementById("fwxConsole")) {
-      fwxConsole = document.getElementById("fwxConsole");
-      fwxSpan = document.createElement("span");
-      switch (type) {
-        case "fwx":
-          fwxSpan.classList.add("fwx");
-          fwxSpan.textContent = ("violet", "FwX:", text);
-          break;
-        case "info":
-          fwxSpan.classList.add("info");
-          fwxSpan.textContent = ("lightskyblue", "INFO:", text);
-          break;
-        case "success":
-          fwxSpan.classList.add("success");
-          fwxSpan.textContent = ("lightgreen", "SUCESSO:", text);
-          break;
-        case "warn":
-          fwxSpan.classList.add("warn");
-          fwxSpan.textContent = ("palegoldenrod", "AVISO:", text);
-          break;
-        case "error":
-          fwxSpan.classList.add("error");
-          fwxSpan.textContent = ("lightcoral", "ERRO:", text);
-          break;
-      }
-    }
-    if (popup) alert(text);
-  },
+  }
+
+  if (popup) alert(text);
+},
   extension(active = false) {
     if (!active) {
       const path = window.location.pathname;
