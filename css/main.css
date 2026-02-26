@@ -41,8 +41,8 @@ html *:not([data-fwx]) {
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx] div[data-fwx].console > pre[data-fwx]#fwxConsole > span[data-fwx].fwx { color: violet; }
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx] div[data-fwx].console > pre[data-fwx]#fwxConsole > span[data-fwx].info { color: lightskyblue; }
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx] div[data-fwx].console > pre[data-fwx]#fwxConsole > span[data-fwx].success { color: lightgreen; }
-html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx]div[data-fwx].console > pre[data-fwx]#fwxConsole > span[data-fwx].warn { color: palegoldenrod; }
-html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx]div[data-fwx].console > pre[data-fwx]#fwxConsole > span[data-fwx].error { color: lightcoral; }
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx] div[data-fwx].console > pre[data-fwx]#fwxConsole > span[data-fwx].warn { color: palegoldenrod; }
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx] div[data-fwx].console > pre[data-fwx]#fwxConsole > span[data-fwx].error { color: lightcoral; }
 
 /* Todos os direitos são reservados */
 /* https://sfwx.github.io/copyright */
