@@ -26,13 +26,13 @@ window.fwx = {
           console.log("lightskyblue", "INFO:", text);
           break;
         case "success":
-          console.log("lightgreen", "SUCESSO:", text);
+          console.success("lightgreen", "SUCESSO:", text);
           break;
         case "warn":
-          console.log("palegoldenrod", "AVISO:", text);
+          console.warn("palegoldenrod", "AVISO:", text);
           break;
         case "error":
-          console.log("lightcoral", "ERRO:", text);
+          console.error("lightcoral", "ERRO:", text);
           break;
       }
     }
