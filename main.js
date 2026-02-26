@@ -16,6 +16,7 @@ window.fwx = {
       }
     }
   },
+  log() {},
   /*log(type, text, popup = false, scroll = true) {
     if (type === "fwx" || type === "info" || type === "success" || type === "warn" || type === "error") return;
     if (type === "fwx") {
