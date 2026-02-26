@@ -68,8 +68,6 @@ window.fwx = {
     return new Promise(resolve => {
       document.querySelectorAll("*:not([data-fwx])").forEach(element => {
         element.setAttribute("data-fwx", "");
-        element.setAttribute("data-origin", "https://sfwx.github.io");
-        element.setAttribute("data-copyright", "https://sfwx.github.io/copyright");
       });
       resolve("sucesso");
     });
