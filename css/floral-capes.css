@@ -16,8 +16,8 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   background-size: 896px;
   background-color: gray;
   margin-bottom: 10px;
-  height: 244px;
-  width: 160px;
+  height: 244.5px;
+  width: 160.5px;
 }
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui.floral-capes > main[data-fwx] > div[data-fwx].layout > div[data-fwx] > div[data-fwx]#fwxSkinPreview {
   background-image: url("https://sfwx.github.io/floral/64/dummy.png");
