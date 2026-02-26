@@ -54,7 +54,7 @@ width: 100px;</textarea>
       const preview = document.getElementById("fwxPreview");
       const element = document.getElementById("fwxElement");
       function update() {
-        preview.innerHTML = element.value.replace("<!--STYLE-->", style.value);
+        preview.innerHTML = element.value.replaceAll("<!--STYLE-->", style.value);
       }
       style.addEventListener("input", update);
       element.addEventListener("input", update);
