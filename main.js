@@ -17,22 +17,46 @@ window.fwx = {
     }
   },
   log(type, text, popup = false, scroll = true) {
+    switch (type) {
+      case "fwx":
+        console.log("violet", "FwX:", text);
+        break;
+      case "info":
+        console.log("lightskyblue", "INFO:", text);
+        break;
+      case "success":
+        console.success("lightgreen", "SUCESSO:", text);
+        break;
+      case "warn":
+        console.warn("palegoldenrod", "AVISO:", text);
+        break;
+      case "error":
+        console.error("lightcoral", "ERRO:", text);
+        break;
+    }
     if (document.getElementById("fwxConsole")) {
+      fwxConsole = document.getElementById("fwxConsole");
+      fwxSpan = document.createElement("span");
       switch (type) {
         case "fwx":
-          console.log("violet", "FwX:", text);
+          fwxSpan.classList.add("fwx");
+          fwxSpan.textContent = ("violet", "FwX:", text);
           break;
         case "info":
-          console.log("lightskyblue", "INFO:", text);
+          fwxSpan.classList.add("info");
+          fwxSpan.textContent = ("lightskyblue", "INFO:", text);
           break;
         case "success":
-          console.success("lightgreen", "SUCESSO:", text);
+          fwxSpan.classList.add("success");
+          fwxSpan.textContent = ("lightgreen", "SUCESSO:", text);
           break;
         case "warn":
-          console.warn("palegoldenrod", "AVISO:", text);
+          fwxSpan.classList.add("warn");
+          fwxSpan.textContent = ("palegoldenrod", "AVISO:", text);
           break;
         case "error":
-          console.error("lightcoral", "ERRO:", text);
+          fwxSpan.classList.add("error");
+          fwxSpan.textContent = ("lightcoral", "ERRO:", text);
           break;
       }
     }
