@@ -18,20 +18,20 @@ window.fwx = {
   },
   log(type, text, popup = false, scroll = true) {
     const types = {
-      fwx: { label: "FwX:", color: "violet" },
-      info: { label: "INFO:", color: "lightskyblue" },
-      success: { label: "SUCESSO:", color: "lightgreen" },
-      warn: { label: "AVISO:", color: "palegoldenrod" },
-      error: { label: "ERRO:", color: "lightcoral" }
+      fwx: { label: "FwX: ", color: "violet" },
+      info: { label: "INFO: ", color: "lightskyblue" },
+      success: { label: "SUCESSO: ", color: "lightgreen" },
+      warn: { label: "AVISO: ", color: "palegoldenrod" },
+      error: { label: "ERRO: ", color: "lightcoral" }
     };
     if (!types[type]||!text) return;
     const { label, color } = types[type];
     if (type === "warn") {
-      console.warn(`%c${label} ${text}`, `color: ${color};`);
+      console.warn(`%c${label}${text}`, `color: ${color};`);
     } else if (type === "error") {
-      console.error(`%c${label} ${text}`, `color: ${color};`);
+      console.error(`%c${label}${text}`, `color: ${color};`);
     } else {
-      console.log(`%c${label} ${text}`, `color: ${color};`);
+      console.log(`%c${label}${text}`, `color: ${color};`);
     }
     // Console customizado na página
     const fwxConsole = document.getElementById("fwxConsole");
