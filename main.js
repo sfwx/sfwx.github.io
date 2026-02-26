@@ -42,7 +42,7 @@ window.fwx = {
       span.textContent = `${label}${text}\n`;
       fwxConsole.appendChild(span);
       if (scroll) {
-        document.querySelector("[data-fwx].console").scrollTop = fwxConsole.scrollHeight;
+        document.querySelector("[data-fwx].console").scrollTop = document.querySelector("[data-fwx].console").scrollHeight;
       }
     }
     if (popup) alert(text);
