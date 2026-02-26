@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html data-fwx data-origin="https://sfwx.github.io" data-copyright="https://sfwx.github.io/copyright" lang="en-US" translate="no">
+  <head>
+    <meta data-fwx charset="UTF-8">
+    <title>
+      FwX · Skin Pack / Minecraft
+    </title>
+    <link data-fwx rel="icon" type="image/png" sizes="350x350" href="https://sfwx.github.io/image/icon/fwx404.png">
+    <meta data-fwx name="author" content="FlowniX · Murilo de Moura S.">
+    <meta data-fwx name="developer" content="FlowniX · Murilo de Moura S.">
+    <meta data-fwx name="copyright" content="https://sfwx.github.io/copyright">
+    <meta data-fwx name="theme-color" content="#1e90ff">
+    <meta data-fwx property="og:type" content="website">
+    <meta data-fwx property="og:site_name" content="FwX   ( FlowniX · TCatDark )">
+    <meta data-fwx property="og:title" content="Skin Pack / Minecraft">
+    <meta data-fwx property="og:description" content="Gerador de pacotes de skin em larga escala.">
+    <meta data-fwx property="og:image" content="https://sfwx.github.io/image/icon/fwx404.png">
+    <meta data-fwx property="article:author" content="FlowniX · Murilo de Moura S.">
+    <meta data-fwx name="twitter:card" content="summary">
+    <meta data-fwx name="twitter:site" content="@FwX0_">
+    <meta data-fwx name="twitter:creator" content="@FwX0_">
+    <meta data-fwx name="twitter:title" content="Skin Pack / Minecraft">
+    <meta data-fwx name="twitter:description" content="Gerador de pacotes de skin em larga escala.">
+    <meta data-fwx name="twitter:image" content="https://sfwx.github.io/image/icon/fwx404.png">
+    <meta data-fwx name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link data-fwx rel="preconnect" href="https://sfwx.github.io">
+    <link data-fwx rel="preload" as="style" href="https://sfwx.github.io/css/main.css">
+    <link data-fwx rel="preload" as="style" href="https://sfwx.github.io/css/minecraft-ui.css">
+    <link data-fwx rel="stylesheet" href="https://sfwx.github.io/css/main.css">
+    <link data-fwx rel="stylesheet" href="https://sfwx.github.io/css/minecraft-ui.css">
+  </head>
+  <body data-fwx class="minecraft-ui">
+    <header>
+      Skin Pack GEN
+    </header>
+    <main>
+      <div data-fwx class="description">
+        <strong>@</strong> Importe seu <span data-fwx style="opacity: 0.75;">"contents.zip"</span> para gerar o pacote .mcpack automaticamente. <span data-fwx style="opacity: 0.5;">[v0.5.1]</span>
+      </div>
+      <input data-fwx id="fwxFile" name="fwxFile" type="file" accept=".zip" hidden>
+      <button data-fwx onclick="document.getElementById('fwxFile').click();">
+        Import ZIP File
+      </button>
+      <button data-fwx id="statusBtn" hidden></button>
+    </main>
+    <div data-fwx class="console" style="margin-top: -10px; margin-bottom: 10px;">
+      <pre data-fwx id="fwxConsole"></pre>
+    </div>
+    <a data-fwx class="copyright" href="https://sfwx.github.io/copyright?type=Minecraft" style="margin-bottom: 325px;">
+      &copy; FlowniX. Copyright & Terms
+    </a>
+    <script data-fwx type="text/javascript" src="https://sfwx.github.io/main.js" defer></script>
+    <script data-fwx type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
+    <script data-fwx type="text/javascript" src="script.js" defer></script>
+    <script data-fwx type="text/javascript" src="https://sfwx.github.io/skin-pack/script.js" defer></script>
+  </body>
+</html>
