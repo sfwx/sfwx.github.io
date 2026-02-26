@@ -17,29 +17,28 @@ window.fwx = {
     }
   },
   log(type, text, popup = false, scroll = true) {
-    const types = {
-      fwx: { label: "FwX: ", color: "violet" },
-      info: { label: "", color: "lightskyblue" },
-      success: { label: "", color: "lightgreen" },
-      warn: { label: "", color: "palegoldenrod" },
-      error: { label: "", color: "lightcoral" }
-    };
-    if (!types[type] || !text) return;
-    const { label, color } = types[type];
-    if (type === "warn") {
-      console.warn(`%c${label}${text}`, `color: ${color};`);
-    } else if (type === "error") {
-      console.error(`%c${label}${text}`, `color: ${color};`);
-    } else {
-      console.log(`%c${label}${text}`, `color: ${color};`);
+    if (type === "fwx" || type === "info" || type === "success" || type === "warn" || type === "error") return;
+    if (type === "fwx") {
+      console.error(`%c${text}`, "color: violet;");
     }
-    // Console customizado na página
+    else if (type === "success") {
+      console.log(`%c${text}`, "color: lightgreen;");
+    }
+    else if (type === "warn") {
+      console.warn(`%c${text}`, "color: palegoldenrod;");
+    }
+    else if (type === "error") {
+      console.error(`%c${text}`, "color: lightcoral;");
+    }
+    else {
+      console.log(`%c${text}`, "color: lightskyblue;");
+    }
     const fwxConsole = document.getElementById("fwxConsole");
     if (fwxConsole) {
       const span = document.createElement("span");
       span.setAttribute("data-fwx", "");
       span.classList.add(type);
-      span.textContent = `${label}${text}\n`;
+      span.textContent = (type === "fwx" : "FwX: ") + text + '\n';
       fwxConsole.appendChild(span);
       if (scroll) {
         document.querySelector("[data-fwx].console").scrollTop = document.querySelector("[data-fwx].console").scrollHeight;
