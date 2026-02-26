@@ -16,37 +16,40 @@ window.fwx = {
       }
     }
   },
-  log() {},
-  /*log(type, text, popup = false, scroll = true) {
-    if (type === "fwx" || type === "info" || type === "success" || type === "warn" || type === "error") return;
-    if (type === "fwx") {
-      console.error(`%c${text}`, "color: violet;");
-    }
-    else if (type === "success") {
-      console.log(`%c${text}`, "color: lightgreen;");
-    }
-    else if (type === "warn") {
-      console.warn(`%c${text}`, "color: palegoldenrod;");
-    }
-    else if (type === "error") {
-      console.error(`%c${text}`, "color: lightcoral;");
-    }
-    else {
-      console.log(`%c${text}`, "color: lightskyblue;");
+  log(type, text, popup = false, scroll = true) {
+    switch (type) {
+      case "fwx":
+        console.log(`%c${text}`, "color: violet;");
+        break;
+      case "info":
+        console.log(`%c${text}`, "color: lightskyblue;");
+        break;
+      case "success":
+        console.log(`%c${text}`, "color: lightgreen;");
+        break;
+      case "warn":
+        console.warn(`%c${text}`, "color: palegoldenrod;");
+        break;
+      case "error":
+        console.error(`%c${text}`, "color: lightcoral;");
+        break;
+      default:
+        return;
+        break;
     }
     const fwxConsole = document.getElementById("fwxConsole");
     if (fwxConsole) {
       const span = document.createElement("span");
       span.setAttribute("data-fwx", "");
       span.classList.add(type);
-      span.textContent = (type === "fwx" : "FwX: ") + text + '\n';
+      span.textContent = (type === "fwx" ? "FwX: ") + text + '\n';
       fwxConsole.appendChild(span);
       if (scroll) {
         document.querySelector("[data-fwx].console").scrollTop = document.querySelector("[data-fwx].console").scrollHeight;
       }
     }
     if (popup) alert(text);
-  },*/
+  },
   extension(active = false) {
     if (!active) {
       const path = window.location.pathname;
