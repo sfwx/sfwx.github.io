@@ -243,10 +243,11 @@ async function handleFWX(event) {
         // EXPORTAR
         // ==================================================
 
+        fwx.log("success", "Pacote fwx.mcpack gerado com sucesso.");
+        fwx.log("info", "Solicitando download pelo navegador..");
         const blob = await newZip.generateAsync({ type: "blob" });
         downloadBlob(blob, "fwx.mcpack");
 
-        fwx.log("success", "Pacote fwx.mcpack gerado com sucesso.");
 
     } catch (err) {
         console.error(err);
