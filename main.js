@@ -39,7 +39,7 @@ window.fwx = {
       const span = document.createElement("span");
       span.setAttribute("data-fwx", "");
       span.classList.add(type);
-      span.textContent = `${label} ${text}`;
+      span.textContent = `${label} ${text}\n`;
       fwxConsole.appendChild(span);
       if (scroll) {
         fwxConsole.scrollTop = fwxConsole.scrollHeight;
