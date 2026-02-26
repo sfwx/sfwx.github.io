@@ -135,7 +135,6 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   padding: 10px;
   height: 250px;
   width: 355px;
-  color: white;
 }
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > div[data-fwx].console::-webkit-scrollbar {
   width: 10px;
