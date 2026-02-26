@@ -152,6 +152,9 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   padding: 0;
   margin: 0;
 }
+html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > div[data-fwx].console > pre[data-fwx]#fwxConsole > span[data-fwx].info {
+  color: lightgreen;
+}
 
 /* Todos os direitos são reservados */
 /* https://sfwx.github.io/copyright */
