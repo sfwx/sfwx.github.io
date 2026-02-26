@@ -1,6 +1,6 @@
 // fwx-skin-pack-generator v0.5.1
 
-fwx.log("info", "Pronto paaa execução.");
+fwx.log("info", "Pronto para execução.");
 
 document.getElementById("fwxFile").addEventListener("change", handleFWX);
 
