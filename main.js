@@ -18,11 +18,11 @@ window.fwx = {
   },
   log(type, text, popup = false, scroll = true) {
     const types = {
-      fwx: { label: "FwX: ", color: "violet" },
-      info: { label: "INFO: ", color: "lightskyblue" },
-      success: { label: "SUCESSO: ", color: "lightgreen" },
-      warn: { label: "AVISO: ", color: "palegoldenrod" },
-      error: { label: "ERRO: ", color: "lightcoral" }
+      fwx: { label: "", color: "violet" },
+      info: { label: "", color: "lightskyblue" },
+      success: { label: "", color: "lightgreen" },
+      warn: { label: "", color: "palegoldenrod" },
+      error: { label: "", color: "lightcoral" }
     };
     if (!types[type]||!text) return;
     const { label, color } = types[type];
