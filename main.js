@@ -20,16 +20,19 @@ window.fwx = {
     if (document.getElementById("fwxConsole")) {
       switch (type) {
         case "fwx":
-          console.log("FwX:", text);
+          console.log("violet", "FwX:", text);
           break;
         case "info":
-          console.log("FwX:", text);
+          console.log("lightskyblue", "INFO:", text);
           break;
         case "success":
+          console.log("lightgreen", "SUCESSO:", text);
           break;
         case "warn":
+          console.log("palegoldenrod", "AVISO:", text);
           break;
         case "error":
+          console.log("lightcoral", "ERRO:", text);
           break;
       }
     }
