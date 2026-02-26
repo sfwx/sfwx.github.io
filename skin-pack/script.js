@@ -208,7 +208,7 @@ async function handleFWX(event) {
         // GERAR LANG
         // ==================================================
 
-        fwx.log("info", "Gerando nomes/lang para as skins..");
+        fwx.log("info", "Gerando \"lang/en_US.lang\" para as skins..");
         let langText = "skinpack.FlowniX=FlowniX: Skin Capes\n";
 
         for (const entry of langEntries) {
