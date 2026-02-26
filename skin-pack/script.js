@@ -1,6 +1,6 @@
 // fwx-skin-pack-generator v0.5.1
 
-fwx.log("info", "Aguardando arquivo...");
+fwx.log("info", "Pronto paaa execução.");
 
 document.getElementById("fwxFile").addEventListener("change", handleFWX);
 
@@ -11,14 +11,14 @@ async function handleFWX(event) {
         return;
     }
 
-    fwx.log("info", "Lendo contents.zip...");
+    fwx.log("info", "Analisando arquivo de pacote ZIP..");
 
     try {
         const zip = await JSZip.loadAsync(file);
         const contentsFile = zip.file("contents.json");
 
         if (!contentsFile) {
-            fwx.log("error", "contents.json não encontrado.");
+            fwx.log("error", "\"contents.json\" não foi encontrado.");
             return;
         }
 
@@ -104,6 +104,7 @@ async function handleFWX(event) {
         // SKINS FIXAS
         // ==================================================
 
+        fwx.log("info", "Adicionando skins fixas ao pacote..");
         for (const entry of contents.content) {
 
             if (
@@ -141,6 +142,7 @@ async function handleFWX(event) {
         // GERAR SKINS DINÂMICAS
         // ==================================================
 
+        fwx.log("info", "Gerando skins dinâmicas..");
         for (const style of styleEntries) {
 
             const styleBlob = await zip.file(style.path).async("blob");
@@ -191,7 +193,6 @@ async function handleFWX(event) {
         // ==================================================
         // GERAR skins.json
         // ==================================================
-
         const skinsJSON = {
             ...metadata,
             localization_name: "FlowniX",
@@ -199,12 +200,14 @@ async function handleFWX(event) {
             skins: skinSlots
         };
 
-        newZip.file("skins.json", JSON.stringify(skinsJSON, null, 2));
+        newZip.file("skins.json", JSON.stringify(skinsJSON, null, 2));        
+        fwx.log("info", "Adicionando skins ao pacote..");
 
         // ==================================================
         // GERAR LANG
         // ==================================================
 
+        fwx.log("info", "Gerando nomes/lang para as skins..");
         let langText = "skinpack.FlowniX=FlowniX: Skin Capes\n";
 
         for (const entry of langEntries) {
@@ -217,6 +220,7 @@ async function handleFWX(event) {
         // GERAR MANIFEST
         // ==================================================
 
+        fwx.log("info", "Adicionando manifest.json ao pacote..");
         const manifest = {
             ...metadata,
             format_version: 2,
