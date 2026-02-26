@@ -18,7 +18,7 @@ window.fwx = {
   },
   log(type, text, popup = false, scroll = true) {
     const types = {
-      fwx: { label: "", color: "violet" },
+      fwx: { label: "FwX: ", color: "violet" },
       info: { label: "", color: "lightskyblue" },
       success: { label: "", color: "lightgreen" },
       warn: { label: "", color: "palegoldenrod" },
