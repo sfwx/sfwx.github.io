@@ -153,7 +153,7 @@ html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfw
   margin: 0;
 }
 html[data-fwx][data-origin="https://sfwx.github.io"][data-copyright="https://sfwx.github.io/copyright"] > body[data-fwx].minecraft-ui > div[data-fwx].console > pre[data-fwx]#fwxConsole > span[data-fwx].info {
-  color: lightgreen;
+  color: darkseagreen;
 }
 
 /* Todos os direitos são reservados */
