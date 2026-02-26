@@ -39,5 +39,11 @@ html *:not([data-fwx]) {
   z-index: -1;
 }
 
+span.fwx { color: violet; }
+span.info { color: lightskyblue; }
+span.success { color: lightgreen; }
+span.warn { color: palegoldenrod; }
+span.error { color: lightcoral; }
+
 /* Todos os direitos são reservados */
 /* https://sfwx.github.io/copyright */
