@@ -35,6 +35,7 @@ window.fwx = {
         break;
       default:
         return;
+        break;
     }
     const fwxConsole = document.getElementById("fwxConsole");
     if (fwxConsole) {
