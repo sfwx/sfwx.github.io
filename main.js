@@ -19,13 +19,13 @@ window.fwx = {
   log(type, text, popup = false, scroll = true) {
     switch (type) {
       case "fwx":
-        console.log(`%c  %c FwX: ${text.trim()}`, "background: violet; border-radius: 50%;", "color: violet;");
+        console.log(`%c🅕%cFwX: ${text.trim()}`, "line-height: 16px; color: violet;", "padding-left: 4px; line-height: 16px; color: violet;");
         break;
       case "info":
-        console.log(`%c  %c Info: ${text.trim()}`, "background: lightskyblue; border-radius: 50%;", "color: lightskyblue;");
+        console.log(`%c🅘%cInfo: ${text.trim()}`, "color: lightskyblue; line-height: 16px;", "color: lightskyblue; padding-left: 4px; line-height: 16px;");
         break;
       case "success":
-        console.log(`%c  %c Success: ${text.trim()}`, "background: lightgreen; border-radius: 50%;", "color: lightgreen;");
+        console.log(`%c🅢%cSuccess: ${text.trim()}`, "line-height: 16px; color: lightgreen;", "padding-left: 4px; line-height: 16px; color: lightgreen;");
         break;
       case "warn":
         console.warn('Warn:', text.trim());
