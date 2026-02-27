@@ -133,8 +133,8 @@ async function handleFWX(event) {
                         key: `${name}.${cape.name}`,
                         value: `${removeFWX(name)} | ${cape.name}`
                     });
-                    fwx.log("success", ` > ${name} - ${cape.name}`);
                 }
+                fwx.log("success", ` > ${name} - ${cape.name}`);
             }
         }
 
@@ -187,8 +187,8 @@ async function handleFWX(event) {
                     key: `${styleName}.${cape.name}`,
                     value: `${removeFWX(styleName)} | ${cape.name}`
                 });
-                fwx.log("success", ` > ${styleName} - ${cape.name}`);
             }
+            fwx.log("success", ` > ${styleName} - ${cape.name}`);
         }        
         fwx.log("info", "\nAdicionando skins dinâmicas ao pacote..");
         // ==================================================
