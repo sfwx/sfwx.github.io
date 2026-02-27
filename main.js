@@ -28,7 +28,7 @@ window.fwx = {
         console.log(`%cSuccess: ${text}`, "color: lightgreen;");
         break;
       case "warn":
-        console.warn(text);
+        console.warn('Warn:', text);
         break;
       case "error":
         console.error(text);
