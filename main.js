@@ -42,10 +42,11 @@ window.fwx = {
       const span = document.createElement("span");
       span.setAttribute("data-fwx", "");
       span.classList.add(type);
-      span.textContent = (type === "fwx" ? "FwX: ") + text + '\n';
+      span.textContent = (type === "fwx" ? "FwX: " : "") + text + '\n';
       fwxConsole.appendChild(span);
-      if (scroll) {
-        document.querySelector("[data-fwx].console").scrollTop = document.querySelector("[data-fwx].console").scrollHeight;
+      const fwxConsoleDiv = document.querySelector("[data-fwx].console");
+      if (fwxConsoleDiv && scroll) {
+        fwxConsoleDiv.scrollTop = fwxConsoleDiv.scrollHeight;
       }
     }
     if (popup) alert(text);
