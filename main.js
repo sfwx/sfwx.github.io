@@ -19,13 +19,13 @@ window.fwx = {
   log(type, text, popup = false, scroll = true) {
     switch (type) {
       case "fwx":
-        console.log(`%c${text}`, "color: violet;");
+        console.log(`%cFwX: ${text}`, "color: violet;");
         break;
       case "info":
-        console.log(`%c${text}`, "color: lightskyblue;");
+        console.log(`%cInfo: ${text}`, "color: lightskyblue;");
         break;
       case "success":
-        console.log(`%c${text}`, "color: lightgreen;");
+        console.log(`%cSuccess: ${text}`, "color: lightgreen;");
         break;
       case "warn":
         console.warn(text);
