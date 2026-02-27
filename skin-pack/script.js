@@ -134,7 +134,7 @@ async function handleFWX(event) {
                         value: `${removeFWX(name)} | ${cape.name}`
                     });
                 }
-                fwx.log("success", ` > ${name} - ${cape.name}`);
+                fwx.log("success", ` > ${name}`);
             }
         }
 
@@ -188,7 +188,7 @@ async function handleFWX(event) {
                     value: `${removeFWX(styleName)} | ${cape.name}`
                 });
             }
-            fwx.log("success", ` > ${styleName} - ${cape.name}`);
+            fwx.log("success", ` > ${styleName}`);
         }        
         fwx.log("info", "\nAdicionando skins dinâmicas ao pacote..");
         // ==================================================
