@@ -28,10 +28,10 @@ window.fwx = {
         console.log(`%c${text}`, "color: lightgreen;");
         break;
       case "warn":
-        console.warn(`%c${text}`, "color: palegoldenrod;");
+        console.warn(text);
         break;
       case "error":
-        console.error(`%c${text}`, "color: lightcoral;");
+        console.error(text);
         break;
       default:
         return;
