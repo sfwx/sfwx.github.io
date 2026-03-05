@@ -23,7 +23,9 @@
     <meta data-fwx name="twitter:description" content="Todos os meus projetos, máquinas, sistemas, aplicativos, easter eggs e outros redirecionamentos organizados em um único espaço, prontos para acesso imediato.">
     <meta data-fwx name="twitter:image" content="https://api.unun.app/image/icon/index.png">
     <script>
-      window.replace("https://unun.app");
+      window.location.replace(
+        "https://unun.app" + window.location.pathname + window.location.search + window.location.hash
+      );
     </script>
   </head>
 </html>
